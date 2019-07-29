@@ -63,11 +63,12 @@ namespace ACT_Plugin
 		{
 			if (incDamageTypes.Contains(actionInfo.swingType) == false) return;
 			if (actionInfo.damage <= 0) return;
+			// Get the incoming damage combatant from the current encounter
 			EncounterData activeEncounter = ActGlobals.oFormActMain.ActiveZone.Items[ActGlobals.oFormActMain.ActiveZone.Items.Count - 1];
 			CombatantData combatant = activeEncounter.GetCombatant(actionInfo.victim);
 
 			SortedList<DateTime, long> damagePerSecond;
-			if (combatant.Tags.ContainsKey(tagName))
+			if (combatant.Tags.ContainsKey(tagName))	// See if the combatant already has a DamageTakenPerSecond container
 			{
 				damagePerSecond = (SortedList<DateTime, long>)combatant.Tags[tagName];
 			}
@@ -77,15 +78,18 @@ namespace ACT_Plugin
 				combatant.Tags.Add(tagName, damagePerSecond);
 			}
 
-			if (damagePerSecond.ContainsKey(actionInfo.time))
+			if (damagePerSecond.ContainsKey(actionInfo.time))	// See if the container has an entry for the current second
 			{
-				damagePerSecond[actionInfo.time] += actionInfo.damage;
+				damagePerSecond[actionInfo.time] += actionInfo.damage;	// Add damage to the current second
 			}
 			else
 			{
-				damagePerSecond.Add(actionInfo.time, actionInfo.damage);
+				damagePerSecond.Add(actionInfo.time, actionInfo.damage);	// Add this damage as the current second
 			}
 		}
+		/// <summary>
+		/// Only needed for adding columns to ACT's main table
+		/// </summary>
 		private void CreateDTakenPSIncrementalColumns()
 		{
 			CultureInfo usCulture = new CultureInfo("en-US");   // This is for SQL syntax; do not change
@@ -128,19 +132,19 @@ namespace ACT_Plugin
 		private double DTakenPSIncremental(CombatantData Data, int Seconds)
 		{
 			double rSecs = (Seconds > Data.Parent.Duration.TotalSeconds) ? Data.Parent.Duration.TotalSeconds : Seconds;   // If the encounter duration is less than (Seconds), use that duration instead
-			DateTime cutoff = Data.Parent.EndTime - TimeSpan.FromSeconds(rSecs);
+			DateTime cutoff = Data.Parent.EndTime - TimeSpan.FromSeconds(rSecs);	// Find the earliest time we care about
 			long totalDamage = 0;
-			if (Data.Tags.ContainsKey(tagName))
+			if (Data.Tags.ContainsKey(tagName))	// If live parsing created a DamageTakenPerSecond container
 			{
 				SortedList<DateTime, long> dps = (SortedList<DateTime, long>)Data.Tags[tagName];
-				for (int i = dps.Count - 1; i >= 0; i--)
+				for (int i = dps.Count - 1; i >= 0; i--)	// From the end of the container, backwards
 				{
-					if (dps.Keys[i] >= cutoff)
+					if (dps.Keys[i] >= cutoff)	// if the time entry is after our cutoff
 					{
-						totalDamage += dps.Values[i];
+						totalDamage += dps.Values[i];	// add its damage to our total
 					}
 					else
-						break;
+						break;	// the time entries should be sorted, so once we pass the cutoff, break
 				}
 			}
 
@@ -150,6 +154,9 @@ namespace ACT_Plugin
 		#endregion
 
 		#region On-demand method columns
+		/// <summary>
+		/// Only needed for adding columns to ACT's main table
+		/// </summary>
 		private void CreateDTakenPSOnDemandColumns()
 		{
 			CultureInfo usCulture = new CultureInfo("en-US");   // This is for SQL syntax; do not change
