@@ -13,8 +13,8 @@ using System.Security;
 
 [assembly: AssemblyTitle("Detriment Call Macro")]
 [assembly: AssemblyDescription("Creates /do_file_commands files with social text warnings about players being afflicted with certain effects")]
-[assembly: AssemblyCopyright("Aditu of Permafrost (EQ2) <aditu@maine.rr.com>")]
-[assembly: AssemblyVersion("1.3.1.8")]
+[assembly: AssemblyCopyright("EQAditu <aditu@advancedcombattracker.com>")]
+[assembly: AssemblyVersion("1.3.1.9")]
 
 namespace ACT_Plugin
 {
@@ -150,8 +150,8 @@ namespace ACT_Plugin
 			// contextMenuStrip1
 			// 
 			this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.copyAsSharableXMLToolStripMenuItem,
-            this.copyAsSharableXMLToolStripMenuItem2});
+			this.copyAsSharableXMLToolStripMenuItem,
+			this.copyAsSharableXMLToolStripMenuItem2});
 			this.contextMenuStrip1.Name = "contextMenuStrip1";
 			this.contextMenuStrip1.Size = new System.Drawing.Size(284, 48);
 			this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
@@ -198,9 +198,9 @@ namespace ACT_Plugin
 			// 
 			// tableLayoutPanel1
 			// 
-			this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+			| System.Windows.Forms.AnchorStyles.Left)
+			| System.Windows.Forms.AnchorStyles.Right)));
 			this.tableLayoutPanel1.ColumnCount = 2;
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -217,8 +217,8 @@ namespace ACT_Plugin
 			// 
 			// tableLayoutPanel2
 			// 
-			this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+			| System.Windows.Forms.AnchorStyles.Right)));
 			this.tableLayoutPanel2.ColumnCount = 5;
 			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
 			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 121F));
@@ -359,10 +359,10 @@ namespace ACT_Plugin
 			this.ddlCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.ddlCategory.FormattingEnabled = true;
 			this.ddlCategory.Items.AddRange(new object[] {
-            "Emote (Regex)",
-            "Any Combat Action",
-            "Non-Melee",
-            "Power Drain"});
+			"Emote (Regex)",
+			"Any Combat Action",
+			"Non-Melee",
+			"Power Drain"});
 			this.ddlCategory.Location = new System.Drawing.Point(113, 63);
 			this.ddlCategory.Name = "ddlCategory";
 			this.ddlCategory.Size = new System.Drawing.Size(115, 21);
@@ -374,18 +374,18 @@ namespace ACT_Plugin
 			this.nudPlayerCount.Dock = System.Windows.Forms.DockStyle.Right;
 			this.nudPlayerCount.Location = new System.Drawing.Point(175, 93);
 			this.nudPlayerCount.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+			1,
+			0,
+			0,
+			0});
 			this.nudPlayerCount.Name = "nudPlayerCount";
 			this.nudPlayerCount.Size = new System.Drawing.Size(53, 20);
 			this.nudPlayerCount.TabIndex = 8;
 			this.nudPlayerCount.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+			1,
+			0,
+			0,
+			0});
 			// 
 			// label5
 			// 
@@ -406,10 +406,10 @@ namespace ACT_Plugin
 			this.nudSecondCount.Size = new System.Drawing.Size(53, 20);
 			this.nudSecondCount.TabIndex = 10;
 			this.nudSecondCount.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+			1,
+			0,
+			0,
+			0});
 			// 
 			// label6
 			// 
@@ -500,11 +500,11 @@ namespace ACT_Plugin
 			this.ddlSound.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.ddlSound.FormattingEnabled = true;
 			this.ddlSound.Items.AddRange(new object[] {
-            "Beep",
-            "Astersk",
-            "TTS",
-            "Custom TTS",
-            "Custom WAV"});
+			"Beep",
+			"Astersk",
+			"TTS",
+			"Custom TTS",
+			"Custom WAV"});
 			this.ddlSound.Location = new System.Drawing.Point(113, 183);
 			this.ddlSound.Name = "ddlSound";
 			this.ddlSound.Size = new System.Drawing.Size(115, 21);
@@ -617,23 +617,23 @@ namespace ACT_Plugin
 			this.nudExportLife.Location = new System.Drawing.Point(24, 71);
 			this.nudExportLife.Margin = new System.Windows.Forms.Padding(3, 1, 3, 0);
 			this.nudExportLife.Maximum = new decimal(new int[] {
-            120,
-            0,
-            0,
-            0});
+			120,
+			0,
+			0,
+			0});
 			this.nudExportLife.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+			1,
+			0,
+			0,
+			0});
 			this.nudExportLife.Name = "nudExportLife";
 			this.nudExportLife.Size = new System.Drawing.Size(48, 20);
 			this.nudExportLife.TabIndex = 3;
 			this.nudExportLife.Value = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
+			15,
+			0,
+			0,
+			0});
 			// 
 			// cbShowChannel
 			// 
@@ -711,6 +711,7 @@ namespace ACT_Plugin
 		{
 			InitializeComponent();
 			#region lblInstructions
+			// Avoid using a .resx
 			lblInstructions.Text = @"In the above export formatting, {0} will be replaced by the player name or list of players. {2} will be replaced by the playername and group number if known(use /whoraid before pull).  {1} will be replaced by the spell name being tracked.
 
 In the case of the spell name being an emote/regular expression, you should set the spell name using a comment block: IE, ""(?#SpellName)"".  The player name in the regular expression will be extracted as the first capuring group in a match.
@@ -747,6 +748,7 @@ To execute the export in EQ2, type: /do_file_commands detriment.txt   (or chosen
 		public void DeInitPlugin()
 		{
 			tmr.Enabled = false;
+			lblPluginStatus.Click -= lblPluginStatus_Click;
 			ActGlobals.oFormActMain.AfterCombatAction -= oFormActMain_AfterCombatAction;
 			ActGlobals.oFormActMain.OnLogLineRead -= oFormActMain_OnLogLineRead;
 			ActGlobals.oFormActMain.XmlSnippetAdded -= oFormActMain_XmlSnippetAdded;
@@ -906,7 +908,7 @@ To execute the export in EQ2, type: /do_file_commands detriment.txt   (or chosen
 				EffectTrigger eff = (EffectTrigger)clbEffects.Items[i];
 				switch (eff.effCategory)
 				{
-					case 0:	// Regex
+					case 0: // Regex
 						continue;
 					case 2: // Non-Melee
 						if (actionInfo.swingType != (int)SwingTypeEnum.NonMelee)
@@ -930,35 +932,48 @@ To execute the export in EQ2, type: /do_file_commands detriment.txt   (or chosen
 		{
 			if (isImport)
 				return;
-			for (int i = 0; i < clbEffects.Items.Count; i++)
+			try
 			{
-				EffectTrigger eff = (EffectTrigger)clbEffects.Items[i];
-				if (eff.effCategory == 0 && logInfo.logLine.Length > ActGlobals.oFormActMain.TimeStampLen)
+				if (logInfo.logLine.Length > ActGlobals.oFormActMain.TimeStampLen)
 				{
-					string logLine = logInfo.logLine.Substring(ActGlobals.oFormActMain.TimeStampLen);
-					if (eff.emoteRegex.IsMatch(logLine))
+					for (int i = 0; i < clbEffects.Items.Count; i++)
 					{
-						string player = eff.emoteRegex.Replace(logLine, "$1");
-						eff.AddPlayer(player);
+						EffectTrigger eff = (EffectTrigger)clbEffects.Items[i];
+						if (eff.effCategory == 0 && logInfo.logLine.Length > ActGlobals.oFormActMain.TimeStampLen)
+						{
+							string logLine = logInfo.logLine.Substring(ActGlobals.oFormActMain.TimeStampLen);
+							if (eff.emoteRegex.IsMatch(logLine))
+							{
+								string player = eff.emoteRegex.Replace(logLine, "$1");
+								eff.AddPlayer(player);
+							}
+						}
 					}
 				}
+				if (logInfo.logLine.Length > ActGlobals.oFormActMain.TimeStampLen)
+				{
+					if (logInfo.logLine.Substring(ActGlobals.oFormActMain.TimeStampLen).StartsWith("/whoraid search results for"))
+					{
+						parseRaid = true;
+						playerGroups.Clear();
+					}
+					if (parseRaid)
+					{
+						string logLine = logInfo.logLine.Substring(ActGlobals.oFormActMain.TimeStampLen);
+						if (whoplayerRegex.IsMatch(logLine))
+							playerGroups.Add(whoplayerRegex.Replace(logLine, "$1"), playerGroups.Count / 6 + 1);
+					}
+				}
+				if (parseRaid && logInfo.logLine.EndsWith(" players found"))
+				{
+					parseRaid = false;
+					//if (playerGroups.Count < 24)
+					//    playerGroups.Clear();
+				}
 			}
-			if (logInfo.logLine.Substring(ActGlobals.oFormActMain.TimeStampLen).StartsWith("/whoraid search results for"))
+			catch (Exception ex)
 			{
-				parseRaid = true;
-				playerGroups.Clear();
-			}
-			if (parseRaid)
-			{
-				string logLine = logInfo.logLine.Substring(ActGlobals.oFormActMain.TimeStampLen);
-				if (whoplayerRegex.IsMatch(logLine))
-					playerGroups.Add(whoplayerRegex.Replace(logLine, "$1"), playerGroups.Count / 6 + 1);
-			}
-			if (parseRaid && logInfo.logLine.EndsWith(" players found"))
-			{
-				parseRaid = false;
-				//if (playerGroups.Count < 24)
-				//    playerGroups.Clear();
+				ActGlobals.oFormActMain.WriteExceptionLog(ex, "DetrimentCallMacro -> OnLogLineRead");
 			}
 		}
 		void tmr_Tick(object sender, EventArgs e)
@@ -1041,7 +1056,7 @@ To execute the export in EQ2, type: /do_file_commands detriment.txt   (or chosen
 									playerGroup = string.Empty;
 									playerGroups.Clear();
 								}
-								sb.Append(String.Format(eff.exportFormat, eff.players[j], effectName, String.IsNullOrEmpty(playerGroup) ? eff.players[j] : playerGroup)+"\n");
+								sb.Append(String.Format(eff.exportFormat, eff.players[j], effectName, String.IsNullOrEmpty(playerGroup) ? eff.players[j] : playerGroup) + "\n");
 							}
 						}
 						ActGlobals.oFormActMain.SendToMacroFile(String.IsNullOrEmpty(eff.exportFilename) ? "detriment.txt" : eff.exportFilename, sb.ToString(), eff.exportChannel);
