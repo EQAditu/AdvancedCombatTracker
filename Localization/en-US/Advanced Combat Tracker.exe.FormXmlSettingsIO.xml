@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ControlText Form="FormXmlSettingsIO">
+    <Control ControlPath="root" UniqueName="linkLabelAppData" Text="Application Data Folder" />
+    <Control ControlPath="root\groupBox2" UniqueName="label1" Text="This feature should not be used to back up your full ACT settings.  Click on the Application Data Folder link and copy the Config folder from it someplace safe." />
+    <Control ControlPath="root\groupBox2" UniqueName="cbFormSizes" Text="ACT Window Locations/Sizes" />
+    <Control ControlPath="root\groupBox2" UniqueName="cbPerfWizard" Text="Performance Wizard Settings" />
+    <Control ControlPath="root\groupBox2" UniqueName="cbSpellTimersSound" Text="Spell Timer Sound Settings" />
+    <Control ControlPath="root\groupBox2" UniqueName="cbSpellTimersEnabled" Text="Spell Timer Enabled Checkbox" />
+    <Control ControlPath="root\groupBox2" UniqueName="cbSpellTimers" Text="Spell Timer List" />
+    <Control ControlPath="root\groupBox2" UniqueName="cbCustomTriggers" Text="Custom Triggers" />
+    <Control ControlPath="root" UniqueName="groupBox1" Text="Options tab settings" />
+    <Control ControlPath="root\groupBox1" UniqueName="checkBox24" Text="Color and Font Settings" />
+    <Control ControlPath="root\groupBox1" UniqueName="checkBox17" Text="Output Display" />
+    <Control ControlPath="root\groupBox1" UniqueName="cbDataCorrectAbility" Text="Ability Redirection" />
+    <Control ControlPath="root\groupBox1" UniqueName="cbSelectiveParsing" Text="Selective Parsing Settings" />
+    <Control ControlPath="root\groupBox1" UniqueName="cbDataCorrectMisc" Text="Miscellaneous" />
+    <Control ControlPath="root\groupBox1" UniqueName="cbColorsMisc" Text="Miscellaneous" />
+    <Control ControlPath="root\groupBox1" UniqueName="cbDataCorrectRename" Text="Combatant Renaming" />
+    <Control ControlPath="root\groupBox1" UniqueName="cbColorsGraphing" Text="Graphing" />
+    <Control ControlPath="root\groupBox1" UniqueName="checkBox32" Text="Data Correction" />
+    <Control ControlPath="root\groupBox1" UniqueName="cbColorsMain" Text="Main User Interface" />
+    <Control ControlPath="root\groupBox1" UniqueName="cbOutputHtml" Text="HTML File Generation" />
+    <Control ControlPath="root\groupBox1" UniqueName="cbOutputWebServer" Text="ACT Web Server" />
+    <Control ControlPath="root\groupBox1" UniqueName="cbOutputOdbc" Text="ODBC (SQL)" />
+    <Control ControlPath="root\groupBox1" UniqueName="cbOutputText" Text="Text Export Settings" />
+    <Control ControlPath="root\groupBox1" UniqueName="cbOutputMini" Text="Mini Parse Window" />
+    <Control ControlPath="root\groupBox1" UniqueName="cbOutputGraphing" Text="Graphing" />
+    <Control ControlPath="root\groupBox1" UniqueName="cbTableAt" Text="AttackType View Options" />
+    <Control ControlPath="root\groupBox1" UniqueName="cbTableDt" Text="DamageType View Options" />
+    <Control ControlPath="root\groupBox1" UniqueName="cbTableCd" Text="Combatant View Options" />
+    <Control ControlPath="root\groupBox1" UniqueName="cbTableEnc" Text="Encounter View Options" />
+    <Control ControlPath="root\groupBox1" UniqueName="cbTableZone" Text="Zone View Options" />
+    <Control ControlPath="root\groupBox1" UniqueName="cbEncCulling" Text="Encounter Culling" />
+    <Control ControlPath="root\groupBox1" UniqueName="cbTableGeneral" Text="General" />
+    <Control ControlPath="root\groupBox1" UniqueName="cbLcdMono" Text="Monochrome LCD Options" />
+    <Control ControlPath="root\groupBox1" UniqueName="cbLcdMisc" Text="LCD Display Options" />
+    <Control ControlPath="root\groupBox1" UniqueName="cbXmlSubs" Text="XML Config Subscriptions" />
+    <Control ControlPath="root\groupBox1" UniqueName="checkBox9" Text="Main Table/Encounters" />
+    <Control ControlPath="root\groupBox1" UniqueName="cbLcdColor" Text="Color LCD Options" />
+    <Control ControlPath="root\groupBox1" UniqueName="checkBox5" Text="Configuration Import/Export" />
+    <Control ControlPath="root\groupBox1" UniqueName="cbXmlSnippets" Text="XML Share Snippets" />
+    <Control ControlPath="root\groupBox1" UniqueName="cbSoundSettings" Text="Sound Settings" />
+    <Control ControlPath="root\groupBox1" UniqueName="cbMisc" Text="Miscellaneous" />
+    <Control ControlPath="root" UniqueName="btnSave" Text="Save..." />
+    <Control ControlPath="root" UniqueName="btnCancel" Text="Cancel" />
+</ControlText>

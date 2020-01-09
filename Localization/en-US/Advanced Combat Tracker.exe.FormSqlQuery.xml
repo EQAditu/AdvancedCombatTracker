@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ControlText Form="FormSqlQuery">
+    <Control ControlPath="root\panel1" UniqueName="btnClearText" Text="Clear All" />
+    <Control ControlPath="root\panel1" UniqueName="btnQuery" Text="Query" />
+    <Control ControlPath="root\panel1" UniqueName="btnNonQuery" Text="Non-Query" />
+</ControlText>

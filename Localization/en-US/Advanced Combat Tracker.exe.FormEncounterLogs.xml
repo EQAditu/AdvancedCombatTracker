@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ControlText Form="FormEncounterLogs">
+    <Control ControlPath="root" UniqueName="cbOnlyResults" Text="Only Show&#xD;&#xA;Search Results" />
+    <Control ControlPath="root" UniqueName="groupBox1" Text="Find in Encounter logs..." />
+    <Control ControlPath="root\groupBox1" UniqueName="btnSearchText" Text="Search as Text" />
+    <Control ControlPath="root\groupBox1" UniqueName="btnSearchRegex" Text="Search as Regex" />
+    <Control ControlPath="root\groupBox1" UniqueName="btnFindNext" Text="Find Next" />
+    <Control ControlPath="root\groupBox1" UniqueName="btnFindPrev" Text="Find Prev" />
+    <Control ControlPath="root\groupBox2" UniqueName="btnCopyCombat" Text="Copy Combat" />
+    <Control ControlPath="root\groupBox2" UniqueName="btnCopyResults" Text="Copy Results" />
+    <Control ControlPath="root\groupBox2" UniqueName="btnCopySelection" Text="Copy Selection" />
+    <Control ControlPath="root\groupBox2" UniqueName="btnCopyAll" Text="Copy All" />
+</ControlText>
