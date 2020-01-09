@@ -9,3 +9,5 @@ Additionally ***.InternalStrings.cs** will also be exported with dynamically use
 Lastly, there will be localizable strings used in parsing/data.  These should be changed by parsing plugins, however secondary plugins loaded afterwards could also do this localization.  See the [EQ2 English parsing plugin](https://github.com/EQAditu/AdvancedCombatTracker/blob/master/Plugins/Standalone/ACT_English_Parser.cs#L1877) as a primary example of localizing all of these objects by replacing them.  ACT by default will start with these **EQ2 English** objects and plugins can remove these objects and recreate them with different localized strings.
 
 The "en-US" folder will contain ACT's default exports for the most recent version.  Any localization efforts/pull requests should target a different folder labeled after their locale and contain the same files.
+
+Contols in the XML exports prefixed with `tb`, `nud` and `ddl` are typically config options that should not be localized in the XML files, as they are logical settings.  They might be excluded in future exports to be safe.
