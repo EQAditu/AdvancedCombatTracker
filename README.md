@@ -1,5 +1,5 @@
 # Advanced Combat Tracker
-This repository is meant to contain my own source-code based plugins, sources for some compiled plugins, main program releases, issue tracking and hopefully some documentation.  (for once)  
+This repository is meant to contain my own source-code based plugins, sources for some compiled plugins, main program releases, localization resources, issue tracking and hopefully some documentation.  (for once)  
 Website: https://advancedcombattracker.com  
 Support Forum: https://forums.advancedcombattracker.com  
 Twitter(ugh): [@EQAditu](https://twitter.com/EQAditu)
