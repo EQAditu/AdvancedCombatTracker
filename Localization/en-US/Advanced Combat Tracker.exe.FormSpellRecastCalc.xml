@@ -3,6 +3,5 @@
     <Control ControlPath="root" UniqueName="cbUseRecastCalcs" Text="Recalculate with Recast AAs" />
     <Control ControlPath="root" UniqueName="cbRestrictShortDelays" Text="Use delays between 12-120s" />
     <Control ControlPath="root" UniqueName="btnSendToTimers" Text="Send to Timers" />
-    <Control ControlPath="root" UniqueName="tbDelays" Text="Median Delay is N seconds." />
     <Control ControlPath="root" UniqueName="btnClose" Text="Close" />
 </ControlText>

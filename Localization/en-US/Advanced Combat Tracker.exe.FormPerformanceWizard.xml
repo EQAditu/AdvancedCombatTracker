@@ -7,7 +7,6 @@
     <Control ControlPath="root\tc1\tabPage1" UniqueName="label1" Text="The pupose of this wizard is to easily access the settings that can affect the amount of CPU usage ACT uses.  In each section a setting is discussed in detail allowing you to better balance functionality and performance.&#xD;&#xA;&#xD;&#xA;Side Note:  The number of enabled Custom Triggers will directly affect the parsing speed(CPU usage) of normal operations." />
     <Control ControlPath="root\tc1" UniqueName="tabPage2" Text="Step 2 " />
     <Control ControlPath="root\tc1\tabPage2" UniqueName="label21" Text="This changes the number of threads dedicated to Custom Trigger parsing.  If set to zero, Custom Triggers will be parsed with the original parsing thread.  If normal log parsing cannot keep up due to the number of Custom Triggers in use, increase to 1+.  You should not increase this value to above the number of cores your CPU has, minus the number of cores your game is able to saturate.  &#xD;&#xA;&#xD;&#xA;IE, if you're playing EQ2 on a 4-core CPU, this value should not exceed 3.  2 would be a safer value if EQ2's multi-core support is enabled.  If playing on a dual-core CPU, 0-1 would be the best values to keep ACT from slowing EQ2.&#xD;&#xA;&#xD;&#xA;(You can check if Custom Trigger parsing is falling behind in the Options - Miscellaneous page, log file section.)" />
-    <Control ControlPath="root\tc1\tabPage2" UniqueName="nudCtThreads" Text="1" />
     <Control ControlPath="root\tc1\tabPage2" UniqueName="label16" Text="Custom Trigger parsing may spawn up to this many additional threads: " />
     <Control ControlPath="root\tc1\tabPage2" UniqueName="btnCancel2" Text="Cancel" />
     <Control ControlPath="root\tc1\tabPage2" UniqueName="btnTab2Back" Text="&lt; Back" />
@@ -33,8 +32,6 @@
     <Control ControlPath="root\tc1\tabPage5" UniqueName="label6" Text="These settings change how often the screen updates with new information.  In the case of main tab table updates, the graphs may also update at this rate.  Shorter intervals will increase the CPU time used by ACT to update the calculations.&#xD;&#xA;&#xD;&#xA;If ACT is minimized or 'Disable Table Auto-Refresh' is checked, the main tab table/graph will not update regardless of these settings.  If the Mini Parse window is not enabled, changing the Mini Parse setting will not affect CPU usage(as it will not update)." />
     <Control ControlPath="root\tc1\tabPage5" UniqueName="label23" Text="seconds." />
     <Control ControlPath="root\tc1\tabPage5" UniqueName="label22" Text="Mini Parse window update interval:" />
-    <Control ControlPath="root\tc1\tabPage5" UniqueName="nudMiniUpdateInterval" Text="5" />
-    <Control ControlPath="root\tc1\tabPage5" UniqueName="nudUpdateValue" Text="5" />
     <Control ControlPath="root\tc1\tabPage5" UniqueName="label5" Text="Update Table every N seconds." />
     <Control ControlPath="root\tc1" UniqueName="tabPage6" Text="Step 6 " />
     <Control ControlPath="root\tc1\tabPage6" UniqueName="btnCancel6" Text="Cancel" />
