@@ -4,7 +4,6 @@
     <Control ControlPath="root\groupBox" UniqueName="btnInvertChecked" Text="Invert Checked" />
     <Control ControlPath="root\groupBox" UniqueName="btnCheckAll" Text="Check All" />
     <Control ControlPath="root\groupBox" UniqueName="btnApplyRecalc" Text="Apply above settings and recalculate" />
-    <Control ControlPath="root\groupBox" UniqueName="nudTLSampleSize" Text="10" />
     <Control ControlPath="root\groupBox" UniqueName="label2" Text="Sample Detail (Seconds)" />
     <Control ControlPath="root\groupBox" UniqueName="cbGlobalMaxLimit" Text="Same type rows share same scale" />
     <Control ControlPath="root\groupBox" UniqueName="cbTLIncomingHealing" Text="Incoming Healing" />

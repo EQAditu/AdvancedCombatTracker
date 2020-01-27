@@ -4,7 +4,6 @@
     <Control ControlPath="root\gbPov" UniqueName="btnLastKnownName" Text="." />
     <Control ControlPath="root\gbPov" UniqueName="btnOk" Text="Use Above" />
     <Control ControlPath="root\gbPov" UniqueName="label1" Text="Character Name:" />
-    <Control ControlPath="root\gbPov" UniqueName="tbLastKnownName" Text="." />
     <Control ControlPath="root" UniqueName="groupBox3" Text="Batch Statistics" />
     <Control ControlPath="root\groupBox3" UniqueName="lblBatchStats" Text="." />
     <Control ControlPath="root\groupBox3" UniqueName="lblLabels2" Text="Time Spent:&#xD;&#xA;Lines Read:&#xD;&#xA;LPS:&#xD;&#xA;Characters Read:&#xD;&#xA;CPS:&#xD;&#xA;" />
