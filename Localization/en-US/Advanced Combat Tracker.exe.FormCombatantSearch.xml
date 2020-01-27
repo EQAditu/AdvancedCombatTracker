@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ControlText Form="FormCombatantSearch">
+    <Control ControlPath="root" UniqueName="btnSelectEnc" Text="Select" />
+    <Control ControlPath="root" UniqueName="btnClose" Text="Close" />
+</ControlText>

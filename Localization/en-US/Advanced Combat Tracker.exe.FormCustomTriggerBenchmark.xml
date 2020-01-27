@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ControlText Form="FormCustomTriggerBenchmark">
+    <Control ControlPath="root" UniqueName="btnDoBenchmark" Text="Perform Benchmarking" />
+    <Control ControlPath="root" UniqueName="groupBox2" Text="Custom Trigger List" />
+    <Control ControlPath="root" UniqueName="groupBox1" Text="Select an encounter with log text to benchmark with..." />
+</ControlText>
