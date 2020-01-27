@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ControlText Form="FormAlliesEdit">
+    <Control ControlPath="root\tableLayoutPanel1" UniqueName="btnOK" Text="OK" />
+    <Control ControlPath="root\tableLayoutPanel1" UniqueName="btnCancel" Text="キャンセル" />
+</ControlText>

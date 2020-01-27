@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ControlText Form="FormPerformanceWizard">
+    <Control ControlPath="root\tc1" UniqueName="tabPage1" Text="Step 1 " />
+    <Control ControlPath="root\tc1\tabPage1" UniqueName="btnCancel1" Text="Cancel" />
+    <Control ControlPath="root\tc1\tabPage1" UniqueName="button2" Text="&lt; Back" />
+    <Control ControlPath="root\tc1\tabPage1" UniqueName="btnTab1Next" Text="Next &gt;" />
+    <Control ControlPath="root\tc1\tabPage1" UniqueName="label1" Text="The pupose of this wizard is to easily access the settings that can affect the amount of CPU usage ACT uses.  In each section a setting is discussed in detail allowing you to better balance functionality and performance.&#xD;&#xA;&#xD;&#xA;Side Note:  The number of enabled Custom Triggers will directly affect the parsing speed(CPU usage) of normal operations." />
+    <Control ControlPath="root\tc1" UniqueName="tabPage2" Text="Step 2 " />
+    <Control ControlPath="root\tc1\tabPage2" UniqueName="label21" Text="This changes the number of threads dedicated to Custom Trigger parsing.  If set to zero, Custom Triggers will be parsed with the original parsing thread.  If normal log parsing cannot keep up due to the number of Custom Triggers in use, increase to 1+.  You should not increase this value to above the number of cores your CPU has, minus the number of cores your game is able to saturate.  &#xD;&#xA;&#xD;&#xA;IE, if you're playing EQ2 on a 4-core CPU, this value should not exceed 3.  2 would be a safer value if EQ2's multi-core support is enabled.  If playing on a dual-core CPU, 0-1 would be the best values to keep ACT from slowing EQ2.&#xD;&#xA;&#xD;&#xA;(You can check if Custom Trigger parsing is falling behind in the Options - Miscellaneous page, log file section.)" />
+    <Control ControlPath="root\tc1\tabPage2" UniqueName="label16" Text="Custom Trigger parsing may spawn up to this many additional threads: " />
+    <Control ControlPath="root\tc1\tabPage2" UniqueName="btnCancel2" Text="Cancel" />
+    <Control ControlPath="root\tc1\tabPage2" UniqueName="btnTab2Back" Text="&lt; Back" />
+    <Control ControlPath="root\tc1\tabPage2" UniqueName="btnTab2Next" Text="Next &gt;" />
+    <Control ControlPath="root\tc1\tabPage2" UniqueName="label2" Text="This setting will change the priority of normal log parsing.  All programs have a priority, usually Normal by default, and this priority defines how much CPU time should be given to the current task.  If set to Lowest(Idle), log parsing will only take CPU time not used by other applications.&#xD;&#xA;&#xD;&#xA;For this setting to take effect, you must restart ACT or Close and Reopen the current log." />
+    <Control ControlPath="root\tc1\tabPage2" UniqueName="lblLogPriority" Text="CPU Priority of normal log parsing:" />
+    <Control ControlPath="root\tc1" UniqueName="tabPage3" Text="Step 3 " />
+    <Control ControlPath="root\tc1\tabPage3" UniqueName="btnCancel3" Text="Cancel" />
+    <Control ControlPath="root\tc1\tabPage3" UniqueName="btnTab3Back" Text="&lt; Back" />
+    <Control ControlPath="root\tc1\tabPage3" UniqueName="btnTab3Next" Text="Next &gt;" />
+    <Control ControlPath="root\tc1\tabPage3" UniqueName="label3" Text="As the first encounter of each Zone branch, an &quot;All&quot; entry can exist which will combine all data from other encounters for that zone.  As encounters progress within that zone, the All entry will be updated in real time.  The All encounter entry will be identical to a merged encounter of all encounters within that zone.&#xD;&#xA;&#xD;&#xA;Disabling this option will reduce memory and CPU usage a bit more than 10% when compared to default options." />
+    <Control ControlPath="root\tc1\tabPage3" UniqueName="cbZoneAllListing" Text="Populate an 'All' encounter including all data from separate encounters within a zone.  (Not Retroactive)" />
+    <Control ControlPath="root\tc1" UniqueName="tabPage4" Text="Step 4 " />
+    <Control ControlPath="root\tc1\tabPage4" UniqueName="btnCancel4" Text="Cancel" />
+    <Control ControlPath="root\tc1\tabPage4" UniqueName="btnTab4Back" Text="&lt; Back" />
+    <Control ControlPath="root\tc1\tabPage4" UniqueName="btnTab4Next" Text="Next &gt;" />
+    <Control ControlPath="root\tc1\tabPage4" UniqueName="label4" Text="When checked, under each combatant, the only Damage Types entries that will be fully populated will be the ones marked (Ref) for Reference.  Instead of 'Melee (Out)' showing All, crush, and slash it will only show All, which is a combination of crush/slash.  Crush and slash will still be found under 'All Outgoing (Ref)' due to the (Ref) tag.&#xD;&#xA;&#xD;&#xA;Enabling this options willl reduce CPU usage by a bit less than 10% and reduce memory usage by a bit more than 10% when compared to default settings.  Unchecked, this option will populate all entries in their logical listings." />
+    <Control ControlPath="root\tc1\tabPage4" UniqueName="cbRestrictToAll" Text="Only populate the 'All' entry for DamageType categories except those marked (Ref)." />
+    <Control ControlPath="root\tc1" UniqueName="tabPage5" Text="Step 5 " />
+    <Control ControlPath="root\tc1\tabPage5" UniqueName="btnCancel5" Text="Cancel" />
+    <Control ControlPath="root\tc1\tabPage5" UniqueName="btnTab5Back" Text="&lt; Back" />
+    <Control ControlPath="root\tc1\tabPage5" UniqueName="btnTab5Next" Text="Next &gt;" />
+    <Control ControlPath="root\tc1\tabPage5" UniqueName="label6" Text="These settings change how often the screen updates with new information.  In the case of main tab table updates, the graphs may also update at this rate.  Shorter intervals will increase the CPU time used by ACT to update the calculations.&#xD;&#xA;&#xD;&#xA;If ACT is minimized or 'Disable Table Auto-Refresh' is checked, the main tab table/graph will not update regardless of these settings.  If the Mini Parse window is not enabled, changing the Mini Parse setting will not affect CPU usage(as it will not update)." />
+    <Control ControlPath="root\tc1\tabPage5" UniqueName="label23" Text="seconds." />
+    <Control ControlPath="root\tc1\tabPage5" UniqueName="label22" Text="Mini Parse window update interval:" />
+    <Control ControlPath="root\tc1\tabPage5" UniqueName="label5" Text="Update Table every N seconds." />
+    <Control ControlPath="root\tc1" UniqueName="tabPage6" Text="Step 6 " />
+    <Control ControlPath="root\tc1\tabPage6" UniqueName="btnCancel6" Text="Cancel" />
+    <Control ControlPath="root\tc1\tabPage6" UniqueName="btnTab6Back" Text="&lt; Back" />
+    <Control ControlPath="root\tc1\tabPage6" UniqueName="btnTab6Next" Text="Next &gt;" />
+    <Control ControlPath="root\tc1\tabPage6" UniqueName="label7" Text="This will change the method in generating the main encounter graph.&#xD;&#xA;- The simple method will just show a bar graph depicting the different values of the currently sorted column.  Not all columns can display a bar graph but generation will always be relatively little CPU time.&#xD;&#xA;- The advanced graphing method will show a line graph of each person's DPS trend split into time segments.  This takes considerably more time to calculate than the DPS over the entire encounter." />
+    <Control ControlPath="root\tc1\tabPage6" UniqueName="rbGraphSimple" Text="Simple bar graphs depicting the current sort." />
+    <Control ControlPath="root\tc1\tabPage6" UniqueName="rbGraphAdv" Text="Advanced DPS over time graphs.  (CPU Intensive)" />
+    <Control ControlPath="root\tc1" UniqueName="tabPage7" Text="Step 7 " />
+    <Control ControlPath="root\tc1\tabPage7" UniqueName="btnCancel7" Text="Cancel" />
+    <Control ControlPath="root\tc1\tabPage7" UniqueName="btnTab7Back" Text="&lt; Back" />
+    <Control ControlPath="root\tc1\tabPage7" UniqueName="btnTab7Next" Text="Next &gt;" />
+    <Control ControlPath="root\tc1\tabPage7" UniqueName="label8" Text="This setting will change the priority of DPS trend graph generation(adv encounter graphs and combatant graphs).  All programs have a priority, usually Normal by default, and this priority defines how much CPU time should be given to the current task.  If set to Lowest(Idle), graph generation will only take CPU time not used by other applications.  If EQ2 is running, this will be next to nothing.  Normal priority will give equal amounts of CPU time to ACT and any other task, such as EQ2.&#xD;&#xA;&#xD;&#xA;Above Normal(not recommended with adv encounter graphs) will give graph generation more priority than most other programs and may cause noticable stuttering in EQ2 or momentary freezing.  ACT's UI may also become unresponsive during graph generation.&#xD;&#xA;&#xD;&#xA;This setting will also affect EQ2 psudo-HTML(and automatic ODBC) exporting.  So if you find HTML exports cannot complete before another encounter ends and requires an export, you may wish to raise this setting." />
+    <Control ControlPath="root\tc1\tabPage7" UniqueName="label11" Text="CPU Priority of graph generation:" />
+    <Control ControlPath="root\tc1" UniqueName="tabPage9" Text="Step 8" />
+    <Control ControlPath="root\tc1\tabPage9" UniqueName="btnCancel8" Text="Cancel" />
+    <Control ControlPath="root\tc1\tabPage9" UniqueName="btnTab8Back" Text="&lt; Back" />
+    <Control ControlPath="root\tc1\tabPage9" UniqueName="btnTab8Next" Text="Next &gt;" />
+    <Control ControlPath="root\tc1\tabPage9" UniqueName="cbRecordLogs" Text="Record all log lines while parsing.  (View Logs context menu option)" />
+    <Control ControlPath="root\tc1\tabPage9" UniqueName="label20" Text="When checked, ACT will record all log lines that appear during an encounter.  You may then right click an encounter, select View Logs and view/search through them.  &#xD;&#xA;&#xD;&#xA;Disabling this option will reduce memory usage by a bit less than 45% when compared to default settings.  Exported ACT files will retain these recorded logs." />
+    <Control ControlPath="root\tc1" UniqueName="tabPage8" Text="Finish " />
+    <Control ControlPath="root\tc1\tabPage8" UniqueName="lblS8A" Text="After" />
+    <Control ControlPath="root\tc1\tabPage8" UniqueName="lblS8B" Text="Before" />
+    <Control ControlPath="root\tc1\tabPage8" UniqueName="label25" Text="Step 8: Recording Encounter Logs" />
+    <Control ControlPath="root\tc1\tabPage8" UniqueName="lblS7A" Text="After" />
+    <Control ControlPath="root\tc1\tabPage8" UniqueName="lblS6A" Text="After" />
+    <Control ControlPath="root\tc1\tabPage8" UniqueName="lblS5A" Text="After" />
+    <Control ControlPath="root\tc1\tabPage8" UniqueName="lblS4A" Text="After" />
+    <Control ControlPath="root\tc1\tabPage8" UniqueName="lblS3A" Text="After" />
+    <Control ControlPath="root\tc1\tabPage8" UniqueName="lblS2A" Text="After" />
+    <Control ControlPath="root\tc1\tabPage8" UniqueName="label12" Text="After" />
+    <Control ControlPath="root\tc1\tabPage8" UniqueName="lblS7B" Text="Before" />
+    <Control ControlPath="root\tc1\tabPage8" UniqueName="lblS6B" Text="Before" />
+    <Control ControlPath="root\tc1\tabPage8" UniqueName="lblS5B" Text="Before" />
+    <Control ControlPath="root\tc1\tabPage8" UniqueName="lblS4B" Text="Before" />
+    <Control ControlPath="root\tc1\tabPage8" UniqueName="lblS3B" Text="Before" />
+    <Control ControlPath="root\tc1\tabPage8" UniqueName="lblS2B" Text="Before" />
+    <Control ControlPath="root\tc1\tabPage8" UniqueName="label10" Text="Before" />
+    <Control ControlPath="root\tc1\tabPage8" UniqueName="label19" Text="Step 7: Graphing/HTML priority" />
+    <Control ControlPath="root\tc1\tabPage8" UniqueName="label18" Text="Step 6: Main encounter graphing" />
+    <Control ControlPath="root\tc1\tabPage8" UniqueName="label17" Text="Step 5: Table data updates" />
+    <Control ControlPath="root\tc1\tabPage8" UniqueName="label15" Text="Step 4: Only populate All (Ref)" />
+    <Control ControlPath="root\tc1\tabPage8" UniqueName="label14" Text="Step 3: Populate an 'All' encounter" />
+    <Control ControlPath="root\tc1\tabPage8" UniqueName="label13" Text="Step 2: Log parsing" />
+    <Control ControlPath="root\tc1\tabPage8" UniqueName="label9" Text="Step 1: " />
+    <Control ControlPath="root\tc1\tabPage8" UniqueName="btnOk" Text="OK" />
+    <Control ControlPath="root\tc1\tabPage8" UniqueName="btnCancel" Text="Cancel" />
+    <Control ControlPath="root\tc1\tabPage8" UniqueName="button5" Text="Next &gt;" />
+    <Control ControlPath="root\tc1\tabPage8" UniqueName="btnTab9Back" Text="&lt; Back" />
+</ControlText>

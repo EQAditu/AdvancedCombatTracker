@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ControlText Form="FormStartupWizard">
+    <Control ControlPath="root" UniqueName="btnClose" Text="Close" />
+    <Control ControlPath="root" UniqueName="btnBack" Text="&lt; Back" />
+    <Control ControlPath="root" UniqueName="btnNext" Text="Next &gt;" />
+    <Control ControlPath="root\tabControl1" UniqueName="tabPage1" Text="Start" />
+    <Control ControlPath="root\tabControl1\tabPage1" UniqueName="label1" Text="This wizard will assist you in selecting a parsing plugin, configuring updates and selecting a log file." />
+    <Control ControlPath="root\tabControl1" UniqueName="tabPage4" Text="Parsing Plugin" />
+    <Control ControlPath="root\tabControl1\tabPage4" UniqueName="label8" Text="Make certain that you select the proper plugin for the game you are playing.  (Marked in bold red)" />
+    <Control ControlPath="root\tabControl1\tabPage4" UniqueName="label7" Text="ACT by itself does not have any capability to parse game log files.  You must use an external plugin to parse log files from different games.  Browse the drop-down list and select a plugin to enable with the associated button. Do not enable more than one parsing plugin at a time." />
+    <Control ControlPath="root\tabControl1\tabPage4" UniqueName="btnUsePlugin" Text="Download/Enable Plugin" />
+    <Control ControlPath="root\tabControl1\tabPage4" UniqueName="btnGetPluginTitles" Text="1: Get available parsing plugins" />
+    <Control ControlPath="root\tabControl1" UniqueName="tabPage2" Text="Log File" />
+    <Control ControlPath="root\tabControl1\tabPage2" UniqueName="label3" Text="Any time you switch characters ACT can detect a different log file being used and switch to it automatically." />
+    <Control ControlPath="root\tabControl1\tabPage2" UniqueName="cbAutoLogSwitch" Text="Auto-load recently changed log files." />
+    <Control ControlPath="root\tabControl1" UniqueName="tabPage3" Text="Startup Settings" />
+    <Control ControlPath="root\tabControl1\tabPage3" UniqueName="label6" Text="Upon starting, exiting or character switching, ACT will attempt to rename the last open log file if it is larger than the listed size.  This may require administrative privilages and will not work with files currently being written to.&#xD;&#xA;&#xD;&#xA;This operation is merely for convenience of importing old files or opening them in text editors.  There is no real-time performance consideration when changing this setting." />
+    <Control ControlPath="root\tabControl1\tabPage3" UniqueName="label5" Text="megabytes.  (Zero will disable)" />
+    <Control ControlPath="root\tabControl1\tabPage3" UniqueName="label4" Text="Attempt to split the log file every" />
+    <Control ControlPath="root\tabControl1\tabPage3" UniqueName="label2" Text="Enabling this will allow ACT and possibly plugins to check for new versions each time they start.  Enabling this is recommended to remain up-to-date with fixes/additions.  (Requires Internet Connection)" />
+    <Control ControlPath="root\tabControl1\tabPage3" UniqueName="cbAutoVerCheck" Text="Auto Version Check" />
+</ControlText>

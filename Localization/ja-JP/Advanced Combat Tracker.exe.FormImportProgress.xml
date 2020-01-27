@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ControlText Form="FormImportProgress">
+    <Control ControlPath="root" UniqueName="gbPov" Text="Point of View" />
+    <Control ControlPath="root\gbPov" UniqueName="btnLastKnownName" Text="." />
+    <Control ControlPath="root\gbPov" UniqueName="btnOk" Text="Use Above" />
+    <Control ControlPath="root\gbPov" UniqueName="label1" Text="Character Name:" />
+    <Control ControlPath="root" UniqueName="groupBox3" Text="Batch Statistics" />
+    <Control ControlPath="root\groupBox3" UniqueName="lblBatchStats" Text="." />
+    <Control ControlPath="root\groupBox3" UniqueName="lblLabels2" Text="Time Spent:&#xD;&#xA;Lines Read:&#xD;&#xA;LPS:&#xD;&#xA;Characters Read:&#xD;&#xA;CPS:&#xD;&#xA;" />
+    <Control ControlPath="root" UniqueName="groupBox2" Text="File Statistics" />
+    <Control ControlPath="root\groupBox2" UniqueName="lblFileStats" Text="." />
+    <Control ControlPath="root\groupBox2" UniqueName="lblLabels" Text="Time Spent:&#xD;&#xA;Lines Read:&#xD;&#xA;LPS:&#xD;&#xA;Characters Read:&#xD;&#xA;CPS:" />
+    <Control ControlPath="root" UniqueName="groupBox1" Text="Progress" />
+    <Control ControlPath="root\groupBox1" UniqueName="lblFileProgress" Text="Progress: 0%" />
+    <Control ControlPath="root\groupBox1" UniqueName="lblBatchCount" Text="Batch 0 of 0" />
+    <Control ControlPath="root\groupBox4" UniqueName="btnClose" Text="Close" />
+</ControlText>
