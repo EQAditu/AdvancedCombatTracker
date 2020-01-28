@@ -1,386 +1,386 @@
 <?xml version="1.0" encoding="utf-8"?>
 <InternalStrings>
-  <string key="attackTypeTerm-all" value="すべて"/>
-  <string key="btnFeedbackSubmit-Text2" value="さらに送信するには再起動してください。"/>
-  <string key="data-dnumBlock" value="ブロック"/>
-  <string key="data-dnumDeath" value="戦闘不能"/>
-  <string key="data-dnumMiss" value="ミス"/>
-  <string key="data-dnumNoDamage" value="ノーダメージ"/>
-  <string key="data-dnumParry" value="パリィ"/>
-  <string key="data-dnumResist" value="レジスト"/>
-  <string key="data-dnumRiposte" value="反射"/>
-  <string key="data-timerStringNone" value="(none)"/>
-  <string key="encounterData-defaultEncounterName" value="エンカウント"/>
-  <string key="exportFormattingDesc-critheal%" value="ヒールのクリティカル率"/>
-  <string key="exportFormattingDesc-critheals" value="ヒールのクリティカル回数"/>
-  <string key="exportFormattingDesc-crithit%" value="攻撃のクリティカル率"/>
-  <string key="exportFormattingDesc-crithits" value="攻撃のクリティカル回数"/>
-  <string key="exportFormattingDesc-cures" value="戦闘員が回復またはディスペルした合計回数"/>
-  <string key="exportFormattingDesc-custom" value="追加する前に上記のテキストボックスにカスタムテキストを入力します。"/>
-  <string key="exportFormattingDesc-damage" value="総与ダメージ量"/>
-  <string key="exportFormattingDesc-damage%" value="総与ダメージの割合"/>
-  <string key="exportFormattingDesc-damagetaken" value="総被ダメージ量"/>
-  <string key="exportFormattingDesc-deaths" value="戦闘不能回数"/>
-  <string key="exportFormattingDesc-dps" value="DPS（12.34形式）"/>
-  <string key="exportFormattingDesc-DPS" value="DPS（12形式）"/>
-  <string key="exportFormattingDesc-duration" value="戦闘時間（mm:ss形式）"/>
-  <string key="exportFormattingDesc-DURATION" value="戦闘時間（トータル秒数形式）"/>
-  <string key="exportFormattingDesc-extdps" value="戦闘員の総与ダメージ量を戦闘時間で割った値。12.34形式 -- 専らDPS値として扱われるのはこの値です。"/>
-  <string key="exportFormattingDesc-EXTDPS" value="戦闘員の総与ダメージ量を戦闘時間で割った値。12形式 -- 専らDPS値として扱われるのはこの値です。"/>
-  <string key="exportFormattingDesc-exthps" value="戦闘員の総ヒール量を戦闘時間で割った値。12.34形式 -- 専らHPS値として扱われるのはこの値です。"/>
-  <string key="exportFormattingDesc-EXTHPS" value="戦闘員の総ヒール量を戦闘時間で割った値。12形式 -- 専らHPS値として扱われるのはこの値です。"/>
-  <string key="exportFormattingDesc-healed" value="総ヒール量"/>
-  <string key="exportFormattingDesc-healed%" value="総ヒールの割合"/>
-  <string key="exportFormattingDesc-heals" value="総ヒール回数"/>
-  <string key="exportFormattingDesc-healstaken" value="被ヒール量"/>
-  <string key="exportFormattingDesc-hitfailed" value="ミス数。この値にはレジスト、反射、ブロック、回避およびその他の回数も含まれます。"/>
-  <string key="exportFormattingDesc-hits" value="ヒット数。ダメージを与えた攻撃の回数"/>
-  <string key="exportFormattingDesc-kills" value="キル数"/>
-  <string key="exportFormattingDesc-maxheal" value="最大ヒール量（[Combatant-]SkillName-Healing#）"/>
-  <string key="exportFormattingDesc-MAXHEAL" value="最大ヒール量（[Combatant-]Healing#）"/>
-  <string key="exportFormattingDesc-maxhealward" value="最大ヒール/ワード量（[Combatant-]SkillName-Healing#）"/>
-  <string key="exportFormattingDesc-MAXHEALWARD" value="最大ヒール/ワード量（[Combatant-]Healing#）"/>
-  <string key="exportFormattingDesc-maxhit" value="最大ダメージヒット数（[Combatant-]SkillName-Damage#）"/>
-  <string key="exportFormattingDesc-MAXHIT" value="最大ダメージヒット数（[Combatant-]Damage#）"/>
-  <string key="exportFormattingDesc-misses" value="ミスメッセージを発生させたオートアタック、詠唱技の回数"/>
-  <string key="exportFormattingDesc-name" value="戦闘員の名前"/>
-  <string key="exportFormattingDesc-NAME" value="戦闘員の名前、前方n文字に短縮した名前。例: 'NAME:5'"/>
-  <string key="exportFormattingDesc-NAME10" value="戦闘員の名前（前方10文字）"/>
-  <string key="exportFormattingDesc-NAME11" value="戦闘員の名前（前方11文字）"/>
-  <string key="exportFormattingDesc-NAME12" value="戦闘員の名前（前方12文字）"/>
-  <string key="exportFormattingDesc-NAME13" value="戦闘員の名前（前方13文字）"/>
-  <string key="exportFormattingDesc-NAME14" value="戦闘員の名前（前方14文字）"/>
-  <string key="exportFormattingDesc-NAME15" value="戦闘員の名前（前方15文字）"/>
-  <string key="exportFormattingDesc-NAME3" value="戦闘員の名前（前方3文字）"/>
-  <string key="exportFormattingDesc-NAME4" value="戦闘員の名前（前方4文字）"/>
-  <string key="exportFormattingDesc-NAME5" value="戦闘員の名前（前方5文字）"/>
-  <string key="exportFormattingDesc-NAME6" value="戦闘員の名前（前方6文字）"/>
-  <string key="exportFormattingDesc-NAME7" value="戦闘員の名前（前方7文字）"/>
-  <string key="exportFormattingDesc-NAME8" value="戦闘員の名前（前方8文字）"/>
-  <string key="exportFormattingDesc-NAME9" value="戦闘員の名前（前方9文字）"/>
-  <string key="exportFormattingDesc-newline" value="改行。この要素の後の書式設定は新しい行に表示されます。"/>
-  <string key="exportFormattingDesc-powerdrain" value="この戦闘員が他の戦闘員から吸収した力の量"/>
-  <string key="exportFormattingDesc-powerheal" value="この戦闘員が他の戦闘員に与えた力の量"/>
-  <string key="exportFormattingDesc-swings" value="攻撃の試行回数。 これにはオートアタックまたはスキルが含まれます。これにはダメージを与えないレジストスキルも含まれます。"/>
-  <string key="exportFormattingDesc-tab" value="タブ。この要素の後の書式設定は相対的な列配置で表示されます。（サンプルではこれを適切に表示できません）"/>
-  <string key="exportFormattingDesc-threatdelta" value="The amount of direct threat output relative to zero."/>
-  <string key="exportFormattingDesc-threatstr" value="The amount of direct threat output that was increased/decreased."/>
-  <string key="exportFormattingDesc-title" value="終了したエンカウントのタイトル"/>
-  <string key="exportFormattingDesc-tohit" value="命中率。12.34形式"/>
-  <string key="exportFormattingDesc-TOHIT" value="命中率。12形式"/>
-  <string key="exportFormattingLabel-critheal%" value="ヒールのクリティカル率"/>
-  <string key="exportFormattingLabel-critheals" value="ヒールのクリティカル回数"/>
-  <string key="exportFormattingLabel-crithit%" value="ヒールのクリティカル率"/>
-  <string key="exportFormattingLabel-crithits" value="ヒールのクリティカル回数"/>
-  <string key="exportFormattingLabel-cures" value="ヒールまたはディスペル回数"/>
-  <string key="exportFormattingLabel-custom" value="カスタムテキスト"/>
-  <string key="exportFormattingLabel-damage" value="与ダメージ"/>
-  <string key="exportFormattingLabel-damage%" value="与ダメージ率"/>
-  <string key="exportFormattingLabel-damagetaken" value="被ダメージ"/>
-  <string key="exportFormattingLabel-deaths" value="戦闘不能回数"/>
-  <string key="exportFormattingLabel-dps" value="DPS"/>
-  <string key="exportFormattingLabel-DPS" value="DPS（短縮）"/>
-  <string key="exportFormattingLabel-duration" value="戦闘時間"/>
-  <string key="exportFormattingLabel-DURATION" value="戦闘時間（短縮）"/>
-  <string key="exportFormattingLabel-extdps" value="エンカウントDPS"/>
-  <string key="exportFormattingLabel-EXTDPS" value="エンカウントDPS（短縮）"/>
-  <string key="exportFormattingLabel-exthps" value="エンカウントHPS"/>
-  <string key="exportFormattingLabel-EXTHPS" value="エンカウントHPS（短縮）"/>
-  <string key="exportFormattingLabel-healed" value="与ヒール量"/>
-  <string key="exportFormattingLabel-healed%" value="与ヒール率"/>
-  <string key="exportFormattingLabel-heals" value="ヒール回数"/>
-  <string key="exportFormattingLabel-healstaken" value="被ヒール量"/>
-  <string key="exportFormattingLabel-hitfailed" value="その他の回避"/>
-  <string key="exportFormattingLabel-hits" value="ヒット数"/>
-  <string key="exportFormattingLabel-kills" value="キル数"/>
-  <string key="exportFormattingLabel-maxheal" value="最大ヒール量"/>
-  <string key="exportFormattingLabel-MAXHEAL" value="最大ヒール量（短縮）"/>
-  <string key="exportFormattingLabel-maxhealward" value="最大ヒール/解除量"/>
-  <string key="exportFormattingLabel-MAXHEALWARD" value="最大ヒール/解除量（短縮）"/>
-  <string key="exportFormattingLabel-maxhit" value="最大ヒット数"/>
-  <string key="exportFormattingLabel-MAXHIT" value="最大ヒット数（短縮）"/>
-  <string key="exportFormattingLabel-misses" value="ミス"/>
-  <string key="exportFormattingLabel-name" value="名前"/>
-  <string key="exportFormattingLabel-NAME" value="短縮された名前"/>
-  <string key="exportFormattingLabel-NAME10" value="名前（10文字）"/>
-  <string key="exportFormattingLabel-NAME11" value="名前（11文字）"/>
-  <string key="exportFormattingLabel-NAME12" value="名前（12文字）"/>
-  <string key="exportFormattingLabel-NAME13" value="名前（13文字）"/>
-  <string key="exportFormattingLabel-NAME14" value="名前（14文字）"/>
-  <string key="exportFormattingLabel-NAME15" value="名前（15文字）"/>
-  <string key="exportFormattingLabel-NAME3" value="名前（3文字）"/>
-  <string key="exportFormattingLabel-NAME4" value="名前（4文字）"/>
-  <string key="exportFormattingLabel-NAME5" value="名前（5文字）"/>
-  <string key="exportFormattingLabel-NAME6" value="名前（6文字）"/>
-  <string key="exportFormattingLabel-NAME7" value="名前（7文字）"/>
-  <string key="exportFormattingLabel-NAME8" value="名前（8文字）"/>
-  <string key="exportFormattingLabel-NAME9" value="名前（9文字）"/>
-  <string key="exportFormattingLabel-newline" value="改行"/>
-  <string key="exportFormattingLabel-powerdrain" value="吸収"/>
-  <string key="exportFormattingLabel-powerheal" value="与バフ"/>
-  <string key="exportFormattingLabel-swings" value="スイング"/>
-  <string key="exportFormattingLabel-tab" value="タブ"/>
-  <string key="exportFormattingLabel-threatdelta" value="Δ驚異"/>
-  <string key="exportFormattingLabel-threatstr" value="驚異の増減"/>
-  <string key="exportFormattingLabel-title" value="エンカウントタイトル"/>
-  <string key="exportFormattingLabel-tohit" value="ヒット率"/>
-  <string key="exportFormattingLabel-TOHIT" value="ヒット率（短縮）"/>
-  <string key="graphAdv-termDps" value="DPS"/>
-  <string key="graphAdv-toolTip" value="+{0} ({1} 秒の平均値)"/>
-  <string key="graphCombatant-toolTip" value="+{0} ({1:#,0} 秒の平均値)"/>
-  <string key="helpPanel-btnExportUIBrowser" value="このボタンを押すとウィザードが起動し、EQ2のWebブラウザーをACTのエンカウンターインデックスに設定し、オプションで折りたたみ可能なインターフェイスとコントロールを備えたブラウザーUI置換を抽出して、画面スペースを最大化できます。"/>
-  <string key="helpPanel-btnImportFile" value="ログファイルからエンカウントをインポートするには、開始日と終了日を選択し解析するログファイルを選択します。"/>
-  <string key="helpPanel-btnOdbcDropTables" value="ACTが使用する各テーブルでDROPコマンドが実行されます。 すべてのテーブルデータが削除されデータソースからテーブルが削除されます。"/>
-  <string key="helpPanel-btnOdbcTestConnection" value="接続文字列で指定されたODBCデータソースへのログインが試行されます。"/>
-  <string key="helpPanel-btnOdbcValidateTables" value="ODBCデータソースに必要なテーブルがあり、テーブルに必要な列があることを確認します。 不足しているものがある場合、ACTはテーブルの作成または変更を試みます。SQLエクスポートを行うには成功が必要です。"/>
-  <string key="helpPanel-btnResetColors" value="色/フォント設定をリセットするには、ACTを再起動する必要があります。"/>
-  <string key="helpPanel-btnResetOdbcHacks" value="すべてのODBCハックを削除し、MSSQL、MS Access、Postgres などのさまざまなデータソースの一連の既知のハックに置き換えます。"/>
-  <string key="helpPanel-cbAutoLoadLogs" value="ACTは、既存のログが更新されているかどうかを数秒ごとに確認し、現在使用されているログに切り替える必要があります。（新しいファイルを自動的にチェックしません）"/>
-  <string key="helpPanel-cbBlockisHit" value="有効にした場合、ブロックはヒットとみなされます。 無効な場合、ダメージを与えた攻撃のみをヒットとみなします。"/>
-  <string key="helpPanel-cbCullAll" value="新しいゾーンリストが作成されると、ACTはリストされた「すべて」のゾーンのエンカウントの数を保持し、古いものを間引きします。"/>
-  <string key="helpPanel-cbCullCount" value="エンカウントが終了すると、通常のエンカウントはリストされた数から除外されます。 これは現在または以前のゾーンでのエンカウントに適用されますが、ゾーン全体の「すべて」のエンカウントには影響しません。"/>
-  <string key="helpPanel-cbCullCountIgnoreNoAlly" value="「エンカウント」とマークされたソロのエンカウントは、除外する古いエンカウンターの数を決定するときにカウントに追加されません。"/>
-  <string key="helpPanel-cbCullNoAlly" value="エンカウントが終了すると、「エンカウント」というラベルが付いたすべてのエンカウント（最後を除く）が削除されます。"/>
-  <string key="helpPanel-cbCullOther" value="新しいゾーンリストが作成されると、ACTはこれまでの多くのゾーンの通常のエンカウントを保持します。"/>
-  <string key="helpPanel-cbCullTimer" value="エンカウントが終了すると、この制限時間よりも古いすべてのエンカウント（ゾーン全体のエンカウントを除く）は削除されます。"/>
-  <string key="helpPanel-cbCurrentOdbc" value="戦闘中、ACTはODBCデータソースのcurrent_tableという一時テーブルに数秒ごとにエクスポートできます。 すべてのエクスポート、テーブルは削除され、現在のエンカウントを反映するために補充されます。 このオプションは、データソースへの接続が非常に速い場合にのみお勧めします。"/>
-  <string key="helpPanel-cbDoubleBufferLV" value="チェックすると、ACTはメインテーブルの最小限の再描画を有効にしようとします。 通常、Windows XPより前のWindowsにはこの機能がなく、望ましくない結果を引き起こす可能性があります。"/>
-  <string key="helpPanel-cbExFile" value="戦闘の最後に、このオプションは、クリップボードのエクスポートがどのように見えるかに似たものをマクロファイルにエクスポートします。 このファイルのエクスポートは、クリップボードのエクスポートのように256文字に制限されていませんが、16行しか出力できません。 エクスポートが作成されたら、次のコマンドを使用して結果を表示できます。\n\n/do_file_commands act-export.txt\n\nこのコマンドをトリガーするEQ2マクロを作成できます。 マクロファイルのエクスポートでは、データを表にまとめて表示しやすくします。\n\nエクスポートを表示するチャンネルを事前に以下のオプションに設定する必要があります。 チャネルプレフィックスを空白のままにすると、テキストのみの書式設定オプションがチャネルのプレフィックスを *every* 行にしない限り、マクロファイルが機能しなくなります。"/>
-  <string key="helpPanel-cbExFileColumnAlign" value="有効にすると、テキストエクスポートはテーブルに整列され、各セルはその列の最長エントリの長さまでパディングされます。 {name} の代わりに{NAME10} などのテキストフォーマッタを使用することをお勧めします。そうしないと、列に余分なパディングが生じる場合があります。"/>
-  <string key="helpPanel-cbExGraph" value="有効にすると、HTMLエクスポートにメインのエンカウントグラフが含まれます。"/>
-  <string key="helpPanel-cbExHTML" value="EQ2には、FireFox に基づいた統合Webブラウザーが付属しています。 これは、フルスクリーンでACTによってエクスポートされたデータを表示するために使用できます。 メインのエンカウントテーブルはHTMLとしてエクスポートされEQ2 HTMLウィンドウ内に表示されます。 HTMLウィンドウにアクセスするには「browser」と入力します"/>
-  <string key="helpPanel-cbExHTMLFTP" value="有効にすると、ACTがEQ2互換のHTMLファイルをエクスポートするときに選択したFTPサーバーにアップロードしようとします。使用前に必ず設定をテストしてください。"/>
-  <string key="helpPanel-cbExOdbc" value="これにより、エンカウントが終了したときにODBCを介したSQLエクスポートが自動的に有効になります。\n\nこの機能を使用するには、データソースに接続し、接続文字列にリモートホスト情報を入力するODBCドライバーが必要です。 http://connectionstrings.com/は、特定のSQLデータソースの接続文字列を作成するのに役立ちます。"/>
-  <string key="helpPanel-cbExportBeep" value="有効にすると、クリップボードにエクスポートするとデフォルトのシステムビープ音が鳴ります。 これは、エンカウントが終了し、EQ2に貼り付ける新しいデータがあるときの良い指標です。"/>
-  <string key="helpPanel-cbExportFilterSpace" value="有効にすると、ミニ解析ウィンドウとクリップボードのエクスポートにより、名前にスペースが含まれる戦闘員が除外されます。 これにより、「巨大なコウモリ」や「キングドラエック」などのほとんどのMobは除外されますが、「Anguis」や「Frostbite」は除外されません。"/>
-  <string key="helpPanel-cbExText" value="エンカウントの戦闘サマリーは、エンカウントが終了した後にクリップボードにエクスポートされます。これらのサマリーは、Ctrl-V を押してEQ2に貼り付け、[一般オプション] -&gt; [テキストのみの書式設定] -&gt; [クリップボードエクスポート書式設定] でカスタマイズできます。"/>
-  <string key="helpPanel-cbGCollectOnClear" value="有効にすると、ACTはエンカウントをクリアするときに GCCollect を呼び出します。 これを行うと、[クリアエンカウント] ボタンの時間が長くなり、再起動するまでACTを完全にフリーズすることがわかっています。 ACTに問題があり、時間の経過とともにメモリが解放されない場合にのみ使用してください。"/>
-  <string key="helpPanel-cbGermanMergeNames" value="有効にすると、次のような文法的な変更が加えられた戦闘員：ruhiger Wachposten、ruhigen Wachpostens、ruhigen Wachposten、ruhige Wachposten、ruhigen Wachposten en; すべて同じ戦闘員として表示されます。（エンカウントで最初に現れたもの）"/>
-  <string key="helpPanel-cbGExpEnd" value="「エンカウンターを倒すとボーナス経験が得られます！」 が表示された場合、エンカウンターは終了したと見なされます。\n（「経験値を達成経験値に変換します！」1秒に2回もこれをトリガーします。）"/>
-  <string key="helpPanel-cbGraphSoloInc" value="無効にすると、ソロ時のグラフは与ダメージに対してのみDPSラインを表示します。 有効にすると、被ダメージと被ヒールのDPSラインも生成されます。（これにより、生成に使用されるCPU時間がわずかに増加します）"/>
-  <string key="helpPanel-cbHtmlTimers" value="有効にすると、ACTはタイマーウィンドウの現在のビューを表示するHTMLページをエクスポートします。タイマービューは元のウィンドウと同じサイズになるため、必要に応じてサイズを変更します。"/>
-  <string key="helpPanel-cbIdleEnd" value="If no combat actions such as attacking are observed for N number of seconds value=the encounter will be considered ended."/>
-  <string key="helpPanel-cbIdleTimerEnd" value="A previously defaulted non-option, ACT can internally count seconds of inactivity instead of waiting on a log timestamp with a time sufficiently after the last combat action.  If disabled, ACT will only end encounters based off of timestamps, and if no new log lines are parsed, its possible to never end an encounter *until* a new log timestamp is seen from EQ2.  When enabled value=the timer will not strictly end an encounter based off the timer, but two seconds after (in absense of log timestamps)."/>
-  <string key="helpPanel-cbKillEnd" value="When an allied combatant kills another, the encounter will be considered ended."/>
-  <string key="helpPanel-cbLcdEnabled" value="This will enable ACT's support for the G15 and G19 keyboards, or other devices that use those unified drivers.  For the default applets: button 1 of 4(G15) or Menu button(G19) will change ACT modes.  The next button(G15) or OK button(G19) will usually change sub-modes within that mode, such as switching export formats."/>
-  <string key="helpPanel-cbLcdRoute" value="When the ACT Clipboard Sharer is connected, using this option will route all LCD traffic to the G15 LCD on the connected computer's keyboard.  This allows you to run ACT on a different computer than EQ2 and retain all LCD functionality."/>
-  <string key="helpPanel-cbLongEncDuration" value="Previously when only using timed encounter ending, heals being cast while the delay was counting down could affect the encounter's total duration, and therefore ExtDPS.  If unchecked, heals after the last combat action will still be recorded up until the encounter is terminated value=but will not affect the duration of the encounter."/>
-  <string key="helpPanel-cbMiniClickThrough" value="When enabled, mouse actions will not affect the Mini Window.  When transparency is set value=this allows you to both see through and click on things behind the window.  Of course you can no longer move or close the window by normal means until click-through is disabled.  NOTE: You may toggle this option by right-clicking the main window 'Show Mini' button."/>
-  <string key="helpPanel-cbMiniColumnAlign" value="When enabled, the text export will be aligned into a table where each cell is padded to the length of the longest entry in that column.  The alignment is dependant on the font selected.  It is recommended you use a text formatter such as {NAME10} instead of {name} or that column may have excessive padding."/>
-  <string key="helpPanel-cbMultiDamageIsOne" value="When enabled, an attack that has multiple damage types, such as '300 crushing, 5 poison and 5 disease damage' will show up as one total attack: 300/5/5 crushing/poison/disease, internally seen as 310.  If disabled, each damage type will show up as an individual swing, IE three attacks: 300 crushing; 5 poison; 5 disease.  Having a single attack show up as multiple will have consequences when calculating ToHit%."/>
-  <string key="helpPanel-cbOnlyGraphAllies" value="When checked, simple encounter bar graphs will only show your allies."/>
-  <string key="helpPanel-cbPetIsMaster" value="When checked, a pet will not show as its own entry, but as a spell under their master.  When unchecked, the pet is considered a seperate combatant and has its own statistics unrelated to its master.\nThis setting is not retroactive, and will not combine or seperate a pet from its master if the encounter has already taken place.  Only future encounters will be affected by this setting.\n\n\nSince LU19 and &lt;Purpose tags&gt; showing under a pet's name and not in log files, parsers cannot automatically see who a pet belongs to."/>
-  <string key="helpPanel-cbRecalcWardedHits" value="有効にすると、0ダメージのヒットまたはワードの吸収直後のダメージの減少ヒットは吸収量だけ増加します。 ストンスキンのダメージなしのヒットは再計算できません。"/>
-  <string key="helpPanel-cbRecordLogs" value="チェックすると、ACTはエンカウント中に表示されるすべてのログ行を記録します。 次に、エンカウントを右クリックして [ログの表示] を選択し、それらを表示/検索します。 このオプションを無効にするとデフォルト設定と比較してメモリ使用量が45％程度削減されます。 エクスポートされたACTファイルはこれらの記録されたログを保持します。"/>
-  <string key="helpPanel-cbRestrictToAll" value="有効にすると、各戦闘員の完全に入力されるダメージタイプエントリのみが、参照用にマーク（参照）されます。 All、crush、slashを表示する「Melee（Out）」の代わりに、crush / slashの組み合わせであるAllのみを表示します。 crushとslashは、（Ref）タグにより、「総与ダメージ（Ref）」の下に引き続き表示されます。 リストは単純に混雑します。\nこのオプションを有効にすると、デフォルト設定と比較してCPU使用量が10％未満、メモリ使用量が10％減少します。 無効にするとこのオプションは論理リストのすべてのエントリに入力されます。"/>
-  <string key="helpPanel-cbSExpEnd" value="If 'You gain experience!' is seen, the encounter will be considered ended. \n('You convert experience into achievement experience!' will also trigger this.)"/>
-  <string key="helpPanel-cbSqlSafeMode" value="In safe mode, SQL commands will be sent one at a time and server response checked.  Otherwise commands will be sent in 100 row batches, which while faster will be more problematic to debug."/>
-  <string key="helpPanel-cbSwarmIsMaster" value="有効にすると、ペットの攻撃はマスターの攻撃に合算されます。被ダメージはマスターに合算されません。"/>
-  <string key="helpPanel-cbWebServerEnabled" value="The ACT Web Interface is somewhat similar to the EQ2 HTML exports in appearance.  Dissimilarly value=the web interface is not made up of intermediary HTML files but generated HTML upon request.  By default value=you can see auto-updating pages of the current encounter table value=Mini-Window text(with support for multiple presets) value=spell timers and a page that can browse through all of ACT's encounter data in memory.  Context-menu reports based on that data are not currently available but plugins can be made to expand the web interface."/>
-  <string key="helpPanel-cbWebServerShowReq" value="If enabled, all HTTP requests will be shown.  Otherwise things like auto-updating portions of pages or .css/.js files will be hidden (unless very large).  One request to '/timers'(always shown) may initiate requests to '/ACT.js' value='/ACT.css' and '/timers.body'(optionally shown) as well."/>
-  <string key="helpPanel-cbZoneAllListing" value="As the first encounter of each Zone branch, an 'All' entry can exist which will combine all data from other encounters for that zone.  As encounters progress within that zone value=the All entry will be updated in real time.  The All encounter entry will be identical to a merged encounter of all encounters within that zone.\n\nDisabling this option will reduce memory and CPU usage a bit more than 10% when compared to default options."/>
-  <string key="helpPanel-ccDGAllyText" value="The foreground color of combatant names that are marked as allies."/>
-  <string key="helpPanel-ccDGPersonalBackcolor" value="The background color of the main table row containing your combatant."/>
-  <string key="helpPanel-ccEncLabel1" value="すべての敵が倒したエンカウントの色。"/>
-  <string key="helpPanel-ccEncLabel2" value="結果が不明なエンカウントの色。"/>
-  <string key="helpPanel-ccEncLabel3" value="すべてのアライアンスが全滅したエンカウントの色。"/>
-  <string key="helpPanel-ColorRestart" value="これらの色を変更するにはACTを再起動する必要があります。"/>
-  <string key="helpPanel-CurrentExports" value="Checking this will create a custom HTML page with an auto updating graph or table.  The page will auto-refresh at the user specified interval providing more or less a real-time view of the encounter."/>
-  <string key="helpPanel-ddlGraphPriority" value="この設定により、DPSトレンドグラフ生成の優先順位が変更されます（adv遭遇グラフおよび戦闘員グラフ）。 すべてのプログラムには優先度があり、通常はデフォルトで標準です。この優先度は、現在のタスクに割り当てるCPU時間を定義します。 最低（アイドル）に設定されている場合、グラフ生成には他のアプリケーションで使用されていないCPU時間しかかかりません。 EQ2が実行されている場合、これはほとんど何も起こりません。 通常の優先度では、ACTおよびEQ2などの他のタスクに等しい量のCPU時間が与えられます。&#10;上記の標準（Adv Encountグラフでは推奨されません）は、他のほとんどのプログラムよりもグラフ生成を優先し、EQ2で顕著なスタッターが発生したり、一時的にフリーズすることがあります。 ACTのUIはグラフ生成中に応答しなくなる場合があります。&#10;この設定は、EQ2の疑似HTML（および自動ODBC）エクスポートにも影響します。 したがって、別のエンカウントが終了してエクスポートが必要になる前にHTMLエクスポートを完了できない場合は、この設定を上げることをお勧めします。"/>
-  <string key="helpPanel-ddlLanguage" value="This will change the parsing engine to another language or Spell Timers only mode."/>
-  <string key="helpPanel-ExFTPPASV" value="If you are behind a router or have multiple NICs you may need to use Passive mode transfers.  If the target FTP server is under the same conditions(a PASV only state), you must use Active mode.  Two machines that require PASV mode cannot establish FTP transfers."/>
-  <string key="helpPanel-gbOdbcHacks" value="This section contains rules to modify all commands sent to the datasource if the connection string matches the rule.  You may use the Reset button to pre-populate known rules for reference."/>
-  <string key="helpPanel-GraphSize" value="This will set the image dimentions of the graph in HTML exporting and EQ2 viewing."/>
-  <string key="helpPanel-GraphType" value="Select a graphing method for the main encounter display."/>
-  <string key="helpPanel-IO_ExportAct" value="This feature will export a compressed binary file which can be later imported by ACT to recreate the encounter.  If you wish to export more than one encounter as a single file, use the Show Checkboxes feature on the Main tab."/>
-  <string key="helpPanel-IO_ExportHtml" value="This feature will export the selected encounters into a single static HTML file which is then controlled by JavaScript and CSS."/>
-  <string key="helpPanel-IO_ImportAct" value="This feature is specifically for importing *.act files exported by ACT."/>
-  <string key="helpPanel-IO_ImportClip" value="Press the Import Clipboard button to import the clipboard contents as though importing a log file."/>
-  <string key="helpPanel-IO_ImportLog" value="Select the starting and end points before selecting the file to parse."/>
-  <string key="helpPanel-IO_XmlFile" value="This feature was added by user request.  I don't know of any practical use for it."/>
-  <string key="helpPanel-lblExFileLines" value="ACT will only create macro files with up to this many commands.  NOTE: EQ2 has server side filtering to prevent spam in public channels.  No matter what, you cannot exceed 16 chat commands in a public channel within a short amount of time."/>
-  <string key="helpPanel-lblExportSound" value="The sound for when ACT creates clipboard exports, macro exports, etc either manually or immediately after combat."/>
-  <string key="helpPanel-lblLcdMiniFormat" value="This LCD mode mimics the Mini Window in ACT.  This selector changes the export format displayed and may also be flipped through using the 2nd button of the G15 or OK button of the G19."/>
-  <string key="helpPanel-lblPersonalParseFormat" value="This LCD mode will create an export with only your personal data in it, unlike the repeating format of all other combatants."/>
-  <string key="helpPanel-lblSplitFile" value="As long as another program has not locked the file, ACT will attempt to rename the file with a date when opening or closing a file. (When over this size)"/>
-  <string key="helpPanel-lblWebServerPort" value="The listening port to accept HTTP requests from.  If you use a non-standard port (80) value=clients must add that port to their URL notation like the following: http://127.0.0.1:80/"/>
-  <string key="helpPanel-LogPriority" value="This setting will change the priority of normal log parsing.  All programs have a priority, usually Normal by default, and this priority defines how much CPU time should be given to the current task.  If set to Lowest(Idle), log parsing will only take CPU time not used by other applications.  If EQ2 is running, this will be next to nothing.  Normal priority will give equal amounts of CPU time to ACT and any other task, such as EQ2.\n\nIf ACT seems unable to keep up with log parsing tasks while EQ2 is running, you may wish to set this to Above Normal.\n\nFor this setting to take effect, you must restart ACT or Close and Reopen the current log."/>
-  <string key="helpPanel-Options_LcdColor" value="This section will define the look of the G19 specific applet.  Use the Change Font buttons to change the font/size of the specific modes.  Also be aware that changing the font size may require you to change the vertical spacing to look correct.  You may also change the basic colors of those modes.  The Spell Timer and Graph modes mimic ACT's normal settings for colors."/>
-  <string key="helpPanel-Options_LcdMono" value="This section will define the look of the G15 specific applet.  Use the Font button to choose a base font to use for all screens.  To adjust the font size, use the Size Offset numeric selector for that mode.  Also adjust the vertical spacing of each line as you change the font size to meet your needs."/>
-  <string key="helpPanel-Options_MiniParse" value="The Mini Parse window is a small text only display of the current encounter.  It may also show a graph if you click the red button in the corner.  To change the included information value=create a preset the new export format."/>
-  <string key="helpPanel-Options_Odbc" value="This section is for exporting ACT data into SQL datasources.  ACT uses ODBC connectivity in order to connect to these datasources and the local machine must have an ODBC driver installed to communicate to the desired type of datasource."/>
-  <string key="helpPanel-Options_SelectiveParsing" value="The purpose of selective parsing is to restrict the data that appears.  The list at the left decides which combatants are used for data/exports."/>
-  <string key="helpPanel-Options_Sound" value="This panel will configure the different sounds ACT will generally make for different events.  Command sounds are when you interact with ACT by typing in a game, like '/act end' or '/e end'.  Misc sounds are when ACT tries to randomly get your attention for a miscellaneous purpose.  This could be an update or even an error playing a non-existent sound.\n\nThe bottom radio buttons change through what API ACT tries to make sounds through.  Windows API is very basic for compatibility purposes.  WMP is sufficient in most cases."/>
-  <string key="helpPanel-Options_TableAttackType" value="These are the columns that will appear in the Main tab tables when clicking on TreeView nodes such as 'crush' or 'Smite'.  This table lists all of the individual combat actions of the selected skill name."/>
-  <string key="helpPanel-Options_TableCombatant" value="These are the columns that will appear in the Main tab tables when clicking on TreeView nodes such as 'PlayerName' or 'MobName'.  This table lists all of the damage type categories of the combatant."/>
-  <string key="helpPanel-Options_TableDamageType" value="These are the columns that will appear in the Main tab tables when clicking on TreeView nodes such as 'Outgoing Damage' or 'Healed'.  This table lists all of the skill names of the selected damage type category."/>
-  <string key="helpPanel-Options_TableEnc" value="These are the columns that will appear in the Main tab tables when clicking on TreeView nodes such as 'Mobname - [1:23] 12:01:02 PM'.  This table lists all of the combatants of the selected encounter."/>
-  <string key="helpPanel-Options_TableZone" value="These are the columns that will appear in the Main tab tables when clicking on TreeView nodes such as 'Import/Merge [1]' or 'ZoneName [3] 12:00:00 PM'.  This table lists all of the encounters of that node(Zone)."/>
-  <string key="helpPanel-rbSParseFull" value="Full selective parsing should only be used in small groups where there are other groups near by.  When the encounter begins value=the settings are locked to that encounter.  Using this feature may cause the ExtDPS calculations to differ from other copies of ACT or other parsers depending on the limiting options they use.  Once an encounter has taken place, you cannot add or remove combatants  to it without reparsing that battle.  Full selective parsing will create data gaps and should not be used while using ACT to analyze battles or statistics as it will not show a complete 'picture' of the encounter."/>
-  <string key="helpPanel-SampleType" value="These settings affect how many DPS plots there are along the X-Axis.  If an encounter is one minute long, and Fixed number of DPS samples(6) is selected value=there will be six X-Axis plots in 10 second intervals.  If DPS samples every 15 seconds is selected, there will be four DPS plots at 15 second intervals.  Fixed number is useful for keeping a graph readable no matter how long the encounter, and fixed sample durations is useful for comparisons to other time lines."/>
-  <string key="helpPanel-tbCharName" value="If a log file is open this setting is ignored; however if ACT is used as an offline parser only, this setting will be used to fill in your name instead of using 'YOU'."/>
-  <string key="helpPanel-tbExFileName" value="This export file name is a relative file path to the game folder or may be an absolute path."/>
-  <string key="helpPanel-TextFormatAddPreset" value="Save these format options to the drop down list."/>
-  <string key="helpPanel-TextFormatAllies" value="Allies formatting string. (First Line Format)"/>
-  <string key="helpPanel-TextFormatAlliesOnly" value="When checked, only combatants who have proven themselves allies in the encounter will be included in the export.  This includes healing you or other proven allies value=or attacking your foes.  If you do not make any allies during the encounter, all combatants will be exported."/>
-  <string key="helpPanel-TextFormatAlliesStats" value="When checked, the totals of your allies will be prefixed to the normal export."/>
-  <string key="helpPanel-TextFormatPlayers" value="Per-player formatting string. (Repeating Format)"/>
-  <string key="helpPanel-TextFormatPreset" value="Replace the current formatters with a saved preset."/>
-  <string key="helpPanel-TextFormatRemovePreset" value="Remove the currently selected format from the drop down list."/>
-  <string key="helpPanel-TextFormatSort" value="The sorting method this formatting option will use."/>
-  <string key="helpPanel-xmlShare" value="This section is designed for importing small snippets of settings such as Custom Triggers or Spell Timers.  Typically these snippets will be parsed from game chat but may also be copied from elsewhere and pasted.\n\nWhen an XML snippet is detected in chat value=by default the character name and type of data will appear in the third(yellow) ListBox.  You may then click on the data to review it in the TextBox to the right and either import or delete the entry.\n\nIf you wish to always import data from a particular character value=you may enter their name into the TextBox above the yellow ListBox and click the above Add button.  Similarly there is a list of characters to always ignore data from.  You may temporarily disable an accept/reject entry by unchecking it or you may simply use the Remove button on either list.\n\nYou may possibly come across an XML snippet from another source made for this feature.  Instead of having someone send it to you in a tell value=you may paste it directly into the larger TextBox above the Import/Delete buttons.  It will then appear as a custom entry allowing you to Import or Delete it.\n\nYou may create a snippet from your own data by going into either the Spell Timers options page or Custom Triggers tab value=right-clicking the entry in the list and selecting Copy as Sharable XML.  If sending in EQ2 chat value=the XML snippet must be by itself with no other chat or spaces."/>
-  <string key="helpPanel-xmlSubscription" value="This section is for keeping up to date with external ACT settings.  XML configuration files can be put on the web and upon startup or on demand, ACT can check these files for updates(based on the timestamp).  ACT can be set to automatically import or notify the user of these updates.\n\nThe top ListBox will contain the external URLs of the files already being watched.  To add an entry, enter the URL into the labeled TextBox, select an update option and click Add/Edit.  As update options, you can have ACT check but ignore updated files value=notify you of updates using a message box or automatically import the external XML file upon detected updates.  The Query URL button will list the general contents of the URL, if valid, and list when it was marked changed.  The View in browser link will open the URL in your default web browser.\n\nThe Check Now button will on demand check all of the URLs for changes and check-mark the updated files.  If the URL has been updated but set to be ignored, it will be marked with a gray checkmark.  You may manually check or uncheck an entry by clicking on it.\n\nThe Update Checked button will import all entries with a normal checkmark regardless of if they were detected as changed."/>
-  <string key="mergedEncounterTerm-all" value="すべて"/>
-  <string key="messageBox-avoidanceCopyDetail" value="\n\nDo you wish to copy this to the windows clipboard?"/>
-  <string key="messageBox-clipboardNoText" value="The clipboard cannot be converted to plain text data."/>
-  <string key="messageBox-clipConnectError" value="\n\nIs the specified computer running the ACT Clipboard Sharer application?\n\nDO NOT USE THIS FEATURE IF THE GAME AND ACT ARE RUNNING ON THE SAME SYSTEM"/>
-  <string key="messageBox-cullHistory" value="{0} of {1} total records deleted."/>
-  <string key="messageBox-duplicatePlugin" value="The plugin {0} appears to be loaded multiple times."/>
-  <string key="messageBox-eq2FolderWizard" value="Detected EQ2 path is:\n{0}\n\nIs this correct?"/>
-  <string key="messageBox-eq2NotFound" value="EverQuest2.exe was not found in this folder.  If you are using an international version, you may need to select an 'LP_REGION_??_??' folder."/>
-  <string key="messageBox-exportNoEncounters" value="Please select an encounter in the treeview."/>
-  <string key="messageBox-exportNoOptions" value="Please select something to display in the export."/>
-  <string key="messageBox-feedbackNoComments" value="You did not enter any comments."/>
-  <string key="messageBox-feedbackNoEmail" value="You did not enter your email address.  If you need technical support or help there will be no way to contact you. \nIf you are reporting a rare bug, without more information from you it may be impossible to fix.\n\nAre you sure you wish to leave your email blank?"/>
-  <string key="messageBox-feedbackShort" value="Your feedback seems to be very short.  If you are reporting a problem, the more you describe it the better.  If you do not sufficiently describe the problem, I must resort to guessing what your problem is... which may get no response at all.\n\nDo you wish to continue with sending the feedback?"/>
-  <string key="messageBox-feedbackSuccess" value="フィードバックが完了しました。"/>
-  <string key="messageBox-ftpConnectionTest" value="ACT may become unresponsive during this test.  Please wait at least 30 seconds while the test is performing, and allow access through firewall notifications if they appear."/>
-  <string key="messageBox-ftpTestSuccess" value="\n\n=============================\nこのテストは正常に完了しました。\n\n"/>
-  <string key="messageBox-htmlNoFileAccess" value="Could not write to required files.\n\n{0}"/>
-  <string key="messageBox-importDateTimeFail" value="Could not find the specified date range within the file."/>
-  <string key="messageBox-importHistoryNoLogMatch" value="Could not find a log file for your character that likely had the date range.  Please find this file."/>
-  <string key="messageBox-importParseError" value="Encountered an unrecoverable error while parsing:\n{0}\nParse position: {1}\n\n{2}\n\nIgnore this error and continue?"/>
-  <string key="messageBox-invalidRegex" value="There was a problem with the regular expression syntax:\n{0}\n\nPlease click the Regular Expression link or visit the forums for more help on creating Regex matches."/>
-  <string key="messageBox-localSecurityPolicy" value="The application was disallowed to perform the operation due to security settings of the local machine.\nIf you are running this application from a networked computer, please copy and run it locally.\n\n"/>
-  <string key="messageBox-noFileFound" value="The specified path does not exist."/>
-  <string key="messageBox-odbcDropTables" value="This procedure will delete all ACT related table data and remove the tables from the database.\nOnce completed, this cannot be undone and the tables will have to be recreated before ACT can store data on them once again.\n\nAre you sure you wish to continue?"/>
-  <string key="messageBox-openLogWizard" value="\nIs the displayed log file the one you wish to open with ACT?"/>
-  <string key="messageBox-openLogWizardNoFolder" value="No logs folder exists within this folder.  You must have logging enabled within EQ2 to use ACT.  Type '/log' within EQ2 to determine the logging status."/>
-  <string key="messageBox-openLogWizardNoLogs" value="No logs seem to exist in this folder or subfolder.  You must have logging enabled within EQ2 to use ACT.  Type '/log' within EQ2 to determine the logging status."/>
-  <string key="messageBox-playerRemoveError" value="リストから名前を選択して削除してください。"/>
-  <string key="messageBox-pluginCompileError" value="プラグインソースファイルのコンパイル中にエラーが発生しました。\n\n詳細についてはプラグイン情報パネルを参照してください。"/>
-  <string key="messageBox-pluginImageError" value="Win32/COMアセンブリをネイティブプラグインとして使用したり、32/64ビットアセンブリを混在させることはできません。"/>
-  <string key="messageBox-pluginInvalid" value="このアセンブリには、ACTのプラグインインターフェイスを実装するクラスがありません。またはアセンブリをスキャンするとエラーがスローされました。"/>
-  <string key="messageBox-removePlugin" value="プラグイン {0} を削除してもよろしいですか？"/>
-  <string key="messageBox-searchResults" value="検索は {0} の結果を返しました。"/>
-  <string key="messageBox-selectEq2Path" value="Your current EQ2 installation was not detectable.  Please select the folder where EQ2 resides."/>
-  <string key="messageBox-sortingColumnError" value="Select a column entry to sort by."/>
-  <string key="messageBoxText-fatalUnhandledException" value="未処理の例外が発生しました。ACTを終了する場合があります。\nCtrl-Cを押してこのメッセージボックスをコピーします。\n\n {0}"/>
-  <string key="messageBoxTitle-avoidanceCopyDetail" value="1ヒットあたりの平均ダメージ回避量：{0}"/>
-  <string key="messageBoxTitle-clipboardNoText" value="クリップボードのインポートに失敗しました"/>
-  <string key="messageBoxTitle-clipConnectError" value="クリップボードへの接続に失敗しました"/>
-  <string key="messageBoxTitle-complete" value="操作は完了しました"/>
-  <string key="messageBoxTitle-cullHistory" value="履歴を抽出しました"/>
-  <string key="messageBoxTitle-duplicatePlugin" value="多重にプラグインが追加されました"/>
-  <string key="messageBoxTitle-eq2FolderWizard" value="EQ2フォルダを検証しました"/>
-  <string key="messageBoxTitle-eq2NotFound" value="選択されたフォルダは無効です"/>
-  <string key="messageBoxTitle-error" value="エラー"/>
-  <string key="messageBoxTitle-exportNoEncounters" value="エクスポートするものがありません"/>
-  <string key="messageBoxTitle-fatalUnhandledException" value="致命的なエラー - 予期しない例外が発生しました"/>
-  <string key="messageBoxTitle-feedbackFail" value="フィードバックが送信されていません"/>
-  <string key="messageBoxTitle-feedbackNoConnect" value="フィードバックサーバへの接続に失敗しました"/>
-  <string key="messageBoxTitle-feedbackNoSend" value="フィードバックデータの送信時に失敗しました"/>
-  <string key="messageBoxTitle-feedbackWarning" value="フィードバック警告"/>
-  <string key="messageBoxTitle-fileError" value="ファイルが有効ではありません"/>
-  <string key="messageBoxTitle-ftpTestFail" value="テスト未完了"/>
-  <string key="messageBoxTitle-ftpTestSuccess" value="テスト完了"/>
-  <string key="messageBoxTitle-htmlNoFileAccess" value="ファイルアクセスが拒否されました"/>
-  <string key="messageBoxTitle-importFail" value="解析に失敗しました"/>
-  <string key="messageBoxTitle-invalidRegex" value="無効な正規表現"/>
-  <string key="messageBoxTitle-loadError" value="ロードエラー"/>
-  <string key="messageBoxTitle-localSecurityPolicy" value="セキュリティ例外"/>
-  <string key="messageBoxTitle-noFileFound" value="ファイルが見つかりませんでした"/>
-  <string key="messageBoxTitle-odbcDropTables" value="ACT ODBCデータベースの削除"/>
-  <string key="messageBoxTitle-odbcQueryError" value="ODBC接続 - クエリが失敗しました"/>
-  <string key="messageBoxTitle-openLogWizard" value="ログファイルを検出しました"/>
-  <string key="messageBoxTitle-openLogWizardNoFolder" value="ログフォルダがありません"/>
-  <string key="messageBoxTitle-openLogWizardNoLogs" value="ログファイルが見つかりません"/>
-  <string key="messageBoxTitle-playerRemoveError" value="選択されていません"/>
-  <string key="messageBoxTitle-pluginCompileError" value="コンパイルエラー"/>
-  <string key="messageBoxTitle-pluginImageError" value="イメージの形式が正しくありません"/>
-  <string key="messageBoxTitle-pluginInvalid" value="無効なプラグイン"/>
-  <string key="messageBoxTitle-removePlugin" value="プラグインを解除しますか？"/>
-  <string key="messageBoxTitle-searchResults" value="検索が完了しました"/>
-  <string key="messageBoxTitle-selectEq2Path" value="EQ2の検出に失敗しました"/>
-  <string key="messageBoxTitle-serverStartError" value="サーバを開始できません"/>
-  <string key="messageBoxTitle-sortingColumnError" value="選択されていません"/>
-  <string key="messageBoxTitle-startupLogError" value="最終ログファイルのロードでエラーが発生しました"/>
-  <string key="messageBoxTitle-updateAct" value="更新しますか？"/>
-  <string key="messageBoxTitle-updateCheckFail" value="ACTのバージョンチェックに失敗しました"/>
-  <string key="messageBoxTitle-xmlPrefError" value="XML設定エラー"/>
-  <string key="messageBox-uiExport1" value="EQ2の組込みブラウザのホームページをACTのエンカウント情報にしますか？"/>
-  <string key="messageBox-uiExport2" value="EQ2のブラウザを、折りたたみ可能なインターフェイスとURLバーを持つウィンドウに置き換えますか？"/>
-  <string key="messageBox-updateAct" value="これによりプログラムが終了し更新が開始されます。\n続行しますか？"/>
-  <string key="messageBox-updateCheckFail" value="インターネットからバージョン情報を取得できません。\n"/>
-  <string key="messageBox-xmlPrefError" value="\n\n デフォルト値を施行しています。"/>
-  <string key="messageBox-xmlReadError" value="XML設定ファイルの読込みでエラーが発生しました。: 行 #{0} ({1})\n{2}\n\n デフォルト値を施行しています。"/>
-  <string key="messageBox-xmlSyntaxError" value="XML設定ファイルが破損しているか、使用できない可能性があります。デフォルト値をロードしています。\n{0}"/>
-  <string key="notifText-unknownAssembly" value="次のアセンブリは認識されませんでした。 プラグインからの間違ったバージョンのロードを回避するために、それらを削除または別のフォルダーに移動する必要があります。\r\n\r\n{0}"/>
-  <string key="notifTitle-imageSaveException" value="画像を保存できませんでした"/>
-  <string key="notifTitle-unknownAssembly" value="不明なアセンブリがACTのインストールフォルダに配置されています。（Show をクリックするとフォルダを開きます）"/>
-  <string key="specialAttackTerm-increase" value="Increase"/>
-  <string key="specialAttackTerm-killing" value="Killing"/>
-  <string key="specialAttackTerm-melee" value="melee"/>
-  <string key="specialAttackTerm-none" value="None"/>
-  <string key="specialAttackTerm-nonMelee" value="non-melee"/>
-  <string key="specialAttackTerm-unknown" value="unknown"/>
-  <string key="specialAttackTerm-wardAbsorb" value="Absorption"/>
-  <string key="specialAttackTerm-warded" value="warded"/>
-  <string key="trayButton-ignore" value="Ignore For Now"/>
-  <string key="trayButton-ignoreRestart" value="Ignore"/>
-  <string key="trayButton-ok" value="OK"/>
-  <string key="trayButton-openLogs" value="ログフォルダを開く"/>
-  <string key="trayButton-restartAct" value="再起動"/>
-  <string key="trayText-encClearGcCollect" value="{0:0,0} bytes allocated difference"/>
-  <string key="trayText-eventExceptions1" value="最後にこれらのプラグインから例外が発生しました:\n"/>
-  <string key="trayText-eventExceptions2" value="{0} [{1} 秒]"/>
-  <string key="trayText-lowDotNet" value="検出された .NET Framework のバージョンは {0} です。\n\nv4.6 以降の .NET Framework が必要です。"/>
-  <string key="trayText-restartACT" value="変更を反映を完了させるにはACTを再起動する必要があります。\n\n{0}"/>
-  <string key="trayTitle-eventUnhandledException" value="イベントハンドラーの予期しない例外"/>
-  <string key="trayTitle-lowDotNet" value="古いバージョンの .NET Framework が検出されました"/>
-  <string key="trayTitle-restartAct" value="ACTの再起動がリクエストされました"/>
-  <string key="trayTitle-unhandledException" value="ACTで予期しない例外が発生しました"/>
-  <string key="ui-customTriggerGeneralCategory" value="全般"/>
-  <string key="uiFormActMain-Title0" value="{0}{1}Advanced Combat Tracker{2} - {3} - 記録時間: {4} (Est. {5})"/>
-  <string key="uiFormActMain-Title1" value="*Combat* "/>
-  <string key="uiFormActMain-Title2a" value="ログ - アクティブ"/>
-  <string key="uiFormActMain-Title2b" value="ログ - アイドル"/>
-  <string key="uiFormActMain-Title3" value="[エクスポート]"/>
-  <string key="uiFormActMain-Title4" value="[インポート]"/>
-  <string key="uiFormActMain-Title5" value="[ODBC]"/>
-  <string key="uiFormMiniParse-title" value="ミニパース"/>
-  <string key="uiFormMiniParse-titleCombat" value="ミニパース - *Combat*"/>
-  <string key="uiLoading-init10" value="ACTの初期化 10...  (ログファイルのセットアップ, ゾーン/名称データをスキャンしています)"/>
-  <string key="uiLoading-init11" value="ACTの初期化 11...  (各種データをセットアップしています)"/>
-  <string key="uiLoading-init12" value="ACTの初期化 12...  (インターネットからのダウンロードファイルのブロックをスキャンしています)"/>
-  <string key="uiLoading-init13" value="ACTの初期化 13...  (CPUアフィニティをセットアップしています)"/>
-  <string key="uiLoading-init14" value="ACTの初期化 14...  (メインテーブルのスタイルを初期化しています)"/>
-  <string key="uiLoading-init15" value="ACTの初期化 15...  (列、エクスポートする変数を検証しています)"/>
-  <string key="uiLoading-init16" value="ACTの初期化 16...  (ログの監視を開始しています)"/>
-  <string key="uiLoading-init17" value="ACTの初期化 17...  (タブビューをリセットしています)"/>
-  <string key="uiLoading-init18" value="ACTの初期化 18...  (コンボボックスのスタイルをリセット、解析イベントをチェックしています)"/>
-  <string key="uiLoading-init19" value="ACTの初期化 19...  (アップデートを確認しています)"/>
-  <string key="uiLoading-init20" value="ACTの初期化 20...  (プラグインをチェック)"/>
-  <string key="uiLoading-init21" value="ACTの初期化 21...  (履歴データベースをセットアップしています)"/>
-  <string key="uiLoading-init22" value="ACTの初期化 22...  (ACTのインストールフォルダをチェックしています)"/>
-  <string key="uiLoading-init23" value="ACTの初期化 23...  (設定ファイルのバックアップをチェックしています)"/>
-  <string key="uiLoading-initExit" value="ACTの初期化を完了しています..."/>
-  <string key="uiOpMisc-logPaused" value="解析の停止..."/>
-  <string key="uiOpMisc-logPosition1" value="読込中... {0}\n現在の位置: {1:0,0}."/>
-  <string key="uiOpMisc-logPosition2" value=" ({0} 後ろ)"/>
-  <string key="uiOpMisc-logPosition3" value=" ({0} CustomTrigger lines behind.)"/>
-  <string key="uiOpWebServer-sessionStats" value="セッション統計 | 直近10秒\n{0:#,0} bytes in | {3:0.00} KB/s in\n{1:#,0} bytes out | {4:0.00} KB/s out\n{2} unique clients | {5} unique clients"/>
-  <string key="ui-processPriority" value="通常"/>
-  <string key="ui-processPriority-" value="通常以下"/>
-  <string key="ui-processPriority--" value="最低"/>
-  <string key="ui-processPriority+" value="通常以上"/>
-  <string key="ui-soundTypeBeep" value="ビープ音"/>
-  <string key="ui-soundTypeNone" value="なし"/>
-  <string key="ui-soundTypeSound" value="サウンド"/>
-  <string key="ui-soundTypeTts" value="TTS"/>
-  <string key="ui-spellTimerTooltip" value="{0} - {1}s."/>
-  <string key="ui-tableColumnError" value="ERROR"/>
-  <string key="ui-textExportDefault" value="[現在のデフォルト]"/>
-  <string key="zoneDataTerm-import" value="インポート"/>
-  <string key="zoneDataTerm-importMerge" value="インポート/マージ - [{0}]"/>
+  <string key="attackTypeTerm-all" value="すべて" />
+  <string key="btnFeedbackSubmit-Text2" value="さらに送信するには再起動してください。" />
+  <string key="data-dnumBlock" value="ブロック" />
+  <string key="data-dnumDeath" value="戦闘不能" />
+  <string key="data-dnumMiss" value="ミス" />
+  <string key="data-dnumNoDamage" value="ノーダメージ" />
+  <string key="data-dnumParry" value="パリィ" />
+  <string key="data-dnumResist" value="レジスト" />
+  <string key="data-dnumRiposte" value="反射" />
+  <string key="data-timerStringNone" value="(none)" />
+  <string key="encounterData-defaultEncounterName" value="エンカウント" />
+  <string key="exportFormattingDesc-critheal%" value="ヒールのクリティカル率" />
+  <string key="exportFormattingDesc-critheals" value="ヒールのクリティカル回数" />
+  <string key="exportFormattingDesc-crithit%" value="攻撃のクリティカル率" />
+  <string key="exportFormattingDesc-crithits" value="攻撃のクリティカル回数" />
+  <string key="exportFormattingDesc-cures" value="戦闘員が回復またはディスペルした合計回数" />
+  <string key="exportFormattingDesc-custom" value="追加する前に上記のテキストボックスにカスタムテキストを入力します。" />
+  <string key="exportFormattingDesc-damage" value="総与ダメージ量" />
+  <string key="exportFormattingDesc-damage%" value="総与ダメージの割合" />
+  <string key="exportFormattingDesc-damagetaken" value="総被ダメージ量" />
+  <string key="exportFormattingDesc-deaths" value="戦闘不能回数" />
+  <string key="exportFormattingDesc-dps" value="DPS（12.34形式）" />
+  <string key="exportFormattingDesc-DPS" value="DPS（12形式）" />
+  <string key="exportFormattingDesc-duration" value="戦闘時間（mm:ss形式）" />
+  <string key="exportFormattingDesc-DURATION" value="戦闘時間（トータル秒数形式）" />
+  <string key="exportFormattingDesc-extdps" value="戦闘員の総与ダメージ量を戦闘時間で割った値。12.34形式 -- 専らDPS値として扱われるのはこの値です。" />
+  <string key="exportFormattingDesc-EXTDPS" value="戦闘員の総与ダメージ量を戦闘時間で割った値。12形式 -- 専らDPS値として扱われるのはこの値です。" />
+  <string key="exportFormattingDesc-exthps" value="戦闘員の総ヒール量を戦闘時間で割った値。12.34形式 -- 専らHPS値として扱われるのはこの値です。" />
+  <string key="exportFormattingDesc-EXTHPS" value="戦闘員の総ヒール量を戦闘時間で割った値。12形式 -- 専らHPS値として扱われるのはこの値です。" />
+  <string key="exportFormattingDesc-healed" value="総ヒール量" />
+  <string key="exportFormattingDesc-healed%" value="総ヒールの割合" />
+  <string key="exportFormattingDesc-heals" value="総ヒール回数" />
+  <string key="exportFormattingDesc-healstaken" value="被ヒール量" />
+  <string key="exportFormattingDesc-hitfailed" value="ミス数。この値にはレジスト、反射、ブロック、回避およびその他の回数も含まれます。" />
+  <string key="exportFormattingDesc-hits" value="ヒット数。ダメージを与えた攻撃の回数" />
+  <string key="exportFormattingDesc-kills" value="キル数" />
+  <string key="exportFormattingDesc-maxheal" value="最大ヒール量（[Combatant-]SkillName-Healing#）" />
+  <string key="exportFormattingDesc-MAXHEAL" value="最大ヒール量（[Combatant-]Healing#）" />
+  <string key="exportFormattingDesc-maxhealward" value="最大ヒール/ワード量（[Combatant-]SkillName-Healing#）" />
+  <string key="exportFormattingDesc-MAXHEALWARD" value="最大ヒール/ワード量（[Combatant-]Healing#）" />
+  <string key="exportFormattingDesc-maxhit" value="最大ダメージヒット数（[Combatant-]SkillName-Damage#）" />
+  <string key="exportFormattingDesc-MAXHIT" value="最大ダメージヒット数（[Combatant-]Damage#）" />
+  <string key="exportFormattingDesc-misses" value="ミスメッセージを発生させたオートアタック、詠唱技の回数" />
+  <string key="exportFormattingDesc-name" value="戦闘員の名前" />
+  <string key="exportFormattingDesc-NAME" value="戦闘員の名前、前方n文字に短縮した名前。例: 'NAME:5'" />
+  <string key="exportFormattingDesc-NAME10" value="戦闘員の名前（前方10文字）" />
+  <string key="exportFormattingDesc-NAME11" value="戦闘員の名前（前方11文字）" />
+  <string key="exportFormattingDesc-NAME12" value="戦闘員の名前（前方12文字）" />
+  <string key="exportFormattingDesc-NAME13" value="戦闘員の名前（前方13文字）" />
+  <string key="exportFormattingDesc-NAME14" value="戦闘員の名前（前方14文字）" />
+  <string key="exportFormattingDesc-NAME15" value="戦闘員の名前（前方15文字）" />
+  <string key="exportFormattingDesc-NAME3" value="戦闘員の名前（前方3文字）" />
+  <string key="exportFormattingDesc-NAME4" value="戦闘員の名前（前方4文字）" />
+  <string key="exportFormattingDesc-NAME5" value="戦闘員の名前（前方5文字）" />
+  <string key="exportFormattingDesc-NAME6" value="戦闘員の名前（前方6文字）" />
+  <string key="exportFormattingDesc-NAME7" value="戦闘員の名前（前方7文字）" />
+  <string key="exportFormattingDesc-NAME8" value="戦闘員の名前（前方8文字）" />
+  <string key="exportFormattingDesc-NAME9" value="戦闘員の名前（前方9文字）" />
+  <string key="exportFormattingDesc-newline" value="改行。この要素の後の書式設定は新しい行に表示されます。" />
+  <string key="exportFormattingDesc-powerdrain" value="この戦闘員が他の戦闘員から吸収した力の量" />
+  <string key="exportFormattingDesc-powerheal" value="この戦闘員が他の戦闘員に与えた力の量" />
+  <string key="exportFormattingDesc-swings" value="攻撃の試行回数。 これにはオートアタックまたはスキルが含まれます。これにはダメージを与えないレジストスキルも含まれます。" />
+  <string key="exportFormattingDesc-tab" value="タブ。この要素の後の書式設定は相対的な列配置で表示されます。（サンプルではこれを適切に表示できません）" />
+  <string key="exportFormattingDesc-threatdelta" value="The amount of direct threat output relative to zero." />
+  <string key="exportFormattingDesc-threatstr" value="The amount of direct threat output that was increased/decreased." />
+  <string key="exportFormattingDesc-title" value="終了したエンカウントのタイトル" />
+  <string key="exportFormattingDesc-tohit" value="命中率。12.34形式" />
+  <string key="exportFormattingDesc-TOHIT" value="命中率。12形式" />
+  <string key="exportFormattingLabel-critheal%" value="ヒールのクリティカル率" />
+  <string key="exportFormattingLabel-critheals" value="ヒールのクリティカル回数" />
+  <string key="exportFormattingLabel-crithit%" value="ヒールのクリティカル率" />
+  <string key="exportFormattingLabel-crithits" value="ヒールのクリティカル回数" />
+  <string key="exportFormattingLabel-cures" value="ヒールまたはディスペル回数" />
+  <string key="exportFormattingLabel-custom" value="カスタムテキスト" />
+  <string key="exportFormattingLabel-damage" value="与ダメージ" />
+  <string key="exportFormattingLabel-damage%" value="与ダメージ率" />
+  <string key="exportFormattingLabel-damagetaken" value="被ダメージ" />
+  <string key="exportFormattingLabel-deaths" value="戦闘不能回数" />
+  <string key="exportFormattingLabel-dps" value="DPS" />
+  <string key="exportFormattingLabel-DPS" value="DPS（短縮）" />
+  <string key="exportFormattingLabel-duration" value="戦闘時間" />
+  <string key="exportFormattingLabel-DURATION" value="戦闘時間（短縮）" />
+  <string key="exportFormattingLabel-extdps" value="エンカウントDPS" />
+  <string key="exportFormattingLabel-EXTDPS" value="エンカウントDPS（短縮）" />
+  <string key="exportFormattingLabel-exthps" value="エンカウントHPS" />
+  <string key="exportFormattingLabel-EXTHPS" value="エンカウントHPS（短縮）" />
+  <string key="exportFormattingLabel-healed" value="与ヒール量" />
+  <string key="exportFormattingLabel-healed%" value="与ヒール率" />
+  <string key="exportFormattingLabel-heals" value="ヒール回数" />
+  <string key="exportFormattingLabel-healstaken" value="被ヒール量" />
+  <string key="exportFormattingLabel-hitfailed" value="その他の回避" />
+  <string key="exportFormattingLabel-hits" value="ヒット数" />
+  <string key="exportFormattingLabel-kills" value="キル数" />
+  <string key="exportFormattingLabel-maxheal" value="最大ヒール量" />
+  <string key="exportFormattingLabel-MAXHEAL" value="最大ヒール量（短縮）" />
+  <string key="exportFormattingLabel-maxhealward" value="最大ヒール/解除量" />
+  <string key="exportFormattingLabel-MAXHEALWARD" value="最大ヒール/解除量（短縮）" />
+  <string key="exportFormattingLabel-maxhit" value="最大ヒット数" />
+  <string key="exportFormattingLabel-MAXHIT" value="最大ヒット数（短縮）" />
+  <string key="exportFormattingLabel-misses" value="ミス" />
+  <string key="exportFormattingLabel-name" value="名前" />
+  <string key="exportFormattingLabel-NAME" value="短縮された名前" />
+  <string key="exportFormattingLabel-NAME10" value="名前（10文字）" />
+  <string key="exportFormattingLabel-NAME11" value="名前（11文字）" />
+  <string key="exportFormattingLabel-NAME12" value="名前（12文字）" />
+  <string key="exportFormattingLabel-NAME13" value="名前（13文字）" />
+  <string key="exportFormattingLabel-NAME14" value="名前（14文字）" />
+  <string key="exportFormattingLabel-NAME15" value="名前（15文字）" />
+  <string key="exportFormattingLabel-NAME3" value="名前（3文字）" />
+  <string key="exportFormattingLabel-NAME4" value="名前（4文字）" />
+  <string key="exportFormattingLabel-NAME5" value="名前（5文字）" />
+  <string key="exportFormattingLabel-NAME6" value="名前（6文字）" />
+  <string key="exportFormattingLabel-NAME7" value="名前（7文字）" />
+  <string key="exportFormattingLabel-NAME8" value="名前（8文字）" />
+  <string key="exportFormattingLabel-NAME9" value="名前（9文字）" />
+  <string key="exportFormattingLabel-newline" value="改行" />
+  <string key="exportFormattingLabel-powerdrain" value="吸収" />
+  <string key="exportFormattingLabel-powerheal" value="与バフ" />
+  <string key="exportFormattingLabel-swings" value="スイング" />
+  <string key="exportFormattingLabel-tab" value="タブ" />
+  <string key="exportFormattingLabel-threatdelta" value="Δ驚異" />
+  <string key="exportFormattingLabel-threatstr" value="驚異の増減" />
+  <string key="exportFormattingLabel-title" value="エンカウントタイトル" />
+  <string key="exportFormattingLabel-tohit" value="ヒット率" />
+  <string key="exportFormattingLabel-TOHIT" value="ヒット率（短縮）" />
+  <string key="graphAdv-termDps" value="DPS" />
+  <string key="graphAdv-toolTip" value="+{0} ({1} 秒の平均値)" />
+  <string key="graphCombatant-toolTip" value="+{0} ({1:#,0} 秒の平均値)" />
+  <string key="helpPanel-btnExportUIBrowser" value="このボタンを押すとウィザードが起動し、EQ2のWebブラウザーをACTのエンカウンターインデックスに設定し、オプションで折りたたみ可能なインターフェイスとコントロールを備えたブラウザーUI置換を抽出して、画面スペースを最大化できます。" />
+  <string key="helpPanel-btnImportFile" value="ログファイルからエンカウントをインポートするには、開始日と終了日を選択し解析するログファイルを選択します。" />
+  <string key="helpPanel-btnOdbcDropTables" value="ACTが使用する各テーブルでDROPコマンドが実行されます。 すべてのテーブルデータが削除されデータソースからテーブルが削除されます。" />
+  <string key="helpPanel-btnOdbcTestConnection" value="接続文字列で指定されたODBCデータソースへのログインが試行されます。" />
+  <string key="helpPanel-btnOdbcValidateTables" value="ODBCデータソースに必要なテーブルがあり、テーブルに必要な列があることを確認します。 不足しているものがある場合、ACTはテーブルの作成または変更を試みます。SQLエクスポートを行うには成功が必要です。" />
+  <string key="helpPanel-btnResetColors" value="色/フォント設定をリセットするには、ACTを再起動する必要があります。" />
+  <string key="helpPanel-btnResetOdbcHacks" value="すべてのODBCハックを削除し、MSSQL、MS Access、Postgres などのさまざまなデータソースの一連の既知のハックに置き換えます。" />
+  <string key="helpPanel-cbAutoLoadLogs" value="ACTは、既存のログが更新されているかどうかを数秒ごとに確認し、現在使用されているログに切り替える必要があります。（新しいファイルを自動的にチェックしません）" />
+  <string key="helpPanel-cbBlockisHit" value="有効にした場合、ブロックはヒットとみなされます。 無効な場合、ダメージを与えた攻撃のみをヒットとみなします。" />
+  <string key="helpPanel-cbCullAll" value="新しいゾーンリストが作成されると、ACTはリストされた「すべて」のゾーンのエンカウントの数を保持し、古いものを間引きします。" />
+  <string key="helpPanel-cbCullCount" value="エンカウントが終了すると、通常のエンカウントはリストされた数から除外されます。 これは現在または以前のゾーンでのエンカウントに適用されますが、ゾーン全体の「すべて」のエンカウントには影響しません。" />
+  <string key="helpPanel-cbCullCountIgnoreNoAlly" value="「エンカウント」とマークされたソロのエンカウントは、除外する古いエンカウンターの数を決定するときにカウントに追加されません。" />
+  <string key="helpPanel-cbCullNoAlly" value="エンカウントが終了すると、「エンカウント」というラベルが付いたすべてのエンカウント（最後を除く）が削除されます。" />
+  <string key="helpPanel-cbCullOther" value="新しいゾーンリストが作成されると、ACTはこれまでの多くのゾーンの通常のエンカウントを保持します。" />
+  <string key="helpPanel-cbCullTimer" value="エンカウントが終了すると、この制限時間よりも古いすべてのエンカウント（ゾーン全体のエンカウントを除く）は削除されます。" />
+  <string key="helpPanel-cbCurrentOdbc" value="戦闘中、ACTはODBCデータソースのcurrent_tableという一時テーブルに数秒ごとにエクスポートできます。 すべてのエクスポート、テーブルは削除され、現在のエンカウントを反映するために補充されます。 このオプションは、データソースへの接続が非常に速い場合にのみお勧めします。" />
+  <string key="helpPanel-cbDoubleBufferLV" value="チェックすると、ACTはメインテーブルの最小限の再描画を有効にしようとします。 通常、Windows XPより前のWindowsにはこの機能がなく、望ましくない結果を引き起こす可能性があります。" />
+  <string key="helpPanel-cbExFile" value="戦闘の最後に、このオプションは、クリップボードのエクスポートがどのように見えるかに似たものをマクロファイルにエクスポートします。 このファイルのエクスポートは、クリップボードのエクスポートのように256文字に制限されていませんが、16行しか出力できません。 エクスポートが作成されたら、次のコマンドを使用して結果を表示できます。\n\n/do_file_commands act-export.txt\n\nこのコマンドをトリガーするEQ2マクロを作成できます。 マクロファイルのエクスポートでは、データを表にまとめて表示しやすくします。\n\nエクスポートを表示するチャンネルを事前に以下のオプションに設定する必要があります。 チャネルプレフィックスを空白のままにすると、テキストのみの書式設定オプションがチャネルのプレフィックスを *every* 行にしない限り、マクロファイルが機能しなくなります。" />
+  <string key="helpPanel-cbExFileColumnAlign" value="有効にすると、テキストエクスポートはテーブルに整列され、各セルはその列の最長エントリの長さまでパディングされます。 {name} の代わりに{NAME10} などのテキストフォーマッタを使用することをお勧めします。そうしないと、列に余分なパディングが生じる場合があります。" />
+  <string key="helpPanel-cbExGraph" value="有効にすると、HTMLエクスポートにメインのエンカウントグラフが含まれます。" />
+  <string key="helpPanel-cbExHTML" value="EQ2には、FireFox に基づいた統合Webブラウザーが付属しています。 これは、フルスクリーンでACTによってエクスポートされたデータを表示するために使用できます。 メインのエンカウントテーブルはHTMLとしてエクスポートされEQ2 HTMLウィンドウ内に表示されます。 HTMLウィンドウにアクセスするには「browser」と入力します" />
+  <string key="helpPanel-cbExHTMLFTP" value="有効にすると、ACTがEQ2互換のHTMLファイルをエクスポートするときに選択したFTPサーバーにアップロードしようとします。使用前に必ず設定をテストしてください。" />
+  <string key="helpPanel-cbExOdbc" value="これにより、エンカウントが終了したときにODBCを介したSQLエクスポートが自動的に有効になります。\n\nこの機能を使用するには、データソースに接続し、接続文字列にリモートホスト情報を入力するODBCドライバーが必要です。 http://connectionstrings.com/は、特定のSQLデータソースの接続文字列を作成するのに役立ちます。" />
+  <string key="helpPanel-cbExportBeep" value="有効にすると、クリップボードにエクスポートするとデフォルトのシステムビープ音が鳴ります。 これは、エンカウントが終了し、EQ2に貼り付ける新しいデータがあるときの良い指標です。" />
+  <string key="helpPanel-cbExportFilterSpace" value="有効にすると、ミニ解析ウィンドウとクリップボードのエクスポートにより、名前にスペースが含まれる戦闘員が除外されます。 これにより、「巨大なコウモリ」や「キングドラエック」などのほとんどのMobは除外されますが、「Anguis」や「Frostbite」は除外されません。" />
+  <string key="helpPanel-cbExText" value="エンカウントの戦闘サマリーは、エンカウントが終了した後にクリップボードにエクスポートされます。これらのサマリーは、Ctrl-V を押してEQ2に貼り付け、[一般オプション] -&gt; [テキストのみの書式設定] -&gt; [クリップボードエクスポート書式設定] でカスタマイズできます。" />
+  <string key="helpPanel-cbGCollectOnClear" value="有効にすると、ACTはエンカウントをクリアするときに GCCollect を呼び出します。 これを行うと、[クリアエンカウント] ボタンの時間が長くなり、再起動するまでACTを完全にフリーズすることがわかっています。 ACTに問題があり、時間の経過とともにメモリが解放されない場合にのみ使用してください。" />
+  <string key="helpPanel-cbGermanMergeNames" value="有効にすると、次のような文法的な変更が加えられた戦闘員：ruhiger Wachposten、ruhigen Wachpostens、ruhigen Wachposten、ruhige Wachposten、ruhigen Wachposten en; すべて同じ戦闘員として表示されます。（エンカウントで最初に現れたもの）" />
+  <string key="helpPanel-cbGExpEnd" value="「エンカウンターを倒すとボーナス経験が得られます！」 が表示された場合、エンカウンターは終了したと見なされます。\n（「経験値を達成経験値に変換します！」1秒に2回もこれをトリガーします。）" />
+  <string key="helpPanel-cbGraphSoloInc" value="無効にすると、ソロ時のグラフは与ダメージに対してのみDPSラインを表示します。 有効にすると、被ダメージと被ヒールのDPSラインも生成されます。（これにより、生成に使用されるCPU時間がわずかに増加します）" />
+  <string key="helpPanel-cbHtmlTimers" value="有効にすると、ACTはタイマーウィンドウの現在のビューを表示するHTMLページをエクスポートします。タイマービューは元のウィンドウと同じサイズになるため、必要に応じてサイズを変更します。" />
+  <string key="helpPanel-cbIdleEnd" value="If no combat actions such as attacking are observed for N number of seconds value=the encounter will be considered ended." />
+  <string key="helpPanel-cbIdleTimerEnd" value="A previously defaulted non-option, ACT can internally count seconds of inactivity instead of waiting on a log timestamp with a time sufficiently after the last combat action.  If disabled, ACT will only end encounters based off of timestamps, and if no new log lines are parsed, its possible to never end an encounter *until* a new log timestamp is seen from EQ2.  When enabled value=the timer will not strictly end an encounter based off the timer, but two seconds after (in absense of log timestamps)." />
+  <string key="helpPanel-cbKillEnd" value="When an allied combatant kills another, the encounter will be considered ended." />
+  <string key="helpPanel-cbLcdEnabled" value="This will enable ACT's support for the G15 and G19 keyboards, or other devices that use those unified drivers.  For the default applets: button 1 of 4(G15) or Menu button(G19) will change ACT modes.  The next button(G15) or OK button(G19) will usually change sub-modes within that mode, such as switching export formats." />
+  <string key="helpPanel-cbLcdRoute" value="When the ACT Clipboard Sharer is connected, using this option will route all LCD traffic to the G15 LCD on the connected computer's keyboard.  This allows you to run ACT on a different computer than EQ2 and retain all LCD functionality." />
+  <string key="helpPanel-cbLongEncDuration" value="Previously when only using timed encounter ending, heals being cast while the delay was counting down could affect the encounter's total duration, and therefore ExtDPS.  If unchecked, heals after the last combat action will still be recorded up until the encounter is terminated value=but will not affect the duration of the encounter." />
+  <string key="helpPanel-cbMiniClickThrough" value="When enabled, mouse actions will not affect the Mini Window.  When transparency is set value=this allows you to both see through and click on things behind the window.  Of course you can no longer move or close the window by normal means until click-through is disabled.  NOTE: You may toggle this option by right-clicking the main window 'Show Mini' button." />
+  <string key="helpPanel-cbMiniColumnAlign" value="When enabled, the text export will be aligned into a table where each cell is padded to the length of the longest entry in that column.  The alignment is dependant on the font selected.  It is recommended you use a text formatter such as {NAME10} instead of {name} or that column may have excessive padding." />
+  <string key="helpPanel-cbMultiDamageIsOne" value="When enabled, an attack that has multiple damage types, such as '300 crushing, 5 poison and 5 disease damage' will show up as one total attack: 300/5/5 crushing/poison/disease, internally seen as 310.  If disabled, each damage type will show up as an individual swing, IE three attacks: 300 crushing; 5 poison; 5 disease.  Having a single attack show up as multiple will have consequences when calculating ToHit%." />
+  <string key="helpPanel-cbOnlyGraphAllies" value="When checked, simple encounter bar graphs will only show your allies." />
+  <string key="helpPanel-cbPetIsMaster" value="When checked, a pet will not show as its own entry, but as a spell under their master.  When unchecked, the pet is considered a seperate combatant and has its own statistics unrelated to its master.\nThis setting is not retroactive, and will not combine or seperate a pet from its master if the encounter has already taken place.  Only future encounters will be affected by this setting.\n\n\nSince LU19 and &lt;Purpose tags&gt; showing under a pet's name and not in log files, parsers cannot automatically see who a pet belongs to." />
+  <string key="helpPanel-cbRecalcWardedHits" value="有効にすると、0ダメージのヒットまたはワードの吸収直後のダメージの減少ヒットは吸収量だけ増加します。 ストンスキンのダメージなしのヒットは再計算できません。" />
+  <string key="helpPanel-cbRecordLogs" value="チェックすると、ACTはエンカウント中に表示されるすべてのログ行を記録します。 次に、エンカウントを右クリックして [ログの表示] を選択し、それらを表示/検索します。 このオプションを無効にするとデフォルト設定と比較してメモリ使用量が45％程度削減されます。 エクスポートされたACTファイルはこれらの記録されたログを保持します。" />
+  <string key="helpPanel-cbRestrictToAll" value="有効にすると、各戦闘員の完全に入力されるダメージタイプエントリのみが、参照用にマーク（参照）されます。 All、crush、slashを表示する「Melee（Out）」の代わりに、crush / slashの組み合わせであるAllのみを表示します。 crushとslashは、（Ref）タグにより、「総与ダメージ（Ref）」の下に引き続き表示されます。 リストは単純に混雑します。\nこのオプションを有効にすると、デフォルト設定と比較してCPU使用量が10％未満、メモリ使用量が10％減少します。 無効にするとこのオプションは論理リストのすべてのエントリに入力されます。" />
+  <string key="helpPanel-cbSExpEnd" value="If 'You gain experience!' is seen, the encounter will be considered ended. \n('You convert experience into achievement experience!' will also trigger this.)" />
+  <string key="helpPanel-cbSqlSafeMode" value="In safe mode, SQL commands will be sent one at a time and server response checked.  Otherwise commands will be sent in 100 row batches, which while faster will be more problematic to debug." />
+  <string key="helpPanel-cbSwarmIsMaster" value="有効にすると、ペットの攻撃はマスターの攻撃に合算されます。被ダメージはマスターに合算されません。" />
+  <string key="helpPanel-cbWebServerEnabled" value="The ACT Web Interface is somewhat similar to the EQ2 HTML exports in appearance.  Dissimilarly value=the web interface is not made up of intermediary HTML files but generated HTML upon request.  By default value=you can see auto-updating pages of the current encounter table value=Mini-Window text(with support for multiple presets) value=spell timers and a page that can browse through all of ACT's encounter data in memory.  Context-menu reports based on that data are not currently available but plugins can be made to expand the web interface." />
+  <string key="helpPanel-cbWebServerShowReq" value="If enabled, all HTTP requests will be shown.  Otherwise things like auto-updating portions of pages or .css/.js files will be hidden (unless very large).  One request to '/timers'(always shown) may initiate requests to '/ACT.js' value='/ACT.css' and '/timers.body'(optionally shown) as well." />
+  <string key="helpPanel-cbZoneAllListing" value="As the first encounter of each Zone branch, an 'All' entry can exist which will combine all data from other encounters for that zone.  As encounters progress within that zone value=the All entry will be updated in real time.  The All encounter entry will be identical to a merged encounter of all encounters within that zone.\n\nDisabling this option will reduce memory and CPU usage a bit more than 10% when compared to default options." />
+  <string key="helpPanel-ccDGAllyText" value="The foreground color of combatant names that are marked as allies." />
+  <string key="helpPanel-ccDGPersonalBackcolor" value="The background color of the main table row containing your combatant." />
+  <string key="helpPanel-ccEncLabel1" value="すべての敵が倒したエンカウントの色。" />
+  <string key="helpPanel-ccEncLabel2" value="結果が不明なエンカウントの色。" />
+  <string key="helpPanel-ccEncLabel3" value="すべてのアライアンスが全滅したエンカウントの色。" />
+  <string key="helpPanel-ColorRestart" value="これらの色を変更するにはACTを再起動する必要があります。" />
+  <string key="helpPanel-CurrentExports" value="Checking this will create a custom HTML page with an auto updating graph or table.  The page will auto-refresh at the user specified interval providing more or less a real-time view of the encounter." />
+  <string key="helpPanel-ddlGraphPriority" value="この設定により、DPSトレンドグラフ生成の優先順位が変更されます（adv遭遇グラフおよび戦闘員グラフ）。 すべてのプログラムには優先度があり、通常はデフォルトで標準です。この優先度は、現在のタスクに割り当てるCPU時間を定義します。 最低（アイドル）に設定されている場合、グラフ生成には他のアプリケーションで使用されていないCPU時間しかかかりません。 EQ2が実行されている場合、これはほとんど何も起こりません。 通常の優先度では、ACTおよびEQ2などの他のタスクに等しい量のCPU時間が与えられます。&#10;上記の標準（Adv Encountグラフでは推奨されません）は、他のほとんどのプログラムよりもグラフ生成を優先し、EQ2で顕著なスタッターが発生したり、一時的にフリーズすることがあります。 ACTのUIはグラフ生成中に応答しなくなる場合があります。&#10;この設定は、EQ2の疑似HTML（および自動ODBC）エクスポートにも影響します。 したがって、別のエンカウントが終了してエクスポートが必要になる前にHTMLエクスポートを完了できない場合は、この設定を上げることをお勧めします。" />
+  <string key="helpPanel-ddlLanguage" value="This will change the parsing engine to another language or Spell Timers only mode." />
+  <string key="helpPanel-ExFTPPASV" value="If you are behind a router or have multiple NICs you may need to use Passive mode transfers.  If the target FTP server is under the same conditions(a PASV only state), you must use Active mode.  Two machines that require PASV mode cannot establish FTP transfers." />
+  <string key="helpPanel-gbOdbcHacks" value="This section contains rules to modify all commands sent to the datasource if the connection string matches the rule.  You may use the Reset button to pre-populate known rules for reference." />
+  <string key="helpPanel-GraphSize" value="This will set the image dimentions of the graph in HTML exporting and EQ2 viewing." />
+  <string key="helpPanel-GraphType" value="Select a graphing method for the main encounter display." />
+  <string key="helpPanel-IO_ExportAct" value="This feature will export a compressed binary file which can be later imported by ACT to recreate the encounter.  If you wish to export more than one encounter as a single file, use the Show Checkboxes feature on the Main tab." />
+  <string key="helpPanel-IO_ExportHtml" value="This feature will export the selected encounters into a single static HTML file which is then controlled by JavaScript and CSS." />
+  <string key="helpPanel-IO_ImportAct" value="This feature is specifically for importing *.act files exported by ACT." />
+  <string key="helpPanel-IO_ImportClip" value="Press the Import Clipboard button to import the clipboard contents as though importing a log file." />
+  <string key="helpPanel-IO_ImportLog" value="Select the starting and end points before selecting the file to parse." />
+  <string key="helpPanel-IO_XmlFile" value="This feature was added by user request.  I don't know of any practical use for it." />
+  <string key="helpPanel-lblExFileLines" value="ACT will only create macro files with up to this many commands.  NOTE: EQ2 has server side filtering to prevent spam in public channels.  No matter what, you cannot exceed 16 chat commands in a public channel within a short amount of time." />
+  <string key="helpPanel-lblExportSound" value="The sound for when ACT creates clipboard exports, macro exports, etc either manually or immediately after combat." />
+  <string key="helpPanel-lblLcdMiniFormat" value="This LCD mode mimics the Mini Window in ACT.  This selector changes the export format displayed and may also be flipped through using the 2nd button of the G15 or OK button of the G19." />
+  <string key="helpPanel-lblPersonalParseFormat" value="This LCD mode will create an export with only your personal data in it, unlike the repeating format of all other combatants." />
+  <string key="helpPanel-lblSplitFile" value="As long as another program has not locked the file, ACT will attempt to rename the file with a date when opening or closing a file. (When over this size)" />
+  <string key="helpPanel-lblWebServerPort" value="The listening port to accept HTTP requests from.  If you use a non-standard port (80) value=clients must add that port to their URL notation like the following: http://127.0.0.1:80/" />
+  <string key="helpPanel-LogPriority" value="This setting will change the priority of normal log parsing.  All programs have a priority, usually Normal by default, and this priority defines how much CPU time should be given to the current task.  If set to Lowest(Idle), log parsing will only take CPU time not used by other applications.  If EQ2 is running, this will be next to nothing.  Normal priority will give equal amounts of CPU time to ACT and any other task, such as EQ2.\n\nIf ACT seems unable to keep up with log parsing tasks while EQ2 is running, you may wish to set this to Above Normal.\n\nFor this setting to take effect, you must restart ACT or Close and Reopen the current log." />
+  <string key="helpPanel-Options_LcdColor" value="This section will define the look of the G19 specific applet.  Use the Change Font buttons to change the font/size of the specific modes.  Also be aware that changing the font size may require you to change the vertical spacing to look correct.  You may also change the basic colors of those modes.  The Spell Timer and Graph modes mimic ACT's normal settings for colors." />
+  <string key="helpPanel-Options_LcdMono" value="This section will define the look of the G15 specific applet.  Use the Font button to choose a base font to use for all screens.  To adjust the font size, use the Size Offset numeric selector for that mode.  Also adjust the vertical spacing of each line as you change the font size to meet your needs." />
+  <string key="helpPanel-Options_MiniParse" value="The Mini Parse window is a small text only display of the current encounter.  It may also show a graph if you click the red button in the corner.  To change the included information value=create a preset the new export format." />
+  <string key="helpPanel-Options_Odbc" value="This section is for exporting ACT data into SQL datasources.  ACT uses ODBC connectivity in order to connect to these datasources and the local machine must have an ODBC driver installed to communicate to the desired type of datasource." />
+  <string key="helpPanel-Options_SelectiveParsing" value="The purpose of selective parsing is to restrict the data that appears.  The list at the left decides which combatants are used for data/exports." />
+  <string key="helpPanel-Options_Sound" value="This panel will configure the different sounds ACT will generally make for different events.  Command sounds are when you interact with ACT by typing in a game, like '/act end' or '/e end'.  Misc sounds are when ACT tries to randomly get your attention for a miscellaneous purpose.  This could be an update or even an error playing a non-existent sound.\n\nThe bottom radio buttons change through what API ACT tries to make sounds through.  Windows API is very basic for compatibility purposes.  WMP is sufficient in most cases." />
+  <string key="helpPanel-Options_TableAttackType" value="These are the columns that will appear in the Main tab tables when clicking on TreeView nodes such as 'crush' or 'Smite'.  This table lists all of the individual combat actions of the selected skill name." />
+  <string key="helpPanel-Options_TableCombatant" value="These are the columns that will appear in the Main tab tables when clicking on TreeView nodes such as 'PlayerName' or 'MobName'.  This table lists all of the damage type categories of the combatant." />
+  <string key="helpPanel-Options_TableDamageType" value="These are the columns that will appear in the Main tab tables when clicking on TreeView nodes such as 'Outgoing Damage' or 'Healed'.  This table lists all of the skill names of the selected damage type category." />
+  <string key="helpPanel-Options_TableEnc" value="These are the columns that will appear in the Main tab tables when clicking on TreeView nodes such as 'Mobname - [1:23] 12:01:02 PM'.  This table lists all of the combatants of the selected encounter." />
+  <string key="helpPanel-Options_TableZone" value="These are the columns that will appear in the Main tab tables when clicking on TreeView nodes such as 'Import/Merge [1]' or 'ZoneName [3] 12:00:00 PM'.  This table lists all of the encounters of that node(Zone)." />
+  <string key="helpPanel-rbSParseFull" value="Full selective parsing should only be used in small groups where there are other groups near by.  When the encounter begins value=the settings are locked to that encounter.  Using this feature may cause the ExtDPS calculations to differ from other copies of ACT or other parsers depending on the limiting options they use.  Once an encounter has taken place, you cannot add or remove combatants  to it without reparsing that battle.  Full selective parsing will create data gaps and should not be used while using ACT to analyze battles or statistics as it will not show a complete 'picture' of the encounter." />
+  <string key="helpPanel-SampleType" value="These settings affect how many DPS plots there are along the X-Axis.  If an encounter is one minute long, and Fixed number of DPS samples(6) is selected value=there will be six X-Axis plots in 10 second intervals.  If DPS samples every 15 seconds is selected, there will be four DPS plots at 15 second intervals.  Fixed number is useful for keeping a graph readable no matter how long the encounter, and fixed sample durations is useful for comparisons to other time lines." />
+  <string key="helpPanel-tbCharName" value="If a log file is open this setting is ignored; however if ACT is used as an offline parser only, this setting will be used to fill in your name instead of using 'YOU'." />
+  <string key="helpPanel-tbExFileName" value="This export file name is a relative file path to the game folder or may be an absolute path." />
+  <string key="helpPanel-TextFormatAddPreset" value="Save these format options to the drop down list." />
+  <string key="helpPanel-TextFormatAllies" value="Allies formatting string. (First Line Format)" />
+  <string key="helpPanel-TextFormatAlliesOnly" value="When checked, only combatants who have proven themselves allies in the encounter will be included in the export.  This includes healing you or other proven allies value=or attacking your foes.  If you do not make any allies during the encounter, all combatants will be exported." />
+  <string key="helpPanel-TextFormatAlliesStats" value="When checked, the totals of your allies will be prefixed to the normal export." />
+  <string key="helpPanel-TextFormatPlayers" value="Per-player formatting string. (Repeating Format)" />
+  <string key="helpPanel-TextFormatPreset" value="Replace the current formatters with a saved preset." />
+  <string key="helpPanel-TextFormatRemovePreset" value="Remove the currently selected format from the drop down list." />
+  <string key="helpPanel-TextFormatSort" value="The sorting method this formatting option will use." />
+  <string key="helpPanel-xmlShare" value="This section is designed for importing small snippets of settings such as Custom Triggers or Spell Timers.  Typically these snippets will be parsed from game chat but may also be copied from elsewhere and pasted.\n\nWhen an XML snippet is detected in chat value=by default the character name and type of data will appear in the third(yellow) ListBox.  You may then click on the data to review it in the TextBox to the right and either import or delete the entry.\n\nIf you wish to always import data from a particular character value=you may enter their name into the TextBox above the yellow ListBox and click the above Add button.  Similarly there is a list of characters to always ignore data from.  You may temporarily disable an accept/reject entry by unchecking it or you may simply use the Remove button on either list.\n\nYou may possibly come across an XML snippet from another source made for this feature.  Instead of having someone send it to you in a tell value=you may paste it directly into the larger TextBox above the Import/Delete buttons.  It will then appear as a custom entry allowing you to Import or Delete it.\n\nYou may create a snippet from your own data by going into either the Spell Timers options page or Custom Triggers tab value=right-clicking the entry in the list and selecting Copy as Sharable XML.  If sending in EQ2 chat value=the XML snippet must be by itself with no other chat or spaces." />
+  <string key="helpPanel-xmlSubscription" value="This section is for keeping up to date with external ACT settings.  XML configuration files can be put on the web and upon startup or on demand, ACT can check these files for updates(based on the timestamp).  ACT can be set to automatically import or notify the user of these updates.\n\nThe top ListBox will contain the external URLs of the files already being watched.  To add an entry, enter the URL into the labeled TextBox, select an update option and click Add/Edit.  As update options, you can have ACT check but ignore updated files value=notify you of updates using a message box or automatically import the external XML file upon detected updates.  The Query URL button will list the general contents of the URL, if valid, and list when it was marked changed.  The View in browser link will open the URL in your default web browser.\n\nThe Check Now button will on demand check all of the URLs for changes and check-mark the updated files.  If the URL has been updated but set to be ignored, it will be marked with a gray checkmark.  You may manually check or uncheck an entry by clicking on it.\n\nThe Update Checked button will import all entries with a normal checkmark regardless of if they were detected as changed." />
+  <string key="mergedEncounterTerm-all" value="すべて" />
+  <string key="messageBox-avoidanceCopyDetail" value="\n\nDo you wish to copy this to the windows clipboard?" />
+  <string key="messageBox-clipboardNoText" value="The clipboard cannot be converted to plain text data." />
+  <string key="messageBox-clipConnectError" value="\n\nIs the specified computer running the ACT Clipboard Sharer application?\n\nDO NOT USE THIS FEATURE IF THE GAME AND ACT ARE RUNNING ON THE SAME SYSTEM" />
+  <string key="messageBox-cullHistory" value="{0} of {1} total records deleted." />
+  <string key="messageBox-duplicatePlugin" value="The plugin {0} appears to be loaded multiple times." />
+  <string key="messageBox-eq2FolderWizard" value="Detected EQ2 path is:\n{0}\n\nIs this correct?" />
+  <string key="messageBox-eq2NotFound" value="EverQuest2.exe was not found in this folder.  If you are using an international version, you may need to select an 'LP_REGION_??_??' folder." />
+  <string key="messageBox-exportNoEncounters" value="Please select an encounter in the treeview." />
+  <string key="messageBox-exportNoOptions" value="Please select something to display in the export." />
+  <string key="messageBox-feedbackNoComments" value="You did not enter any comments." />
+  <string key="messageBox-feedbackNoEmail" value="You did not enter your email address.  If you need technical support or help there will be no way to contact you. \nIf you are reporting a rare bug, without more information from you it may be impossible to fix.\n\nAre you sure you wish to leave your email blank?" />
+  <string key="messageBox-feedbackShort" value="Your feedback seems to be very short.  If you are reporting a problem, the more you describe it the better.  If you do not sufficiently describe the problem, I must resort to guessing what your problem is... which may get no response at all.\n\nDo you wish to continue with sending the feedback?" />
+  <string key="messageBox-feedbackSuccess" value="フィードバックが完了しました。" />
+  <string key="messageBox-ftpConnectionTest" value="ACT may become unresponsive during this test.  Please wait at least 30 seconds while the test is performing, and allow access through firewall notifications if they appear." />
+  <string key="messageBox-ftpTestSuccess" value="\n\n=============================\nこのテストは正常に完了しました。\n\n" />
+  <string key="messageBox-htmlNoFileAccess" value="Could not write to required files.\n\n{0}" />
+  <string key="messageBox-importDateTimeFail" value="Could not find the specified date range within the file." />
+  <string key="messageBox-importHistoryNoLogMatch" value="Could not find a log file for your character that likely had the date range.  Please find this file." />
+  <string key="messageBox-importParseError" value="Encountered an unrecoverable error while parsing:\n{0}\nParse position: {1}\n\n{2}\n\nIgnore this error and continue?" />
+  <string key="messageBox-invalidRegex" value="There was a problem with the regular expression syntax:\n{0}\n\nPlease click the Regular Expression link or visit the forums for more help on creating Regex matches." />
+  <string key="messageBox-localSecurityPolicy" value="The application was disallowed to perform the operation due to security settings of the local machine.\nIf you are running this application from a networked computer, please copy and run it locally.\n\n" />
+  <string key="messageBox-noFileFound" value="The specified path does not exist." />
+  <string key="messageBox-odbcDropTables" value="This procedure will delete all ACT related table data and remove the tables from the database.\nOnce completed, this cannot be undone and the tables will have to be recreated before ACT can store data on them once again.\n\nAre you sure you wish to continue?" />
+  <string key="messageBox-openLogWizard" value="\nIs the displayed log file the one you wish to open with ACT?" />
+  <string key="messageBox-openLogWizardNoFolder" value="No logs folder exists within this folder.  You must have logging enabled within EQ2 to use ACT.  Type '/log' within EQ2 to determine the logging status." />
+  <string key="messageBox-openLogWizardNoLogs" value="No logs seem to exist in this folder or subfolder.  You must have logging enabled within EQ2 to use ACT.  Type '/log' within EQ2 to determine the logging status." />
+  <string key="messageBox-playerRemoveError" value="リストから名前を選択して削除してください。" />
+  <string key="messageBox-pluginCompileError" value="プラグインソースファイルのコンパイル中にエラーが発生しました。\n\n詳細についてはプラグイン情報パネルを参照してください。" />
+  <string key="messageBox-pluginImageError" value="Win32/COMアセンブリをネイティブプラグインとして使用したり、32/64ビットアセンブリを混在させることはできません。" />
+  <string key="messageBox-pluginInvalid" value="このアセンブリには、ACTのプラグインインターフェイスを実装するクラスがありません。またはアセンブリをスキャンするとエラーがスローされました。" />
+  <string key="messageBox-removePlugin" value="プラグイン {0} を削除してもよろしいですか？" />
+  <string key="messageBox-searchResults" value="検索は {0} の結果を返しました。" />
+  <string key="messageBox-selectEq2Path" value="Your current EQ2 installation was not detectable.  Please select the folder where EQ2 resides." />
+  <string key="messageBox-sortingColumnError" value="Select a column entry to sort by." />
+  <string key="messageBoxText-fatalUnhandledException" value="未処理の例外が発生しました。ACTを終了する場合があります。\nCtrl-Cを押してこのメッセージボックスをコピーします。\n\n {0}" />
+  <string key="messageBoxTitle-avoidanceCopyDetail" value="1ヒットあたりの平均ダメージ回避量：{0}" />
+  <string key="messageBoxTitle-clipboardNoText" value="クリップボードのインポートに失敗しました" />
+  <string key="messageBoxTitle-clipConnectError" value="クリップボードへの接続に失敗しました" />
+  <string key="messageBoxTitle-complete" value="操作は完了しました" />
+  <string key="messageBoxTitle-cullHistory" value="履歴を抽出しました" />
+  <string key="messageBoxTitle-duplicatePlugin" value="多重にプラグインが追加されました" />
+  <string key="messageBoxTitle-eq2FolderWizard" value="EQ2フォルダを検証しました" />
+  <string key="messageBoxTitle-eq2NotFound" value="選択されたフォルダは無効です" />
+  <string key="messageBoxTitle-error" value="エラー" />
+  <string key="messageBoxTitle-exportNoEncounters" value="エクスポートするものがありません" />
+  <string key="messageBoxTitle-fatalUnhandledException" value="致命的なエラー - 予期しない例外が発生しました" />
+  <string key="messageBoxTitle-feedbackFail" value="フィードバックが送信されていません" />
+  <string key="messageBoxTitle-feedbackNoConnect" value="フィードバックサーバへの接続に失敗しました" />
+  <string key="messageBoxTitle-feedbackNoSend" value="フィードバックデータの送信時に失敗しました" />
+  <string key="messageBoxTitle-feedbackWarning" value="フィードバック警告" />
+  <string key="messageBoxTitle-fileError" value="ファイルが有効ではありません" />
+  <string key="messageBoxTitle-ftpTestFail" value="テスト未完了" />
+  <string key="messageBoxTitle-ftpTestSuccess" value="テスト完了" />
+  <string key="messageBoxTitle-htmlNoFileAccess" value="ファイルアクセスが拒否されました" />
+  <string key="messageBoxTitle-importFail" value="解析に失敗しました" />
+  <string key="messageBoxTitle-invalidRegex" value="無効な正規表現" />
+  <string key="messageBoxTitle-loadError" value="ロードエラー" />
+  <string key="messageBoxTitle-localSecurityPolicy" value="セキュリティ例外" />
+  <string key="messageBoxTitle-noFileFound" value="ファイルが見つかりませんでした" />
+  <string key="messageBoxTitle-odbcDropTables" value="ACT ODBCデータベースの削除" />
+  <string key="messageBoxTitle-odbcQueryError" value="ODBC接続 - クエリが失敗しました" />
+  <string key="messageBoxTitle-openLogWizard" value="ログファイルを検出しました" />
+  <string key="messageBoxTitle-openLogWizardNoFolder" value="ログフォルダがありません" />
+  <string key="messageBoxTitle-openLogWizardNoLogs" value="ログファイルが見つかりません" />
+  <string key="messageBoxTitle-playerRemoveError" value="選択されていません" />
+  <string key="messageBoxTitle-pluginCompileError" value="コンパイルエラー" />
+  <string key="messageBoxTitle-pluginImageError" value="イメージの形式が正しくありません" />
+  <string key="messageBoxTitle-pluginInvalid" value="無効なプラグイン" />
+  <string key="messageBoxTitle-removePlugin" value="プラグインを解除しますか？" />
+  <string key="messageBoxTitle-searchResults" value="検索が完了しました" />
+  <string key="messageBoxTitle-selectEq2Path" value="EQ2の検出に失敗しました" />
+  <string key="messageBoxTitle-serverStartError" value="サーバを開始できません" />
+  <string key="messageBoxTitle-sortingColumnError" value="選択されていません" />
+  <string key="messageBoxTitle-startupLogError" value="最終ログファイルのロードでエラーが発生しました" />
+  <string key="messageBoxTitle-updateAct" value="更新しますか？" />
+  <string key="messageBoxTitle-updateCheckFail" value="ACTのバージョンチェックに失敗しました" />
+  <string key="messageBoxTitle-xmlPrefError" value="XML設定エラー" />
+  <string key="messageBox-uiExport1" value="EQ2の組込みブラウザのホームページをACTのエンカウント情報にしますか？" />
+  <string key="messageBox-uiExport2" value="EQ2のブラウザを、折りたたみ可能なインターフェイスとURLバーを持つウィンドウに置き換えますか？" />
+  <string key="messageBox-updateAct" value="これによりプログラムが終了し更新が開始されます。\n続行しますか？" />
+  <string key="messageBox-updateCheckFail" value="インターネットからバージョン情報を取得できません。\n" />
+  <string key="messageBox-xmlPrefError" value="\n\n デフォルト値を施行しています。" />
+  <string key="messageBox-xmlReadError" value="XML設定ファイルの読込みでエラーが発生しました。: 行 #{0} ({1})\n{2}\n\n デフォルト値を施行しています。" />
+  <string key="messageBox-xmlSyntaxError" value="XML設定ファイルが破損しているか、使用できない可能性があります。デフォルト値をロードしています。\n{0}" />
+  <string key="notifText-unknownAssembly" value="次のアセンブリは認識されませんでした。 プラグインからの間違ったバージョンのロードを回避するために、それらを削除または別のフォルダーに移動する必要があります。\n\n{0}" />
+  <string key="notifTitle-imageSaveException" value="画像を保存できませんでした" />
+  <string key="notifTitle-unknownAssembly" value="不明なアセンブリがACTのインストールフォルダに配置されています。（Show をクリックするとフォルダを開きます）" />
+  <string key="specialAttackTerm-increase" value="Increase" />
+  <string key="specialAttackTerm-killing" value="Killing" />
+  <string key="specialAttackTerm-melee" value="melee" />
+  <string key="specialAttackTerm-none" value="None" />
+  <string key="specialAttackTerm-nonMelee" value="non-melee" />
+  <string key="specialAttackTerm-unknown" value="unknown" />
+  <string key="specialAttackTerm-wardAbsorb" value="Absorption" />
+  <string key="specialAttackTerm-warded" value="warded" />
+  <string key="trayButton-ignore" value="Ignore For Now" />
+  <string key="trayButton-ignoreRestart" value="Ignore" />
+  <string key="trayButton-ok" value="OK" />
+  <string key="trayButton-openLogs" value="ログフォルダを開く" />
+  <string key="trayButton-restartAct" value="再起動" />
+  <string key="trayText-encClearGcCollect" value="{0:0,0} bytes allocated difference" />
+  <string key="trayText-eventExceptions1" value="最後にこれらのプラグインから例外が発生しました:\n" />
+  <string key="trayText-eventExceptions2" value="{0} [{1} 秒]" />
+  <string key="trayText-lowDotNet" value="検出された .NET Framework のバージョンは {0} です。\n\nv4.6 以降の .NET Framework が必要です。" />
+  <string key="trayText-restartACT" value="変更を反映を完了させるにはACTを再起動する必要があります。\n\n{0}" />
+  <string key="trayTitle-eventUnhandledException" value="イベントハンドラーの予期しない例外" />
+  <string key="trayTitle-lowDotNet" value="古いバージョンの .NET Framework が検出されました" />
+  <string key="trayTitle-restartAct" value="ACTの再起動がリクエストされました" />
+  <string key="trayTitle-unhandledException" value="ACTで予期しない例外が発生しました" />
+  <string key="ui-customTriggerGeneralCategory" value="全般" />
+  <string key="uiFormActMain-Title0" value="{0}{1}Advanced Combat Tracker{2} - {3} - 記録時間: {4} (Est. {5})" />
+  <string key="uiFormActMain-Title1" value="*Combat* " />
+  <string key="uiFormActMain-Title2a" value="ログ - アクティブ" />
+  <string key="uiFormActMain-Title2b" value="ログ - アイドル" />
+  <string key="uiFormActMain-Title3" value="[エクスポート]" />
+  <string key="uiFormActMain-Title4" value="[インポート]" />
+  <string key="uiFormActMain-Title5" value="[ODBC]" />
+  <string key="uiFormMiniParse-title" value="ミニパース" />
+  <string key="uiFormMiniParse-titleCombat" value="ミニパース - *Combat*" />
+  <string key="uiLoading-init10" value="ACTの初期化 10...  (ログファイルのセットアップ, ゾーン/名称データをスキャンしています)" />
+  <string key="uiLoading-init11" value="ACTの初期化 11...  (各種データをセットアップしています)" />
+  <string key="uiLoading-init12" value="ACTの初期化 12...  (インターネットからのダウンロードファイルのブロックをスキャンしています)" />
+  <string key="uiLoading-init13" value="ACTの初期化 13...  (CPUアフィニティをセットアップしています)" />
+  <string key="uiLoading-init14" value="ACTの初期化 14...  (メインテーブルのスタイルを初期化しています)" />
+  <string key="uiLoading-init15" value="ACTの初期化 15...  (列、エクスポートする変数を検証しています)" />
+  <string key="uiLoading-init16" value="ACTの初期化 16...  (ログの監視を開始しています)" />
+  <string key="uiLoading-init17" value="ACTの初期化 17...  (タブビューをリセットしています)" />
+  <string key="uiLoading-init18" value="ACTの初期化 18...  (コンボボックスのスタイルをリセット、解析イベントをチェックしています)" />
+  <string key="uiLoading-init19" value="ACTの初期化 19...  (アップデートを確認しています)" />
+  <string key="uiLoading-init20" value="ACTの初期化 20...  (プラグインをチェック)" />
+  <string key="uiLoading-init21" value="ACTの初期化 21...  (履歴データベースをセットアップしています)" />
+  <string key="uiLoading-init22" value="ACTの初期化 22...  (ACTのインストールフォルダをチェックしています)" />
+  <string key="uiLoading-init23" value="ACTの初期化 23...  (設定ファイルのバックアップをチェックしています)" />
+  <string key="uiLoading-initExit" value="ACTの初期化を完了しています..." />
+  <string key="uiOpMisc-logPaused" value="解析の停止..." />
+  <string key="uiOpMisc-logPosition1" value="読込中... {0}\n現在の位置: {1:0,0}." />
+  <string key="uiOpMisc-logPosition2" value=" ({0} 後ろ)" />
+  <string key="uiOpMisc-logPosition3" value=" ({0} CustomTrigger lines behind.)" />
+  <string key="uiOpWebServer-sessionStats" value="セッション統計 | 直近10秒\n{0:#,0} bytes in | {3:0.00} KB/s in\n{1:#,0} bytes out | {4:0.00} KB/s out\n{2} unique clients | {5} unique clients" />
+  <string key="ui-processPriority" value="通常" />
+  <string key="ui-processPriority-" value="通常以下" />
+  <string key="ui-processPriority--" value="最低" />
+  <string key="ui-processPriority+" value="通常以上" />
+  <string key="ui-soundTypeBeep" value="ビープ音" />
+  <string key="ui-soundTypeNone" value="なし" />
+  <string key="ui-soundTypeSound" value="サウンド" />
+  <string key="ui-soundTypeTts" value="TTS" />
+  <string key="ui-spellTimerTooltip" value="{0} - {1}s." />
+  <string key="ui-tableColumnError" value="ERROR" />
+  <string key="ui-textExportDefault" value="[現在のデフォルト]" />
+  <string key="zoneDataTerm-import" value="インポート" />
+  <string key="zoneDataTerm-importMerge" value="インポート/マージ - [{0}]" />
 </InternalStrings>
