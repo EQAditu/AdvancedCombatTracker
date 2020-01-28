@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ControlText Form="FormUpdater">
-    <Control ControlPath="root" UniqueName="lblUpdateStatus" Text="Checking version from web..." />
-    <Control ControlPath="root" UniqueName="btnCancel" Text="Cancel" />
-    <Control ControlPath="root" UniqueName="lblThisVer" Text="1.0.0.0" />
-    <Control ControlPath="root" UniqueName="label1" Text="This Version:" />
-    <Control ControlPath="root" UniqueName="label2" Text="Web Version:" />
-    <Control ControlPath="root" UniqueName="lblWebVer" Text="1.0.0.0" />
-    <Control ControlPath="root" UniqueName="btnUpdate" Text="Update" />
-    <Control ControlPath="root" UniqueName="btnDownload" Text="Download" />
+    <Control ControlPath="root" UniqueName="lblUpdateStatus" Text="バージョンを確認"/>
+    <Control ControlPath="root" UniqueName="btnCancel" Text="キャンセル"/>
+    <Control ControlPath="root" UniqueName="lblThisVer" Text="1.0.0.0"/>
+    <Control ControlPath="root" UniqueName="label1" Text="使用バージョン:"/>
+    <Control ControlPath="root" UniqueName="label2" Text="Webバージョン:"/>
+    <Control ControlPath="root" UniqueName="lblWebVer" Text="1.0.0.0"/>
+    <Control ControlPath="root" UniqueName="btnUpdate" Text="更新"/>
+    <Control ControlPath="root" UniqueName="btnDownload" Text="ダウンロード"/>
 </ControlText>

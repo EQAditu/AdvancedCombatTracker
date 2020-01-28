@@ -1,22 +1,22 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ControlText Form="FormStartupWizard">
-    <Control ControlPath="root" UniqueName="btnClose" Text="Close" />
-    <Control ControlPath="root" UniqueName="btnBack" Text="&lt; Back" />
-    <Control ControlPath="root" UniqueName="btnNext" Text="Next &gt;" />
-    <Control ControlPath="root\tabControl1" UniqueName="tabPage1" Text="Start" />
-    <Control ControlPath="root\tabControl1\tabPage1" UniqueName="label1" Text="This wizard will assist you in selecting a parsing plugin, configuring updates and selecting a log file." />
-    <Control ControlPath="root\tabControl1" UniqueName="tabPage4" Text="Parsing Plugin" />
-    <Control ControlPath="root\tabControl1\tabPage4" UniqueName="label8" Text="Make certain that you select the proper plugin for the game you are playing.  (Marked in bold red)" />
-    <Control ControlPath="root\tabControl1\tabPage4" UniqueName="label7" Text="ACT by itself does not have any capability to parse game log files.  You must use an external plugin to parse log files from different games.  Browse the drop-down list and select a plugin to enable with the associated button. Do not enable more than one parsing plugin at a time." />
-    <Control ControlPath="root\tabControl1\tabPage4" UniqueName="btnUsePlugin" Text="Download/Enable Plugin" />
-    <Control ControlPath="root\tabControl1\tabPage4" UniqueName="btnGetPluginTitles" Text="1: Get available parsing plugins" />
-    <Control ControlPath="root\tabControl1" UniqueName="tabPage2" Text="Log File" />
-    <Control ControlPath="root\tabControl1\tabPage2" UniqueName="label3" Text="Any time you switch characters ACT can detect a different log file being used and switch to it automatically." />
-    <Control ControlPath="root\tabControl1\tabPage2" UniqueName="cbAutoLogSwitch" Text="Auto-load recently changed log files." />
-    <Control ControlPath="root\tabControl1" UniqueName="tabPage3" Text="Startup Settings" />
-    <Control ControlPath="root\tabControl1\tabPage3" UniqueName="label6" Text="Upon starting, exiting or character switching, ACT will attempt to rename the last open log file if it is larger than the listed size.  This may require administrative privilages and will not work with files currently being written to.&#xD;&#xA;&#xD;&#xA;This operation is merely for convenience of importing old files or opening them in text editors.  There is no real-time performance consideration when changing this setting." />
-    <Control ControlPath="root\tabControl1\tabPage3" UniqueName="label5" Text="megabytes.  (Zero will disable)" />
-    <Control ControlPath="root\tabControl1\tabPage3" UniqueName="label4" Text="Attempt to split the log file every" />
-    <Control ControlPath="root\tabControl1\tabPage3" UniqueName="label2" Text="Enabling this will allow ACT and possibly plugins to check for new versions each time they start.  Enabling this is recommended to remain up-to-date with fixes/additions.  (Requires Internet Connection)" />
-    <Control ControlPath="root\tabControl1\tabPage3" UniqueName="cbAutoVerCheck" Text="Auto Version Check" />
+    <Control ControlPath="root" UniqueName="btnClose" Text="閉じる"/>
+    <Control ControlPath="root" UniqueName="btnBack" Text="&lt; 戻る"/>
+    <Control ControlPath="root" UniqueName="btnNext" Text="次へ &gt;"/>
+    <Control ControlPath="root\tabControl1" UniqueName="tabPage1" Text="開始"/>
+    <Control ControlPath="root\tabControl1\tabPage1" UniqueName="label1" Text="このウィザードは、解析プラグインの選択、アップデートの設定、およびログファイルの選択を案内します。"/>
+    <Control ControlPath="root\tabControl1" UniqueName="tabPage4" Text="解析プラグイン"/>
+    <Control ControlPath="root\tabControl1\tabPage4" UniqueName="label8" Text="プレイしているゲームに適切なプラグインを選択していることを確認してください。 （太字の赤でマーク）&#10;"/>
+    <Control ControlPath="root\tabControl1\tabPage4" UniqueName="label7" Text="ACT自体には、ゲームログファイルを解析する機能はありません。 さまざまなゲームのログファイルを解析するには、外部プラグインを使用する必要があります。 ドロップダウンリストを参照し、関連するボタンで有効にするプラグインを選択します。 一度に複数の解析プラグインを有効にしないでください。"/>
+    <Control ControlPath="root\tabControl1\tabPage4" UniqueName="btnUsePlugin" Text="プラグインをダウンロード/有効化する"/>
+    <Control ControlPath="root\tabControl1\tabPage4" UniqueName="btnGetPluginTitles" Text="1: 利用可能な解析プラグインを取得"/>
+    <Control ControlPath="root\tabControl1" UniqueName="tabPage2" Text="ログファイル"/>
+    <Control ControlPath="root\tabControl1\tabPage2" UniqueName="label3" Text="&#10;文字を切り替えるとACTは使用されている別のログファイルを検出し自動的に切替えます。"/>
+    <Control ControlPath="root\tabControl1\tabPage2" UniqueName="cbAutoLogSwitch" Text="更新されたログファイルを自動的にロードします。"/>
+    <Control ControlPath="root\tabControl1" UniqueName="tabPage3" Text="スタートアップ設定"/>
+    <Control ControlPath="root\tabControl1\tabPage3" UniqueName="label6" Text="ACTは、開始、終了、または文字の切り替え時に、リストにあるサイズよりも大きい場合にログファイルリネームします。 これには管理特権が必要な場合があります。&#10;&#10;この操作は、古いファイルをインポートしたり、テキストエディタで開いたりするために便利です。この設定を有効にしてもリアルタイム解析のパフォーマンスには影響ありません。"/>
+    <Control ControlPath="root\tabControl1\tabPage3" UniqueName="label5" Text="MB（ゼロで無効）"/>
+    <Control ControlPath="root\tabControl1\tabPage3" UniqueName="label4" Text="ログファイルを分割します"/>
+    <Control ControlPath="root\tabControl1\tabPage3" UniqueName="label2" Text="これを有効にすると、ACTおよびプラグインが起動するたびに新しいバージョンをチェックするようになります。最新の状態を維持するために有効にすることをお勧めします。（インターネット接続が必要です）"/>
+    <Control ControlPath="root\tabControl1\tabPage3" UniqueName="cbAutoVerCheck" Text="自動バージョンチェック"/>
 </ControlText>

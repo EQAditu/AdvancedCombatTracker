@@ -1,18 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ControlText Form="FormTimeLine">
-    <Control ControlPath="root" UniqueName="groupBox" Text="Event Toggles" />
-    <Control ControlPath="root\groupBox" UniqueName="btnInvertChecked" Text="Invert Checked" />
-    <Control ControlPath="root\groupBox" UniqueName="btnCheckAll" Text="Check All" />
-    <Control ControlPath="root\groupBox" UniqueName="btnApplyRecalc" Text="Apply above settings and recalculate" />
-    <Control ControlPath="root\groupBox" UniqueName="label2" Text="Sample Detail (Seconds)" />
-    <Control ControlPath="root\groupBox" UniqueName="cbGlobalMaxLimit" Text="Same type rows share same scale" />
-    <Control ControlPath="root\groupBox" UniqueName="cbTLIncomingHealing" Text="Incoming Healing" />
-    <Control ControlPath="root\groupBox" UniqueName="cbTLOutgoingHealing" Text="Outgoing Healing" />
-    <Control ControlPath="root\groupBox" UniqueName="cbTLIncomingDamage" Text="Incoming Damage" />
-    <Control ControlPath="root\groupBox" UniqueName="cbTLOutDamage" Text="Outgoing Damage" />
-    <Control ControlPath="root\groupBox" UniqueName="cbTLRollingAvg" Text="Use rolling average plots (not segments)" />
-    <Control ControlPath="root\groupBox" UniqueName="label1" Text="Combatant Grouping" />
-    <Control ControlPath="root" UniqueName="cbAllowRedraw" Text="R" />
-    <Control ControlPath="root" UniqueName="btnZoomIn" Text="+" />
-    <Control ControlPath="root" UniqueName="btnZoomOut" Text="-" />
+    <Control ControlPath="root" UniqueName="groupBox" Text="イベント"/>
+    <Control ControlPath="root\groupBox" UniqueName="btnInvertChecked" Text="反転"/>
+    <Control ControlPath="root\groupBox" UniqueName="btnCheckAll" Text="すべてチェック"/>
+    <Control ControlPath="root\groupBox" UniqueName="btnApplyRecalc" Text="設定を適用して再計算する"/>
+    <Control ControlPath="root\groupBox" UniqueName="label2" Text="詳細な例（秒）"/>
+    <Control ControlPath="root\groupBox" UniqueName="cbGlobalMaxLimit" Text="同じタイプの行に同じスケールを適用する"/>
+    <Control ControlPath="root\groupBox" UniqueName="cbTLIncomingHealing" Text="被ヒール"/>
+    <Control ControlPath="root\groupBox" UniqueName="cbTLOutgoingHealing" Text="与ヒール"/>
+    <Control ControlPath="root\groupBox" UniqueName="cbTLIncomingDamage" Text="被ダメージ"/>
+    <Control ControlPath="root\groupBox" UniqueName="cbTLOutDamage" Text="与ダメージ"/>
+    <Control ControlPath="root\groupBox" UniqueName="cbTLRollingAvg" Text="ローリングした平均値をプロットする（区切らない）"/>
+    <Control ControlPath="root\groupBox" UniqueName="label1" Text="戦闘員のグルーピング"/>
+    <Control ControlPath="root" UniqueName="cbAllowRedraw" Text="R"/>
+    <Control ControlPath="root" UniqueName="btnZoomIn" Text="+"/>
+    <Control ControlPath="root" UniqueName="btnZoomOut" Text="-"/>
 </ControlText>

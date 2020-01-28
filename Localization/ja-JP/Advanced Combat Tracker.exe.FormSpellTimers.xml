@@ -1,38 +1,38 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ControlText Form="FormSpellTimers">
-    <Control ControlPath="root" UniqueName="btnClearSearch" Text="Clear" />
-    <Control ControlPath="root" UniqueName="groupBox1" Text="Timer Specific Settings" />
-    <Control ControlPath="root\groupBox1\tableLayoutPanel2" UniqueName="label17" Text="AE/Skill/Custom Trigger Name" />
-    <Control ControlPath="root\groupBox1\tableLayoutPanel2" UniqueName="label1" Text="Timer period in seconds" />
-    <Control ControlPath="root\groupBox1\tableLayoutPanel2" UniqueName="label9" Text="Remove timer from view at" />
-    <Control ControlPath="root\groupBox1\tableLayoutPanel2" UniqueName="label3" Text="Warning point in seconds" />
-    <Control ControlPath="root\groupBox1\tableLayoutPanel2" UniqueName="label23" Text="Restrict to category zone or mob" />
-    <Control ControlPath="root\groupBox1\tableLayoutPanel2" UniqueName="label22" Text="Category" />
-    <Control ControlPath="root\groupBox1\tableLayoutPanel2" UniqueName="label21" Text="Display in Panel B" />
-    <Control ControlPath="root\groupBox1\tableLayoutPanel2" UniqueName="label20" Text="Display in Panel A" />
-    <Control ControlPath="root\groupBox1\tableLayoutPanel2" UniqueName="label19" Text="Allow Timer Mods to affect this" />
-    <Control ControlPath="root\groupBox1\tableLayoutPanel2" UniqueName="label18" Text="Show Radial Timer Display" />
-    <Control ControlPath="root\groupBox1\tableLayoutPanel2" UniqueName="label4" Text="Restrict timers to a &quot;white list&quot;" />
-    <Control ControlPath="root\groupBox1\tableLayoutPanel2" UniqueName="label2" Text="Ignore timer restarts while time left" />
-    <Control ControlPath="root\groupBox1\tableLayoutPanel2" UniqueName="label24" Text="Do not use DoT ticks, only restart" />
-    <Control ControlPath="root\splitContainer2\" UniqueName="btnAddEdit" Text="Add/&amp;Edit" />
-    <Control ControlPath="root\splitContainer2\" UniqueName="btnRemove" Text="&amp;Remove" />
-    <Control ControlPath="root" UniqueName="groupBox4" Text="Restricted Timer White List" />
-    <Control ControlPath="root\groupBox4" UniqueName="btnWhiteListRemove" Text="Remove" />
-    <Control ControlPath="root\groupBox4" UniqueName="btnWhiteListAdd" Text="Add" />
-    <Control ControlPath="root" UniqueName="groupBox3" Text="Global Settings" />
-    <Control ControlPath="root\groupBox3\tableLayoutPanel1" UniqueName="label8" Text="Setting" />
-    <Control ControlPath="root\groupBox3\tableLayoutPanel1" UniqueName="label11" Text="Panel Opacity (%)" />
-    <Control ControlPath="root\groupBox3\tableLayoutPanel1" UniqueName="label12" Text="Panel A" />
-    <Control ControlPath="root\groupBox3\tableLayoutPanel1" UniqueName="label13" Text="Panel B" />
-    <Control ControlPath="root\groupBox3\tableLayoutPanel1" UniqueName="label10" Text="Visual Scale Factor" />
-    <Control ControlPath="root\groupBox3\tableLayoutPanel1" UniqueName="label14" Text="Always on Top" />
-    <Control ControlPath="root\groupBox3\tableLayoutPanel1" UniqueName="label15" Text="Enable Click-Through" />
-    <Control ControlPath="root\groupBox3\tableLayoutPanel1" UniqueName="label16" Text="Visible" />
-    <Control ControlPath="root" UniqueName="groupBox2" Text="Timer Specific Sounds/Notes/Color" />
-    <Control ControlPath="root\groupBox2" UniqueName="label7" Text="Custom Timer Start Sound" />
-    <Control ControlPath="root\groupBox2" UniqueName="label6" Text="Custom Tooltip" />
-    <Control ControlPath="root\groupBox2" UniqueName="label5" Text="Custom Warning Sound" />
-    <Control ControlPath="root\groupBox2" UniqueName="btnWarningWavBrowse" Text="..." />
-    <Control ControlPath="root\groupBox2" UniqueName="btnStartWavBrowse" Text="..." />
+    <Control ControlPath="root" UniqueName="btnClearSearch" Text="クリア"/>
+    <Control ControlPath="root" UniqueName="groupBox1" Text="タイマー詳細設定"/>
+    <Control ControlPath="root\groupBox1\tableLayoutPanel2" UniqueName="label17" Text="AoE/スキル/トリガー名"/>
+    <Control ControlPath="root\groupBox1\tableLayoutPanel2" UniqueName="label1" Text="タイマーの長さ（秒）"/>
+    <Control ControlPath="root\groupBox1\tableLayoutPanel2" UniqueName="label9" Text="ビューからタイマーを除去する"/>
+    <Control ControlPath="root\groupBox1\tableLayoutPanel2" UniqueName="label3" Text="警告点（秒）"/>
+    <Control ControlPath="root\groupBox1\tableLayoutPanel2" UniqueName="label23" Text="Restrict to category zone or mob"/>
+    <Control ControlPath="root\groupBox1\tableLayoutPanel2" UniqueName="label22" Text="カテゴリー"/>
+    <Control ControlPath="root\groupBox1\tableLayoutPanel2" UniqueName="label21" Text="パネルBの表示"/>
+    <Control ControlPath="root\groupBox1\tableLayoutPanel2" UniqueName="label20" Text="パネルAの表示"/>
+    <Control ControlPath="root\groupBox1\tableLayoutPanel2" UniqueName="label19" Text="Allow Timer Mods to affect this"/>
+    <Control ControlPath="root\groupBox1\tableLayoutPanel2" UniqueName="label18" Text="円形タイマー表示"/>
+    <Control ControlPath="root\groupBox1\tableLayoutPanel2" UniqueName="label4" Text="ホワイトリストでタイマーの実行を制限する"/>
+    <Control ControlPath="root\groupBox1\tableLayoutPanel2" UniqueName="label2" Text="Ignore timer restarts while time left"/>
+    <Control ControlPath="root\groupBox1\tableLayoutPanel2" UniqueName="label24" Text="Do not use DoT ticks, only restart"/>
+    <Control ControlPath="root\splitContainer2\" UniqueName="btnAddEdit" Text="追加/&amp;編集"/>
+    <Control ControlPath="root\splitContainer2\" UniqueName="btnRemove" Text="&amp;削除"/>
+    <Control ControlPath="root" UniqueName="groupBox4" Text="Restricted Timer White List"/>
+    <Control ControlPath="root\groupBox4" UniqueName="btnWhiteListRemove" Text="削除"/>
+    <Control ControlPath="root\groupBox4" UniqueName="btnWhiteListAdd" Text="追加"/>
+    <Control ControlPath="root" UniqueName="groupBox3" Text="一般設定"/>
+    <Control ControlPath="root\groupBox3\tableLayoutPanel1" UniqueName="label8" Text="設定"/>
+    <Control ControlPath="root\groupBox3\tableLayoutPanel1" UniqueName="label11" Text="パネルの不透明度(%)"/>
+    <Control ControlPath="root\groupBox3\tableLayoutPanel1" UniqueName="label12" Text="パネルA"/>
+    <Control ControlPath="root\groupBox3\tableLayoutPanel1" UniqueName="label13" Text="パネルB"/>
+    <Control ControlPath="root\groupBox3\tableLayoutPanel1" UniqueName="label10" Text="Visual Scale Factor"/>
+    <Control ControlPath="root\groupBox3\tableLayoutPanel1" UniqueName="label14" Text="常に前面に表示する"/>
+    <Control ControlPath="root\groupBox3\tableLayoutPanel1" UniqueName="label15" Text="クリックスルー"/>
+    <Control ControlPath="root\groupBox3\tableLayoutPanel1" UniqueName="label16" Text="表示する"/>
+    <Control ControlPath="root" UniqueName="groupBox2" Text="タイマーのサウンド/テキスト/カラーの詳細"/>
+    <Control ControlPath="root\groupBox2" UniqueName="label7" Text="カスタムタイマーの開始音"/>
+    <Control ControlPath="root\groupBox2" UniqueName="label6" Text="カスタムツールチップ"/>
+    <Control ControlPath="root\groupBox2" UniqueName="label5" Text="カスタム警告音"/>
+    <Control ControlPath="root\groupBox2" UniqueName="btnWarningWavBrowse" Text="…"/>
+    <Control ControlPath="root\groupBox2" UniqueName="btnStartWavBrowse" Text="…"/>
 </ControlText>
