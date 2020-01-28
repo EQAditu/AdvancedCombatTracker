@@ -341,7 +341,7 @@
   <string key="trayTitle-restartAct" value="ACTの再起動がリクエストされました" />
   <string key="trayTitle-unhandledException" value="ACTで予期しない例外が発生しました" />
   <string key="ui-customTriggerGeneralCategory" value="全般" />
-  <string key="uiFormActMain-Title0" value="{0}{1}Advanced Combat Tracker{2} - {3} - 記録時間: {4} (Est. {5})" />
+  <string key="uiFormActMain-Title0" value="{0}{1}Advanced Combat Tracker{2} - {3} - 記録時間: {4} (JST {5})" />
   <string key="uiFormActMain-Title1" value="*Combat* " />
   <string key="uiFormActMain-Title2a" value="ログ - アクティブ" />
   <string key="uiFormActMain-Title2b" value="ログ - アイドル" />
