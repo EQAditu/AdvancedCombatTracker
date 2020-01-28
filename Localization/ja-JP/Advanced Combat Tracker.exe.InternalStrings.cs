@@ -43,7 +43,7 @@ namespace ActLocalization
         {
             var asm = Assembly.GetExecutingAssembly();
 
-            using (var s = asm.GetManifestResourceStream("Advanced Combat Tracker.exe.InternalStrings.xml"))
+            using (var s = asm.GetManifestResourceStream("ActLocalization.Advanced Combat Tracker.exe.InternalStrings.xml"))
             {
                 if (s == null)
                 {
@@ -61,8 +61,8 @@ namespace ActLocalization
                             var key = xmlTextReader.GetAttribute("key");
                             var value = xmlTextReader.GetAttribute("value");
 
-                            value.Replace("\\n", Environment.NewLine);
-                            value.Replace("\\r", Environment.NewLine);
+                            value = value.Replace("\\n", Environment.NewLine);
+                            value = value.Replace("\\r", Environment.NewLine);
 
                             TryEditLocalization(key, value);
                         }
