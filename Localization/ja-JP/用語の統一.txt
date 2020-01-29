@@ -1,0 +1,6 @@
+encounter → エンカウント
+parse → 解析
+Outgoing Damage → 与ダメージ
+Incoming Damage → 被ダメージ
+Outoging Healing → 与ヒール
+Incoming Healing → 被ヒール

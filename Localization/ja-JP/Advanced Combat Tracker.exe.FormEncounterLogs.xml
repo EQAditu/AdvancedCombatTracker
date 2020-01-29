@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlText Form="FormEncounterLogs">
+    <Control ControlPath="root" UniqueName="cbOnlyResults" Text="検索結果で絞る"/>
+    <Control ControlPath="root" UniqueName="groupBox1" Text="エンカウントログを検索する..."/>
+    <Control ControlPath="root\groupBox1" UniqueName="btnSearchText" Text="検索する"/>
+    <Control ControlPath="root\groupBox1" UniqueName="btnSearchRegex" Text="検索する（正規表現）"/>
+    <Control ControlPath="root\groupBox1" UniqueName="btnFindNext" Text="次へ"/>
+    <Control ControlPath="root\groupBox1" UniqueName="btnFindPrev" Text="前へ"/>
+    <Control ControlPath="root\groupBox2" UniqueName="btnCopyCombat" Text="戦闘をコピー"/>
+    <Control ControlPath="root\groupBox2" UniqueName="btnCopyResults" Text="結果をコピー"/>
+    <Control ControlPath="root\groupBox2" UniqueName="btnCopySelection" Text="選択範囲をコピー"/>
+    <Control ControlPath="root\groupBox2" UniqueName="btnCopyAll" Text="すべてコピー"/>
+</ControlText>

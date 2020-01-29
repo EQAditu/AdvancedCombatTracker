@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlText Form="FormScratchRange">
+    <Control ControlPath="root" UniqueName="btnOk" Text="OK"/>
+    <Control ControlPath="root" UniqueName="groupBox2" Text="タイムレンジを入力する"/>
+    <Control ControlPath="root\groupBox2\tableLayoutPanel1" UniqueName="label1" Text="レンジ開始"/>
+    <Control ControlPath="root\groupBox2\tableLayoutPanel1" UniqueName="label2" Text="レンジ終了"/>
+    <Control ControlPath="root\groupBox2\tableLayoutPanel1" UniqueName="label3" Text="タイムコード（他のウィンドウにコピーする）"/>
+    <Control ControlPath="root" UniqueName="groupBox1" Text="タイムレンジをスライドする"/>
+    <Control ControlPath="root\groupBox1" UniqueName="label5" Text="終了"/>
+    <Control ControlPath="root\groupBox1" UniqueName="label4" Text="開始"/>
+</ControlText>

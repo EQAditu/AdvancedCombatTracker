@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlText Form="FormExportFormat">
+    <Control ControlPath="root" UniqueName="groupBox4" Text="整形例"/>
+    <Control ControlPath="root" UniqueName="groupBox3" Text="整形の詳細"/>
+    <Control ControlPath="root\groupBox3" UniqueName="lblElementDescription" Text="要素が選択されていません"/>
+    <Control ControlPath="root" UniqueName="groupBox2" Text="有効な整形ルール"/>
+    <Control ControlPath="root" UniqueName="groupBox1" Text="文字列整形"/>
+    <Control ControlPath="root\groupBox1" UniqueName="label1" Text="戦闘員をソートする:"/>
+    <Control ControlPath="root\groupBox1" UniqueName="btnAddTextPreset" Text="プリセットを追加する"/>
+    <Control ControlPath="root\groupBox1" UniqueName="cbPrefixAllied" Text="アライアンス統計のプレフィックス"/>
+    <Control ControlPath="root\groupBox1" UniqueName="cbAlliesOnly" Text="アライアンスの戦闘員だけエクスポートする"/>
+    <Control ControlPath="root\groupBox1" UniqueName="groupBox6" Text="アライアンスの整形ルール"/>
+    <Control ControlPath="root\groupBox1\groupBox6" UniqueName="btnEditAllyString" Text="直接編集"/>
+    <Control ControlPath="root\groupBox1\groupBox6" UniqueName="btnShiftRightAllies" Text="-&gt;"/>
+    <Control ControlPath="root\groupBox1\groupBox6" UniqueName="btnShiftLeftAllies" Text="&lt;-"/>
+    <Control ControlPath="root\groupBox1\groupBox6" UniqueName="btnAppendAllies" Text="追加"/>
+    <Control ControlPath="root\groupBox1\groupBox6" UniqueName="btnRemoveAllies" Text="削除"/>
+    <Control ControlPath="root\groupBox1" UniqueName="groupBox5" Text="戦闘員ごとの整形ルール"/>
+    <Control ControlPath="root\groupBox1\groupBox5" UniqueName="btnEditCombatantString" Text="直接編集"/>
+    <Control ControlPath="root\groupBox1\groupBox5" UniqueName="btnShiftRight" Text="-&gt;"/>
+    <Control ControlPath="root\groupBox1\groupBox5" UniqueName="btnShiftLeft" Text="&lt;-"/>
+    <Control ControlPath="root\groupBox1\groupBox5" UniqueName="btnAppend" Text="追加"/>
+    <Control ControlPath="root\groupBox1\groupBox5" UniqueName="btnRemove" Text="削除"/>
+</ControlText>

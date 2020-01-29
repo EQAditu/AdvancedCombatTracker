@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlText Form="FormStartupWizard">
+    <Control ControlPath="root" UniqueName="btnClose" Text="閉じる"/>
+    <Control ControlPath="root" UniqueName="btnBack" Text="&lt; 戻る"/>
+    <Control ControlPath="root" UniqueName="btnNext" Text="次へ &gt;"/>
+    <Control ControlPath="root\tabControl1" UniqueName="tabPage1" Text="開始"/>
+    <Control ControlPath="root\tabControl1\tabPage1" UniqueName="label1" Text="このウィザードは、解析プラグインの選択、アップデートの設定、およびログファイルの選択を案内します。"/>
+    <Control ControlPath="root\tabControl1" UniqueName="tabPage4" Text="解析プラグイン"/>
+    <Control ControlPath="root\tabControl1\tabPage4" UniqueName="label8" Text="プレイしているゲームに適切なプラグインを選択していることを確認してください。 （太字の赤でマーク）&#10;"/>
+    <Control ControlPath="root\tabControl1\tabPage4" UniqueName="label7" Text="ACT自体には、ゲームログファイルを解析する機能はありません。 さまざまなゲームのログファイルを解析するには、外部プラグインを使用する必要があります。 ドロップダウンリストを参照し、関連するボタンで有効にするプラグインを選択します。 一度に複数の解析プラグインを有効にしないでください。"/>
+    <Control ControlPath="root\tabControl1\tabPage4" UniqueName="btnUsePlugin" Text="プラグインをダウンロード/有効化する"/>
+    <Control ControlPath="root\tabControl1\tabPage4" UniqueName="btnGetPluginTitles" Text="1: 利用可能な解析プラグインを取得"/>
+    <Control ControlPath="root\tabControl1" UniqueName="tabPage2" Text="ログファイル"/>
+    <Control ControlPath="root\tabControl1\tabPage2" UniqueName="label3" Text="&#10;文字を切り替えるとACTは使用されている別のログファイルを検出し自動的に切替えます。"/>
+    <Control ControlPath="root\tabControl1\tabPage2" UniqueName="cbAutoLogSwitch" Text="更新されたログファイルを自動的にロードします。"/>
+    <Control ControlPath="root\tabControl1" UniqueName="tabPage3" Text="スタートアップ設定"/>
+    <Control ControlPath="root\tabControl1\tabPage3" UniqueName="label6" Text="ACTは、開始、終了、または文字の切り替え時に、リストにあるサイズよりも大きい場合にログファイルリネームします。 これには管理特権が必要な場合があります。&#10;&#10;この操作は、古いファイルをインポートしたり、テキストエディタで開いたりするために便利です。この設定を有効にしてもリアルタイム解析のパフォーマンスには影響ありません。"/>
+    <Control ControlPath="root\tabControl1\tabPage3" UniqueName="label5" Text="MB（ゼロで無効）"/>
+    <Control ControlPath="root\tabControl1\tabPage3" UniqueName="label4" Text="ログファイルを分割します"/>
+    <Control ControlPath="root\tabControl1\tabPage3" UniqueName="label2" Text="これを有効にすると、ACTおよびプラグインが起動するたびに新しいバージョンをチェックするようになります。最新の状態を維持するために有効にすることをお勧めします。（インターネット接続が必要です）"/>
+    <Control ControlPath="root\tabControl1\tabPage3" UniqueName="cbAutoVerCheck" Text="自動バージョンチェック"/>
+</ControlText>
