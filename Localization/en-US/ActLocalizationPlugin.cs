@@ -5,9 +5,9 @@ using System.Reflection;
 using System.Windows.Forms;
 using System.Xml;
 
-[assembly: AssemblyTitle("ActLocalization")]
+[assembly: AssemblyTitle("ActLocalization en-US")]
 [assembly: AssemblyDescription("A sample of an ACT plugin that changes localization strings using XML resources.")]
-[assembly: AssemblyVersion("267.0.1.1")]
+[assembly: AssemblyVersion("268.0.0.0")]
 
 namespace ActLocalization
 {
