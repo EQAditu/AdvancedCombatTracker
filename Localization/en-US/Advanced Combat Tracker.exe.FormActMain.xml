@@ -6,7 +6,6 @@
     <Control ControlPath="root" UniqueName="btnPasteXmlSnippet" Text="fakeFLP" />
     <Control ControlPath="root\tc1" UniqueName="tpMain" Text="Main" />
     <Control ControlPath="root\tc1\tpMain\pRightView\pDG" UniqueName="lblDG" Text="Encounters" />
-    <Control ControlPath="root\tc1\tpMain\pRightView\pGraphing\pCList" UniqueName="lblGraphList" Text="Combatants shown:" />
     <Control ControlPath="root\tc1\tpMain\pLeftView\pTvBtns\tableLayoutPanel11" UniqueName="btnClear" Text="&amp;Clear Encounters" />
     <Control ControlPath="root\tc1\tpMain\pLeftView\pTvBtns\tableLayoutPanel11" UniqueName="btnEndEnc" Text="&amp;End Encounter" />
     <Control ControlPath="root\tc1\tpMain\pLeftView\pTvBtns\tableLayoutPanel11" UniqueName="btnRefresh" Text="&amp;Refresh List" />
