@@ -266,100 +266,56 @@
 	<string key="graphCombatant-toolTip" value="+{0} ({1:#,0} sec average)" />
 	<string key="graphEncText-noDataError" value="The table currently has no data to graph..." />
 	<string key="graphEncText-noDataSortingError" value="No rows with compatible data to graph...&#xA;Try sorting the table by another column." />
-	<!--helpPanel-btnExportUIBrowser -> Help Panel Mouseover-->
 	<string key="helpPanel-btnExportUIBrowser" value="Press this button to start a wizard allowing you to set the EQ2's web browser to ACT's encounter index and optionally extracting a browser UI replacement with a collapsable interface and controls for maximum screen space." />
 	<string key="helpPanel-btnImportFile" value="To import encounters from your logfile, select the start and ending date with the choosers and select the log file to parse." />
-	<!--helpPanel-btnOdbcDropTables -> Help Panel Mouseover-->
 	<string key="helpPanel-btnOdbcDropTables" value="This will perform the DROP command on each table ACT uses.  This will delete all table data and remove the tables from the datasource." />
-	<!--helpPanel-btnOdbcTestConnection -> Help Panel Mouseover-->
 	<string key="helpPanel-btnOdbcTestConnection" value="This will attempt to log into the ODBC datasource specified in the Connection String." />
-	<!--helpPanel-btnOdbcValidateTables -> Help Panel Mouseover-->
 	<string key="helpPanel-btnOdbcValidateTables" value="This will make sure the ODBC datasource has the required tables and the tables have the required columns.  If anything is missing, ACT will attempt to create or alter the tables.  Success is required to do SQL exporting." />
 	<string key="helpPanel-btnResetColors" value="Resetting color/font settings will require ACT to be restarted." />
-	<!--helpPanel-btnResetOdbcHacks -> Help Panel Mouseover-->
 	<string key="helpPanel-btnResetOdbcHacks" value="This button will delete all ODBC hacks and replace them with a set of known hacks for various datasources, such as MSSQL, MS Access, Postgres..." />
 	<string key="helpPanel-cbAutoLoadLogs" value="ACT should check every few seconds for existing logs to have been updated and switch to those currently used logs.  (It will not check for new files automatically)" />
-	<!--helpPanel-cbBlockisHit -> Help Panel Mouseover-->
 	<string key="helpPanel-cbBlockisHit" value="When checked, a hit that reports that it fails to inflict any damage will still be considered a Hit.  When unchecked, only an attack that does damage is considered successful." />
-	<!--helpPanel-cbCullAll -> Help Panel Mouseover-->
 	<string key="helpPanel-cbCullAll" value="When a new zone listing is created, ACT will keep the listed number of &quot;All&quot; zone-wide encounters and cull the older." />
-	<!--helpPanel-cbCullCount -> Help Panel Mouseover-->
 	<string key="helpPanel-cbCullCount" value="When an encounter ends, normal encounters are culled to the listed number.  This applies to encounters in any current or previous zone but will not affect &quot;All&quot; zone-wide encounters." />
-	<!--helpPanel-cbCullCountIgnoreNoAlly -> Help Panel Mouseover-->
 	<string key="helpPanel-cbCullCountIgnoreNoAlly" value="Encounters with no allies, marked &quot;Encounter&quot; will not add to the count when determining the number of old encounters to cull." />
-	<!--helpPanel-cbCullNoAlly -> Help Panel Mouseover-->
 	<string key="helpPanel-cbCullNoAlly" value="When an encounter ends, all encounters (except for the last) labeled &quot;Encounter&quot; will be removed." />
-	<!--helpPanel-cbCullOther -> Help Panel Mouseover-->
 	<string key="helpPanel-cbCullOther" value="When a new zone listing is created, ACT will keep the normal encounters of this many previous zones." />
-	<!--helpPanel-cbCullTimer -> Help Panel Mouseover-->
 	<string key="helpPanel-cbCullTimer" value="When an encounter ends, all encounters (except for &quot;All&quot; zone-wide encounters) older than this time limit will be removed." />
-	<!--helpPanel-cbCurrentOdbc -> Help Panel Mouseover-->
 	<string key="helpPanel-cbCurrentOdbc" value="When in combat, ACT can export to a temporary table called current_table on your ODBC datasource every few seconds.  Every export, the table will be deleted and refilled to reflect the current encounter.  This option is only recommended if you have a very quick connection to your datasource." />
-	<!--helpPanel-cbDoubleBufferLV -> Help Panel Mouseover-->
 	<string key="helpPanel-cbDoubleBufferLV" value="When checked, ACT will attempt to enable minimal redrawing of the main table.  Windows versions before WindowsXP normally do not have this ability and may cause undesired results." />
-	<!--helpPanel-cbExFile -> Help Panel Mouseover-->
 	<string key="helpPanel-cbExFile" value="At the end of combat, this option will export to a macro file something similar to what a clipboard export would look like.  This file export is not restricted to 256 characters like the clipboard export, however it can only output 16 lines.  Once the export is created, you can display the results by using the command:&#xA;&#xA;/do_file_commands act-export.txt&#xA;&#xA;You can create an EQ2 macro to trigger this command.  The macro file export will attempt to tabulate the data to make viewing it easier.&#xA;&#xA;You must set the below option with what channel you wish to display the export to beforehand.  Leaving the channel prefix blank will cause the macro file not to function unless the Text Only Formatting options prefix a channel to *every* line." />
 	<string key="helpPanel-cbExFileColumnAlign" value="When enabled, the text export will be aligned into a table where each cell is padded to the length of the longest entry in that column.  It is recommended you use a text formatter such as {NAME10} instead of {name} or that column may have excessive padding." />
-	<!--helpPanel-cbExGraph -> Help Panel Mouseover-->
 	<string key="helpPanel-cbExGraph" value="When checked, HTML exports will include a main encounter graph." />
-	<!--helpPanel-cbExHTML -> Help Panel Mouseover-->
 	<string key="helpPanel-cbExHTML" value="EQ2 comes with an integrated web browser based on FireFox.  This can be used to view data exported by ACT while in fullscreen.  The main encounter table will be exported as HTML to be viewed within the EQ2 HTML window.  To access the HTML window, type: &quot;/browser&quot;" />
-	<!--helpPanel-cbExHTMLFTP -> Help Panel Mouseover-->
 	<string key="helpPanel-cbExHTMLFTP" value="If checked, when ACT exports EQ2 compatible HTML files, it will attempt to upload them to an FTP server of your choice.  Make sure to test your settings before use." />
-	<!--helpPanel-cbExOdbc -> Help Panel Mouseover-->
 	<string key="helpPanel-cbExOdbc" value="This will enable SQL exporting via ODBC automatically when an encounter ends.&#xA;&#xA;To use this feature, you need an ODBC driver to connect to your datasource and to fill out the Connection String with the remote host info. http://connectionstrings.com/ can help you make a connection string for your specific SQL datasource." />
-	<!--helpPanel-cbExportBeep -> Help Panel Mouseover-->
 	<string key="helpPanel-cbExportBeep" value="When checked, any exporting to the clipboard will cause a default system beep.  This is a good indication of when an encounter is ended and there is new data to paste into EQ2." />
-	<!--helpPanel-cbExportFilterSpace -> Help Panel Mouseover-->
 	<string key="helpPanel-cbExportFilterSpace" value="When checked, the Mini Parse window and clipboard exporting will exclude any combatants with spaces in their names.  This will exclude most mobs such as 'a giant bat' or 'King Drayek', but not 'Anguis' or 'Frostbite'." />
-	<!--helpPanel-cbExText -> Help Panel Mouseover-->
 	<string key="helpPanel-cbExText" value="Combatant summaries for the encounter will be exported to the clipboard after an encounter has ended.  These summaries can be pasted into EQ2 by pressing Ctrl-V, and customized under General Options -&gt; Text Only Formatting -&gt; Clipboard Export Formatting." />
 	<string key="helpPanel-cbGCollectOnClear" value="Enabling this will cause ACT to call GCCollect when clearing the encounters.  Doing this will cause the Clear Encounters button to take longer and has been known to completely freeze ACT until restart.  Only use this if you have problems with ACT never freeing memory over time." />
-	<!--helpPanel-cbGermanMergeNames -> Help Panel Mouseover-->
 	<string key="helpPanel-cbGermanMergeNames" value="If enabled, combatants with grammatical changes such as: ruhiger Wachposten, ruhigen Wachpostens s, ruhigen Wachposten, ruhige Wachposten, ruhigen Wachposten en; will all show up as the same combatant.  (Which ever showed up first in an encounter)" />
-	<!--helpPanel-cbGExpEnd -> Help Panel Mouseover-->
 	<string key="helpPanel-cbGExpEnd" value="If 'You gain bonus experience for defeating the encounter!' is seen, the encounter will be considered ended. &#xA;('You convert experience into achievement experience!' twice in a single second will also trigger this.)" />
-	<!--helpPanel-cbGraphSoloInc -> Help Panel Mouseover-->
 	<string key="helpPanel-cbGraphSoloInc" value="When unchecked, solo combatant graphs will only show DPS lines for outgoing damage.  When checked, incoming damage and incoming heal DPS lines will also be generated.  (This will slightly increase the CPU time used to generate)" />
-	<!--helpPanel-cbHtmlTimers -> Help Panel Mouseover-->
 	<string key="helpPanel-cbHtmlTimers" value="When checked, ACT will export an HTML page displaying the current view of the Timers Window.  The timer view will have the same dimensions as the original window, so resize it to your needs." />
-	<!--helpPanel-cbIdleEnd -> Help Panel Mouseover-->
 	<string key="helpPanel-cbIdleEnd" value="If no combat actions such as attacking are observed for N number of seconds, the encounter will be considered ended." />
-	<!--helpPanel-cbIdleTimerEnd -> Help Panel Mouseover-->
 	<string key="helpPanel-cbIdleTimerEnd" value="A previously defaulted non-option, ACT can internally count seconds of inactivity instead of waiting on a log timestamp with a time sufficiently after the last combat action.  If disabled, ACT will only end encounters based off of timestamps, and if no new log lines are parsed, its possible to never end an encounter *until* a new log timestamp is seen from EQ2.  When enabled, the timer will not strictly end an encounter based off the timer, but two seconds after (in absense of log timestamps)." />
-	<!--helpPanel-cbKillEnd -> Help Panel Mouseover-->
 	<string key="helpPanel-cbKillEnd" value="When an allied combatant kills another, the encounter will be considered ended." />
 	<string key="helpPanel-cbLcdEnabled" value="This will enable ACT's support for the G15 and G19 keyboards, or other devices that use those unified drivers.  For the default applets: button 1 of 4(G15) or Menu button(G19) will change ACT modes.  The next button(G15) or OK button(G19) will usually change sub-modes within that mode, such as switching export formats." />
-	<!--helpPanel-cbLcdRoute -> Help Panel Mouseover-->
 	<string key="helpPanel-cbLcdRoute" value="When the ACT Clipboard Sharer is connected, using this option will route all LCD traffic to the G15 LCD on the connected computer's keyboard.  This allows you to run ACT on a different computer than EQ2 and retain all LCD functionality." />
-	<!--helpPanel-cbLongEncDuration -> Help Panel Mouseover-->
 	<string key="helpPanel-cbLongEncDuration" value="Previously when only using timed encounter ending, heals being cast while the delay was counting down could affect the encounter's total duration, and therefore ExtDPS.  If unchecked, heals after the last combat action will still be recorded up until the encounter is terminated, but will not affect the duration of the encounter." />
-	<!--helpPanel-cbMiniClickThrough -> Help Panel Mouseover-->
 	<string key="helpPanel-cbMiniClickThrough" value="When enabled, mouse actions will not affect the Mini Window.  When transparency is set, this allows you to both see through and click on things behind the window.  Of course you can no longer move or close the window by normal means until click-through is disabled.  NOTE: You may toggle this option by right-clicking the main window 'Show Mini' button." />
 	<string key="helpPanel-cbMiniColumnAlign" value="When enabled, the text export will be aligned into a table where each cell is padded to the length of the longest entry in that column.  The alignment is dependant on the font selected.  It is recommended you use a text formatter such as {NAME10} instead of {name} or that column may have excessive padding." />
-	<!--helpPanel-cbMultiDamageIsOne -> Help Panel Mouseover-->
 	<string key="helpPanel-cbMultiDamageIsOne" value="When enabled, an attack that has multiple damage types, such as &quot;300 crushing, 5 poison and 5 disease damage&quot; will show up as one total attack: 300/5/5 crushing/poison/disease, internally seen as 310.  If disabled, each damage type will show up as an individual swing, IE three attacks: 300 crushing; 5 poison; 5 disease.  Having a single attack show up as multiple will have consequences when calculating ToHit%." />
-	<!--helpPanel-cbOnlyGraphAllies -> Help Panel Mouseover-->
 	<string key="helpPanel-cbOnlyGraphAllies" value="When checked, simple encounter bar graphs will only show your allies." />
-	<!--helpPanel-cbPetIsMaster -> Help Panel Mouseover-->
 	<string key="helpPanel-cbPetIsMaster" value="When checked, a pet will not show as its own entry, but as a spell under their master.  When unchecked, the pet is considered a seperate combatant and has its own statistics unrelated to its master.&#xA;This setting is not retroactive, and will not combine or seperate a pet from its master if the encounter has already taken place.  Only future encounters will be affected by this setting.&#xA;&#xA;&#xA;Since LU19 and &lt;Purpose tags&gt; showing under a pet's name and not in log files, parsers cannot automatically see who a pet belongs to." />
-	<!--helpPanel-cbRecalcWardedHits -> Help Panel Mouseover-->
 	<string key="helpPanel-cbRecalcWardedHits" value="If enabled, no-damage hits or reduced damage hits immediately following a ward absorbtion will be increased by the absorbtion amount.  Stoneskin's no-damage hits cannot be recalculated." />
-	<!--helpPanel-cbRecordLogs -> Help Panel Mouseover-->
 	<string key="helpPanel-cbRecordLogs" value="When checked, ACT will record all log lines that appear during an encounter.  You may then right click an encounter, select View Logs and view/search through them.  Disabling this option will reduce memory usage by a bit less than 45% when compared to default settings.  Exported ACT files will retain these recorded logs." />
-	<!--helpPanel-cbRestrictToAll -> Help Panel Mouseover-->
 	<string key="helpPanel-cbRestrictToAll" value="When checked, under each combatant, the only Damage Types entries that will be fully populated will be the ones marked (Ref) for Reference.  Instead of 'Melee (Out)' showing All, crush, and slash it will only show All, which is a combination of crush/slash.  Crush and slash will still be found under 'All Outgoing (Ref)' due to the (Ref) tag; the listing will simply be more crowded.&#xA;Enabling this options willl reduce CPU usage by a bit less than 10% and reduce memory usage by a bit more than 10% when compared to default settings.  Unchecked, this option will populate all entries in their logical listings." />
-	<!--helpPanel-cbSExpEnd -> Help Panel Mouseover-->
 	<string key="helpPanel-cbSExpEnd" value="If 'You gain experience!' is seen, the encounter will be considered ended. &#xA;('You convert experience into achievement experience!' will also trigger this.)" />
-	<!--helpPanel-cbSqlSafeMode -> Help Panel Mouseover-->
 	<string key="helpPanel-cbSqlSafeMode" value="In safe mode, SQL commands will be sent one at a time and server response checked.  Otherwise commands will be sent in 100 row batches, which while faster will be more problematic to debug." />
-	<!--helpPanel-cbSwarmIsMaster -> Help Panel Mouseover-->
 	<string key="helpPanel-cbSwarmIsMaster" value="When enabled, &quot;Дух огня (персонажа)&quot;, &quot;Wässrige Horde des Character&quot; and other similarly named pets will have their attack damage added to their master instead of as their own named entry.  Incoming attacks will *not* be redirected to their master's data." />
-	<!--helpPanel-cbWebServerEnabled -> Help Panel Mouseover-->
 	<string key="helpPanel-cbWebServerEnabled" value="The ACT Web Interface is somewhat similar to the EQ2 HTML exports in appearance.  Dissimilarly, the web interface is not made up of intermediary HTML files but generated HTML upon request.  By default, you can see auto-updating pages of the current encounter table, Mini-Window text(with support for multiple presets), spell timers and a page that can browse through all of ACT's encounter data in memory.  Context-menu reports based on that data are not currently available but plugins can be made to expand the web interface." />
-	<!--helpPanel-cbWebServerShowReq -> Help Panel Mouseover-->
 	<string key="helpPanel-cbWebServerShowReq" value="If enabled, all HTTP requests will be shown.  Otherwise things like auto-updating portions of pages or .css/.js files will be hidden (unless very large).  One request to '/timers'(always shown) may initiate requests to '/ACT.js', '/ACT.css' and '/timers.body'(optionally shown) as well." />
-	<!--helpPanel-cbZoneAllListing -> Help Panel Mouseover-->
 	<string key="helpPanel-cbZoneAllListing" value="As the first encounter of each Zone branch, an &quot;All&quot; entry can exist which will combine all data from other encounters for that zone.  As encounters progress within that zone, the All entry will be updated in real time.  The All encounter entry will be identical to a merged encounter of all encounters within that zone.&#xA;&#xA;Disabling this option will reduce memory and CPU usage a bit more than 10% when compared to default options." />
 	<string key="helpPanel-ccDGAllyText" value="The foreground color of combatant names that are marked as allies." />
 	<string key="helpPanel-ccDGPersonalBackcolor" value="The background color of the main table row containing your combatant." />
@@ -367,20 +323,13 @@
 	<string key="helpPanel-ccEncLabel2" value="The color for encounters where the outcome was unknown." />
 	<string key="helpPanel-ccEncLabel3" value="The color for encounters where all allies were defeated." />
 	<string key="helpPanel-ColorRestart" value="Changing these colors will require ACT to be restarted." />
-	<!--helpPanel-CurrentExports -> Help Panel Mouseover-->
 	<string key="helpPanel-CurrentExports" value="Checking this will create a custom HTML page with an auto updating graph or table.  The page will auto-refresh at the user specified interval providing more or less a real-time view of the encounter." />
-	<!--helpPanel-ddlGraphPriority -> Help Panel Mouseover-->
 	<string key="helpPanel-ddlGraphPriority" value="This setting will change the priority of graph generation.  All programs have a priority, usually Normal by default, and this priority defines how much CPU time should be given to the current task.  If set to Lowest(Idle), graph generation will only take CPU time not used by other applications.  If EQ2 is running, this will be next to nothing.  Normal priority will give equal amounts of CPU time to ACT and any other task, such as EQ2. Above Normal(Not recommended) will give graph generation more priority than most other programs and may cause noticable stuttering in EQ2 momentary freezing.  ACT's UI may also become unresponsive during graph generation." />
-	<!--helpPanel-ddlLanguage -> Help Panel Mouseover-->
 	<string key="helpPanel-ddlLanguage" value="This will change the parsing engine to another language or Spell Timers only mode." />
 	<string key="helpPanel-defaultText" value="Mouse-over an item to view a more detailed explanation." />
-	<!--helpPanel-ExFTPPASV -> Help Panel Mouseover-->
 	<string key="helpPanel-ExFTPPASV" value="If you are behind a router or have multiple NICs you may need to use Passive mode transfers.  If the target FTP server is under the same conditions(a PASV only state), you must use Active mode.  Two machines that require PASV mode cannot establish FTP transfers." />
-	<!--helpPanel-gbOdbcHacks -> Help Panel Mouseover-->
 	<string key="helpPanel-gbOdbcHacks" value="This section contains rules to modify all commands sent to the datasource if the connection string matches the rule.  You may use the Reset button to pre-populate known rules for reference." />
-	<!--helpPanel-GraphSize -> Help Panel Mouseover-->
 	<string key="helpPanel-GraphSize" value="This will set the image dimentions of the graph in HTML exporting and EQ2 viewing." />
-	<!--helpPanel-GraphType -> Help Panel Mouseover-->
 	<string key="helpPanel-GraphType" value="Select a graphing method for the main encounter display." />
 	<string key="helpPanel-IO_ExportAct" value="This feature will export a compressed binary file which can be later imported by ACT to recreate the encounter.  If you wish to export more than one encounter as a single file, use the Show Checkboxes feature on the Main tab." />
 	<string key="helpPanel-IO_ExportHtml" value="This feature will export the selected encounters into a single static HTML file which is then controlled by JavaScript and CSS." />
@@ -393,13 +342,10 @@
 	<string key="helpPanel-lblLcdMiniFormat" value="This LCD mode mimics the Mini Window in ACT.  This selector changes the export format displayed and may also be flipped through using the 2nd button of the G15 or OK button of the G19." />
 	<string key="helpPanel-lblPersonalParseFormat" value="This LCD mode will create an export with only your personal data in it, unlike the repeating format of all other combatants." />
 	<string key="helpPanel-lblSplitFile" value="As long as another program has not locked the file, ACT will attempt to rename the file with a date when opening or closing a file. (When over this size)" />
-	<!--helpPanel-lblWebServerPort -> Help Panel Mouseover-->
 	<string key="helpPanel-lblWebServerPort" value="The listening port to accept HTTP requests from.  If you use a non-standard port (80), clients must add that port to their URL notation like the following: http://127.0.0.1:80/" />
-	<!--helpPanel-LogPriority -> Help Panel Mouseover-->
 	<string key="helpPanel-LogPriority" value="This setting will change the priority of normal log parsing.  All programs have a priority, usually Normal by default, and this priority defines how much CPU time should be given to the current task.  If set to Lowest(Idle), log parsing will only take CPU time not used by other applications.  If EQ2 is running, this will be next to nothing.  Normal priority will give equal amounts of CPU time to ACT and any other task, such as EQ2.&#xA;&#xA;If ACT seems unable to keep up with log parsing tasks while EQ2 is running, you may wish to set this to Above Normal.&#xA;&#xA;For this setting to take effect, you must restart ACT or Close and Reopen the current log." />
 	<string key="helpPanel-Options_LcdColor" value="This section will define the look of the G19 specific applet.  Use the Change Font buttons to change the font/size of the specific modes.  Also be aware that changing the font size may require you to change the vertical spacing to look correct.  You may also change the basic colors of those modes.  The Spell Timer and Graph modes mimic ACT's normal settings for colors." />
 	<string key="helpPanel-Options_LcdMono" value="This section will define the look of the G15 specific applet.  Use the Font button to choose a base font to use for all screens.  To adjust the font size, use the Size Offset numeric selector for that mode.  Also adjust the vertical spacing of each line as you change the font size to meet your needs." />
-	<!--helpPanel-Options_MiniParse -> Help Panel Mouseover-->
 	<string key="helpPanel-Options_MiniParse" value="The Mini Parse window is a small text only display of the current encounter.  It may also show a graph if you click the red button in the corner.  To change the included information, create a preset the new export format." />
 	<string key="helpPanel-Options_Odbc" value="This section is for exporting ACT data into SQL datasources.  ACT uses ODBC connectivity in order to connect to these datasources and the local machine must have an ODBC driver installed to communicate to the desired type of datasource." />
 	<string key="helpPanel-Options_SelectiveParsing" value="The purpose of selective parsing is to restrict the data that appears.  The list at the left decides which combatants are used for data/exports." />
@@ -410,26 +356,16 @@
 	<string key="helpPanel-Options_TableEnc" value="These are the columns that will appear in the Main tab tables when clicking on TreeView nodes such as 'Mobname - [1:23] 12:01:02 PM'.  This table lists all of the combatants of the selected encounter." />
 	<string key="helpPanel-Options_TableZone" value="These are the columns that will appear in the Main tab tables when clicking on TreeView nodes such as 'Import/Merge [1]' or 'ZoneName [3] 12:00:00 PM'.  This table lists all of the encounters of that node(Zone)." />
 	<string key="helpPanel-rbSParseFull" value="Full selective parsing should only be used in small groups where there are other groups near by.  When the encounter begins, the settings are locked to that encounter.  Using this feature may cause the ExtDPS calculations to differ from other copies of ACT or other parsers depending on the limiting options they use.  Once an encounter has taken place, you cannot add or remove combatants  to it without reparsing that battle.  Full selective parsing will create data gaps and should not be used while using ACT to analyze battles or statistics as it will not show a complete &quot;picture&quot; of the encounter." />
-	<!--helpPanel-SampleType -> Help Panel Mouseover-->
 	<string key="helpPanel-SampleType" value="These settings affect how many DPS plots there are along the X-Axis.  If an encounter is one minute long, and Fixed number of DPS samples(6) is selected, there will be six X-Axis plots in 10 second intervals.  If DPS samples every 15 seconds is selected, there will be four DPS plots at 15 second intervals.  Fixed number is useful for keeping a graph readable no matter how long the encounter, and fixed sample durations is useful for comparisons to other time lines." />
-	<!--helpPanel-tbCharName -> Help Panel Mouseover-->
 	<string key="helpPanel-tbCharName" value="If a log file is open this setting is ignored; however if ACT is used as an offline parser only, this setting will be used to fill in your name instead of using 'YOU'." />
 	<string key="helpPanel-tbExFileName" value="This export file name is a relative file path to the game folder or may be an absolute path." />
-	<!--helpPanel-TextFormatAddPreset -> Help Panel Mouseover-->
 	<string key="helpPanel-TextFormatAddPreset" value="Save these format options to the drop down list." />
-	<!--helpPanel-TextFormatAllies -> Help Panel Mouseover-->
 	<string key="helpPanel-TextFormatAllies" value="Allies formatting string. (First Line Format)" />
-	<!--helpPanel-TextFormatAlliesOnly -> Help Panel Mouseover-->
 	<string key="helpPanel-TextFormatAlliesOnly" value="When checked, only combatants who have proven themselves allies in the encounter will be included in the export.  This includes healing you or other proven allies, or attacking your foes.  If you do not make any allies during the encounter, all combatants will be exported." />
-	<!--helpPanel-TextFormatAlliesStats -> Help Panel Mouseover-->
 	<string key="helpPanel-TextFormatAlliesStats" value="When checked, the totals of your allies will be prefixed to the normal export." />
-	<!--helpPanel-TextFormatPlayers -> Help Panel Mouseover-->
 	<string key="helpPanel-TextFormatPlayers" value="Per-player formatting string. (Repeating Format)" />
-	<!--helpPanel-TextFormatPreset -> Help Panel Mouseover-->
 	<string key="helpPanel-TextFormatPreset" value="Replace the current formatters with a saved preset." />
-	<!--helpPanel-TextFormatRemovePreset -> Help Panel Mouseover-->
 	<string key="helpPanel-TextFormatRemovePreset" value="Remove the currently selected format from the drop down list." />
-	<!--helpPanel-TextFormatSort -> Help Panel Mouseover-->
 	<string key="helpPanel-TextFormatSort" value="The sorting method this formatting option will use." />
 	<string key="helpPanel-xmlShare" value="This section is designed for importing small snippets of settings such as Custom Triggers or Spell Timers.  Typically these snippets will be parsed from game chat but may also be copied from elsewhere and pasted.&#xA;&#xA;When an XML snippet is detected in chat, by default the character name and type of data will appear in the third(yellow) ListBox.  You may then click on the data to review it in the TextBox to the right and either import or delete the entry.&#xA;&#xA;If you wish to always import data from a particular character, you may enter their name into the TextBox above the yellow ListBox and click the above Add button.  Similarly there is a list of characters to always ignore data from.  You may temporarily disable an accept/reject entry by unchecking it or you may simply use the Remove button on either list.&#xA;&#xA;You may possibly come across an XML snippet from another source made for this feature.  Instead of having someone send it to you in a tell, you may paste it directly into the larger TextBox above the Import/Delete buttons.  It will then appear as a custom entry allowing you to Import or Delete it.&#xA;&#xA;You may create a snippet from your own data by going into either the Spell Timers options page or Custom Triggers tab, right-clicking the entry in the list and selecting Copy as Sharable XML.  If sending in EQ2 chat, the XML snippet must be by itself with no other chat or spaces." />
 	<string key="helpPanel-xmlSubscription" value="This section is for keeping up to date with external ACT settings.  XML configuration files can be put on the web and upon startup or on demand, ACT can check these files for updates(based on the timestamp).  ACT can be set to automatically import or notify the user of these updates.&#xA;&#xA;The top ListBox will contain the external URLs of the files already being watched.  To add an entry, enter the URL into the labeled TextBox, select an update option and click Add/Edit.  As update options, you can have ACT check but ignore updated files, notify you of updates using a message box or automatically import the external XML file upon detected updates.  The Query URL button will list the general contents of the URL, if valid, and list when it was marked changed.  The View in browser link will open the URL in your default web browser.&#xA;&#xA;The Check Now button will on demand check all of the URLs for changes and check-mark the updated files.  If the URL has been updated but set to be ignored, it will be marked with a gray checkmark.  You may manually check or uncheck an entry by clicking on it.&#xA;&#xA;The Update Checked button will import all entries with a normal checkmark regardless of if they were detected as changed." />
