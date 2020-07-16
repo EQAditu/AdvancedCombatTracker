@@ -2,10 +2,16 @@
 <InternalStrings>
 	<!--attackTypeTerm-all -> The localized term for an AttackType object that contains swings merged from other AttackTypes-->
 	<string key="attackTypeTerm-all" value="All" />
+	<!--attackTypeTerm-melee -> auto-attack type, non-skill-->
+	<string key="attackTypeTerm-melee" value="Melee" />
 	<string key="btnFeedbackSubmit-Text2" value="Please restart to submit more." />
 	<string key="contextMenu-gridAppend" value="Append &quot;, {0}&quot;" />
 	<string key="contextMenu-gridAppendLine" value="Append &quot;&lt;newline&gt;&#xA;{0}&quot;" />
 	<string key="contextMenu-gridCopy" value="Copy &quot;{0}&quot;" />
+	<string key="damageTypeTerm-incDamage" value="Incoming Damage" />
+	<string key="damageTypeTerm-incHealing" value="Incoming Healing" />
+	<string key="damageTypeTerm-outDamage" value="Outgoing Damage" />
+	<string key="damageTypeTerm-outHealing" value="Outgoing Healing" />
 	<string key="data-dnumBlock" value="Block" />
 	<string key="data-dnumDeath" value="Death" />
 	<string key="data-dnumMiss" value="Miss" />
@@ -26,7 +32,6 @@
 	<string key="exportFormattingDesc-crithits" value="The number of damaging attacks that were critical." />
 	<!--exportFormattingDesc-cures -> DEPRECATED: Only old plugins use this.-->
 	<string key="exportFormattingDesc-cures" value="The total number of times the combatant cured or dispelled" />
-	<!--exportFormattingDesc-custom -> DEPRECATED: Only old plugins use this.-->
 	<string key="exportFormattingDesc-custom" value="Enter your custom text into the above text box before appending." />
 	<!--exportFormattingDesc-damage -> DEPRECATED: Only old plugins use this.-->
 	<string key="exportFormattingDesc-damage" value="The amount of damage from auto-attack, spells, CAs, etc done to other combatants." />
@@ -251,12 +256,12 @@
 	<string key="fileDialogFilter-saveGraph" value="Portable Network Graphics (*.png)|*.png" />
 	<string key="fileDialogFilter-saveTableImage" value="Portable Network Graphics (*.png)|*.png" />
 	<string key="fileDialogFilter-triggerSound" value="Waveform Files (*.wav)|*.wav" />
-	<string key="fileDialogTitle" value="Save graph as..." />
 	<string key="fileDialogTitle-actExport" value="Export Encounter to Data File" />
 	<string key="fileDialogTitle-eq2InstallFolder" value="Select your EQ2 installation folder" />
 	<string key="fileDialogTitle-exportHtml" value="Export Encounter to HTML" />
 	<!--fileDialogTitle-importHistoryNoLogMatch -> Date range (to)-->
 	<string key="fileDialogTitle-importHistoryNoLogMatch" value="Open log file containing {0} {1} to {2} {3}" />
+	<string key="fileDialogTitle-saveGraph" value="Save graph as..." />
 	<string key="fileDialogTitle-saveTableImage" value="Save graph as..." />
 	<string key="graphAdv-termDps" value="DPS" />
 	<!--graphAdv-toolTip -> sec = second-->
@@ -374,6 +379,16 @@
 	<string key="htmlText-lastUpdated" value="Last Updated: " />
 	<string key="htmlText-return" value="Return to Index" />
 	<string key="htmlText-timers" value="Timers Window" />
+	<string key="ioExport" value="Export Encounters" />
+	<string key="ioExportAct" value="Export to an *.act File" />
+	<string key="ioExportHtml" value="Export to an HTML Page" />
+	<!--ioImport -> Import/Export tab treeview-->
+	<string key="ioImport" value="Import Encounters" />
+	<string key="ioImportAct" value="Import an *.act File" />
+	<string key="ioImportClip" value="Import the Clipboard" />
+	<string key="ioImportLog" value="Import a Log File" />
+	<string key="ioOdbc" value="Export to SQL/ODBC" />
+	<string key="ioXmlFile" value="Export to an XML File" />
 	<string key="lcdError-noDevice" value="No device is connected." />
 	<string key="lcdModeName-miniWindow" value="Mini Window" />
 	<string key="lcdModeName-personalStats" value="Personal Stats" />
@@ -416,18 +431,39 @@
 	<!--messageBox-selectEq2Path -> ACT unable to find the EQ2 installation-->
 	<string key="messageBox-selectEq2Path" value="Your current EQ2 installation was not detectable.  Please select the folder where EQ2 resides." />
 	<string key="messageBox-sortingColumnError" value="Select a column entry to sort by." />
+	<string key="messageBoxText-addCalcTimer" value="The lowest calculated recast has been sent to the spell timer options.  Do you wish to add/replace this timer now?" />
+	<string key="messageBoxText-ctBenchComplete1" value="The baseline benchmark did not consume enough time to be useful.  Please select another encounter that has more log lines available." />
+	<string key="messageBoxText-ctBenchComplete2" value="Benchmarking complete.&#xA;&#xA;Identify the Custom Triggers that are many times more expensive than the baseline for optimizations.  Alternatively, restrict them to a specific zone if not already done." />
+	<string key="messageBoxText-ctBenchNoSelection" value="Please select an encounter in the left-side TreeView." />
+	<string key="messageBoxText-ctBenchSmallSelection" value="Please select an encounter with more than 1000 log line entries." />
 	<string key="messageBoxText-customTriggerDeleteMultiple" value="Really delete {0} custom triggers under '{1}'?" />
 	<string key="messageBoxText-eq2CreateFileError" value="Could not create {0}.&#xA;{1}" />
 	<string key="messageBoxText-fatalUnhandledException" value="An unhandled exception has occurred.  ACT may close.&#xA;Press Ctrl-C to copy this MessageBox.&#xA;&#xA;{0}" />
+	<string key="messageBoxText-getPlugins429" value="The remote server returned a 429 status error.&#xA;&#xA;This may mean you have tried to access this resource too many times recently.  Please try again later." />
+	<string key="messageBoxText-getPlugins503" value="The remote server returned a 503 status error.&#xA;&#xA;This may mean you have tried to access this resource too many times recently.  Please try again later." />
+	<string key="messageBoxText-getPluginsApplied" value="The plugin has been added and started." />
+	<string key="messageBoxText-getPluginsAppliedZip" value="From the ZIP, {0} plugin(s) have been added and started." />
+	<string key="messageBoxText-getPluginsApplyFail" value="The downloaded file did not contain a plugin that could be loaded." />
+	<string key="messageBoxText-getPluginsUnknownFile" value="The downloaded file was not of the expected type for a plugin." />
+	<string key="messageBoxText-importAbort" value="Do you wish to abort the import process?" />
 	<string key="messageBoxText-pluginInternetBlocked" value="{0}&#xA;&#xA;---&#xA;&#xA;Suggestion: The plugin ({1}) may be blocked from loading because it is marked as from the Internet.  Please right-click the file, select Properties and Unblock the file.&#xA;&#xA;If this plugin came with any other files, unblock them as well." />
+	<string key="messageBoxText-pluginWizParserAdded" value="The parsing plugin has been added and started." />
+	<string key="messageBoxText-startupWizEQ2" value="Will ACT be used for EverQuest II?" />
+	<string key="messageBoxText-startupWizFF14" value="Will ACT be used for Final Fantasy XIV?" />
+	<string key="messageBoxText-startupWizManualSelect" value="Please manually select your game log file." />
+	<string key="messageBoxText-startupWizParserWarn" value="Simple detection suggests that you may already have a parsing plugin enabled.  Check the Plugins tab before adding another." />
 	<string key="messageBoxText-unblock1a" value="The following {0} file(s) were downloaded from the Internet and are still blocked:&#xA;&#xA;{1}&#xA;&#xA;Unblock?  Press [Cancel] to stop asking." />
 	<!--messageBoxText-unblock1b -> A count of additional blocked files not listed.-->
 	<string key="messageBoxText-unblock1b" value="{0} more files..." />
 	<string key="messageBoxText-unblockFail" value="Not all files could be unblocked.  Try running ACT as admin.&#xA;&#xA;{0}" />
+	<string key="messageBoxText-viewLogsDisabled" value="ACT currently is not allowed to store log lines with encounter objects.&#xA;&#xA;Look for an option called 'Record all log lines while parsing.' in the Misc options page." />
+	<string key="messageBoxTitle-addCalcTimer" value="Add Timer Now?" />
 	<string key="messageBoxTitle-avoidanceCopyDetail" value="Per hit average damage avoided: {0}" />
 	<string key="messageBoxTitle-clipboardNoText" value="Clipboard import failed" />
 	<string key="messageBoxTitle-clipConnectError" value="Clipboard Connection Failed" />
 	<string key="messageBoxTitle-complete" value="The operation has completed" />
+	<string key="messageBoxTitle-ctBenchComplete" value="Complete" />
+	<string key="messageBoxTitle-ctBenchInvalid" value="Invalid Selection" />
 	<string key="messageBoxTitle-cullHistory" value="Cull History" />
 	<string key="messageBoxTitle-customTriggerDeleteMultiple" value="Delete multiple triggers?" />
 	<string key="messageBoxTitle-duplicatePlugin" value="Duplicate Plugin" />
@@ -444,8 +480,15 @@
 	<string key="messageBoxTitle-fileError" value="File Unavailable" />
 	<string key="messageBoxTitle-ftpTestFail" value="Test incomplete" />
 	<string key="messageBoxTitle-ftpTestSuccess" value="Test complete" />
+	<string key="messageBoxTitle-getPluginsApplied" value="Plugin Applied" />
+	<string key="messageBoxTitle-getPluginsApplyFail" value="Plugin Load Failure" />
+	<string key="messageBoxTitle-getPluginsApplyFail2" value="Error applying plugin" />
+	<string key="messageBoxTitle-getPluginsError1" value="Error retrieving plugin list" />
+	<string key="messageBoxTitle-getPluginsUnknownFile" value="Unknown file type" />
 	<string key="messageBoxTitle-htmlNoFileAccess" value="File Access Denied" />
+	<string key="messageBoxTitle-importAbort" value="Abort?" />
 	<string key="messageBoxTitle-importFail" value="Parse failed" />
+	<string key="messageBoxTitle-importParseError" value="Parsing Failed" />
 	<string key="messageBoxTitle-invalidRegex" value="Invalid Regular Expression" />
 	<string key="messageBoxTitle-loadError" value="Load Error" />
 	<string key="messageBoxTitle-localSecurityPolicy" value="Security Exception" />
@@ -460,21 +503,29 @@
 	<string key="messageBoxTitle-pluginImageError" value="Bad image format" />
 	<string key="messageBoxTitle-pluginInitFail" value="Plugin Initialization Failed" />
 	<string key="messageBoxTitle-pluginInvalid" value="Invalid Plugin" />
+	<string key="messageBoxTitle-pluginWizTitleError" value="Could not retrieve plugin titles" />
 	<string key="messageBoxTitle-removePlugin" value="Remove Plugin?" />
 	<string key="messageBoxTitle-searchResults" value="Search Complete" />
 	<string key="messageBoxTitle-selectEq2Path" value="EQ2 Detection Failed" />
 	<string key="messageBoxTitle-serverStartError" value="Could not start the server" />
 	<string key="messageBoxTitle-sortingColumnError" value="Nothing Selected" />
 	<string key="messageBoxTitle-startupLogError" value="Error loading last log file" />
+	<string key="messageBoxTitle-startupWizEQ2" value="EQ2?" />
+	<string key="messageBoxTitle-startupWizFF14" value="FFXIV?" />
+	<string key="messageBoxTitle-startupWizManualSelect" value="Select log file" />
+	<string key="messageBoxTitle-startupWizParserWarn" value="Plugin event in-use" />
 	<string key="messageBoxTitle-unblock" value="Unblock files?" />
 	<string key="messageBoxTitle-unblockFail" value="Unblock Failure" />
 	<string key="messageBoxTitle-updateAct" value="Update?" />
 	<string key="messageBoxTitle-updateCheckFail" value="ACT version check failed" />
+	<string key="messageBoxTitle-updateError" value="Error Updating" />
+	<string key="messageBoxTitle-viewLogsDisabled" value="Log recording disabled" />
 	<string key="messageBoxTitle-xmlPrefError" value="XML Preferences Error" />
 	<string key="messageBox-uiExport1" value="Do you wish to set the homepage of EQ2's embedded browser to ACT's encounter index?" />
 	<string key="messageBox-uiExport2" value="Do you wish to replace EQ2's browser window with one that has a collapsable interface and URL bar?" />
 	<string key="messageBox-updateAct" value="This will close the program and start the update.&#xA;Do you wish to continue?" />
 	<string key="messageBox-updateCheckFail" value="Unable to obtain version info from web.&#xA;" />
+	<string key="messageBox-xmlPrefLoadError" value="The XML settings file may be corrupt or unusable.  Consider loading a backup from 'Configuration Import/Export' options." />
 	<!--messageBox-xmlReadError -> A non-syntax error when reading XML setting files-->
 	<string key="messageBox-xmlReadError" value="Error while parsing XML settings: Line #{0} ({1})&#xA;{2}&#xA;&#xA; Attempting default setting" />
 	<!--messageBox-xmlSyntaxError -> The XML file was not parsable-->
@@ -487,9 +538,44 @@
 	<string key="notifTitle-clipboardReadFail" value="Clipboard Error" />
 	<string key="notifTitle-imageSaveException" value="Could not save image." />
 	<string key="notifTitle-unknownAssembly" value="Unknown assemblies in ACT's folder.  (Click Show to open folder)" />
+	<string key="notifTitle-webserverError" value="Webserver error" />
+	<string key="notifTitle-webserverException" value="Webserver closed" />
 	<string key="notifTitle-xmlSnippetError" value="XML Share error" />
 	<string key="notifTitle-xmlSnippetIncomplete" value="XML Share incomplete" />
 	<string key="notifTitle-xmlSnippetNotHandled" value="XML Share not handled" />
+	<string key="opColorFont" value="Color and Font Settings" />
+	<string key="opColorGraphing" value="Graphing" />
+	<string key="opColorMisc" value="Miscellaneous" />
+	<string key="opColorUserInterface" value="Main User Interface" />
+	<string key="opDataCorrection" value="Data Correction" />
+	<string key="opDataCorrectionMisc" value="Miscellaneous" />
+	<string key="opDataCorrectionRedirect" value="Ability Redirect" />
+	<string key="opDataCorrectionRename" value="Combatant Rename" />
+	<string key="opEncCulling" value="Encounter Culling" />
+	<string key="opFileHTML" value="HTML File Generation" />
+	<string key="opGraphing" value="Graphing" />
+	<string key="opImportExport" value="Configuration Import/Export" />
+	<string key="opLcdColor" value="Color LCD Options" />
+	<string key="opLcdGeneral" value="LCD Display Options" />
+	<string key="opLcdMono" value="Monochrome LCD Options" />
+	<string key="opMainTable" value="Main Table/Encounters" />
+	<string key="opMainTableGen" value="General" />
+	<string key="opMiniParse" value="Mini Parse Window" />
+	<!--opMisc -> Options tab treeview-->
+	<string key="opMisc" value="Miscellaneous" />
+	<string key="opOdbc" value="ODBC (SQL)" />
+	<string key="opOutputDisplay" value="Output Display" />
+	<string key="opSelectiveParsing" value="Selective Parsing" />
+	<string key="opSound" value="Sound Settings" />
+	<string key="opTableAttackType" value="AttackType View Options" />
+	<string key="opTableCombatant" value="Combatant View Options" />
+	<string key="opTableDamageType" value="DamageType View Options" />
+	<string key="opTableEncounter" value="Encounter View Options" />
+	<string key="opTableZone" value="Zone View Options" />
+	<string key="opTextExports" value="Text Export Settings" />
+	<string key="opWebServer" value="ACT Web Server" />
+	<string key="opXmlShare" value="XML Share Snippets" />
+	<string key="opXmlSubs" value="XML Config Subscriptions" />
 	<string key="sliderText-badPluginLocation" value="{0} should not be loaded from ACT's installation folder.  It may cause file locking issues or other hard to diagnose problems.  Please move it to a sub-folder or other location such as %APPDATA%\Advanced Combat Tracker\Plugins\." />
 	<string key="sliderText-logFileTimeError" value="This log file is not valid for the current parsing plugin. (It cannot read the timestamps)&#xA;&#xA;Please verify that you have the correct parsing plugin enabled and *only* one parsing plugin enabled." />
 	<string key="sliderText-oldLog" value="The currently open log file has not been modified for over a week.  Please ensure /log is on in-game and you have selected the correct log file." />
@@ -507,22 +593,45 @@
 	<string key="specialAttackTerm-wardAbsorb" value="Absorption" />
 	<string key="specialAttackTerm-warded" value="warded" />
 	<string key="tooltip-regexWildcardWarn" value="Be careful about using wildcards like .* without need." />
+	<string key="trayButton-benchShow" value="Show Benchmarks" />
+	<string key="trayButton-continue" value="Continue" />
 	<string key="trayButton-ignore" value="Ignore For Now" />
 	<string key="trayButton-ignoreRestart" value="Ignore" />
+	<string key="trayButton-never" value="Never ask again" />
+	<string key="trayButton-notNow" value="Not now" />
 	<string key="trayButton-ok" value="OK" />
+	<string key="trayButton-openActLog" value="Open error log" />
 	<string key="trayButton-openLogs" value="Open Logs Folder" />
 	<string key="trayButton-restartAct" value="Restart" />
+	<string key="trayButton-skip" value="Skip" />
+	<string key="trayText-ctBench2" value="Custom Trigger log parsing has been behind for 10 seconds.  You may need to add more Custom Trigger threads in the Options page or optimize your current Custom Triggers to be more effiecient.&#xA;&#xA;Would you like to open the Custom Trigger Benchmark to identify problematic Custom Triggers?" />
 	<string key="trayText-encClearGcCollect" value="{0:0,0} bytes allocated difference" />
 	<string key="trayText-eventExceptions1" value="In the last minute, these plugins caused exceptions in event handlers:&#xA;" />
 	<string key="trayText-eventExceptions2" value="{0} [{1} time(s)]" />
+	<string key="trayText-findZoneBusy" value="Finding the zone name in the log file appears to be taking a long time.  Do you wish to skip scanning?&#xA;&#xA;{0} {1:0,0} bytes" />
 	<string key="trayText-lowDotNet" value="Your detected .NET Framework version is {0}.&#xA;&#xA;You will need to install v4.6 of the .NET Framework or greater in order for most Internet downloads/updates to work." />
+	<string key="trayText-parsingBusy" value="Log line parsing has been behind for 10 seconds.  A plugin subscribed to BeforeLogLine/OnLogLine may be processing synchronously and taking too long." />
 	<string key="trayText-restartACT" value="Restarting ACT is required to complete changes. &#xA;&#xA;{0}" />
+	<string key="trayText-xmlPrefErrorCount" value="There were {0} errors encountered while loading settings.&#xA;If you just changed ACT versions, these errors may be a one-time result of ACT settings changing names/locations." />
+	<string key="trayTitle-ctBench" value="Custom Triggers lagging behind" />
 	<string key="trayTitle-eventUnhandledException" value="Event Handler Unhandled Exceptions" />
+	<string key="trayTitle-findZoneBusy" value="Scanning Log File" />
 	<string key="trayTitle-lowDotNet" value="Insufficient .NET Framework" />
+	<string key="trayTitle-parsingBusy" value="Log Parsing lagging behind" />
 	<string key="trayTitle-restartAct" value="ACT Restart Requested" />
 	<string key="trayTitle-unhandledException" value="Unhandled Exception in ACT" />
+	<string key="trayTitle-updateAvailable" value="ACT Update Available" />
+	<string key="trayTitle-xmlPrefErrorCount" value="Config Load Errors" />
+	<!--tts-spellExpired -> TTS: SpellName expired-->
+	<string key="tts-spellExpired" value="{0} expired" />
+	<!--tts-spellStarted -> TTS: SpellName started-->
+	<string key="tts-spellStarted" value="{0} started" />
+	<!--tts-spellWarning -> TTS: SpellName warning-->
+	<string key="tts-spellWarning" value="{0} warning" />
 	<!--ui-customTriggerGeneralCategory -> There is a space before the term for sorting purposes.  Also for Spell Timer categories.-->
 	<string key="ui-customTriggerGeneralCategory" value=" General" />
+	<!--ui-customTriggerSearch -> Search terms for the Options tab to show Custom Trigger thread count-->
+	<string key="ui-customTriggerSearch" value="Custom Trigger threads" />
 	<string key="uiFormActMain-Title0" value="{0}{1}Advanced Combat Tracker{2} - {3} - Log Time: {4} (Est. {5})" />
 	<!--uiFormActMain-Title1 -> Shown on the titlebar-->
 	<string key="uiFormActMain-Title1" value="*Combat* " />
@@ -531,8 +640,91 @@
 	<string key="uiFormActMain-Title3" value="[Exporting]" />
 	<string key="uiFormActMain-Title4" value="[Importing]" />
 	<string key="uiFormActMain-Title5" value="[ODBC]" />
+	<string key="uiFormAvoidanceReport-avoidCount" value="Count" />
+	<string key="uiFormAvoidanceReport-avoidCount2" value="Avoids" />
+	<string key="uiFormAvoidanceReport-avoidDamage" value="Damage Avoided By Average" />
+	<string key="uiFormAvoidanceReport-avoidHps" value="EncHPS" />
+	<!--uiFormAvoidanceReport-avoidLabel -> vs = verses, Avg = average-->
+	<string key="uiFormAvoidanceReport-avoidLabel" value="[{4}] {0}'s {1} vs {2} = {3:0} Avg" />
+	<string key="uiFormAvoidanceReport-avoidTitle" value="Avoid-Other Report for {0}  (Click a row for details)" />
+	<string key="uiFormAvoidanceReport-avoidTitle2" value="{0}'s Avoidance Report  (Click a row for details)" />
+	<string key="uiFormAvoidanceReport-avoidType" value="Type" />
+	<string key="uiFormAvoidanceReport-noDamage" value="No Damage (Stoneskin)" />
+	<string key="uiFormAvoidanceReport-percAvoids" value="% of Avoids" />
+	<string key="uiFormAvoidanceReport-percSwings" value="% of Swings" />
+	<string key="uiFormAvoidanceReport-specialTitle" value="{0}'s Special Attack Report" />
+	<string key="uiFormAvoidanceReport-swings" value="Swings" />
+	<string key="uiFormAvoidanceReport-total" value="TOTAL" />
+	<string key="uiFormByCombatantLookup-title" value="{0} Breakdown by Combatant" />
+	<string key="uiFormCustomEncRange-custom" value="CustomEnc" />
+	<string key="uiFormCustomTriggerBenchmark-bench1" value="&lt;Benchmark&gt;" />
+	<string key="uiFormCustomTriggerBenchmark-benchBaseline" value="&lt;Baseline benchmark...&gt;" />
+	<!--uiFormCustomTriggerBenchmark-benchRunning -> <Running>-->
+	<string key="uiFormCustomTriggerBenchmark-benchRunning" value="text" />
+	<string key="uiFormCustomTriggerBenchmark-lineCount" value="{0:#,0} log lines in this encounter." />
+	<string key="uiFormEncounterVcr-currentHealth" value="Current Health: {0:0.00%} of {1:#,0}" />
+	<string key="uiFormEncounterVcr-damageTaken" value="Damage taken: {0:0.00%} of {1:#,0}" />
+	<string key="uiFormEncounterVcr-healingTaken" value="Healing taken: {0:0.00%} of {1:#,0}" />
+	<string key="uiFormEncounterVcr-linked" value="Linked @ T+{0}" />
+	<string key="uiFormEncounterVcr-paused" value="Paused @ T+{0}" />
+	<string key="uiFormEncounterVcr-play" value="Play @ T+{0}" />
+	<string key="uiFormEncounterVcr-play4" value="4x Play @ T+{0}" />
+	<string key="uiFormEncounterVcr-rewind" value="Rewind @ T+{0}" />
+	<string key="uiFormExportFormat-edit" value="Edit Directly" />
+	<string key="uiFormExportFormat-noSelection" value="No Element Selected" />
+	<string key="uiFormExportFormat-save" value="Save" />
+	<string key="uiFormGetPlugins-headerLabel" value="Plugin Description (Added: {1} - Modified: {2} {3})" />
+	<string key="uiFormImportProgress-batchStep" value="Batch {0} of {1}" />
+	<string key="uiFormImportProgress-complete" value="Operation Complete" />
+	<string key="uiFormImportProgress-importStats" value="{0:#,0}s&#xA;{1:#,0}&#xA;{2:#,0} per sec&#xA;{3:#,0} k&#xA;{4:#,0} k/s" />
+	<string key="uiFormImportProgress-progressPerc" value="Progress: {0}%" />
+	<string key="uiFormImportProgress-timeElapsed" value="Operation Time Elapsed: {0:#,0}s&#xA;" />
+	<string key="uiFormMiniParse-switchTooltip" value="Switch between text and graph modes" />
 	<string key="uiFormMiniParse-title" value="Mini Parse" />
 	<string key="uiFormMiniParse-titleCombat" value="Mini Parse - *Combat*" />
+	<string key="uiFormMiniParse-valueTooltip" value="Val: {0:0} Y: {1}" />
+	<string key="uiFormPerformanceWizard-advanced" value="Advanced" />
+	<string key="uiFormPerformanceWizard-simple" value="Simple" />
+	<string key="uiFormResistsDeathReport-deathLegend" value="Time: Dmg (Dmg - Heal) [Dmg Total]&#xA;" />
+	<string key="uiFormResistsDeathReport-deathTitle" value="Death Report" />
+	<string key="uiFormResistsDeathReport-reportCopyLeft" value="Click to copy to the left...&#xA;" />
+	<string key="uiFormSpellRecastCalc-delaysLabel" value="Checked Delays: " />
+	<string key="uiFormSpellRecastCalc-title" value="Spell Recast Calculation - {0} -&gt; {1}" />
+	<!--uiFormSpellTimers-displayRemaining -> 01m 30s-->
+	<string key="uiFormSpellTimers-displayRemaining" value="{0:00}m {1:00}s{2}" />
+	<!--uiFormSpellTimers-displayTooltip -> 12s - SpellName-->
+	<string key="uiFormSpellTimers-displayTooltip" value="{0}s - {1}" />
+	<string key="uiFormSpellTimersPanel-optionsTooltip" value="Right-click for options" />
+	<!--uiFormSpellTimers-searchPH -> Placeholder to show when textbox is empty-->
+	<string key="uiFormSpellTimers-searchPH" value="Search name or tooltip" />
+	<string key="uiFormSqlQuery-connectionInfo" value="ServerVersion: {0}, Database: {1}, DataSource: {2}" />
+	<string key="uiFormSqlQuery-rowsAffected" value="&#xA;{0} - Rows affected: {1}" />
+	<!--uiFormSqlQuery-tableCommitError -> 0 = timestamp, 1 = table row text, 2 = error text-->
+	<string key="uiFormSqlQuery-tableCommitError" value="&#xA;{0} - {1} has the following error: {2} -- and has been ignored." />
+	<string key="uiFormStartupWizard-eq2FolderFound" value="EQ2 Logs folder found." />
+	<string key="uiFormStartupWizard-eq2FolderFound2" value="EQ2 Logs folder not found." />
+	<string key="uiFormStartupWizard-eq2FolderTitle" value="Select your EQ2 installation folder" />
+	<string key="uiFormStartupWizard-loading" value="Please wait..." />
+	<string key="uiFormStartupWizard-pluginInfo" value="Added: {1} - Modified: {2} {3}" />
+	<string key="uiFormStartupWizard-pluginLog" value="Plugin selected log file." />
+	<string key="uiFormStartupWizard-pluginLog2" value="Log file status unknown.  Plugin may regenerate later." />
+	<string key="uiFormTimeLine-alignType1" value="Us" />
+	<string key="uiFormTimeLine-alignType2" value="Them" />
+	<string key="uiFormTimeLine-classType1" value="Tanks" />
+	<string key="uiFormTimeLine-classType2" value="Healers" />
+	<string key="uiFormTimeLine-classType3" value="Melee DPS" />
+	<string key="uiFormTimeLine-classType4" value="Other DPS" />
+	<string key="uiFormTimeLine-title1" value="Timeline - {0} {1:0.00}%" />
+	<string key="uiFormTimeLine-title2" value="Timeline" />
+	<string key="uiFormTimeLine-toolTipError" value="This tool tip is too large.  Please Middle-Click to view separately." />
+	<string key="uiFormUpdater-checking" value="Checking version from web..." />
+	<string key="uiFormUpdater-download1" value="Downloading update...  connecting..." />
+	<string key="uiFormUpdater-download2" value="Downloading update: {0:#,0} of {1:#,0} KB." />
+	<string key="uiFormUpdater-download3" value="Downloading update: {0:#,0} KB read..." />
+	<string key="uiFormUpdater-download4" value="Download is complete.  Click Update to continue." />
+	<string key="uiFormUpdater-downloadError" value="There was an error updating:&#xA;" />
+	<string key="uiFormUpdater-noUpdates" value="No updates available." />
+	<string key="uiFormUpdater-updateAvailable" value="Update to {0} available.&#xA;Press Download to retrieve." />
 	<string key="uiLoading-init10" value="InitACT 10...  (Setting up log file, scanning for zone/name info)" />
 	<string key="uiLoading-init11" value="InitACT 11...  (Setting up data objects)" />
 	<string key="uiLoading-init12" value="InitACT 12...  (Scanning for blocked Internet files)" />
@@ -548,10 +740,12 @@
 	<string key="uiLoading-init22" value="InitACT 22...  (Checking ACT's folder, XML subs)" />
 	<string key="uiLoading-init23" value="InitACT 23...  (Checking config backups)" />
 	<string key="uiLoading-initExit" value="Exiting InitACT..." />
+	<!--ui-loadingPlugin -> Shown during InitACT-->
+	<string key="ui-loadingPlugin" value="Loading plugin {0}..." />
 	<string key="uiOpMisc-logPaused" value="Parsing Paused..." />
 	<!--uiOpMisc-logPosition1 -> Shown in the Misc options panel-->
 	<string key="uiOpMisc-logPosition1" value="Reading {0}&#xA;At position: {1:0,0}." />
-	<string key="uiOpMisc-logPosition2" value=" ({0} behind.)" />
+	<string key="uiOpMisc-logPosition2a" value=" ({0} lines behind.)" />
 	<string key="uiOpMisc-logPosition3" value=" ({0} CustomTrigger lines behind.)" />
 	<string key="uiOpMisc-logResumed" value="Parsing Resumed..." />
 	<!--uiOptions-searchDefault -> What is shown in the searchbox when empty-->
@@ -562,6 +756,11 @@
 	<string key="ui-processPriority-" value="Below Normal" />
 	<string key="ui-processPriority--" value="Lowest" />
 	<string key="ui-processPriority+" value="Above Normal" />
+	<string key="ui-ReadLogClosed" value="Logfile closed." />
+	<!--ui-ReadLogException -> ReadLog throws an exception, this is displayed in the Options tab-->
+	<string key="ui-ReadLogException" value="System Message: {0}" />
+	<string key="ui-ReadLogPaused" value="Parsing Paused..." />
+	<string key="ui-ReadLogResumed" value="Parsing Resumed..." />
 	<string key="ui-soundTypeBeep" value="Beep" />
 	<string key="ui-soundTypeNone" value="None" />
 	<string key="ui-soundTypeSound" value="Sound" />
@@ -607,6 +806,8 @@
 	<string key="uiText-htmlComplete" value="Export to {0} has completed.&#xA;{1} seconds elapsed." />
 	<string key="uiText-htmlGen" value="Generating HTML...&#xA;" />
 	<string key="uiText-htmlWrite" value="Writing HTML to file..." />
+	<!--uiText-n -> No-->
+	<string key="uiText-n" value="N" />
 	<string key="uiText-odbcCalc" value="Data calculated for {0} in {1} secs." />
 	<string key="uiText-odbcComplete" value="ODBC export has completed.&#xA;{0} seconds elapsed.&#xA;{1} errors." />
 	<string key="uiText-odbcComplete2" value="	 Please see the General Options tab ODBC section for error descriptions." />
@@ -631,7 +832,32 @@
 	<string key="uiText-pluginInfoParts9" value="LegalTrademarks: " />
 	<string key="uiText-pluginInfoTitle1" value="Assembly Info:&#xA;" />
 	<string key="uiText-pluginInfoTitle2" value="Source File Info:&#xA;" />
+	<string key="uiText-startupWizLogFileInfo" value="{0}\{1}&#xA;File size: {2:0,0}  Last Modified: {3}" />
+	<!--uiText-y -> Yes-->
+	<string key="uiText-y" value="Y" />
 	<string key="uiTitle-act" value="Advanced Combat Tracker" />
+	<string key="ui-webserverStatus" value="Server Status" />
+	<string key="webDesc-browse" value="Browse through all of the tables that ACT currently has in memory." />
+	<string key="webDesc-current" value="Any encounter currently active can be found here. Page will refresh every 5 seconds." />
+	<string key="webDesc-mini" value="The Mini Window text-only display of the current encounter. Page will refresh every 5 seconds." />
+	<string key="webDesc-timers" value="View a table of spell timers ACT is currently tracking.  Page will refresh every 2 seconds." />
+	<string key="webText-actUi" value="ACT Web Interface" />
+	<string key="webText-browse" value="Browse" />
+	<string key="webText-copyAll" value="Copy All to Clipboard" />
+	<string key="webText-currentEncounter" value="Current Encounter" />
+	<string key="webText-currentNoEncounter" value="No Encounter" />
+	<string key="webText-loading" value="Loading..." />
+	<string key="webText-miniNoEncounter" value="No Encounter" />
+	<string key="webText-miniNoFormat" value="No Text Format Selected" />
+	<string key="webText-reload" value="Reload" />
+	<string key="webText-timers" value="Spell Timers" />
+	<string key="webText-timersNormal" value="Normal View" />
+	<string key="webText-timersNoTimers" value="No Spell Timers to display." />
+	<string key="webText-timersSimple" value="Simple View" />
+	<string key="webTitle-browse" value="Browse ACT's Encounter Data" />
+	<string key="webTitle-current" value="Current Encounter Table" />
+	<string key="webTitle-mini" value="Current Mini Window Text" />
+	<string key="webTitle-timers" value="Timers Window Table" />
 	<string key="zoneDataTerm-import" value="Import" />
 	<string key="zoneDataTerm-importMerge" value="Import/Merge - [{0}]" />
 	<string key="zoneTerm-import" value="Import Zone" />
