@@ -6,7 +6,7 @@ using System.Reflection;
 
 [assembly: AssemblyTitle("ActLocalization-InternalStrings")]
 [assembly: AssemblyDescription("A sample of an ACT plugin that changes localization strings.")]
-[assembly: AssemblyVersion("269.0.0.0")]
+[assembly: AssemblyVersion("271.0.0.0")]
 
 namespace ActLocalization
 {
@@ -176,12 +176,15 @@ namespace ActLocalization
 			TryEditLocalization("fileDialogFilter-saveGraph", "Portable Network Graphics (*.png)|*.png"); // 
 			TryEditLocalization("fileDialogFilter-saveTableImage", "Portable Network Graphics (*.png)|*.png"); // 
 			TryEditLocalization("fileDialogFilter-triggerSound", "Waveform Files (*.wav)|*.wav"); // 
+			TryEditLocalization("fileDialogFilter-xml", "XML File (*.xml)|*.xml"); // 
 			TryEditLocalization("fileDialogTitle-actExport", "Export Encounter to Data File"); // 
 			TryEditLocalization("fileDialogTitle-eq2InstallFolder", "Select your EQ2 installation folder"); // 
 			TryEditLocalization("fileDialogTitle-exportHtml", "Export Encounter to HTML"); // 
 			TryEditLocalization("fileDialogTitle-importHistoryNoLogMatch", "Open log file containing {0} {1} to {2} {3}"); // Date range (to)
+			TryEditLocalization("fileDialogTitle-importSettingsXml", "Import Settings from XML"); // 
 			TryEditLocalization("fileDialogTitle-saveGraph", "Save graph as..."); // 
 			TryEditLocalization("fileDialogTitle-saveTableImage", "Save graph as..."); // 
+			TryEditLocalization("fileDialogTitle-xmlEncounter", "Export Encounter to XML"); // 
 			TryEditLocalization("graphAdv-termDps", "DPS"); // 
 			TryEditLocalization("graphAdv-toolTip", "+{0} ({1} sec average)"); // sec = second
 			TryEditLocalization("graphAttackTypes-noDataError", "This sorting method has no available data."); // 
@@ -345,13 +348,17 @@ namespace ActLocalization
 			TryEditLocalization("messageBox-searchResults", "Search returned {0} results."); // 
 			TryEditLocalization("messageBox-selectEq2Path", "Your current EQ2 installation was not detectable.  Please select the folder where EQ2 resides."); // ACT unable to find the EQ2 installation
 			TryEditLocalization("messageBox-sortingColumnError", "Select a column entry to sort by."); // 
+			TryEditLocalization("messageBoxText-abilityRedirectError", "Please fill in both the Ability and Into fields and select an ability type."); // 
 			TryEditLocalization("messageBoxText-addCalcTimer", "The lowest calculated recast has been sent to the spell timer options.  Do you wish to add/replace this timer now?"); // 
+			TryEditLocalization("messageBoxText-colorRestart", "You must restart ACT to revert these color changes."); // 
+			TryEditLocalization("messageBoxText-combatantRenameError", "Please fill in both the Before and After fields."); // 
 			TryEditLocalization("messageBoxText-ctBenchComplete1", "The baseline benchmark did not consume enough time to be useful.  Please select another encounter that has more log lines available."); // 
 			TryEditLocalization("messageBoxText-ctBenchComplete2", "Benchmarking complete.\n\nIdentify the Custom Triggers that are many times more expensive than the baseline for optimizations.  Alternatively, restrict them to a specific zone if not already done."); // 
 			TryEditLocalization("messageBoxText-ctBenchNoSelection", "Please select an encounter in the left-side TreeView."); // 
 			TryEditLocalization("messageBoxText-ctBenchSmallSelection", "Please select an encounter with more than 1000 log line entries."); // 
 			TryEditLocalization("messageBoxText-customTriggerDeleteMultiple", "Really delete {0} custom triggers under '{1}'?"); // 
 			TryEditLocalization("messageBoxText-eq2CreateFileError", "Could not create {0}.\n{1}"); // 
+			TryEditLocalization("messageBoxText-exFilePrefixBlank", "Leaving this blank field is dangerous and will result in macro files that will not function unless the used Clipboard Format properly prefixes channel commands to every line."); // 
 			TryEditLocalization("messageBoxText-fatalUnhandledException", "An unhandled exception has occurred.  ACT may close.\nPress Ctrl-C to copy this MessageBox.\n\n{0}"); // 
 			TryEditLocalization("messageBoxText-getPlugins429", "The remote server returned a 429 status error.\n\nThis may mean you have tried to access this resource too many times recently.  Please try again later."); // 
 			TryEditLocalization("messageBoxText-getPlugins503", "The remote server returned a 503 status error.\n\nThis may mean you have tried to access this resource too many times recently.  Please try again later."); // 
@@ -362,6 +369,7 @@ namespace ActLocalization
 			TryEditLocalization("messageBoxText-importAbort", "Do you wish to abort the import process?"); // 
 			TryEditLocalization("messageBoxText-pluginInternetBlocked", "{0}\n\n---\n\nSuggestion: The plugin ({1}) may be blocked from loading because it is marked as from the Internet.  Please right-click the file, select Properties and Unblock the file.\n\nIf this plugin came with any other files, unblock them as well."); // 
 			TryEditLocalization("messageBoxText-pluginWizParserAdded", "The parsing plugin has been added and started."); // 
+			TryEditLocalization("messageBoxText-restartAct", "You must restart ACT to apply changes."); // 
 			TryEditLocalization("messageBoxText-startupWizEQ2", "Will ACT be used for EverQuest II?"); // 
 			TryEditLocalization("messageBoxText-startupWizFF14", "Will ACT be used for Final Fantasy XIV?"); // 
 			TryEditLocalization("messageBoxText-startupWizManualSelect", "Please manually select your game log file."); // 
@@ -370,10 +378,16 @@ namespace ActLocalization
 			TryEditLocalization("messageBoxText-unblock1b", "{0} more files..."); // A count of additional blocked files not listed.
 			TryEditLocalization("messageBoxText-unblockFail", "Not all files could be unblocked.  Try running ACT as admin.\n\n{0}"); // 
 			TryEditLocalization("messageBoxText-viewLogsDisabled", "ACT currently is not allowed to store log lines with encounter objects.\n\nLook for an option called 'Record all log lines while parsing.' in the Misc options page."); // 
+			TryEditLocalization("messageBoxText-xmlShareInvalid", "This feature is for importing XML Share snippets, only.  If you wish to import an XML configuration file, use the Import button in Options -> Configuration Import/Export."); // 
+			TryEditLocalization("messageboxText-xmlShareUnknown", "{0}: No XML Snippet Handler marked the snippet as consumed.  Does this share type require a plugin?"); // 
+			TryEditLocalization("messageBoxText-xmlSnippetNotUsed", "{0}: No XML Snippet Handler marked the snippet as used.  This share type may require a plugin."); // 
+			TryEditLocalization("messageBoxTitle-abilityRedirectError", "Invalid Entry"); // 
 			TryEditLocalization("messageBoxTitle-addCalcTimer", "Add Timer Now?"); // 
 			TryEditLocalization("messageBoxTitle-avoidanceCopyDetail", "Per hit average damage avoided: {0}"); // 
 			TryEditLocalization("messageBoxTitle-clipboardNoText", "Clipboard import failed"); // 
 			TryEditLocalization("messageBoxTitle-clipConnectError", "Clipboard Connection Failed"); // 
+			TryEditLocalization("messageBoxTitle-colorRestart", "Restart required"); // 
+			TryEditLocalization("messageBoxTitle-combatantRenameError", "Invalid Entry"); // 
 			TryEditLocalization("messageBoxTitle-complete", "The operation has completed"); // 
 			TryEditLocalization("messageBoxTitle-ctBenchComplete", "Complete"); // 
 			TryEditLocalization("messageBoxTitle-ctBenchInvalid", "Invalid Selection"); // 
@@ -384,6 +398,7 @@ namespace ActLocalization
 			TryEditLocalization("messageBoxTitle-eq2FolderWizard", "Detected EQ2 Folder"); // 
 			TryEditLocalization("messageBoxTitle-eq2NotFound", "Could not confirm folder selection"); // 
 			TryEditLocalization("messageBoxTitle-error", "Error"); // 
+			TryEditLocalization("messageBoxTitle-exFilePrefixBlank", "DoFileCommands Channel Prefix"); // 
 			TryEditLocalization("messageBoxTitle-exportNoEncounters", "Nothing to export"); // 
 			TryEditLocalization("messageBoxTitle-fatalUnhandledException", "Fatal Error - Unhandled Exception"); // 
 			TryEditLocalization("messageBoxTitle-feedbackFail", "Feedback not submitted"); // 
@@ -407,6 +422,7 @@ namespace ActLocalization
 			TryEditLocalization("messageBoxTitle-localSecurityPolicy", "Security Exception"); // 
 			TryEditLocalization("messageBoxTitle-noFileFound", "File Not Found"); // 
 			TryEditLocalization("messageBoxTitle-odbcDropTables", "ACT ODBC database removal"); // 
+			TryEditLocalization("messageBoxTitle-odbcHackError", "Could not add OdbcHack"); // 
 			TryEditLocalization("messageBoxTitle-odbcQueryError", "ODBC Connection Query Failed"); // 
 			TryEditLocalization("messageBoxTitle-openLogWizard", "Detected log file"); // 
 			TryEditLocalization("messageBoxTitle-openLogWizardNoFolder", "No logs folder"); // 
@@ -418,6 +434,7 @@ namespace ActLocalization
 			TryEditLocalization("messageBoxTitle-pluginInvalid", "Invalid Plugin"); // 
 			TryEditLocalization("messageBoxTitle-pluginWizTitleError", "Could not retrieve plugin titles"); // 
 			TryEditLocalization("messageBoxTitle-removePlugin", "Remove Plugin?"); // 
+			TryEditLocalization("messageBoxTitle-restartAct", "Restart"); // 
 			TryEditLocalization("messageBoxTitle-searchResults", "Search Complete"); // 
 			TryEditLocalization("messageBoxTitle-selectEq2Path", "EQ2 Detection Failed"); // 
 			TryEditLocalization("messageBoxTitle-serverStartError", "Could not start the server"); // 
@@ -434,6 +451,9 @@ namespace ActLocalization
 			TryEditLocalization("messageBoxTitle-updateError", "Error Updating"); // 
 			TryEditLocalization("messageBoxTitle-viewLogsDisabled", "Log recording disabled"); // 
 			TryEditLocalization("messageBoxTitle-xmlPrefError", "XML Preferences Error"); // 
+			TryEditLocalization("messageboxTitle-xmlShareError", "Error adding XML Share"); // 
+			TryEditLocalization("messageBoxTitle-xmlShareError", "Error parsing XML Share"); // 
+			TryEditLocalization("messageBoxTitle-xmlSnippetError", "Error adding XML Share"); // 
 			TryEditLocalization("messageBox-uiExport1", "Do you wish to set the homepage of EQ2's embedded browser to ACT's encounter index?"); // 
 			TryEditLocalization("messageBox-uiExport2", "Do you wish to replace EQ2's browser window with one that has a collapsable interface and URL bar?"); // 
 			TryEditLocalization("messageBox-updateAct", "This will close the program and start the update.\nDo you wish to continue?"); // 
@@ -443,6 +463,8 @@ namespace ActLocalization
 			TryEditLocalization("messageBox-xmlSyntaxError", "The XML settings file may be corrupt or unusable.  Loading defaults where applicable.\n{0}"); // The XML file was not parsable
 			TryEditLocalization("notifText-clipboardReadFail", "Could not get text from the clipboard..."); // 
 			TryEditLocalization("notifText-unknownAssembly", "The following assemblies were not recognized.  If they are plugins or from plugins, they should be deleted or moved to another folder to avoid \"wrong version\" load issues.\r\n\r\n{0}"); // 
+			TryEditLocalization("notifText-xmlShareAdded", "A ({0}) from ({1}) has been added to ACT."); // 
+			TryEditLocalization("notifText-xmlShareDetected", "A ({0}) from ({1}) has been detected in the log file.\n\nWould you like to import this to ACT?\n\n\n\n\n[Also in Options -> Configuration Import/Export -> XML Share Snippets]"); // 
 			TryEditLocalization("notifText-xmlSnippetError", "There was an unexpected error importing this XML snippet.\n\n{0}"); // 
 			TryEditLocalization("notifText-xmlSnippetIncomplete", "The shared XML seems to be missing required attributes to be imported"); // 
 			TryEditLocalization("notifText-xmlSnippetNotHandled", "The XML Snippet was not marked as handled.  Does this share type require a plugin?"); // 
@@ -451,6 +473,7 @@ namespace ActLocalization
 			TryEditLocalization("notifTitle-unknownAssembly", "Unknown assemblies in ACT's folder.  (Click Show to open folder)"); // 
 			TryEditLocalization("notifTitle-webserverError", "Webserver error"); // 
 			TryEditLocalization("notifTitle-webserverException", "Webserver closed"); // 
+			TryEditLocalization("notifTitle-xmlShareAdded", "ACT XML Share"); // 
 			TryEditLocalization("notifTitle-xmlSnippetError", "XML Share error"); // 
 			TryEditLocalization("notifTitle-xmlSnippetIncomplete", "XML Share incomplete"); // 
 			TryEditLocalization("notifTitle-xmlSnippetNotHandled", "XML Share not handled"); // 
@@ -530,9 +553,16 @@ namespace ActLocalization
 			TryEditLocalization("trayTitle-unhandledException", "Unhandled Exception in ACT"); // 
 			TryEditLocalization("trayTitle-updateAvailable", "ACT Update Available"); // 
 			TryEditLocalization("trayTitle-xmlPrefErrorCount", "Config Load Errors"); // 
-			TryEditLocalization("tts-spellExpired", "{0} expired"); // TTS: SpellName expired
-			TryEditLocalization("tts-spellStarted", "{0} started"); // TTS: SpellName started
-			TryEditLocalization("tts-spellWarning", "{0} warning"); // TTS: SpellName warning
+			TryEditLocalization("ttOptionsXmlShare-invalidXml", "Invalid XML: Use this field to paste XML share text"); // 
+			TryEditLocalization("ttOptionsXmlShare-noName", "A name must be entered"); // 
+			TryEditLocalization("ttOptionsXmlShare-xmlMissingAttributes", "The shared XML seems to be missing required attributes to be imported"); // 
+			TryEditLocalization("tts-commandTest", "Command name"); // 
+			TryEditLocalization("tts-spellExpired", "{0} expired"); // Text to Speech: SpellName expired
+			TryEditLocalization("tts-spellExpiredTest", "Spellname expired"); // 
+			TryEditLocalization("tts-spellStarted", "{0} started"); // Text to Speech: SpellName started
+			TryEditLocalization("tts-spellStartedTest", "Spellname started"); // 
+			TryEditLocalization("tts-spellWarning", "{0} warning"); // Text to Speech: SpellName warning
+			TryEditLocalization("tts-spellWarningTest", "Spellname warning"); // 
 			TryEditLocalization("ui-customTriggerGeneralCategory", " General"); // There is a space before the term for sorting purposes.  Also for Spell Timer categories.
 			TryEditLocalization("ui-customTriggerSearch", "Custom Trigger threads"); // Search terms for the Options tab to show Custom Trigger thread count
 			TryEditLocalization("uiFormActMain-Title0", "{0}{1}Advanced Combat Tracker{2} - {3} - Log Time: {4} (Est. {5})"); // 
@@ -621,6 +651,11 @@ namespace ActLocalization
 			TryEditLocalization("uiFormUpdater-downloadError", "There was an error updating:\n"); // 
 			TryEditLocalization("uiFormUpdater-noUpdates", "No updates available."); // 
 			TryEditLocalization("uiFormUpdater-updateAvailable", "Update to {0} available.\nPress Download to retrieve."); // 
+			TryEditLocalization("uiIoImportClip-clipStatus", "The Windows clipboard contains {0:#,0} characters."); // 
+			TryEditLocalization("uiIoImportClip-noText", "The clipboard did not contain text data."); // 
+			TryEditLocalization("uiIoXmlFile-exportCanceled", "Export canceled..."); // 
+			TryEditLocalization("uiIoXmlFile-exportComplete", "Export to {0} has completed.\n{1:0} seconds elapsed."); // 
+			TryEditLocalization("uiIoXmlFile-exporting", "Exporting XML...\nPlease wait..."); // 
 			TryEditLocalization("uiLoading-init10", "InitACT 10...  (Setting up log file, scanning for zone/name info)"); // 
 			TryEditLocalization("uiLoading-init11", "InitACT 11...  (Setting up data objects)"); // 
 			TryEditLocalization("uiLoading-init12", "InitACT 12...  (Scanning for blocked Internet files)"); // 
@@ -642,7 +677,14 @@ namespace ActLocalization
 			TryEditLocalization("uiOpMisc-logPosition2a", " ({0} lines behind.)"); // 
 			TryEditLocalization("uiOpMisc-logPosition3", " ({0} CustomTrigger lines behind.)"); // 
 			TryEditLocalization("uiOpMisc-logResumed", "Parsing Resumed..."); // 
+			TryEditLocalization("uiOptionsImportExport-xmlConverted", "XML Converted.  The above may be copied as an ACT Config Snippet to paste."); // 
+			TryEditLocalization("uiOptionsOdbc-connectSuccess", "ODBC Connection Succeeded"); // 
+			TryEditLocalization("uiOptionsOdbc-tableCreated", "'{0}' created successfully."); // 
+			TryEditLocalization("uiOptionsOdbc-tableDropped", "'{0}' dropped successfully."); // 
+			TryEditLocalization("uiOptionsOdbc-tableValidated", "'{0}' validated successfully."); // 
 			TryEditLocalization("uiOptions-searchDefault", "Search Options..."); // What is shown in the searchbox when empty
+			TryEditLocalization("uiOptionsXmlShare-customEntry", "* Custom Entry *"); // 
+			TryEditLocalization("uiOptionsXmlShare-pasteHere", "(Paste XML Here)"); // 
 			TryEditLocalization("uiOpWebServer-sessionStats", "Session stats | During the last 10s\n{0:#,0} bytes in | {3:0.00} KB/s in\n{1:#,0} bytes out | {4:0.00} KB/s out\n{2} unique clients | {5} unique clients"); // 
 			TryEditLocalization("uiPlugins-fileDetails", "{3}\n{0,0} bytes, Last Modified: {1} - {2}"); // 
 			TryEditLocalization("ui-processPriority", "Normal"); // 

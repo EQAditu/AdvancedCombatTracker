@@ -256,13 +256,16 @@
 	<string key="fileDialogFilter-saveGraph" value="Portable Network Graphics (*.png)|*.png" />
 	<string key="fileDialogFilter-saveTableImage" value="Portable Network Graphics (*.png)|*.png" />
 	<string key="fileDialogFilter-triggerSound" value="Waveform Files (*.wav)|*.wav" />
+	<string key="fileDialogFilter-xml" value="XML File (*.xml)|*.xml" />
 	<string key="fileDialogTitle-actExport" value="Export Encounter to Data File" />
 	<string key="fileDialogTitle-eq2InstallFolder" value="Select your EQ2 installation folder" />
 	<string key="fileDialogTitle-exportHtml" value="Export Encounter to HTML" />
 	<!--fileDialogTitle-importHistoryNoLogMatch -> Date range (to)-->
 	<string key="fileDialogTitle-importHistoryNoLogMatch" value="Open log file containing {0} {1} to {2} {3}" />
+	<string key="fileDialogTitle-importSettingsXml" value="Import Settings from XML" />
 	<string key="fileDialogTitle-saveGraph" value="Save graph as..." />
 	<string key="fileDialogTitle-saveTableImage" value="Save graph as..." />
+	<string key="fileDialogTitle-xmlEncounter" value="Export Encounter to XML" />
 	<string key="graphAdv-termDps" value="DPS" />
 	<!--graphAdv-toolTip -> sec = second-->
 	<string key="graphAdv-toolTip" value="+{0} ({1} sec average)" />
@@ -431,13 +434,17 @@
 	<!--messageBox-selectEq2Path -> ACT unable to find the EQ2 installation-->
 	<string key="messageBox-selectEq2Path" value="Your current EQ2 installation was not detectable.  Please select the folder where EQ2 resides." />
 	<string key="messageBox-sortingColumnError" value="Select a column entry to sort by." />
+	<string key="messageBoxText-abilityRedirectError" value="Please fill in both the Ability and Into fields and select an ability type." />
 	<string key="messageBoxText-addCalcTimer" value="The lowest calculated recast has been sent to the spell timer options.  Do you wish to add/replace this timer now?" />
+	<string key="messageBoxText-colorRestart" value="You must restart ACT to revert these color changes." />
+	<string key="messageBoxText-combatantRenameError" value="Please fill in both the Before and After fields." />
 	<string key="messageBoxText-ctBenchComplete1" value="The baseline benchmark did not consume enough time to be useful.  Please select another encounter that has more log lines available." />
 	<string key="messageBoxText-ctBenchComplete2" value="Benchmarking complete.&#xA;&#xA;Identify the Custom Triggers that are many times more expensive than the baseline for optimizations.  Alternatively, restrict them to a specific zone if not already done." />
 	<string key="messageBoxText-ctBenchNoSelection" value="Please select an encounter in the left-side TreeView." />
 	<string key="messageBoxText-ctBenchSmallSelection" value="Please select an encounter with more than 1000 log line entries." />
 	<string key="messageBoxText-customTriggerDeleteMultiple" value="Really delete {0} custom triggers under '{1}'?" />
 	<string key="messageBoxText-eq2CreateFileError" value="Could not create {0}.&#xA;{1}" />
+	<string key="messageBoxText-exFilePrefixBlank" value="Leaving this blank field is dangerous and will result in macro files that will not function unless the used Clipboard Format properly prefixes channel commands to every line." />
 	<string key="messageBoxText-fatalUnhandledException" value="An unhandled exception has occurred.  ACT may close.&#xA;Press Ctrl-C to copy this MessageBox.&#xA;&#xA;{0}" />
 	<string key="messageBoxText-getPlugins429" value="The remote server returned a 429 status error.&#xA;&#xA;This may mean you have tried to access this resource too many times recently.  Please try again later." />
 	<string key="messageBoxText-getPlugins503" value="The remote server returned a 503 status error.&#xA;&#xA;This may mean you have tried to access this resource too many times recently.  Please try again later." />
@@ -448,6 +455,7 @@
 	<string key="messageBoxText-importAbort" value="Do you wish to abort the import process?" />
 	<string key="messageBoxText-pluginInternetBlocked" value="{0}&#xA;&#xA;---&#xA;&#xA;Suggestion: The plugin ({1}) may be blocked from loading because it is marked as from the Internet.  Please right-click the file, select Properties and Unblock the file.&#xA;&#xA;If this plugin came with any other files, unblock them as well." />
 	<string key="messageBoxText-pluginWizParserAdded" value="The parsing plugin has been added and started." />
+	<string key="messageBoxText-restartAct" value="You must restart ACT to apply changes." />
 	<string key="messageBoxText-startupWizEQ2" value="Will ACT be used for EverQuest II?" />
 	<string key="messageBoxText-startupWizFF14" value="Will ACT be used for Final Fantasy XIV?" />
 	<string key="messageBoxText-startupWizManualSelect" value="Please manually select your game log file." />
@@ -457,10 +465,16 @@
 	<string key="messageBoxText-unblock1b" value="{0} more files..." />
 	<string key="messageBoxText-unblockFail" value="Not all files could be unblocked.  Try running ACT as admin.&#xA;&#xA;{0}" />
 	<string key="messageBoxText-viewLogsDisabled" value="ACT currently is not allowed to store log lines with encounter objects.&#xA;&#xA;Look for an option called 'Record all log lines while parsing.' in the Misc options page." />
+	<string key="messageBoxText-xmlShareInvalid" value="This feature is for importing XML Share snippets, only.  If you wish to import an XML configuration file, use the Import button in Options -&gt; Configuration Import/Export." />
+	<string key="messageboxText-xmlShareUnknown" value="{0}: No XML Snippet Handler marked the snippet as consumed.  Does this share type require a plugin?" />
+	<string key="messageBoxText-xmlSnippetNotUsed" value="{0}: No XML Snippet Handler marked the snippet as used.  This share type may require a plugin." />
+	<string key="messageBoxTitle-abilityRedirectError" value="Invalid Entry" />
 	<string key="messageBoxTitle-addCalcTimer" value="Add Timer Now?" />
 	<string key="messageBoxTitle-avoidanceCopyDetail" value="Per hit average damage avoided: {0}" />
 	<string key="messageBoxTitle-clipboardNoText" value="Clipboard import failed" />
 	<string key="messageBoxTitle-clipConnectError" value="Clipboard Connection Failed" />
+	<string key="messageBoxTitle-colorRestart" value="Restart required" />
+	<string key="messageBoxTitle-combatantRenameError" value="Invalid Entry" />
 	<string key="messageBoxTitle-complete" value="The operation has completed" />
 	<string key="messageBoxTitle-ctBenchComplete" value="Complete" />
 	<string key="messageBoxTitle-ctBenchInvalid" value="Invalid Selection" />
@@ -471,6 +485,7 @@
 	<string key="messageBoxTitle-eq2FolderWizard" value="Detected EQ2 Folder" />
 	<string key="messageBoxTitle-eq2NotFound" value="Could not confirm folder selection" />
 	<string key="messageBoxTitle-error" value="Error" />
+	<string key="messageBoxTitle-exFilePrefixBlank" value="DoFileCommands Channel Prefix" />
 	<string key="messageBoxTitle-exportNoEncounters" value="Nothing to export" />
 	<string key="messageBoxTitle-fatalUnhandledException" value="Fatal Error - Unhandled Exception" />
 	<string key="messageBoxTitle-feedbackFail" value="Feedback not submitted" />
@@ -494,6 +509,7 @@
 	<string key="messageBoxTitle-localSecurityPolicy" value="Security Exception" />
 	<string key="messageBoxTitle-noFileFound" value="File Not Found" />
 	<string key="messageBoxTitle-odbcDropTables" value="ACT ODBC database removal" />
+	<string key="messageBoxTitle-odbcHackError" value="Could not add OdbcHack" />
 	<string key="messageBoxTitle-odbcQueryError" value="ODBC Connection Query Failed" />
 	<string key="messageBoxTitle-openLogWizard" value="Detected log file" />
 	<string key="messageBoxTitle-openLogWizardNoFolder" value="No logs folder" />
@@ -505,6 +521,7 @@
 	<string key="messageBoxTitle-pluginInvalid" value="Invalid Plugin" />
 	<string key="messageBoxTitle-pluginWizTitleError" value="Could not retrieve plugin titles" />
 	<string key="messageBoxTitle-removePlugin" value="Remove Plugin?" />
+	<string key="messageBoxTitle-restartAct" value="Restart" />
 	<string key="messageBoxTitle-searchResults" value="Search Complete" />
 	<string key="messageBoxTitle-selectEq2Path" value="EQ2 Detection Failed" />
 	<string key="messageBoxTitle-serverStartError" value="Could not start the server" />
@@ -521,6 +538,9 @@
 	<string key="messageBoxTitle-updateError" value="Error Updating" />
 	<string key="messageBoxTitle-viewLogsDisabled" value="Log recording disabled" />
 	<string key="messageBoxTitle-xmlPrefError" value="XML Preferences Error" />
+	<string key="messageboxTitle-xmlShareError" value="Error adding XML Share" />
+	<string key="messageBoxTitle-xmlShareError" value="Error parsing XML Share" />
+	<string key="messageBoxTitle-xmlSnippetError" value="Error adding XML Share" />
 	<string key="messageBox-uiExport1" value="Do you wish to set the homepage of EQ2's embedded browser to ACT's encounter index?" />
 	<string key="messageBox-uiExport2" value="Do you wish to replace EQ2's browser window with one that has a collapsable interface and URL bar?" />
 	<string key="messageBox-updateAct" value="This will close the program and start the update.&#xA;Do you wish to continue?" />
@@ -532,6 +552,8 @@
 	<string key="messageBox-xmlSyntaxError" value="The XML settings file may be corrupt or unusable.  Loading defaults where applicable.&#xA;{0}" />
 	<string key="notifText-clipboardReadFail" value="Could not get text from the clipboard..." />
 	<string key="notifText-unknownAssembly" value="The following assemblies were not recognized.  If they are plugins or from plugins, they should be deleted or moved to another folder to avoid &quot;wrong version&quot; load issues.&#xD;&#xA;&#xD;&#xA;{0}" />
+	<string key="notifText-xmlShareAdded" value="A ({0}) from ({1}) has been added to ACT." />
+	<string key="notifText-xmlShareDetected" value="A ({0}) from ({1}) has been detected in the log file.&#xA;&#xA;Would you like to import this to ACT?&#xA;&#xA;&#xA;&#xA;&#xA;[Also in Options -&gt; Configuration Import/Export -&gt; XML Share Snippets]" />
 	<string key="notifText-xmlSnippetError" value="There was an unexpected error importing this XML snippet.&#xA;&#xA;{0}" />
 	<string key="notifText-xmlSnippetIncomplete" value="The shared XML seems to be missing required attributes to be imported" />
 	<string key="notifText-xmlSnippetNotHandled" value="The XML Snippet was not marked as handled.  Does this share type require a plugin?" />
@@ -540,6 +562,7 @@
 	<string key="notifTitle-unknownAssembly" value="Unknown assemblies in ACT's folder.  (Click Show to open folder)" />
 	<string key="notifTitle-webserverError" value="Webserver error" />
 	<string key="notifTitle-webserverException" value="Webserver closed" />
+	<string key="notifTitle-xmlShareAdded" value="ACT XML Share" />
 	<string key="notifTitle-xmlSnippetError" value="XML Share error" />
 	<string key="notifTitle-xmlSnippetIncomplete" value="XML Share incomplete" />
 	<string key="notifTitle-xmlSnippetNotHandled" value="XML Share not handled" />
@@ -622,12 +645,19 @@
 	<string key="trayTitle-unhandledException" value="Unhandled Exception in ACT" />
 	<string key="trayTitle-updateAvailable" value="ACT Update Available" />
 	<string key="trayTitle-xmlPrefErrorCount" value="Config Load Errors" />
-	<!--tts-spellExpired -> TTS: SpellName expired-->
+	<string key="ttOptionsXmlShare-invalidXml" value="Invalid XML: Use this field to paste XML share text" />
+	<string key="ttOptionsXmlShare-noName" value="A name must be entered" />
+	<string key="ttOptionsXmlShare-xmlMissingAttributes" value="The shared XML seems to be missing required attributes to be imported" />
+	<string key="tts-commandTest" value="Command name" />
+	<!--tts-spellExpired -> Text to Speech: SpellName expired-->
 	<string key="tts-spellExpired" value="{0} expired" />
-	<!--tts-spellStarted -> TTS: SpellName started-->
+	<string key="tts-spellExpiredTest" value="Spellname expired" />
+	<!--tts-spellStarted -> Text to Speech: SpellName started-->
 	<string key="tts-spellStarted" value="{0} started" />
-	<!--tts-spellWarning -> TTS: SpellName warning-->
+	<string key="tts-spellStartedTest" value="Spellname started" />
+	<!--tts-spellWarning -> Text to Speech: SpellName warning-->
 	<string key="tts-spellWarning" value="{0} warning" />
+	<string key="tts-spellWarningTest" value="Spellname warning" />
 	<!--ui-customTriggerGeneralCategory -> There is a space before the term for sorting purposes.  Also for Spell Timer categories.-->
 	<string key="ui-customTriggerGeneralCategory" value=" General" />
 	<!--ui-customTriggerSearch -> Search terms for the Options tab to show Custom Trigger thread count-->
@@ -725,6 +755,11 @@
 	<string key="uiFormUpdater-downloadError" value="There was an error updating:&#xA;" />
 	<string key="uiFormUpdater-noUpdates" value="No updates available." />
 	<string key="uiFormUpdater-updateAvailable" value="Update to {0} available.&#xA;Press Download to retrieve." />
+	<string key="uiIoImportClip-clipStatus" value="The Windows clipboard contains {0:#,0} characters." />
+	<string key="uiIoImportClip-noText" value="The clipboard did not contain text data." />
+	<string key="uiIoXmlFile-exportCanceled" value="Export canceled..." />
+	<string key="uiIoXmlFile-exportComplete" value="Export to {0} has completed.&#xA;{1:0} seconds elapsed." />
+	<string key="uiIoXmlFile-exporting" value="Exporting XML...&#xA;Please wait..." />
 	<string key="uiLoading-init10" value="InitACT 10...  (Setting up log file, scanning for zone/name info)" />
 	<string key="uiLoading-init11" value="InitACT 11...  (Setting up data objects)" />
 	<string key="uiLoading-init12" value="InitACT 12...  (Scanning for blocked Internet files)" />
@@ -748,8 +783,15 @@
 	<string key="uiOpMisc-logPosition2a" value=" ({0} lines behind.)" />
 	<string key="uiOpMisc-logPosition3" value=" ({0} CustomTrigger lines behind.)" />
 	<string key="uiOpMisc-logResumed" value="Parsing Resumed..." />
+	<string key="uiOptionsImportExport-xmlConverted" value="XML Converted.  The above may be copied as an ACT Config Snippet to paste." />
+	<string key="uiOptionsOdbc-connectSuccess" value="ODBC Connection Succeeded" />
+	<string key="uiOptionsOdbc-tableCreated" value="'{0}' created successfully." />
+	<string key="uiOptionsOdbc-tableDropped" value="'{0}' dropped successfully." />
+	<string key="uiOptionsOdbc-tableValidated" value="'{0}' validated successfully." />
 	<!--uiOptions-searchDefault -> What is shown in the searchbox when empty-->
 	<string key="uiOptions-searchDefault" value="Search Options..." />
+	<string key="uiOptionsXmlShare-customEntry" value="* Custom Entry *" />
+	<string key="uiOptionsXmlShare-pasteHere" value="(Paste XML Here)" />
 	<string key="uiOpWebServer-sessionStats" value="Session stats | During the last 10s&#xA;{0:#,0} bytes in | {3:0.00} KB/s in&#xA;{1:#,0} bytes out | {4:0.00} KB/s out&#xA;{2} unique clients | {5} unique clients" />
 	<string key="uiPlugins-fileDetails" value="{3}&#xA;{0,0} bytes, Last Modified: {1} - {2}" />
 	<string key="ui-processPriority" value="Normal" />

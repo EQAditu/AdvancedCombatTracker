@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ControlText Form="FormUpdater">
+    <Control ControlPath="root" UniqueName="lblUpdateStatus" Text="Checking version from web..." />
     <Control ControlPath="root" UniqueName="btnCancel" Text="Cancel" />
     <Control ControlPath="root" UniqueName="lblThisVer" Text="1.0.0.0" />
     <Control ControlPath="root" UniqueName="label1" Text="This Version:" />
