@@ -6,7 +6,7 @@ using System.Reflection;
 
 [assembly: AssemblyTitle("ActLocalization-InternalStrings")]
 [assembly: AssemblyDescription("A sample of an ACT plugin that changes localization strings.")]
-[assembly: AssemblyVersion("271.0.0.0")]
+[assembly: AssemblyVersion("273.0.0.0")]
 
 namespace ActLocalization
 {
@@ -208,6 +208,7 @@ namespace ActLocalization
 			TryEditLocalization("helpPanel-cbCullTimer", "When an encounter ends, all encounters (except for \"All\" zone-wide encounters) older than this time limit will be removed."); // 
 			TryEditLocalization("helpPanel-cbCurrentOdbc", "When in combat, ACT can export to a temporary table called current_table on your ODBC datasource every few seconds.  Every export, the table will be deleted and refilled to reflect the current encounter.  This option is only recommended if you have a very quick connection to your datasource."); // 
 			TryEditLocalization("helpPanel-cbDoubleBufferLV", "When checked, ACT will attempt to enable minimal redrawing of the main table.  Windows versions before WindowsXP normally do not have this ability and may cause undesired results."); // 
+			TryEditLocalization("helpPanel-cbEncSilenceCut", "When enabled, an encounter's duration will be reduced when there are no hostile actions recorded for this many seconds.  This setting should be lower than the above end encounter idle timer.  This setting will not increase the duration of an enounter past its last hostile action."); // 
 			TryEditLocalization("helpPanel-cbExFile", "At the end of combat, this option will export to a macro file something similar to what a clipboard export would look like.  This file export is not restricted to 256 characters like the clipboard export, however it can only output 16 lines.  Once the export is created, you can display the results by using the command:\n\n/do_file_commands act-export.txt\n\nYou can create an EQ2 macro to trigger this command.  The macro file export will attempt to tabulate the data to make viewing it easier.\n\nYou must set the below option with what channel you wish to display the export to beforehand.  Leaving the channel prefix blank will cause the macro file not to function unless the Text Only Formatting options prefix a channel to *every* line."); // 
 			TryEditLocalization("helpPanel-cbExFileColumnAlign", "When enabled, the text export will be aligned into a table where each cell is padded to the length of the longest entry in that column.  It is recommended you use a text formatter such as {NAME10} instead of {name} or that column may have excessive padding."); // 
 			TryEditLocalization("helpPanel-cbExGraph", "When checked, HTML exports will include a main encounter graph."); // 
@@ -283,6 +284,7 @@ namespace ActLocalization
 			TryEditLocalization("helpPanel-rbSParseFull", "Full selective parsing should only be used in small groups where there are other groups near by.  When the encounter begins, the settings are locked to that encounter.  Using this feature may cause the ExtDPS calculations to differ from other copies of ACT or other parsers depending on the limiting options they use.  Once an encounter has taken place, you cannot add or remove combatants  to it without reparsing that battle.  Full selective parsing will create data gaps and should not be used while using ACT to analyze battles or statistics as it will not show a complete \"picture\" of the encounter."); // 
 			TryEditLocalization("helpPanel-SampleType", "These settings affect how many DPS plots there are along the X-Axis.  If an encounter is one minute long, and Fixed number of DPS samples(6) is selected, there will be six X-Axis plots in 10 second intervals.  If DPS samples every 15 seconds is selected, there will be four DPS plots at 15 second intervals.  Fixed number is useful for keeping a graph readable no matter how long the encounter, and fixed sample durations is useful for comparisons to other time lines."); // 
 			TryEditLocalization("helpPanel-tbCharName", "If a log file is open this setting is ignored; however if ACT is used as an offline parser only, this setting will be used to fill in your name instead of using 'YOU'."); // 
+			TryEditLocalization("helpPanel-tbConvertXml", "You may paste a portion of ACT's configuration file in this textbox and convert it into a snippet.  Someone copying this snippet and clicking the [Import XML] button in the corner will import the contained config settings."); // 
 			TryEditLocalization("helpPanel-tbExFileName", "This export file name is a relative file path to the game folder or may be an absolute path."); // 
 			TryEditLocalization("helpPanel-TextFormatAddPreset", "Save these format options to the drop down list."); // 
 			TryEditLocalization("helpPanel-TextFormatAllies", "Allies formatting string. (First Line Format)"); // 
@@ -676,6 +678,7 @@ namespace ActLocalization
 			TryEditLocalization("uiOpMisc-logPosition1", "Reading {0}\nAt position: {1:0,0}."); // Shown in the Misc options panel
 			TryEditLocalization("uiOpMisc-logPosition2a", " ({0} lines behind.)"); // 
 			TryEditLocalization("uiOpMisc-logPosition3", " ({0} CustomTrigger lines behind.)"); // 
+			TryEditLocalization("uiOpMisc-logPosition4", "\nSyncing companion files: "); // 
 			TryEditLocalization("uiOpMisc-logResumed", "Parsing Resumed..."); // 
 			TryEditLocalization("uiOptionsImportExport-xmlConverted", "XML Converted.  The above may be copied as an ACT Config Snippet to paste."); // 
 			TryEditLocalization("uiOptionsOdbc-connectSuccess", "ODBC Connection Succeeded"); // 
