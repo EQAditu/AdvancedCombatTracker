@@ -20,7 +20,7 @@ namespace ACT_Plugin
 		public void InitPlugin(TabPage pluginScreenSpace, Label pluginStatusText)
 		{
 			lblStatus = pluginStatusText;	// Hand the status label's reference to our local var
-			CombatantData.ColumnDefs.Add("CurseCures", new CombatantData.ColumnDef("CurseCures", false, "INT", "CurseCures",
+			CombatantData.ColumnDefs.Add("CurseCures", new CombatantData.ColumnDef("CurseCures", true, "INT", "CurseCures",
 				(Data) => { return GetCurseCureCount(Data).ToString(); }, (Data) => { return GetCurseCureCount(Data).ToString(); },
 				(Left, Right) => { return GetCurseCureCount(Left).CompareTo(GetCurseCureCount(Right)); }));
 			ActGlobals.oFormActMain.ValidateTableSetup();	// Make sure the new column is in the Options tab
