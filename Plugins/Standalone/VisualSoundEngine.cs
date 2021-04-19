@@ -4,6 +4,7 @@ using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 using System.Xml;
 using Advanced_Combat_Tracker;
@@ -12,7 +13,7 @@ using Transitions;
 [assembly: AssemblyTitle("Visual Sound Engine")]
 [assembly: AssemblyDescription("Captures TTS/WAV being sent through ACT and displays a descriptive visual alert in addition")]
 [assembly: AssemblyCopyright("EQAditu <aditu@advancedcombattracker.com>")]
-[assembly: AssemblyVersion("1.0.1.2")]
+[assembly: AssemblyVersion("1.0.1.3")]
 
 namespace ACT_Plugin
 {
@@ -353,6 +354,11 @@ namespace ACT_Plugin
 			{
 				if (!cbClickThrough.Checked) eventWindow.BackColor = newColor;
 			};
+
+			ActGlobals.oFormActMain.UpdateCheckClicked += oFormActMain_UpdateCheckClicked;
+			if (ActGlobals.oFormActMain.GetAutomaticUpdatesAllowed())   // If ACT is set to automatically check for updates, check for updates to the plugin
+				new Thread(new ThreadStart(oFormActMain_UpdateCheckClicked)) { IsBackground = true }.Start();   // If we don't put this on a separate thread, web latency will delay the plugin init phase
+
 			xmlSettings = new SettingsSerializer(this);
 			LoadSettings();
 			if (cbShowWindow.Checked)
@@ -367,12 +373,44 @@ namespace ACT_Plugin
 
 		public void DeInitPlugin()
 		{
+			ActGlobals.oFormActMain.UpdateCheckClicked -= oFormActMain_UpdateCheckClicked;
 			ActGlobals.oFormActMain.PlaySoundMethod = oldSoundEngine;
 			ActGlobals.oFormActMain.PlayTtsMethod = oldTtsEngine;
 			SaveSettings();
 			eventWindow.Dispose();
 			ActGlobals.oFormActMain.CornerControlRemove(cbbShowWindow);
 		}
+
+		void oFormActMain_UpdateCheckClicked()
+		{
+			int pluginId = 83;    // This ID must be the same ID used on ACT's website.  
+			try
+			{
+				DateTime localDate = ActGlobals.oFormActMain.PluginGetSelfDateUtc(this);
+				DateTime remoteDate = ActGlobals.oFormActMain.PluginGetRemoteDateUtc(pluginId);
+				if (localDate.AddHours(2) < remoteDate)
+				{
+					DialogResult result = MessageBox.Show("There is an updated version of the Visual Sound Engine Plugin.  Update it now?\n\n(If there is an update to ACT, you should click No and update ACT first.)", "New Version", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+					if (result == DialogResult.Yes)
+					{
+						FileInfo updatedFile = ActGlobals.oFormActMain.PluginDownload(pluginId);
+						ActPluginData pluginData = ActGlobals.oFormActMain.PluginGetSelfData(this);
+						pluginData.pluginFile.Delete();
+						updatedFile.MoveTo(pluginData.pluginFile.FullName);
+
+						// You can choose to simply restart the plugin, if the plugin can properly clean-up in DeInit and has no external assemblies that update
+						ThreadInvokes.CheckboxSetChecked(ActGlobals.oFormActMain, pluginData.cbEnabled, false); // Deinit the old plugin
+						Application.DoEvents();
+						ThreadInvokes.CheckboxSetChecked(ActGlobals.oFormActMain, pluginData.cbEnabled, true);  // Init the new version
+					}
+				}
+			}
+			catch (Exception ex)
+			{
+				ActGlobals.oFormActMain.WriteExceptionLog(ex, "Plugin Update Check");
+			}
+		}
+
 		void LoadSettings()
 		{
 			xmlSettings.AddControlSetting(cbTopMost.Name, cbTopMost);
