@@ -368,7 +368,7 @@
 	<string key="helpPanel-SampleType" value="These settings affect how many DPS plots there are along the X-Axis.  If an encounter is one minute long, and Fixed number of DPS samples(6) is selected, there will be six X-Axis plots in 10 second intervals.  If DPS samples every 15 seconds is selected, there will be four DPS plots at 15 second intervals.  Fixed number is useful for keeping a graph readable no matter how long the encounter, and fixed sample durations is useful for comparisons to other time lines." />
 	<string key="helpPanel-soundTts-correction" value="Uses regular expressions to find parts of a TTS string and replaces them with a specified correction.  Mostly this is used to correct pronunciation." />
 	<string key="helpPanel-soundTts-lblTtsMethod" value="The currently used TTS engine method" />
-	<string key="helpPanel-soundTts-linkTtsCpl" value="Opens the classic Text To Speech Control Panel applet.  The Windows 10 Settings app only affects UWP apps, not ACT." />
+	<string key="helpPanel-soundTts-linkTtsCpl" value="Opens the classic Text To Speech Control Panel applet.  The Windows 10/11 Settings app only affects UWP apps, not ACT." />
 	<string key="helpPanel-soundTts-rbTtsSapiDirect" value="Uses the Windows SAPI directly.  This will have a different volume curve when compared to the other setting and other WAV sound files." />
 	<string key="helpPanel-soundTts-rbTtsSapiWav" value="Uses temporary WAV files created by Windows SAPI.  This method was originally created for low resource machines that could not play TTS reliably while playing a demanding CPU bound game." />
 	<string key="helpPanel-soundTts-TestTts" value="Enter a text string to speak with the current rules and engine" />
