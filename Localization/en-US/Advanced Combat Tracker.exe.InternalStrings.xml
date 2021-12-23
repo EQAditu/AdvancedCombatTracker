@@ -366,6 +366,12 @@
 	<string key="helpPanel-Options_TableZone" value="These are the columns that will appear in the Main tab tables when clicking on TreeView nodes such as 'Import/Merge [1]' or 'ZoneName [3] 12:00:00 PM'.  This table lists all of the encounters of that node(Zone)." />
 	<string key="helpPanel-rbSParseFull" value="Full selective parsing should only be used in small groups where there are other groups near by.  When the encounter begins, the settings are locked to that encounter.  Using this feature may cause the ExtDPS calculations to differ from other copies of ACT or other parsers depending on the limiting options they use.  Once an encounter has taken place, you cannot add or remove combatants  to it without reparsing that battle.  Full selective parsing will create data gaps and should not be used while using ACT to analyze battles or statistics as it will not show a complete &quot;picture&quot; of the encounter." />
 	<string key="helpPanel-SampleType" value="These settings affect how many DPS plots there are along the X-Axis.  If an encounter is one minute long, and Fixed number of DPS samples(6) is selected, there will be six X-Axis plots in 10 second intervals.  If DPS samples every 15 seconds is selected, there will be four DPS plots at 15 second intervals.  Fixed number is useful for keeping a graph readable no matter how long the encounter, and fixed sample durations is useful for comparisons to other time lines." />
+	<string key="helpPanel-soundTts-correction" value="Uses regular expressions to find parts of a TTS string and replaces them with a specified correction.  Mostly this is used to correct pronunciation." />
+	<string key="helpPanel-soundTts-lblTtsMethod" value="The currently used TTS engine method" />
+	<string key="helpPanel-soundTts-linkTtsCpl" value="Opens the classic Text To Speech Control Panel applet.  The Windows 10/11 Settings app only affects UWP apps, not ACT." />
+	<string key="helpPanel-soundTts-rbTtsSapiDirect" value="Uses the Windows SAPI directly.  This will have a different volume curve when compared to the other setting and other WAV sound files." />
+	<string key="helpPanel-soundTts-rbTtsSapiWav" value="Uses temporary WAV files created by Windows SAPI.  This method was originally created for low resource machines that could not play TTS reliably while playing a demanding CPU bound game." />
+	<string key="helpPanel-soundTts-TestTts" value="Enter a text string to speak with the current rules and engine" />
 	<string key="helpPanel-tbCharName" value="If a log file is open this setting is ignored; however if ACT is used as an offline parser only, this setting will be used to fill in your name instead of using 'YOU'." />
 	<string key="helpPanel-tbConvertXml" value="You may paste a portion of ACT's configuration file in this textbox and convert it into a snippet.  Someone copying this snippet and clicking the [Import XML] button in the corner will import the contained config settings." />
 	<string key="helpPanel-tbExFileName" value="This export file name is a relative file path to the game folder or may be an absolute path." />
@@ -592,6 +598,7 @@
 	<string key="opOutputDisplay" value="Output Display" />
 	<string key="opSelectiveParsing" value="Selective Parsing" />
 	<string key="opSound" value="Sound Settings" />
+	<string key="opSoundTts" value="Text to Speech" />
 	<string key="opTableAttackType" value="AttackType View Options" />
 	<string key="opTableCombatant" value="Combatant View Options" />
 	<string key="opTableDamageType" value="DamageType View Options" />
@@ -793,6 +800,8 @@
 	<string key="uiOptionsOdbc-tableValidated" value="'{0}' validated successfully." />
 	<!--uiOptions-searchDefault -> What is shown in the searchbox when empty-->
 	<string key="uiOptions-searchDefault" value="Search Options..." />
+	<string key="uiOptionsSound-soundMethod" value="Sound Method:" />
+	<string key="uiOptionsSound-ttsMethod" value="TTS Method:" />
 	<string key="uiOptionsXmlShare-customEntry" value="* Custom Entry *" />
 	<string key="uiOptionsXmlShare-pasteHere" value="(Paste XML Here)" />
 	<string key="uiOpWebServer-sessionStats" value="Session stats | During the last 10s&#xA;{0:#,0} bytes in | {3:0.00} KB/s in&#xA;{1:#,0} bytes out | {4:0.00} KB/s out&#xA;{2} unique clients | {5} unique clients" />

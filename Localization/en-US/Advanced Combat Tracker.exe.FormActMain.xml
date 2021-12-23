@@ -228,6 +228,7 @@
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Sound\pAudioDevice" UniqueName="rbSndWinApi" Text="Use Windows API Sound  (No volume control, one sound at a time)" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Sound\pAudioDevice" UniqueName="label93" Text="TTS Vol" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Sound\pAudioDevice" UniqueName="label12" Text="Wav Vol" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Sound\pAudioDevice" UniqueName="lblSndMethod" Text="Sound Method: " />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Sound\tableLayoutPanel4" UniqueName="rbSndTimerTTS" Text="TTS " />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Sound\tableLayoutPanel4" UniqueName="rbSndTimerNone" Text="None" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Sound\tableLayoutPanel4" UniqueName="rbSndTimerWAV" Text="WAV:" />
@@ -537,7 +538,7 @@
     <Control ControlPath="root\tc1\tpAbout\gbAbout" UniqueName="btnCheckVer" Text="Check Version Now" />
     <Control ControlPath="root\tc1\tpAbout\gbAbout" UniqueName="label5" Text="Version:" />
     <Control ControlPath="root\tc1\tpAbout\gbAbout" UniqueName="linkURL" Text="Main Website" />
-    <Control ControlPath="root\tc1\tpAbout\gbAbout" UniqueName="label4" Text="Made by EQAditu (EQ2-Skyfire)" />
+    <Control ControlPath="root\tc1\tpAbout\gbAbout" UniqueName="label4" Text="Made by EQAditu" />
     <Control ControlPath="root\tc1\tpAbout\gbAbout" UniqueName="linkEmail" Text="aditu@advancedcombattracker.com" />
     <Control ControlPath="root\tc1\tpAbout\gbAbout" UniqueName="label7" Text="Visit:" />
 </ControlText>

@@ -6,7 +6,7 @@ using System.Reflection;
 
 [assembly: AssemblyTitle("ActLocalization-InternalStrings")]
 [assembly: AssemblyDescription("A sample of an ACT plugin that changes localization strings.")]
-[assembly: AssemblyVersion("273.0.0.0")]
+[assembly: AssemblyVersion("274.0.0.0")]
 
 namespace ActLocalization
 {
@@ -283,6 +283,12 @@ namespace ActLocalization
 			TryEditLocalization("helpPanel-Options_TableZone", "These are the columns that will appear in the Main tab tables when clicking on TreeView nodes such as 'Import/Merge [1]' or 'ZoneName [3] 12:00:00 PM'.  This table lists all of the encounters of that node(Zone)."); // 
 			TryEditLocalization("helpPanel-rbSParseFull", "Full selective parsing should only be used in small groups where there are other groups near by.  When the encounter begins, the settings are locked to that encounter.  Using this feature may cause the ExtDPS calculations to differ from other copies of ACT or other parsers depending on the limiting options they use.  Once an encounter has taken place, you cannot add or remove combatants  to it without reparsing that battle.  Full selective parsing will create data gaps and should not be used while using ACT to analyze battles or statistics as it will not show a complete \"picture\" of the encounter."); // 
 			TryEditLocalization("helpPanel-SampleType", "These settings affect how many DPS plots there are along the X-Axis.  If an encounter is one minute long, and Fixed number of DPS samples(6) is selected, there will be six X-Axis plots in 10 second intervals.  If DPS samples every 15 seconds is selected, there will be four DPS plots at 15 second intervals.  Fixed number is useful for keeping a graph readable no matter how long the encounter, and fixed sample durations is useful for comparisons to other time lines."); // 
+			TryEditLocalization("helpPanel-soundTts-correction", "Uses regular expressions to find parts of a TTS string and replaces them with a specified correction.  Mostly this is used to correct pronunciation."); // 
+			TryEditLocalization("helpPanel-soundTts-lblTtsMethod", "The currently used TTS engine method"); // 
+			TryEditLocalization("helpPanel-soundTts-linkTtsCpl", "Opens the classic Text To Speech Control Panel applet.  The Windows 10/11 Settings app only affects UWP apps, not ACT."); // 
+			TryEditLocalization("helpPanel-soundTts-rbTtsSapiDirect", "Uses the Windows SAPI directly.  This will have a different volume curve when compared to the other setting and other WAV sound files."); // 
+			TryEditLocalization("helpPanel-soundTts-rbTtsSapiWav", "Uses temporary WAV files created by Windows SAPI.  This method was originally created for low resource machines that could not play TTS reliably while playing a demanding CPU bound game."); // 
+			TryEditLocalization("helpPanel-soundTts-TestTts", "Enter a text string to speak with the current rules and engine"); // 
 			TryEditLocalization("helpPanel-tbCharName", "If a log file is open this setting is ignored; however if ACT is used as an offline parser only, this setting will be used to fill in your name instead of using 'YOU'."); // 
 			TryEditLocalization("helpPanel-tbConvertXml", "You may paste a portion of ACT's configuration file in this textbox and convert it into a snippet.  Someone copying this snippet and clicking the [Import XML] button in the corner will import the contained config settings."); // 
 			TryEditLocalization("helpPanel-tbExFileName", "This export file name is a relative file path to the game folder or may be an absolute path."); // 
@@ -502,6 +508,7 @@ namespace ActLocalization
 			TryEditLocalization("opOutputDisplay", "Output Display"); // 
 			TryEditLocalization("opSelectiveParsing", "Selective Parsing"); // 
 			TryEditLocalization("opSound", "Sound Settings"); // 
+			TryEditLocalization("opSoundTts", "Text to Speech"); // 
 			TryEditLocalization("opTableAttackType", "AttackType View Options"); // 
 			TryEditLocalization("opTableCombatant", "Combatant View Options"); // 
 			TryEditLocalization("opTableDamageType", "DamageType View Options"); // 
@@ -686,6 +693,8 @@ namespace ActLocalization
 			TryEditLocalization("uiOptionsOdbc-tableDropped", "'{0}' dropped successfully."); // 
 			TryEditLocalization("uiOptionsOdbc-tableValidated", "'{0}' validated successfully."); // 
 			TryEditLocalization("uiOptions-searchDefault", "Search Options..."); // What is shown in the searchbox when empty
+			TryEditLocalization("uiOptionsSound-soundMethod", "Sound Method:"); // 
+			TryEditLocalization("uiOptionsSound-ttsMethod", "TTS Method:"); // 
 			TryEditLocalization("uiOptionsXmlShare-customEntry", "* Custom Entry *"); // 
 			TryEditLocalization("uiOptionsXmlShare-pasteHere", "(Paste XML Here)"); // 
 			TryEditLocalization("uiOpWebServer-sessionStats", "Session stats | During the last 10s\n{0:#,0} bytes in | {3:0.00} KB/s in\n{1:#,0} bytes out | {4:0.00} KB/s out\n{2} unique clients | {5} unique clients"); // 
