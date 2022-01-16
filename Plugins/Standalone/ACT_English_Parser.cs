@@ -14,7 +14,7 @@ using System.Xml;
 [assembly: AssemblyTitle("English Parsing Engine")]
 [assembly: AssemblyDescription("Plugin based parsing engine for English EQ2 servers")]
 [assembly: AssemblyCompany("(EQAditu)")]
-[assembly: AssemblyVersion("1.3.0.23")]
+[assembly: AssemblyVersion("1.4.0.25")]
 
 namespace ACT_Plugin
 {
@@ -288,7 +288,6 @@ namespace ACT_Plugin
 			SetupEQ2EnglishEnvironment();   // Not really needed since ACT has this code internalized as well.
 			ActGlobals.oFormActMain.BeforeLogLineRead += new LogLineEventDelegate(oFormActMain_BeforeLogLineRead);
 			ActGlobals.oFormActMain.BeforeCombatAction += new CombatActionDelegate(oFormActMain_BeforeCombatAction);
-			ActGlobals.oFormActMain.AfterCombatAction += new CombatActionDelegate(oFormActMain_AfterCombatAction);
 			ActGlobals.oFormActMain.OnLogLineRead += new LogLineEventDelegate(oFormActMain_OnLogLineRead);
 			ActGlobals.oFormActMain.UpdateCheckClicked += new FormActMain.NullDelegate(oFormActMain_UpdateCheckClicked);
 			if (ActGlobals.oFormActMain.GetAutomaticUpdatesAllowed())   // If ACT is set to automatically check for updates, check for updates to the plugin
@@ -300,7 +299,6 @@ namespace ACT_Plugin
 		{
 			ActGlobals.oFormActMain.BeforeLogLineRead -= oFormActMain_BeforeLogLineRead;
 			ActGlobals.oFormActMain.BeforeCombatAction -= oFormActMain_BeforeCombatAction;
-			ActGlobals.oFormActMain.AfterCombatAction -= oFormActMain_AfterCombatAction;
 			ActGlobals.oFormActMain.UpdateCheckClicked -= oFormActMain_UpdateCheckClicked;
 			ActGlobals.oFormActMain.OnLogLineRead -= oFormActMain_OnLogLineRead;
 
@@ -332,20 +330,36 @@ namespace ACT_Plugin
 		private void PopulateRegexArray()
 		{
 			regexArray = new Regex[14];
+			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Clear();
+			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(0, Color.Gray);
 			regexArray[0] = new Regex(logTimeStampRegexStr + @"(?<victim>.+?) (?:is|are) (?<oldcrit>(?:critically )?(?:hit|multi attack(?:ed)?)) by (?<skillType>.+?) for (?<crit>a .*?critical of )?(?<damageAndType>.+?) damage\.", RegexOptions.Compiled);
+			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(1, Color.Red);
 			regexArray[1] = new Regex(logTimeStampRegexStr + @"(?<attackerAndSkill>.+?) (?<special>(?:critically )?(?:hits?|flurry|flurries|multi attacks?|double attacks?|aoe attacks?|bash(?:es)?)) (?<victim>.+?) for (?<crit>a .*?critical of )?(?<damageAndType>.+?) damage\.", RegexOptions.Compiled);
+			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(2, Color.Red);
 			regexArray[2] = new Regex(logTimeStampRegexStr + @"(?<healerAndSkill>.+?) (?<oldcrit>critically heals|heals) (?<victim>.+?) for (?<crit>a .*?critical of )?(?<damage>\d+) hit points?\.", RegexOptions.Compiled);
+			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(3, Color.Blue);
 			regexArray[3] = new Regex(logTimeStampRegexStr + @"(?<attacker>.+?) (?:try|tries) to (?<attackType>[^ ]+) (?<victimAndSkill>.+?), but (?<why>.+)\.", RegexOptions.Compiled);
+			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(4, Color.DarkRed);
 			regexArray[4] = new Regex(logTimeStampRegexStr + @"(?<attackerAndSkill>.+?) (?<crit>(?:critically )?(?:hits?|flurry|flurries|multi attacks?|double attacks?|aoe attacks?)) (?<victim>.+?) but fails? to infl[ie]ct any damage\.", RegexOptions.Compiled);
+			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(5, Color.DarkOrange);
 			regexArray[5] = new Regex(logTimeStampRegexStr + @"(?<attacker>.+?) (?:has|have) killed (?<victim>.+)\.", RegexOptions.Compiled);
+			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(6, Color.Black);
 			regexArray[6] = new Regex(logTimeStampRegexStr + @"Unknown command: 'act (.+)'", RegexOptions.Compiled);
+			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(7, Color.Black);
 			regexArray[7] = new Regex(logTimeStampRegexStr + @"(?<attacker>YOUR|.+?[’'의の]s?) (?<skillType>.+?) (?<attacksType>slash|slashes|pierces|crushes|zaps|smites|confounds|burns|freezes|poisons|diseases) (?<victim>.+?) draining (?<damage>[0-9]+) points? of power\.", RegexOptions.Compiled);
+			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(8, Color.DarkOrchid);
 			regexArray[8] = new Regex(logTimeStampRegexStr + @"(?<healerAndSkill>.+?) absorbs (?<damage>\d+) points? of damage from being done to (?<victim>.+?)(?: with (?<bypass>\d+) points? of damage bleeding through)?\.(?: \((?<remaining>\d+) points? remaining\))?", RegexOptions.Compiled);
+			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(9, Color.DodgerBlue);
 			regexArray[9] = new Regex(logTimeStampRegexStr + @"You have entered (?::.+?:)?(?<zone>.+)\.", RegexOptions.Compiled);
+			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(10, Color.Black);
 			regexArray[10] = new Regex(logTimeStampRegexStr + @"(?<healerAndSkill>.+?) (?<oldcrit>(?:critically )?refreshes) (?<victim>.+?) for (?<crit>a .*?critical of )?(?<damage>\d+) mana points?\.", RegexOptions.Compiled);
+			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(11, Color.Black);
 			regexArray[11] = new Regex(logTimeStampRegexStr + @"(?:(?<owner>YOUR)|(?<owner>.+?)(?:[’'의の]s?)) (?<skillType>.+?) (?<oldcrit>critically )?(?<direction>increases|reduces) (?<attacker>.+?) hate (?:position )?with (?<victim>.+?) (?:by |for )?(?<crit>a .*?critical of )?(?<damage>\d+) (?<dirType>threat|positions?)\.", RegexOptions.Compiled);
+			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(12, Color.Black);
 			regexArray[12] = new Regex(logTimeStampRegexStr + @"(?<attacker>YOUR|.+?[’'의の]s?) (?<skillType>.+?) (?<action>dispels?|relieves?) (?:(?<victim>YOU) of (?<affliction>.+?)|(?<affliction>.+?) from (?<victim>.+))\.", RegexOptions.Compiled);
+			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(13, Color.Black);
 			regexArray[13] = new Regex(logTimeStampRegexStr + @"(?<healer>.+?) reduces? the damage from (?<attacker>.+?) to (?<victim>.+) by (?<damage>\d+)\.", RegexOptions.Compiled);
+			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(14, Color.Black);
 		}
 		void oFormActMain_BeforeLogLineRead(bool isImport, LogLineEventArgs logInfo)
 		{
@@ -356,31 +370,7 @@ namespace ACT_Plugin
 					Match reMatch = regexArray[i].Match(logInfo.logLine);
 					if (reMatch.Success)
 					{
-						switch (i)
-						{
-							case 0:
-							case 1:
-								logInfo.detectedType = Color.Red.ToArgb();
-								break;
-							case 2:
-								logInfo.detectedType = Color.Blue.ToArgb();
-								break;
-							case 3:
-								logInfo.detectedType = Color.DarkRed.ToArgb();
-								break;
-							case 4:
-								logInfo.detectedType = Color.DarkOrange.ToArgb();
-								break;
-							case 7:
-								logInfo.detectedType = Color.DarkOrchid.ToArgb();
-								break;
-							case 8:
-								logInfo.detectedType = Color.DodgerBlue.ToArgb();
-								break;
-							default:
-								logInfo.detectedType = Color.Black.ToArgb();
-								break;
-						}
+						logInfo.detectedType = i + 1;
 						LogExeEnglish(reMatch, i + 1, logInfo.logLine, isImport);
 						break;
 					}
@@ -1427,9 +1417,6 @@ namespace ACT_Plugin
 				}
 			}
 
-		}
-		void oFormActMain_AfterCombatAction(bool isImport, CombatActionEventArgs actionInfo)
-		{
 			if (actionInfo.swingType == (int)SwingTypeEnum.Melee || actionInfo.swingType == (int)SwingTypeEnum.NonMelee)
 				lastDamage = actionInfo;
 		}
@@ -2205,6 +2192,7 @@ namespace ACT_Plugin
 			MasterSwing.ColumnDefs.Clear();
 			MasterSwing.ColumnDefs.Add("EncId", new MasterSwing.ColumnDef("EncId", false, "CHAR(8)", "EncId", (Data) => { return string.Empty; }, (Data) => { return Data.ParentEncounter.EncId; }, (Left, Right) => { return 0; }));
 			MasterSwing.ColumnDefs.Add("Time", new MasterSwing.ColumnDef("Time", true, "TIMESTAMP", "STime", (Data) => { return Data.Time.ToString("T"); }, (Data) => { return Data.Time.ToString("u").TrimEnd(new char[] { 'Z' }); }, (Left, Right) => { return Left.Time.CompareTo(Right.Time); }));
+			MasterSwing.ColumnDefs.Add("RelativeTime", new MasterSwing.ColumnDef("RelativeTime", true, "FLOAT", "RelativeTime", (Data) => { return Data.ParentEncounter != null ? (Data.Time - Data.ParentEncounter.StartTime).ToString("g") : String.Empty; }, (Data) => { return Data.ParentEncounter != null ? (Data.Time - Data.ParentEncounter.StartTime).TotalSeconds.ToString() : String.Empty; }, (Left, Right) => { return Left.Time.CompareTo(Right.Time); }));
 			MasterSwing.ColumnDefs.Add("Attacker", new MasterSwing.ColumnDef("Attacker", true, "VARCHAR(64)", "Attacker", (Data) => { return Data.Attacker; }, (Data) => { return Data.Attacker; }, (Left, Right) => { return Left.Attacker.CompareTo(Right.Attacker); }));
 			MasterSwing.ColumnDefs.Add("SwingType", new MasterSwing.ColumnDef("SwingType", false, "TINYINT", "SwingType", (Data) => { return Data.SwingType.ToString(); }, (Data) => { return Data.SwingType.ToString(); }, (Left, Right) => { return Left.SwingType.CompareTo(Right.SwingType); }));
 			MasterSwing.ColumnDefs.Add("AttackType", new MasterSwing.ColumnDef("AttackType", true, "VARCHAR(64)", "AttackType", (Data) => { return Data.AttackType; }, (Data) => { return Data.AttackType; }, (Left, Right) => { return Left.AttackType.CompareTo(Right.AttackType); }));
