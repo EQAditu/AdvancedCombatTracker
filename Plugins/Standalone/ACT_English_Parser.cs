@@ -14,7 +14,7 @@ using System.Xml;
 [assembly: AssemblyTitle("English Parsing Engine")]
 [assembly: AssemblyDescription("Plugin based parsing engine for English EQ2 servers")]
 [assembly: AssemblyCompany("(EQAditu)")]
-[assembly: AssemblyVersion("1.4.0.26")]
+[assembly: AssemblyVersion("1.4.1.27")]
 
 namespace ACT_Plugin
 {
@@ -336,7 +336,7 @@ namespace ACT_Plugin
 			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(1, Color.Red);
 			regexArray[1] = new Regex(logTimeStampRegexStr + @"(?<attackerAndSkill>.+?) (?<special>(?:critically )?(?:hits?|flurry|flurries|multi attacks?|double attacks?|aoe attacks?|bash(?:es)?)) (?<victim>.+?) for (?<crit>a .*?critical of )?(?<damageAndType>.+?) damage\.", RegexOptions.Compiled);
 			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(2, Color.Red);
-			regexArray[2] = new Regex(logTimeStampRegexStr + @"(?<healerAndSkill>.+?) (?<oldcrit>critically heals|heals) (?<victim>.+?) for (?<crit>a .*?critical of )?(?<damage>\d+) hit points?\.", RegexOptions.Compiled);
+			regexArray[2] = new Regex(logTimeStampRegexStr + @"(?<healerAndSkill>.+?) (?<oldcrit>critically heals|heals) (?<victim>.+?) for (?<crit>a .*?critical of )?(?<damage>[\d,\.KMBTQ]+) hit points?\.", RegexOptions.Compiled);
 			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(3, Color.Blue);
 			regexArray[3] = new Regex(logTimeStampRegexStr + @"(?<attacker>.+?) (?:try|tries) to (?<attackType>[^ ]+) (?<victimAndSkill>.+?), but (?<why>.+)\.", RegexOptions.Compiled);
 			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(4, Color.DarkRed);
@@ -346,19 +346,19 @@ namespace ACT_Plugin
 			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(6, Color.Black);
 			regexArray[6] = new Regex(logTimeStampRegexStr + @"Unknown command: 'act (.+)'", RegexOptions.Compiled);
 			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(7, Color.Black);
-			regexArray[7] = new Regex(logTimeStampRegexStr + @"(?<attacker>YOUR|.+?[’'의の]s?) (?<skillType>.+?) (?<attacksType>slash|slashes|pierces|crushes|zaps|smites|confounds|burns|freezes|poisons|diseases) (?<victim>.+?) draining (?<damage>[0-9]+) points? of power\.", RegexOptions.Compiled);
+			regexArray[7] = new Regex(logTimeStampRegexStr + @"(?<attacker>YOUR|.+?[’'의の]s?) (?<skillType>.+?) (?<attacksType>slash|slashes|pierces|crushes|zaps|smites|confounds|burns|freezes|poisons|diseases) (?<victim>.+?) draining (?<damage>[\d,\.KMBTQ]+) points? of power\.", RegexOptions.Compiled);
 			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(8, Color.DarkOrchid);
-			regexArray[8] = new Regex(logTimeStampRegexStr + @"(?<healerAndSkill>.+?) absorbs (?<damage>\d+) points? of damage from being done to (?<victim>.+?)(?: with (?<bypass>\d+) points? of damage bleeding through)?\.(?: \((?<remaining>\d+) points? remaining\))?", RegexOptions.Compiled);
+			regexArray[8] = new Regex(logTimeStampRegexStr + @"(?<healerAndSkill>.+?) absorbs (?<damage>[\d,\.KMBTQ]+) points? of damage from being done to (?<victim>.+?)(?: with (?<bypass>[\d,\.KMBTQ]+) points? of damage bleeding through)?\.(?: \((?<remaining>[\d,\.KMBTQ]+) points? remaining\))?", RegexOptions.Compiled);
 			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(9, Color.DodgerBlue);
 			regexArray[9] = new Regex(logTimeStampRegexStr + @"You have entered (?::.+?:)?(?<zone>.+)\.", RegexOptions.Compiled);
 			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(10, Color.Black);
-			regexArray[10] = new Regex(logTimeStampRegexStr + @"(?<healerAndSkill>.+?) (?<oldcrit>(?:critically )?refreshes) (?<victim>.+?) for (?<crit>a .*?critical of )?(?<damage>\d+) mana points?\.", RegexOptions.Compiled);
+			regexArray[10] = new Regex(logTimeStampRegexStr + @"(?<healerAndSkill>.+?) (?<oldcrit>(?:critically )?refreshes) (?<victim>.+?) for (?<crit>a .*?critical of )?(?<damage>[\d,\.KMBTQ]+) mana points?\.", RegexOptions.Compiled);
 			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(11, Color.Black);
-			regexArray[11] = new Regex(logTimeStampRegexStr + @"(?:(?<owner>YOUR)|(?<owner>.+?)(?:[’'의の]s?)) (?<skillType>.+?) (?<oldcrit>critically )?(?<direction>increases|reduces) (?<attacker>.+?) hate (?:position )?with (?<victim>.+?) (?:by |for )?(?<crit>a .*?critical of )?(?<damage>\d+) (?<dirType>threat|positions?)\.", RegexOptions.Compiled);
+			regexArray[11] = new Regex(logTimeStampRegexStr + @"(?:(?<owner>YOUR)|(?<owner>.+?)(?:[’'의の]s?)) (?<skillType>.+?) (?<oldcrit>critically )?(?<direction>increases|reduces) (?<attacker>.+?) hate (?:position )?with (?<victim>.+?) (?:by |for )?(?<crit>a .*?critical of )?(?<damage>[\d,\.KMBTQ]+) (?<dirType>threat|positions?)\.", RegexOptions.Compiled);
 			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(12, Color.Black);
 			regexArray[12] = new Regex(logTimeStampRegexStr + @"(?<attacker>YOUR|.+?[’'의の]s?) (?<skillType>.+?) (?<action>dispels?|relieves?) (?:(?<victim>YOU) of (?<affliction>.+?)|(?<affliction>.+?) from (?<victim>.+))\.", RegexOptions.Compiled);
 			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(13, Color.Black);
-			regexArray[13] = new Regex(logTimeStampRegexStr + @"(?<healer>.+?) reduces? the damage from (?<attacker>.+?) to (?<victim>.+) by (?<damage>\d+)\.", RegexOptions.Compiled);
+			regexArray[13] = new Regex(logTimeStampRegexStr + @"(?<healer>.+?) reduces? the damage from (?<attacker>.+?) to (?<victim>.+) by (?<damage>[\d,\.KMBTQ]+)\.", RegexOptions.Compiled);
 			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(14, Color.Black);
 		}
 		void oFormActMain_BeforeLogLineRead(bool isImport, LogLineEventArgs logInfo)
@@ -576,6 +576,7 @@ namespace ACT_Plugin
 					{
 						critStr = "None";
 					}
+					damage = ExpandDamageAmount(damage);
 
 					victim = EnglishPersonaReplace(victim);
 					if (attacker.StartsWith("YOUR"))        // You healing
@@ -810,6 +811,7 @@ namespace ACT_Plugin
 						break;      // You don't get credit for attacking yourself or your own pet
 					if (ActGlobals.oFormActMain.SetEncounter(time, attacker, victim))
 					{
+						damage = ExpandDamageAmount(damage);
 						if (CheckWardedHit(victim, time))   // Probably can't ward power drains any more
 						{
 							Dnum complexWardedHit = new Dnum(Int64.Parse(damage) + lastWardAmount, String.Format("{0}/{1}", lastWardAmount.ToString(GetIntCommas()), Int64.Parse(damage).ToString(GetIntCommas())));
@@ -854,6 +856,7 @@ namespace ACT_Plugin
 					//if (attacker.EndsWith("'"))
 					//	attacker = attacker.Substring(0, attacker.Length - 1);
 
+					damage = ExpandDamageAmount(damage);
 					if (attacker.StartsWith("YOUR"))        // You healing
 					{
 						skillType = attacker.Substring(5);
@@ -916,7 +919,7 @@ namespace ACT_Plugin
 					{
 						critStr = "None";
 					}
-
+					damage = ExpandDamageAmount(damage);
 					victim = EnglishPersonaReplace(victim);
 					if (attacker.StartsWith("YOUR"))        // You healing
 					{
@@ -977,7 +980,7 @@ namespace ACT_Plugin
 					if (attacker.EndsWith("'"))
 						attacker = attacker.Substring(0, attacker.Length - 1);
 
-
+					damage = ExpandDamageAmount(damage);
 					Dnum dDamage;
 					if (positionChange)
 						dDamage = new Dnum(Dnum.ThreatPosition, String.Format("{0} Positions", Int64.Parse(damage)));
@@ -1035,6 +1038,7 @@ namespace ACT_Plugin
 					special = reMatch.Groups[2].Value;  // Attacker
 					victim = reMatch.Groups[3].Value;   // Target
 					damage = reMatch.Groups[4].Value;   // Amount
+					damage = ExpandDamageAmount(damage);
 
 					attacker = EnglishPersonaReplace(attacker);
 					victim = EnglishPersonaReplace(victim);
@@ -1052,6 +1056,42 @@ namespace ACT_Plugin
 				default:
 					break;
 			}
+		}
+
+		internal static string ExpandDamageAmount(string DamageString)
+		{
+			if (DamageString.Contains(",") && !DamageString.Contains("."))
+			{
+				return DamageString.Replace(",", "");
+			}
+
+			if (!DamageString.Contains(",") && DamageString.Contains(".") && (DamageString.Contains("K") || DamageString.Contains("M") || DamageString.Contains("B") || DamageString.Contains("T") || DamageString.Contains("Q")))
+			{
+				char suffix = DamageString[DamageString.Length - 1];
+				DamageString = DamageString.Substring(0, DamageString.Length - 1);
+				double damage = Double.Parse(DamageString);
+
+				switch (suffix)
+				{
+					case 'K':
+						damage *= 1000;
+						break;
+					case 'M':
+						damage *= 1000000;
+						break;
+					case 'B':
+						damage *= 1000000000;
+						break;
+					case 'T':
+						damage *= 1000000000000;
+						break;
+					case 'Q':
+						damage *= 1000000000000000;
+						break;
+				}
+				return damage.ToString();
+			}
+			return DamageString;
 		}
 
 		private void RecalcWardedInterceptedHit(ref string attackType, string victim, ref string damage, DateTime time, ref long totalDamage)
@@ -1627,7 +1667,8 @@ namespace ACT_Plugin
 				int spacePos = UnsplitSource.IndexOf(' ');
 				if (spacePos == -1)
 					throw new ArgumentException("The input string did not contain a space, thus cannot be split");
-				damage = Int64.Parse(UnsplitSource.Substring(0, spacePos));
+				string damageStr = ExpandDamageAmount(UnsplitSource.Substring(0, spacePos));
+				damage = Int64.Parse(damageStr);
 				type = UnsplitSource.Substring(spacePos + 1);
 			}
 			public long Damage
