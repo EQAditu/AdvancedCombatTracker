@@ -14,7 +14,7 @@ using System.Xml;
 [assembly: AssemblyTitle("English Parsing Engine")]
 [assembly: AssemblyDescription("Plugin based parsing engine for English EQ2 servers")]
 [assembly: AssemblyCompany("(EQAditu)")]
-[assembly: AssemblyVersion("1.4.1.27")]
+[assembly: AssemblyVersion("1.4.1.28")]
 
 namespace ACT_Plugin
 {
@@ -1058,6 +1058,7 @@ namespace ACT_Plugin
 			}
 		}
 
+		internal static CultureInfo enUsCulture = new CultureInfo("en-US");
 		internal static string ExpandDamageAmount(string DamageString)
 		{
 			if (DamageString.Contains(",") && !DamageString.Contains("."))
@@ -1069,7 +1070,7 @@ namespace ACT_Plugin
 			{
 				char suffix = DamageString[DamageString.Length - 1];
 				DamageString = DamageString.Substring(0, DamageString.Length - 1);
-				double damage = Double.Parse(DamageString);
+				double damage = Double.Parse(DamageString, enUsCulture);
 
 				switch (suffix)
 				{
@@ -1089,7 +1090,7 @@ namespace ACT_Plugin
 						damage *= 1000000000000000;
 						break;
 				}
-				return damage.ToString();
+				return damage.ToString("0");
 			}
 			return DamageString;
 		}
