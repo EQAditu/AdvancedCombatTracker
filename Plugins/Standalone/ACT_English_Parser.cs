@@ -14,7 +14,7 @@ using System.Xml;
 [assembly: AssemblyTitle("English Parsing Engine")]
 [assembly: AssemblyDescription("Plugin based parsing engine for English EQ2 servers")]
 [assembly: AssemblyCompany("(EQAditu)")]
-[assembly: AssemblyVersion("1.4.1.28")]
+[assembly: AssemblyVersion("1.4.1.29")]
 
 namespace ACT_Plugin
 {
@@ -1061,12 +1061,12 @@ namespace ACT_Plugin
 		internal static CultureInfo enUsCulture = new CultureInfo("en-US");
 		internal static string ExpandDamageAmount(string DamageString)
 		{
-			if (DamageString.Contains(",") && !DamageString.Contains("."))
+			if (DamageString.Contains(","))
 			{
-				return DamageString.Replace(",", "");
+				DamageString = DamageString.Replace(",", "");
 			}
 
-			if (!DamageString.Contains(",") && DamageString.Contains(".") && (DamageString.Contains("K") || DamageString.Contains("M") || DamageString.Contains("B") || DamageString.Contains("T") || DamageString.Contains("Q")))
+			if (DamageString.Contains(".") && (DamageString.Contains("K") || DamageString.Contains("M") || DamageString.Contains("B") || DamageString.Contains("T") || DamageString.Contains("Q")))
 			{
 				char suffix = DamageString[DamageString.Length - 1];
 				DamageString = DamageString.Substring(0, DamageString.Length - 1);
