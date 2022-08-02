@@ -354,7 +354,7 @@ namespace ACT_Plugin
 			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(10, Color.Black);
 			regexArray[10] = new Regex(logTimeStampRegexStr + @"(?<healerAndSkill>.+?) (?<oldcrit>(?:critically )?refreshes) (?<victim>.+?) for (?<crit>a .*?critical of )?(?<damage>[\d,\.KMBTQ]+) mana points?\.", RegexOptions.Compiled);
 			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(11, Color.Black);
-			regexArray[11] = new Regex(logTimeStampRegexStr + @"(?:(?<owner>YOUR)|(?<owner>.+?)(?:[’'의の]s?)) (?<skillType>.+?) (?<oldcrit>critically )?(?<direction>increases|reduces) (?<attacker>.+?) hate (?:position )?with (?<victim>.+?) (?:by |for )?(?<crit>a .*?critical of )?(?<damage>[\d,\.KMBTQ]+) (?<dirType>threat|positions?)\.", RegexOptions.Compiled);
+			regexArray[11] = new Regex(logTimeStampRegexStr + @"(?:(?<owner>YOUR)|(?<owner>.+?)(?:[’'의の]s?)) (?<skillType>.+?) (?<oldcrit>critically )?(?<direction>increases|reduces) (?<attacker>.+?) hate (?:position )?with (?<victim>.+?) (?:by |for )?(?<crit>a .*?critical of )?(?<damage>[-\d,\.KMBTQ]+) (?<dirType>threat|positions?)\.", RegexOptions.Compiled);
 			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(12, Color.Black);
 			regexArray[12] = new Regex(logTimeStampRegexStr + @"(?<attacker>YOUR|.+?[’'의の]s?) (?<skillType>.+?) (?<action>dispels?|relieves?) (?:(?<victim>YOU) of (?<affliction>.+?)|(?<affliction>.+?) from (?<victim>.+))\.", RegexOptions.Compiled);
 			ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(13, Color.Black);
