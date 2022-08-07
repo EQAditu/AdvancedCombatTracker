@@ -7,7 +7,7 @@ using System.Xml;
 
 [assembly: AssemblyTitle("ActLocalization en-US")]
 [assembly: AssemblyDescription("A sample of an ACT plugin that changes localization strings using XML resources.")]
-[assembly: AssemblyVersion("274.0.0.0")]
+[assembly: AssemblyVersion("276.0.0.0")]
 
 namespace ActLocalization
 {
