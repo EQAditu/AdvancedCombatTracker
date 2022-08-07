@@ -642,6 +642,7 @@
 	<string key="trayText-eventExceptions1" value="In the last minute, these plugins caused exceptions in event handlers:&#xA;" />
 	<string key="trayText-eventExceptions2" value="{0} [{1} time(s)]" />
 	<string key="trayText-findZoneBusy" value="Finding the zone name in the log file appears to be taking a long time.  Do you wish to skip scanning?&#xA;&#xA;{0} {1:0,0} bytes" />
+	<string key="trayText-globalMutex" value="There is already another running copy of ACT.  You should close ALL running copies and restart ACT.&#xA;&#xA;You may disable this warning by adding &#xA;-skipmutex to the commandline parameters." />
 	<string key="trayText-lowDotNet" value="Your detected .NET Framework version is {0}.&#xA;&#xA;You will need to install v4.6 of the .NET Framework or greater in order for most Internet downloads/updates to work." />
 	<string key="trayText-parsingBusy" value="Log line parsing has been behind for 10 seconds.  A plugin subscribed to BeforeLogLine/OnLogLine may be processing synchronously and taking too long." />
 	<string key="trayText-restartACT" value="Restarting ACT is required to complete changes. &#xA;&#xA;{0}" />
@@ -649,6 +650,7 @@
 	<string key="trayTitle-ctBench" value="Custom Triggers lagging behind" />
 	<string key="trayTitle-eventUnhandledException" value="Event Handler Unhandled Exceptions" />
 	<string key="trayTitle-findZoneBusy" value="Scanning Log File" />
+	<string key="trayTitle-globalMutex" value="Multiple Instances" />
 	<string key="trayTitle-lowDotNet" value="Insufficient .NET Framework" />
 	<string key="trayTitle-parsingBusy" value="Log Parsing lagging behind" />
 	<string key="trayTitle-restartAct" value="ACT Restart Requested" />
