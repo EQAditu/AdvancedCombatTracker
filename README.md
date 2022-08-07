@@ -5,7 +5,7 @@ Support Forum: https://forums.advancedcombattracker.com
 Twitter(ugh): [@EQAditu](https://twitter.com/EQAditu)
 
 ## What is ACT?
-Advanced Combat Tracker is a 14 year old project that taught me to program.  Put another way, I wanted a way to analyze the more complicated aspects of the MMOs I was playing, mainly raid mechanics and the complexity that dozens of people working together would create.
+Advanced Combat Tracker is a 17 year old project that taught me to program.  Put another way, I wanted a way to analyze the more complicated aspects of the MMOs I was playing, mainly raid mechanics and the complexity that dozens of people working together would create.
 
 ## Advanced Combat Tracker features: [(from the website)](https://advancedcombattracker.com/)
 * Multiple-game parsing support
