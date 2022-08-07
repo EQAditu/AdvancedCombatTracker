@@ -373,6 +373,7 @@
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorMisc\groupBox1\ccSpellTimerWarnColor" UniqueName="lblText" Text="Spell Timer Warning Color" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorMisc\groupBox1" UniqueName="ccSpellTimerBackColor" Text="Spell Timer Window Back Color" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorMisc\groupBox1\ccSpellTimerBackColor" UniqueName="lblText" Text="Spell Timer Window Back Color" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc" UniqueName="cbDisableIncrementalCaching" Text="Disable incremental caching for data objects" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc" UniqueName="cbUnblockFiles" Text="Scan ACT folders and plugins for Internet downloads to unblock." />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc" UniqueName="label1" Text="Custom Trigger parsing may spawn up to this many additional threads: " />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc" UniqueName="groupBox11" Text="Cross Computer Clipboard Sharing" />
