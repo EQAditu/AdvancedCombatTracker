@@ -6,7 +6,7 @@ using System.Reflection;
 
 [assembly: AssemblyTitle("ActLocalization-InternalStrings")]
 [assembly: AssemblyDescription("A sample of an ACT plugin that changes localization strings.")]
-[assembly: AssemblyVersion("274.0.0.0")]
+[assembly: AssemblyVersion("276.0.0.0")]
 
 namespace ActLocalization
 {
@@ -207,6 +207,7 @@ namespace ActLocalization
 			TryEditLocalization("helpPanel-cbCullOther", "When a new zone listing is created, ACT will keep the normal encounters of this many previous zones."); // 
 			TryEditLocalization("helpPanel-cbCullTimer", "When an encounter ends, all encounters (except for \"All\" zone-wide encounters) older than this time limit will be removed."); // 
 			TryEditLocalization("helpPanel-cbCurrentOdbc", "When in combat, ACT can export to a temporary table called current_table on your ODBC datasource every few seconds.  Every export, the table will be deleted and refilled to reflect the current encounter.  This option is only recommended if you have a very quick connection to your datasource."); // 
+			TryEditLocalization("helpPanel-cbDisableIncrementalCaching", "This will disable the new incremental caching for encounter tables and mini parse exports.  Only use this if real-time calculations are different than imported encounters."); // 
 			TryEditLocalization("helpPanel-cbDoubleBufferLV", "When checked, ACT will attempt to enable minimal redrawing of the main table.  Windows versions before WindowsXP normally do not have this ability and may cause undesired results."); // 
 			TryEditLocalization("helpPanel-cbEncSilenceCut", "When enabled, an encounter's duration will be reduced when there are no hostile actions recorded for this many seconds.  This setting should be lower than the above end encounter idle timer.  This setting will not increase the duration of an enounter past its last hostile action."); // 
 			TryEditLocalization("helpPanel-cbExFile", "At the end of combat, this option will export to a macro file something similar to what a clipboard export would look like.  This file export is not restricted to 256 characters like the clipboard export, however it can only output 16 lines.  Once the export is created, you can display the results by using the command:\n\n/do_file_commands act-export.txt\n\nYou can create an EQ2 macro to trigger this command.  The macro file export will attempt to tabulate the data to make viewing it easier.\n\nYou must set the below option with what channel you wish to display the export to beforehand.  Leaving the channel prefix blank will cause the macro file not to function unless the Text Only Formatting options prefix a channel to *every* line."); // 
@@ -549,6 +550,7 @@ namespace ActLocalization
 			TryEditLocalization("trayText-eventExceptions1", "In the last minute, these plugins caused exceptions in event handlers:\n"); // 
 			TryEditLocalization("trayText-eventExceptions2", "{0} [{1} time(s)]"); // 
 			TryEditLocalization("trayText-findZoneBusy", "Finding the zone name in the log file appears to be taking a long time.  Do you wish to skip scanning?\n\n{0} {1:0,0} bytes"); // 
+			TryEditLocalization("trayText-globalMutex", "There is already another running copy of ACT.  You should close ALL running copies and restart ACT.\n\nYou may disable this warning by adding \n-skipmutex to the commandline parameters.  You may block new instances by adding -onlyone."); // 
 			TryEditLocalization("trayText-lowDotNet", "Your detected .NET Framework version is {0}.\n\nYou will need to install v4.6 of the .NET Framework or greater in order for most Internet downloads/updates to work."); // 
 			TryEditLocalization("trayText-parsingBusy", "Log line parsing has been behind for 10 seconds.  A plugin subscribed to BeforeLogLine/OnLogLine may be processing synchronously and taking too long."); // 
 			TryEditLocalization("trayText-restartACT", "Restarting ACT is required to complete changes. \n\n{0}"); // 
@@ -556,6 +558,7 @@ namespace ActLocalization
 			TryEditLocalization("trayTitle-ctBench", "Custom Triggers lagging behind"); // 
 			TryEditLocalization("trayTitle-eventUnhandledException", "Event Handler Unhandled Exceptions"); // 
 			TryEditLocalization("trayTitle-findZoneBusy", "Scanning Log File"); // 
+			TryEditLocalization("trayTitle-globalMutex", "Multiple Instances"); // 
 			TryEditLocalization("trayTitle-lowDotNet", "Insufficient .NET Framework"); // 
 			TryEditLocalization("trayTitle-parsingBusy", "Log Parsing lagging behind"); // 
 			TryEditLocalization("trayTitle-restartAct", "ACT Restart Requested"); // 
