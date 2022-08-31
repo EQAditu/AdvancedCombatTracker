@@ -13,7 +13,7 @@ using Transitions;
 [assembly: AssemblyTitle("Visual Sound Engine")]
 [assembly: AssemblyDescription("Captures TTS/WAV being sent through ACT and displays a descriptive visual alert in addition")]
 [assembly: AssemblyCopyright("EQAditu <aditu@advancedcombattracker.com>")]
-[assembly: AssemblyVersion("1.0.1.3")]
+[assembly: AssemblyVersion("1.0.2.4")]
 
 namespace ACT_Plugin
 {
@@ -316,7 +316,7 @@ namespace ACT_Plugin
 
 		private void CbbShowWindow_MouseUp(object sender, MouseEventArgs e)
 		{
-			if(e.Button == MouseButtons.Right)
+			if (e.Button == MouseButtons.Right)
 			{
 				cbClickThrough.Checked = !cbClickThrough.Checked;
 			}
@@ -484,23 +484,31 @@ namespace ACT_Plugin
 
 		private void AddEventLabel(string Text)
 		{
-			Label eventLabel = new Label();
-			eventLabel.Text = Text;
-			eventLabel.AutoSize = true;
-			eventLabel.Font = fccEventColors.FontSetting;
-			eventLabel.ForeColor = fccEventColors.ForeColorSetting;
-			if (cbClickThrough.Checked && cbWindowTransLocked.Checked && cbEventTransLocked.Checked)
-				eventLabel.BackColor = transparentKey;
+			Action action = new Action(() =>
+			{
+				Label eventLabel = new Label();
+				eventLabel.Text = Text;
+				eventLabel.AutoSize = true;
+				eventLabel.Font = fccEventColors.FontSetting;
+				eventLabel.ForeColor = fccEventColors.ForeColorSetting;
+				if (cbClickThrough.Checked && cbWindowTransLocked.Checked && cbEventTransLocked.Checked)
+					eventLabel.BackColor = transparentKey;
+				else
+					eventLabel.BackColor = fccEventColors.BackColorSetting;
+				Transition colorFade = new Transition(new TransitionType_Acceleration((int)nudEventDuration.Value * 1000));
+				colorFade.add(eventLabel, "ForeColor", eventLabel.BackColor);
+				colorFade.TransitionCompletedEvent += (sender, args) => { eventPanel.Controls.Remove(eventLabel); eventLabel.Dispose(); };
+				eventPanel.SuspendLayout();
+				eventPanel.Controls.Add(eventLabel);
+				eventPanel.Controls.SetChildIndex(eventLabel, 0);
+				eventPanel.ResumeLayout();
+				colorFade.run();
+			});
+
+			if (ActGlobals.oFormActMain.InvokeRequired)
+				ActGlobals.oFormActMain.Invoke(action);
 			else
-				eventLabel.BackColor = fccEventColors.BackColorSetting;
-			Transition colorFade = new Transition(new TransitionType_Acceleration((int)nudEventDuration.Value * 1000));
-			colorFade.add(eventLabel, "ForeColor", eventLabel.BackColor);
-			colorFade.TransitionCompletedEvent += (sender, args) => { eventPanel.Controls.Remove(eventLabel); eventLabel.Dispose(); };
-			eventPanel.SuspendLayout();
-			eventPanel.Controls.Add(eventLabel);
-			eventPanel.Controls.SetChildIndex(eventLabel, 0);
-			eventPanel.ResumeLayout();
-			colorFade.run();
+				action.Invoke();
 		}
 		private void cbShowWindow_CheckedChanged(object sender, EventArgs e)
 		{
