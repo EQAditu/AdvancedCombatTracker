@@ -47,11 +47,12 @@ namespace ACT_Plugin
 				}
 				string companionLogPath = ActGlobals.oFormActMain.GetCompanionFilePath(NewLogFileName, "demo");
 
-				fs = new FileStream(companionLogPath, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Read);
-				fs.Seek(0, SeekOrigin.End);
-				sw = new StreamWriter(fs, ActGlobals.oFormActMain.LogEncoding);
-
-				ActGlobals.oFormActMain.WriteDebugLog("[CompanionLogSetup] Opening: " + companionLogPath);
+				using (fs = new FileStream(companionLogPath, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Read))
+				{
+					fs.Seek(0, SeekOrigin.End);
+					using (sw = new StreamWriter(fs, ActGlobals.oFormActMain.LogEncoding))
+						ActGlobals.oFormActMain.WriteDebugLog("[CompanionLogSetup] Opening: " + companionLogPath);
+				}
 			}
 			catch(Exception ex)
 			{

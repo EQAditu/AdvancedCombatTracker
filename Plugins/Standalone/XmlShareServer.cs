@@ -936,118 +936,124 @@ namespace ACT_Plugin
 		}
 		private void GetTimersXmlStream(Stream ms, bool WebList)
 		{
-			XmlTextWriter xWriter = new XmlTextWriter(ms, Encoding.UTF8);
-			xWriter.Formatting = Formatting.Indented;
-			xWriter.Indentation = 1;
-			xWriter.IndentChar = '\t';
-			xWriter.WriteStartDocument(true);
-			xWriter.WriteStartElement("Config");	// <Config>
-
-			List<string> checkedItems = new List<string>();
-			if (WebList)
+			using (XmlTextWriter xWriter = new XmlTextWriter(ms, Encoding.UTF8))
 			{
-				for (int i = 0; i < clbWebSpellIncludes.Items.Count; i++)
-				{
-					if (clbWebSpellIncludes.GetItemChecked(i))
-						checkedItems.Add((string)clbWebSpellIncludes.Items[i]);
-				}
-				SaveXmlSpellTimers(xWriter, checkedItems, cbWebSpellSounds.Checked);
-			}
-			else
-			{
-				for (int i = 0; i < clbFileSpellIncludes.Items.Count; i++)
-				{
-					if (clbFileSpellIncludes.GetItemChecked(i))
-						checkedItems.Add((string)clbFileSpellIncludes.Items[i]);
-				}
-				SaveXmlSpellTimers(xWriter, checkedItems, cbFileSpellSounds.Checked);
-			}
+				xWriter.Formatting = Formatting.Indented;
+				xWriter.Indentation = 1;
+				xWriter.IndentChar = '\t';
+				xWriter.WriteStartDocument(true);
+				xWriter.WriteStartElement("Config");    // <Config>
 
-			xWriter.WriteEndElement();	// </Config>
-			xWriter.WriteEndDocument();	// Tie up loose ends (shouldn't be any)
-			xWriter.Flush();	// Flush the file buffer to disk
+				List<string> checkedItems = new List<string>();
+				if (WebList)
+				{
+					for (int i = 0; i < clbWebSpellIncludes.Items.Count; i++)
+					{
+						if (clbWebSpellIncludes.GetItemChecked(i))
+							checkedItems.Add((string)clbWebSpellIncludes.Items[i]);
+					}
+					SaveXmlSpellTimers(xWriter, checkedItems, cbWebSpellSounds.Checked);
+				}
+				else
+				{
+					for (int i = 0; i < clbFileSpellIncludes.Items.Count; i++)
+					{
+						if (clbFileSpellIncludes.GetItemChecked(i))
+							checkedItems.Add((string)clbFileSpellIncludes.Items[i]);
+					}
+					SaveXmlSpellTimers(xWriter, checkedItems, cbFileSpellSounds.Checked);
+				}
+
+				xWriter.WriteEndElement();  // </Config>
+				xWriter.WriteEndDocument(); // Tie up loose ends (shouldn't be any)
+				xWriter.Flush();    // Flush the file buffer to disk
+			}
 		}
 		private void GetTriggersXmlStream(Stream ms, bool WebList)
 		{
-			XmlTextWriter xWriter = new XmlTextWriter(ms, Encoding.UTF8);
-			xWriter.Formatting = Formatting.Indented;
-			xWriter.Indentation = 1;
-			xWriter.IndentChar = '\t';
-			xWriter.WriteStartDocument(true);
-			xWriter.WriteStartElement("Config");	// <Config>
-
-			List<string> checkedItems = new List<string>();
-			if (WebList)
+			using (XmlTextWriter xWriter = new XmlTextWriter(ms, Encoding.UTF8))
 			{
-				for (int i = 0; i < clbWebTriggerIncludes.Items.Count; i++)
-				{
-					if (clbWebTriggerIncludes.GetItemChecked(i))
-						checkedItems.Add((string)clbWebTriggerIncludes.Items[i]);
-				}
-				SaveXmlCustomTriggers(xWriter, checkedItems);
-			}
-			else
-			{
-				for (int i = 0; i < clbFileTriggerIncludes.Items.Count; i++)
-				{
-					if (clbFileTriggerIncludes.GetItemChecked(i))
-						checkedItems.Add((string)clbFileTriggerIncludes.Items[i]);
-				}
-				SaveXmlCustomTriggers(xWriter, checkedItems);
-			}
+				xWriter.Formatting = Formatting.Indented;
+				xWriter.Indentation = 1;
+				xWriter.IndentChar = '\t';
+				xWriter.WriteStartDocument(true);
+				xWriter.WriteStartElement("Config");    // <Config>
 
-			xWriter.WriteEndElement();	// </Config>
-			xWriter.WriteEndDocument();	// Tie up loose ends (shouldn't be any)
-			xWriter.Flush();	// Flush the file buffer to disk
+				List<string> checkedItems = new List<string>();
+				if (WebList)
+				{
+					for (int i = 0; i < clbWebTriggerIncludes.Items.Count; i++)
+					{
+						if (clbWebTriggerIncludes.GetItemChecked(i))
+							checkedItems.Add((string)clbWebTriggerIncludes.Items[i]);
+					}
+					SaveXmlCustomTriggers(xWriter, checkedItems);
+				}
+				else
+				{
+					for (int i = 0; i < clbFileTriggerIncludes.Items.Count; i++)
+					{
+						if (clbFileTriggerIncludes.GetItemChecked(i))
+							checkedItems.Add((string)clbFileTriggerIncludes.Items[i]);
+					}
+					SaveXmlCustomTriggers(xWriter, checkedItems);
+				}
+
+				xWriter.WriteEndElement();  // </Config>
+				xWriter.WriteEndDocument(); // Tie up loose ends (shouldn't be any)
+				xWriter.Flush();    // Flush the file buffer to disk
+			}
 		}
 		private void GetTimersTriggersXmlStream(Stream ms, bool WebList)
 		{
-			XmlTextWriter xWriter = new XmlTextWriter(ms, Encoding.UTF8);
-			xWriter.Formatting = Formatting.Indented;
-			xWriter.Indentation = 1;
-			xWriter.IndentChar = '\t';
-			xWriter.WriteStartDocument(true);
-			xWriter.WriteStartElement("Config");	// <Config>
-
-			List<string> checkedItems = new List<string>();
-			if (WebList)
+			using (XmlTextWriter xWriter = new XmlTextWriter(ms, Encoding.UTF8))
 			{
-				for (int i = 0; i < clbWebSpellIncludes.Items.Count; i++)
-				{
-					if (clbWebSpellIncludes.GetItemChecked(i))
-						checkedItems.Add((string)clbWebSpellIncludes.Items[i]);
-				}
-				SaveXmlSpellTimers(xWriter, checkedItems, cbWebSpellSounds.Checked);
+				xWriter.Formatting = Formatting.Indented;
+				xWriter.Indentation = 1;
+				xWriter.IndentChar = '\t';
+				xWriter.WriteStartDocument(true);
+				xWriter.WriteStartElement("Config");    // <Config>
 
-				checkedItems.Clear();
-				for (int i = 0; i < clbWebTriggerIncludes.Items.Count; i++)
+				List<string> checkedItems = new List<string>();
+				if (WebList)
 				{
-					if (clbWebTriggerIncludes.GetItemChecked(i))
-						checkedItems.Add((string)clbWebTriggerIncludes.Items[i]);
+					for (int i = 0; i < clbWebSpellIncludes.Items.Count; i++)
+					{
+						if (clbWebSpellIncludes.GetItemChecked(i))
+							checkedItems.Add((string)clbWebSpellIncludes.Items[i]);
+					}
+					SaveXmlSpellTimers(xWriter, checkedItems, cbWebSpellSounds.Checked);
+
+					checkedItems.Clear();
+					for (int i = 0; i < clbWebTriggerIncludes.Items.Count; i++)
+					{
+						if (clbWebTriggerIncludes.GetItemChecked(i))
+							checkedItems.Add((string)clbWebTriggerIncludes.Items[i]);
+					}
+					SaveXmlCustomTriggers(xWriter, checkedItems);
 				}
-				SaveXmlCustomTriggers(xWriter, checkedItems);
+				else
+				{
+					for (int i = 0; i < clbFileSpellIncludes.Items.Count; i++)
+					{
+						if (clbFileSpellIncludes.GetItemChecked(i))
+							checkedItems.Add((string)clbFileSpellIncludes.Items[i]);
+					}
+					SaveXmlSpellTimers(xWriter, checkedItems, cbFileSpellSounds.Checked);
+
+					checkedItems.Clear();
+					for (int i = 0; i < clbFileTriggerIncludes.Items.Count; i++)
+					{
+						if (clbFileTriggerIncludes.GetItemChecked(i))
+							checkedItems.Add((string)clbFileTriggerIncludes.Items[i]);
+					}
+					SaveXmlCustomTriggers(xWriter, checkedItems);
+				}
+
+				xWriter.WriteEndElement();  // </Config>
+				xWriter.WriteEndDocument(); // Tie up loose ends (shouldn't be any)
+				xWriter.Flush();    // Flush the file buffer to disk
 			}
-			else
-			{
-				for (int i = 0; i < clbFileSpellIncludes.Items.Count; i++)
-				{
-					if (clbFileSpellIncludes.GetItemChecked(i))
-						checkedItems.Add((string)clbFileSpellIncludes.Items[i]);
-				}
-				SaveXmlSpellTimers(xWriter, checkedItems, cbFileSpellSounds.Checked);
-
-				checkedItems.Clear();
-				for (int i = 0; i < clbFileTriggerIncludes.Items.Count; i++)
-				{
-					if (clbFileTriggerIncludes.GetItemChecked(i))
-						checkedItems.Add((string)clbFileTriggerIncludes.Items[i]);
-				}
-				SaveXmlCustomTriggers(xWriter, checkedItems);
-			}
-
-			xWriter.WriteEndElement();	// </Config>
-			xWriter.WriteEndDocument();	// Tie up loose ends (shouldn't be any)
-			xWriter.Flush();	// Flush the file buffer to disk
 		}
 
 		void LoadSettings()
@@ -1078,45 +1084,50 @@ namespace ACT_Plugin
 
 			if (File.Exists(settingsFile))
 			{
-				FileStream fs = new FileStream(settingsFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-				XmlTextReader xReader = new XmlTextReader(fs);
-
-				try
+				using (FileStream fs = new FileStream(settingsFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
 				{
-					while (xReader.Read())
+					using (XmlTextReader xReader = new XmlTextReader(fs))
 					{
-						if (xReader.NodeType == XmlNodeType.Element)
+						try
 						{
-							if (xReader.LocalName == "SettingsSerializer")
+							while (xReader.Read())
 							{
-								xmlSettings.ImportFromXml(xReader);
+								if (xReader.NodeType == XmlNodeType.Element)
+								{
+									if (xReader.LocalName == "SettingsSerializer")
+									{
+										xmlSettings.ImportFromXml(xReader);
+									}
+								}
 							}
 						}
-					}
+						catch (Exception ex)
+						{
+							lblStatus.Text = "Error loading settings: " + ex.Message;
+						}
 				}
-				catch (Exception ex)
-				{
-					lblStatus.Text = "Error loading settings: " + ex.Message;
-				}
-				xReader.Close();
 			}
 		}
 		void SaveSettings()
 		{
-			FileStream fs = new FileStream(settingsFile, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
-			XmlTextWriter xWriter = new XmlTextWriter(fs, Encoding.UTF8);
-			xWriter.Formatting = Formatting.Indented;
-			xWriter.Indentation = 1;
-			xWriter.IndentChar = '\t';
-			xWriter.WriteStartDocument(true);
-			xWriter.WriteStartElement("Config");	// <Config>
-			xWriter.WriteStartElement("SettingsSerializer");	// <Config><SettingsSerializer>
-			xmlSettings.ExportToXml(xWriter);	// Fill the SettingsSerializer XML
-			xWriter.WriteEndElement();	// </SettingsSerializer>
-			xWriter.WriteEndElement();	// </Config>
-			xWriter.WriteEndDocument();	// Tie up loose ends (shouldn't be any)
-			xWriter.Flush();	// Flush the file buffer to disk
-			xWriter.Close();
+			using (FileStream fs = new FileStream(settingsFile, FileMode.Create, FileAccess.Write, FileShare.ReadWrite))
+			{
+				using (XmlTextWriter xWriter = new XmlTextWriter(fs, Encoding.UTF8))
+				{
+
+					xWriter.Formatting = Formatting.Indented;
+					xWriter.Indentation = 1;
+					xWriter.IndentChar = '\t';
+					xWriter.WriteStartDocument(true);
+					xWriter.WriteStartElement("Config");    // <Config>
+					xWriter.WriteStartElement("SettingsSerializer");    // <Config><SettingsSerializer>
+					xmlSettings.ExportToXml(xWriter);   // Fill the SettingsSerializer XML
+					xWriter.WriteEndElement();  // </SettingsSerializer>
+					xWriter.WriteEndElement();  // </Config>
+					xWriter.WriteEndDocument(); // Tie up loose ends (shouldn't be any)
+					xWriter.Flush();    // Flush the file buffer to disk
+				}
+			}
 		}
 
 		private void btnWebSpellRefresh_Click(object sender, EventArgs e)
@@ -1223,10 +1234,11 @@ namespace ACT_Plugin
 			if (result != DialogResult.OK)
 				return;
 
-			FileStream fs = new FileStream(fD.FileName, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Read);
-			fs.SetLength(0);
-			GetTimersXmlStream(fs, false);
-			fs.Close();
+			using (FileStream fs = new FileStream(fD.FileName, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Read))
+			{
+				fs.SetLength(0);
+				GetTimersXmlStream(fs, false);
+			}
 		}
 		private void btnFileTriggersExport_Click(object sender, EventArgs e)
 		{
@@ -1243,10 +1255,11 @@ namespace ACT_Plugin
 			if (result != DialogResult.OK)
 				return;
 
-			FileStream fs = new FileStream(fD.FileName, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Read);
-			fs.SetLength(0);
-			GetTriggersXmlStream(fs, false);
-			fs.Close();
+			using (FileStream fs = new FileStream(fD.FileName, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Read))
+			{
+				fs.SetLength(0);
+				GetTriggersXmlStream(fs, false);
+			}
 		}
 		private void btnFileBothExport_Click(object sender, EventArgs e)
 		{
@@ -1263,10 +1276,11 @@ namespace ACT_Plugin
 			if (result != DialogResult.OK)
 				return;
 
-			FileStream fs = new FileStream(fD.FileName, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Read);
-			fs.SetLength(0);
-			GetTimersTriggersXmlStream(fs, false);
-			fs.Close();
+			using (FileStream fs = new FileStream(fD.FileName, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Read))
+			{
+				fs.SetLength(0);
+				GetTimersTriggersXmlStream(fs, false);
+			}
 		}
 		private void SaveXmlSpellTimers(XmlTextWriter xWriter, List<string> checkedItems, bool SaveSounds)
 		{
@@ -1396,27 +1410,31 @@ namespace ACT_Plugin
 
 		private void btnFileTimersFtp_Click(object sender, EventArgs e)
 		{
-			MemoryStream ms = new MemoryStream();
-			GetTimersXmlStream(ms, false);
-			ms.Seek(0, SeekOrigin.Begin);
-
-			FtpUploadStream(tbFtpTimerFile.Text, ms);
+			using (MemoryStream ms = new MemoryStream())
+			{
+				GetTimersXmlStream(ms, false);
+				ms.Seek(0, SeekOrigin.Begin);
+				FtpUploadStream(tbFtpTimerFile.Text, ms);
+			}
 		}
 		private void btnFileTriggersFtp_Click(object sender, EventArgs e)
 		{
-			MemoryStream ms = new MemoryStream();
-			GetTriggersXmlStream(ms, false);
-			ms.Seek(0, SeekOrigin.Begin);
-
-			FtpUploadStream(tbFtpTriggerFile.Text, ms);
+			using (MemoryStream ms = new MemoryStream())
+			{
+				GetTriggersXmlStream(ms, false);
+				ms.Seek(0, SeekOrigin.Begin);
+				FtpUploadStream(tbFtpTriggerFile.Text, ms);
+			}
 		}
 		private void btnFileBothFtp_Click(object sender, EventArgs e)
 		{
-			MemoryStream ms = new MemoryStream();
-			GetTimersTriggersXmlStream(ms, false);
-			ms.Seek(0, SeekOrigin.Begin);
+			using (MemoryStream ms = new MemoryStream())
+			{
+				GetTimersTriggersXmlStream(ms, false);
+				ms.Seek(0, SeekOrigin.Begin);
 
-			FtpUploadStream(tbFtpBothFile.Text, ms);
+				FtpUploadStream(tbFtpBothFile.Text, ms);
+			}
 		}
 		private void FtpUploadStream(string FileName, Stream FileData)
 		{
@@ -1432,20 +1450,24 @@ namespace ACT_Plugin
 				request.UsePassive = cbFtpPassive.Checked;
 				request.KeepAlive = false;
 
-				StreamWriter uploadWriter = new StreamWriter(request.GetRequestStream());
-				StreamReader streamReader = new StreamReader(FileData);
-				uploadWriter.Write(streamReader.ReadToEnd());
-				uploadWriter.Flush();
-				uploadWriter.Close();
+				using (StreamWriter uploadWriter = new StreamWriter(request.GetRequestStream()))
+				{
+					using (StreamReader streamReader = new StreamReader(FileData))
+					{
+						uploadWriter.Write(streamReader.ReadToEnd());
+						uploadWriter.Flush();
+						uploadWriter.Close();
 
-				FtpWebResponse response = (FtpWebResponse)request.GetResponse();
-				if (response.StatusCode != FtpStatusCode.ClosingData)
-				{
-					MessageBox.Show(response.StatusDescription, response.StatusCode.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
-				}
-				else
-				{
-					MessageBox.Show(response.StatusDescription, response.StatusCode.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+						FtpWebResponse response = (FtpWebResponse)request.GetResponse();
+						if (response.StatusCode != FtpStatusCode.ClosingData)
+						{
+							MessageBox.Show(response.StatusDescription, response.StatusCode.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+						}
+						else
+						{
+							MessageBox.Show(response.StatusDescription, response.StatusCode.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+						}
+					}
 				}
 			}
 			catch (Exception ex)

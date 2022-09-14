@@ -1090,32 +1090,31 @@ To execute the export in EQ2, type: /do_file_commands detriment.txt   (or chosen
 			if (!File.Exists(path))
 				return;
 
-			XmlTextReader xReader = new XmlTextReader(File.OpenRead(path));
-			try
-			{
-				while (xReader.Read())
+			using (XmlTextReader xReader = new XmlTextReader(File.OpenRead(path)))
+				try
 				{
-					if (xReader.NodeType == XmlNodeType.Element)
+					while (xReader.Read())
 					{
-						try
+						if (xReader.NodeType == XmlNodeType.Element)
 						{
-							if (xReader.LocalName == "SettingsSerializer")
-								xmlSettings.ImportFromXml(xReader);
-							if (xReader.LocalName == "EffectTriggers")
-								LoadXmlEffectTriggers(xReader);
-						}
-						catch (Exception ex)
-						{
-							ActGlobals.oFormActMain.WriteExceptionLog(ex, "DetCallMacro LoadSettings");
+							try
+							{
+								if (xReader.LocalName == "SettingsSerializer")
+									xmlSettings.ImportFromXml(xReader);
+								if (xReader.LocalName == "EffectTriggers")
+									LoadXmlEffectTriggers(xReader);
+							}
+							catch (Exception ex)
+							{
+								ActGlobals.oFormActMain.WriteExceptionLog(ex, "DetCallMacro LoadSettings");
+							}
 						}
 					}
 				}
-			}
-			catch (Exception ex)
-			{
-				ActGlobals.oFormActMain.WriteExceptionLog(ex, "DetCallMacro LoadSettings");
-			}
-			xReader.Close();
+				catch (Exception ex)
+				{
+					ActGlobals.oFormActMain.WriteExceptionLog(ex, "DetCallMacro LoadSettings");
+				}
 		}
 
 		private void LoadXmlEffectTriggers(XmlTextReader xReader)
@@ -1163,46 +1162,47 @@ To execute the export in EQ2, type: /do_file_commands detriment.txt   (or chosen
 		private void SaveXmlSettings()
 		{
 			string path = Path.Combine(ActGlobals.oFormActMain.AppDataFolder.FullName, "Config\\DetrimentCallMacro.config.xml");
-			XmlTextWriter xml = new XmlTextWriter(path, Encoding.UTF8);
-			xml.Formatting = Formatting.Indented;
-			xml.Indentation = 4;
-			xml.Namespaces = false;
-
-			xml.WriteStartDocument();
-
-			xml.WriteStartElement("Config");
-
-			xml.WriteStartElement("SettingsSerializer");
-			xmlSettings.ExportToXml(xml);
-			xml.WriteEndElement();
-
-			xml.WriteStartElement("EffectTriggers");
-			for (int i = 0; i < clbEffects.Items.Count; i++)
+			using (XmlTextWriter xml = new XmlTextWriter(path, Encoding.UTF8))
 			{
-				EffectTrigger eff = (EffectTrigger)clbEffects.Items[i];
-				xml.WriteStartElement("EffectTrigger");
-				xml.WriteAttributeString("Checked", clbEffects.GetItemChecked(i).ToString());
-				xml.WriteAttributeString("AnyMob", eff.anyMob.ToString());
-				xml.WriteAttributeString("EffCategory", eff.effCategory.ToString());
-				xml.WriteAttributeString("ExportChannel", eff.exportChannel.ToString());
-				xml.WriteAttributeString("ExportFilename", eff.exportFilename.ToString());
-				xml.WriteAttributeString("ExportFormat", eff.exportFormat.ToString());
-				xml.WriteAttributeString("Mob", eff.mob.ToString());
-				xml.WriteAttributeString("SingleLine", eff.singleLine.ToString());
-				xml.WriteAttributeString("PlayerCount", eff.playerCount.ToString());
-				xml.WriteAttributeString("WaitCount", eff.waitCount.ToString());
-				xml.WriteAttributeString("Spell", eff.spell.ToString());
-				xml.WriteAttributeString("SoundType", eff.soundType.ToString());
-				xml.WriteAttributeString("SoundData", eff.soundData.ToString());
+				xml.Formatting = Formatting.Indented;
+				xml.Indentation = 4;
+				xml.Namespaces = false;
+
+				xml.WriteStartDocument();
+
+				xml.WriteStartElement("Config");
+
+				xml.WriteStartElement("SettingsSerializer");
+				xmlSettings.ExportToXml(xml);
 				xml.WriteEndElement();
+
+				xml.WriteStartElement("EffectTriggers");
+				for (int i = 0; i < clbEffects.Items.Count; i++)
+				{
+					EffectTrigger eff = (EffectTrigger)clbEffects.Items[i];
+					xml.WriteStartElement("EffectTrigger");
+					xml.WriteAttributeString("Checked", clbEffects.GetItemChecked(i).ToString());
+					xml.WriteAttributeString("AnyMob", eff.anyMob.ToString());
+					xml.WriteAttributeString("EffCategory", eff.effCategory.ToString());
+					xml.WriteAttributeString("ExportChannel", eff.exportChannel.ToString());
+					xml.WriteAttributeString("ExportFilename", eff.exportFilename.ToString());
+					xml.WriteAttributeString("ExportFormat", eff.exportFormat.ToString());
+					xml.WriteAttributeString("Mob", eff.mob.ToString());
+					xml.WriteAttributeString("SingleLine", eff.singleLine.ToString());
+					xml.WriteAttributeString("PlayerCount", eff.playerCount.ToString());
+					xml.WriteAttributeString("WaitCount", eff.waitCount.ToString());
+					xml.WriteAttributeString("Spell", eff.spell.ToString());
+					xml.WriteAttributeString("SoundType", eff.soundType.ToString());
+					xml.WriteAttributeString("SoundData", eff.soundData.ToString());
+					xml.WriteEndElement();
+				}
+				xml.WriteEndElement();
+
+				xml.WriteEndElement();
+
+				xml.WriteEndDocument();
+				xml.Flush();
 			}
-			xml.WriteEndElement();
-
-			xml.WriteEndElement();
-
-			xml.WriteEndDocument();
-			xml.Flush();
-			xml.Close();
 		}
 
 		private class EffectTrigger : IEquatable<EffectTrigger>

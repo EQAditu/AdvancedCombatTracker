@@ -347,53 +347,53 @@ namespace Some_ACT_Plugin
 		// Save settings to XML file
 		private void SaveXmlSettings()
 		{
-			XmlTextWriter xml = new XmlTextWriter(xmlFileName, System.Text.Encoding.UTF8);
-			
-			xml.Formatting = Formatting.Indented;
-			xml.Indentation = 4;
-			xml.Namespaces = false;
-			
-			xml.WriteStartDocument();
-			
-			xml.WriteStartElement("", "Config", "");
-			
-			xml.WriteStartElement("", "InCombatInterval", "");
-			xml.WriteString(nudInCombatInterval.Value.ToString());
-			xml.WriteEndElement();
-			
-			xml.WriteStartElement("", "ReportRaidDPS", "");
-			xml.WriteString(rbReportRaidDPS.Checked.ToString());
-			xml.WriteEndElement();
-			
-			xml.WriteStartElement("", "ReportPersonalDPS", "");
-			xml.WriteString(rbReportPersonalDPS.Checked.ToString());
-			xml.WriteEndElement();
-			
-			xml.WriteStartElement("", "SpeakDuringEncounter", "");
-			xml.WriteString(cbSpeakDuringEncounter.Checked.ToString());
-			xml.WriteEndElement();
-			
-			xml.WriteStartElement("", "SpeakEndEncounter", "");
-			xml.WriteString(cbSpeakEndEncounter.Checked.ToString());
-			xml.WriteEndElement();
-			
-			xml.WriteStartElement("", "SpeakEncounterName", "");
-			xml.WriteString(cbSpeakEncounterName.Checked.ToString());
-			xml.WriteEndElement();
-			
-			xml.WriteStartElement("", "SpeakEncounterDuration", "");
-			xml.WriteString(cbSpeakEncounterDuration.Checked.ToString());
-			xml.WriteEndElement();
-			
-			xml.WriteStartElement("", "SpeakNumDeaths", "");
-			xml.WriteString(cbSpeakNumDeaths.Checked.ToString());
-			xml.WriteEndElement();
-			
-			xml.WriteEndElement();	//Config
-			
-			xml.WriteEndDocument();
-			xml.Flush();
-			xml.Close();
+			using (XmlTextWriter xml = new XmlTextWriter(xmlFileName, System.Text.Encoding.UTF8))
+			{
+				xml.Formatting = Formatting.Indented;
+				xml.Indentation = 4;
+				xml.Namespaces = false;
+
+				xml.WriteStartDocument();
+
+				xml.WriteStartElement("", "Config", "");
+
+				xml.WriteStartElement("", "InCombatInterval", "");
+				xml.WriteString(nudInCombatInterval.Value.ToString());
+				xml.WriteEndElement();
+
+				xml.WriteStartElement("", "ReportRaidDPS", "");
+				xml.WriteString(rbReportRaidDPS.Checked.ToString());
+				xml.WriteEndElement();
+
+				xml.WriteStartElement("", "ReportPersonalDPS", "");
+				xml.WriteString(rbReportPersonalDPS.Checked.ToString());
+				xml.WriteEndElement();
+
+				xml.WriteStartElement("", "SpeakDuringEncounter", "");
+				xml.WriteString(cbSpeakDuringEncounter.Checked.ToString());
+				xml.WriteEndElement();
+
+				xml.WriteStartElement("", "SpeakEndEncounter", "");
+				xml.WriteString(cbSpeakEndEncounter.Checked.ToString());
+				xml.WriteEndElement();
+
+				xml.WriteStartElement("", "SpeakEncounterName", "");
+				xml.WriteString(cbSpeakEncounterName.Checked.ToString());
+				xml.WriteEndElement();
+
+				xml.WriteStartElement("", "SpeakEncounterDuration", "");
+				xml.WriteString(cbSpeakEncounterDuration.Checked.ToString());
+				xml.WriteEndElement();
+
+				xml.WriteStartElement("", "SpeakNumDeaths", "");
+				xml.WriteString(cbSpeakNumDeaths.Checked.ToString());
+				xml.WriteEndElement();
+
+				xml.WriteEndElement();  //Config
+
+				xml.WriteEndDocument();
+				xml.Flush();
+			}
 		}
 		
 		// Load settings from XML file
@@ -402,57 +402,51 @@ namespace Some_ACT_Plugin
 			FileInfo file = new FileInfo(xmlFileName);
 			if (file.Exists == false)
 				return;
-			
-			XmlTextReader xml = new XmlTextReader(xmlFileName);
-			
-			try
-			{
-				while (xml.Read())
+
+			using (XmlTextReader xml = new XmlTextReader(xmlFileName))
+				try
 				{
-					if (xml.NodeType == XmlNodeType.Element)
+					while (xml.Read())
 					{
-						try
+						if (xml.NodeType == XmlNodeType.Element)
 						{
-							if (xml.LocalName == "InCombatInterval")
-								nudInCombatInterval.Value = Convert.ToDecimal(xml.ReadString());
-							if (xml.LocalName == "ReportRaidDPS")
-								rbReportRaidDPS.Checked = Convert.ToBoolean(xml.ReadString());
-							if (xml.LocalName == "ReportPersonalDPS")
-								rbReportPersonalDPS.Checked = Convert.ToBoolean(xml.ReadString());
-							if (xml.LocalName == "SpeakDuringEncounter")
-								cbSpeakDuringEncounter.Checked = Convert.ToBoolean(xml.ReadString());
-							if (xml.LocalName == "SpeakEndEncounter")
-								cbSpeakEndEncounter.Checked = Convert.ToBoolean(xml.ReadString());
-							if (xml.LocalName == "SpeakEncounterName")
-								cbSpeakEncounterName.Checked = Convert.ToBoolean(xml.ReadString());
-							if (xml.LocalName == "SpeakEncounterDuration")
-								cbSpeakEncounterDuration.Checked = Convert.ToBoolean(xml.ReadString());
-							if (xml.LocalName == "SpeakNumDeaths")
-								cbSpeakNumDeaths.Checked = Convert.ToBoolean(xml.ReadString());
-						
-						}
-						catch (System.Exception ex)
-						{
-							string error = String.Format("Error while parsing XML settings: Line #{0} ({1})\n{2}", xml.LineNumber, xml.LocalName, ex.Message);
-							MessageBox.Show(error + "\n\n Attempting default settings!", "Talking DPS Plugin - XML Preferences Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-							ActGlobals.oFormActMain.WriteExceptionLog(ex, error);
-							continue;
+							try
+							{
+								if (xml.LocalName == "InCombatInterval")
+									nudInCombatInterval.Value = Convert.ToDecimal(xml.ReadString());
+								if (xml.LocalName == "ReportRaidDPS")
+									rbReportRaidDPS.Checked = Convert.ToBoolean(xml.ReadString());
+								if (xml.LocalName == "ReportPersonalDPS")
+									rbReportPersonalDPS.Checked = Convert.ToBoolean(xml.ReadString());
+								if (xml.LocalName == "SpeakDuringEncounter")
+									cbSpeakDuringEncounter.Checked = Convert.ToBoolean(xml.ReadString());
+								if (xml.LocalName == "SpeakEndEncounter")
+									cbSpeakEndEncounter.Checked = Convert.ToBoolean(xml.ReadString());
+								if (xml.LocalName == "SpeakEncounterName")
+									cbSpeakEncounterName.Checked = Convert.ToBoolean(xml.ReadString());
+								if (xml.LocalName == "SpeakEncounterDuration")
+									cbSpeakEncounterDuration.Checked = Convert.ToBoolean(xml.ReadString());
+								if (xml.LocalName == "SpeakNumDeaths")
+									cbSpeakNumDeaths.Checked = Convert.ToBoolean(xml.ReadString());
+
+							}
+							catch (System.Exception ex)
+							{
+								string error = String.Format("Error while parsing XML settings: Line #{0} ({1})\n{2}", xml.LineNumber, xml.LocalName, ex.Message);
+								MessageBox.Show(error + "\n\n Attempting default settings!", "Talking DPS Plugin - XML Preferences Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+								ActGlobals.oFormActMain.WriteExceptionLog(ex, error);
+								continue;
+							}
 						}
 					}
 				}
-			}
-			catch (System.Exception ex)
-			{
-				string error = "The XML settings file may be corrupt or unusable.  Loading defaults where applicable.";
-				MessageBox.Show(error, "Talking DPS Plugin - XML Preferences Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				ActGlobals.oFormActMain.WriteExceptionLog(ex, error);
-			}
-			xml.Close();
+				catch (System.Exception ex)
+				{
+					string error = "The XML settings file may be corrupt or unusable.  Loading defaults where applicable.";
+					MessageBox.Show(error, "Talking DPS Plugin - XML Preferences Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					ActGlobals.oFormActMain.WriteExceptionLog(ex, error);
+				}
 		}
-	
-	
-	
-	
 	// end public class
     }
 // end namespace
