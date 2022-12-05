@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 [assembly: AssemblyTitle("Harvest Tracking")]
 [assembly: AssemblyDescription("Parses and totals harvests")]
-[assembly: AssemblyVersion("2.0.0.0")]
+[assembly: AssemblyVersion("2.1.0.0")]
 
 namespace ACT_Harvest_Plugin
 {
@@ -1722,6 +1722,7 @@ namespace ACT_Harvest_Plugin
                     row[colPlantStarted] = g.plantStarted;
                     row[colPlantState] = g.plantState;
                     row[colPlantWait] = DBNull.Value;
+                    dataSetGatherers.Tables[tableHarvests].Rows.Add(row);
                 }
                 else
                 {
@@ -1749,6 +1750,7 @@ namespace ACT_Harvest_Plugin
                     row[colPonyHarvest] = g.ponyArea;
                     row[colPonyState] = g.ponyState;
                     row[colPonyWait] = DBNull.Value;
+                    dataSetGatherers.Tables[tableHarvests].Rows.Add(row);
                 }
                 else
                 {
