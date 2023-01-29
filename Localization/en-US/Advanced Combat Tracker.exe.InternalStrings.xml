@@ -264,6 +264,7 @@
 	<string key="fileDialogTitle-importHistoryNoLogMatch" value="Open log file containing {0} {1} to {2} {3}" />
 	<string key="fileDialogTitle-importSettingsXml" value="Import Settings from XML" />
 	<string key="fileDialogTitle-saveGraph" value="Save graph as..." />
+	<string key="fileDialogTitle-saveScreenshot" value="Save ACT window screenshot..." />
 	<string key="fileDialogTitle-saveTableImage" value="Save graph as..." />
 	<string key="fileDialogTitle-xmlEncounter" value="Export Encounter to XML" />
 	<string key="graphAdv-termDps" value="DPS" />
@@ -300,6 +301,7 @@
 	<string key="helpPanel-cbExHTMLFTP" value="If checked, when ACT exports EQ2 compatible HTML files, it will attempt to upload them to an FTP server of your choice.  Make sure to test your settings before use." />
 	<string key="helpPanel-cbExOdbc" value="This will enable SQL exporting via ODBC automatically when an encounter ends.&#xA;&#xA;To use this feature, you need an ODBC driver to connect to your datasource and to fill out the Connection String with the remote host info. http://connectionstrings.com/ can help you make a connection string for your specific SQL datasource." />
 	<string key="helpPanel-cbExportBeep" value="When checked, any exporting to the clipboard will cause a default system beep.  This is a good indication of when an encounter is ended and there is new data to paste into EQ2." />
+	<string key="helpPanel-cbExportDurationWallTime" value="For text exports such as duration/DURATION, usually the duration is calculated as EndTime-StartTime.  This setting will allow the duration text export to use the LastEstimatedTime of the logfile as the EndTime of the encounter as long as it is in-combat.  When out of combat, it will always use the encounter's EndTime." />
 	<string key="helpPanel-cbExportFilterSpace" value="When checked, the Mini Parse window and clipboard exporting will exclude any combatants with spaces in their names.  This will exclude most mobs such as 'a giant bat' or 'King Drayek', but not 'Anguis' or 'Frostbite'." />
 	<string key="helpPanel-cbExText" value="Combatant summaries for the encounter will be exported to the clipboard after an encounter has ended.  These summaries can be pasted into EQ2 by pressing Ctrl-V, and customized under General Options -&gt; Text Only Formatting -&gt; Clipboard Export Formatting." />
 	<string key="helpPanel-cbGCollectOnClear" value="Enabling this will cause ACT to call GCCollect when clearing the encounters.  Doing this will cause the Clear Encounters button to take longer and has been known to completely freeze ACT until restart.  Only use this if you have problems with ACT never freeing memory over time." />
@@ -324,8 +326,10 @@
 	<string key="helpPanel-cbSExpEnd" value="If 'You gain experience!' is seen, the encounter will be considered ended. &#xA;('You convert experience into achievement experience!' will also trigger this.)" />
 	<string key="helpPanel-cbSqlSafeMode" value="In safe mode, SQL commands will be sent one at a time and server response checked.  Otherwise commands will be sent in 100 row batches, which while faster will be more problematic to debug." />
 	<string key="helpPanel-cbSwarmIsMaster" value="When enabled, &quot;Дух огня (персонажа)&quot;, &quot;Wässrige Horde des Character&quot; and other similarly named pets will have their attack damage added to their master instead of as their own named entry.  Incoming attacks will *not* be redirected to their master's data." />
+	<string key="helpPanel-cbUnblockFiles" value="Files downloaded by browsers will have a file attribute marking them to be blocked for direct execution by Windows.  This setting will scan files and folders ACT tries to use for this filesystem flag and offer to unset the flag.  This is very important for plugins." />
 	<string key="helpPanel-cbWebServerEnabled" value="The ACT Web Interface is somewhat similar to the EQ2 HTML exports in appearance.  Dissimilarly, the web interface is not made up of intermediary HTML files but generated HTML upon request.  By default, you can see auto-updating pages of the current encounter table, Mini-Window text(with support for multiple presets), spell timers and a page that can browse through all of ACT's encounter data in memory.  Context-menu reports based on that data are not currently available but plugins can be made to expand the web interface." />
 	<string key="helpPanel-cbWebServerShowReq" value="If enabled, all HTTP requests will be shown.  Otherwise things like auto-updating portions of pages or .css/.js files will be hidden (unless very large).  One request to '/timers'(always shown) may initiate requests to '/ACT.js', '/ACT.css' and '/timers.body'(optionally shown) as well." />
+	<string key="helpPanel-cbWmpRequireInvoke" value="Require sounds to be played on the UI thread.  Do not use if ACT seems to freeze when expecting sound playback." />
 	<string key="helpPanel-cbZoneAllListing" value="As the first encounter of each Zone branch, an &quot;All&quot; entry can exist which will combine all data from other encounters for that zone.  As encounters progress within that zone, the All entry will be updated in real time.  The All encounter entry will be identical to a merged encounter of all encounters within that zone.&#xA;&#xA;Disabling this option will reduce memory and CPU usage a bit more than 10% when compared to default options." />
 	<string key="helpPanel-ccDGAllyText" value="The foreground color of combatant names that are marked as allies." />
 	<string key="helpPanel-ccDGPersonalBackcolor" value="The background color of the main table row containing your combatant." />
@@ -373,6 +377,7 @@
 	<string key="helpPanel-soundTts-rbTtsSapiDirect" value="Uses the Windows SAPI directly.  This will have a different volume curve when compared to the other setting and other WAV sound files." />
 	<string key="helpPanel-soundTts-rbTtsSapiWav" value="Uses temporary WAV files created by Windows SAPI.  This method was originally created for low resource machines that could not play TTS reliably while playing a demanding CPU bound game." />
 	<string key="helpPanel-soundTts-TestTts" value="Enter a text string to speak with the current rules and engine" />
+	<string key="helpPanel-tbActTitle" value="This changes the title text of ACT's main window.  {0} is replaced with Import/Export indicators.  {1} is replaced with combat indicators.  {2} is replaced with log activity indicators.  {3} is replaced by the current zone name.  {4} is replaced by the current log time.  {5} is replaced by the currently estimated time.&#xA;&#xA;Default: {0}{1}Advanced Combat Tracker{2} - {3} - Log Time: {4} (Est. {5})" />
 	<string key="helpPanel-tbCharName" value="If a log file is open this setting is ignored; however if ACT is used as an offline parser only, this setting will be used to fill in your name instead of using 'YOU'." />
 	<string key="helpPanel-tbConvertXml" value="You may paste a portion of ACT's configuration file in this textbox and convert it into a snippet.  Someone copying this snippet and clicking the [Import XML] button in the corner will import the contained config settings." />
 	<string key="helpPanel-tbExFileName" value="This export file name is a relative file path to the game folder or may be an absolute path." />
@@ -436,7 +441,7 @@
 	<string key="messageBox-openLogWizardNoLogs" value="No logs seem to exist in this folder or subfolder.  You must have logging enabled within EQ2 to use ACT.  Type &quot;/log&quot; within EQ2 to determine the logging status." />
 	<string key="messageBox-playerRemoveError" value="Please select a name in the list to remove." />
 	<string key="messageBox-pluginCompileError" value="There were errors compiling the plugin source file.&#xA;&#xA;Please refer to the Plugin Info panel for more information." />
-	<string key="messageBox-pluginImageError" value="ACT cannot use Win32/COM assemblies as native plugins or mix 32/64 bit assemblies." />
+	<string key="messageBox-pluginImageError" value="The selected file is either not a valid plugin for ACT or has been corrupted." />
 	<string key="messageBox-pluginInvalid" value="This assembly does not have a class that implements ACT's plugin interface, or scanning the assembly threw an error." />
 	<string key="messageBox-removePlugin" value="Are you sure you wish to remove plugin {0}?" />
 	<string key="messageBox-searchResults" value="Search returned {0} results." />
@@ -900,6 +905,7 @@
 	<string key="webDesc-timers" value="View a table of spell timers ACT is currently tracking.  Page will refresh every 2 seconds." />
 	<string key="webText-actUi" value="ACT Web Interface" />
 	<string key="webText-browse" value="Browse" />
+	<!--webText-copyAll -> OBSOLETE-->
 	<string key="webText-copyAll" value="Copy All to Clipboard" />
 	<string key="webText-currentEncounter" value="Current Encounter" />
 	<string key="webText-currentNoEncounter" value="No Encounter" />
