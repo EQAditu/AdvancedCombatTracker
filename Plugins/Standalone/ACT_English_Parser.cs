@@ -14,7 +14,7 @@ using System.Xml;
 [assembly: AssemblyTitle("English Parsing Engine")]
 [assembly: AssemblyDescription("Plugin based parsing engine for English EQ2 servers")]
 [assembly: AssemblyCompany("(EQAditu)")]
-[assembly: AssemblyVersion("1.4.1.29")]
+[assembly: AssemblyVersion("1.4.2.30")]
 
 namespace ACT_Plugin
 {
@@ -2236,7 +2236,7 @@ namespace ACT_Plugin
 			MasterSwing.ColumnDefs.Clear();
 			MasterSwing.ColumnDefs.Add("EncId", new MasterSwing.ColumnDef("EncId", false, "CHAR(8)", "EncId", (Data) => { return string.Empty; }, (Data) => { return Data.ParentEncounter.EncId; }, (Left, Right) => { return 0; }));
 			MasterSwing.ColumnDefs.Add("Time", new MasterSwing.ColumnDef("Time", true, "TIMESTAMP", "STime", (Data) => { return Data.Time.ToString("T"); }, (Data) => { return Data.Time.ToString("u").TrimEnd(new char[] { 'Z' }); }, (Left, Right) => { return Left.Time.CompareTo(Right.Time); }));
-			MasterSwing.ColumnDefs.Add("RelativeTime", new MasterSwing.ColumnDef("RelativeTime", true, "FLOAT", "RelativeTime", (Data) => { return Data.ParentEncounter != null ? (Data.Time - Data.ParentEncounter.StartTime).ToString("g") : String.Empty; }, (Data) => { return Data.ParentEncounter != null ? (Data.Time - Data.ParentEncounter.StartTime).TotalSeconds.ToString() : String.Empty; }, (Left, Right) => { return Left.Time.CompareTo(Right.Time); }));
+			MasterSwing.ColumnDefs.Add("RelativeTime", new MasterSwing.ColumnDef("RelativeTime", true, "FLOAT", "RelativeTime", (Data) => { return Data.ParentEncounter != null ? (Data.Time - Data.ParentEncounter.StartTime).ToString("g") : String.Empty; }, (Data) => { return Data.ParentEncounter != null ? (Data.Time - Data.ParentEncounter.StartTime).TotalSeconds.ToString(usCulture) : String.Empty; }, (Left, Right) => { return Left.Time.CompareTo(Right.Time); }));
 			MasterSwing.ColumnDefs.Add("Attacker", new MasterSwing.ColumnDef("Attacker", true, "VARCHAR(64)", "Attacker", (Data) => { return Data.Attacker; }, (Data) => { return Data.Attacker; }, (Left, Right) => { return Left.Attacker.CompareTo(Right.Attacker); }));
 			MasterSwing.ColumnDefs.Add("SwingType", new MasterSwing.ColumnDef("SwingType", false, "TINYINT", "SwingType", (Data) => { return Data.SwingType.ToString(); }, (Data) => { return Data.SwingType.ToString(); }, (Left, Right) => { return Left.SwingType.CompareTo(Right.SwingType); }));
 			MasterSwing.ColumnDefs.Add("AttackType", new MasterSwing.ColumnDef("AttackType", true, "VARCHAR(64)", "AttackType", (Data) => { return Data.AttackType; }, (Data) => { return Data.AttackType; }, (Left, Right) => { return Left.AttackType.CompareTo(Right.AttackType); }));
@@ -2402,9 +2402,52 @@ namespace ACT_Plugin
 				case "MAXHIT-*":
 					return Data.GetMaxHit(false, true);
 				case "duration":
-					return Data.DurationS;
+					if (ActGlobals.wallClockDuration)
+					{
+						if (Data.Active)
+						{
+							if (ActGlobals.oFormActMain.LastEstimatedTime > Data.StartTime)
+							{
+								TimeSpan wallDuration = ActGlobals.oFormActMain.LastEstimatedTime - Data.StartTime;
+								if (wallDuration.Hours == 0)
+									return String.Format("{0:00}:{1:00}", wallDuration.Minutes, wallDuration.Seconds);
+								else
+									return String.Format("{0:00}:{1:00}:{2:00}", wallDuration.Hours, wallDuration.Minutes, wallDuration.Seconds);
+							}
+							else
+							{
+								return "00:00";
+							}
+						}
+						else
+						{
+							return Data.DurationS;
+						}
+					}
+					else
+						return Data.DurationS;
 				case "DURATION":
-					return Data.Duration.TotalSeconds.ToString("0");
+					if (ActGlobals.wallClockDuration)
+					{
+						if (Data.Active)
+						{
+							if (ActGlobals.oFormActMain.LastEstimatedTime > Data.StartTime)
+							{
+								TimeSpan wallDuration = ActGlobals.oFormActMain.LastEstimatedTime - Data.StartTime;
+								return ((int)wallDuration.TotalSeconds).ToString("0");
+							}
+							else
+							{
+								return "0";
+							}
+						}
+						else
+						{
+							return ((int)Data.Duration.TotalSeconds).ToString("0");
+						}
+					}
+					else
+						return Data.Duration.TotalSeconds.ToString("0");
 				case "damage":
 					foreach (CombatantData cd in SelectiveAllies)
 						damage += cd.Damage;

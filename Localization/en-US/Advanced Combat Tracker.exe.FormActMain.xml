@@ -140,6 +140,12 @@
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Graphing" UniqueName="cbSimpleGraphTotals" Text="Show Totals &amp;&amp; Average" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Graphing" UniqueName="cbOnlyGraphAllies" Text="Only show allies" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Graphing" UniqueName="rbGraphSimple" Text="Simple bar graphs depicting the current sort." />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_TextExports" UniqueName="groupBox11" Text="Cross Computer Clipboard Sharing" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_TextExports\groupBox11" UniqueName="lblClipStatus" Text="Not Connected." />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_TextExports\groupBox11" UniqueName="cbClipAutoConnect" Text="Connect to this IP automatically." />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_TextExports\groupBox11" UniqueName="cbClipConnect" Text="Connect" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_TextExports\groupBox11" UniqueName="label68" Text="When connected to the ACT Clipboard Sharer(get it from the ACT website), whenever text is exported by ACT to the clipboard, it is sent to the connected computer's clipboard.  This allows you to run ACT over the network and still paste data into the game.  Also usable for G15/G19 data.&#xD;&#xA;" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_TextExports\groupBox11" UniqueName="label17" Text="This feature is for users running ACT on a different machine than the game." />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_TextExports" UniqueName="cbExportFilterSpace" Text="For text exports, filter out combatants with spaces in their name. (Possible swarm pets)" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_TextExports" UniqueName="label3" Text="Clipboard Formatting:" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_TextExports" UniqueName="groupBox35" Text="Export to EQ2 Macro File after combat." />
@@ -223,6 +229,7 @@
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Sound\tableLayoutPanel5" UniqueName="rbSndCommandBeep" Text="Beep" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Sound\tableLayoutPanel5" UniqueName="lblCommandSound" Text="Command sound:" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Sound\tableLayoutPanel5" UniqueName="btnSndCommandBrowse" Text="..." />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Sound\pAudioDevice" UniqueName="cbWmpRequireInvoke" Text="Require the UI thread for playing sounds" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Sound\pAudioDevice" UniqueName="rbSndPlugin" Text="Plugin Sound" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Sound\pAudioDevice" UniqueName="rbSndWmpApi" Text="Use WMP API Sound (Volume control, multiple sounds, slight latency)" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Sound\pAudioDevice" UniqueName="rbSndWinApi" Text="Use Windows API Sound  (No volume control, one sound at a time)" />
@@ -373,15 +380,10 @@
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorMisc\groupBox1\ccSpellTimerWarnColor" UniqueName="lblText" Text="Spell Timer Warning Color" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorMisc\groupBox1" UniqueName="ccSpellTimerBackColor" Text="Spell Timer Window Back Color" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorMisc\groupBox1\ccSpellTimerBackColor" UniqueName="lblText" Text="Spell Timer Window Back Color" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc" UniqueName="label2" Text="Titlebar format for ACT's window:" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc" UniqueName="cbDisableIncrementalCaching" Text="Disable incremental caching for data objects" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc" UniqueName="cbUnblockFiles" Text="Scan ACT folders and plugins for Internet downloads to unblock." />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc" UniqueName="label1" Text="Custom Trigger parsing may spawn up to this many additional threads: " />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc" UniqueName="groupBox11" Text="Cross Computer Clipboard Sharing" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc\groupBox11" UniqueName="lblClipStatus" Text="Not Connected." />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc\groupBox11" UniqueName="cbClipAutoConnect" Text="Connect to this IP automatically." />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc\groupBox11" UniqueName="cbClipConnect" Text="Connect" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc\groupBox11" UniqueName="label68" Text="When connected to the ACT Clipboard Sharer(get it from the ACT website), whenever text is exported by ACT to the clipboard, it is sent to the connected computer's clipboard.  This allows you to run ACT over the network and still paste data into the game.  Also usable for G15/G19 data.&#xD;&#xA;" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc\groupBox11" UniqueName="label17" Text="This feature is for users running ACT on a different machine than the game." />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc" UniqueName="gbFile" Text="Log File" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc\gbFile" UniqueName="cbbPauseLog" Text="Pause Log" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc\gbFile" UniqueName="lblSplitFile" Text="When opening or closing log files, attempt to rename the log if over this value (in megabytes):" />
@@ -428,6 +430,7 @@
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionMisc" UniqueName="btnCharNameApply" Text="Apply" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionMisc" UniqueName="lblCharName" Text="Default character name if not defined by the log file name." />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionMisc" UniqueName="cbBlockisHit" Text="Count a hit that inflicts no damage as a Hit in calculations." />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionMisc" UniqueName="cbExportDurationWallTime" Text="For text export durations, include wall-time while in-combat." />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionMisc" UniqueName="cbLongEncDuration" Text="Allow heals to extend an encounter's duration past the last damage action." />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionRename" UniqueName="label82" Text="After" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionRename" UniqueName="label81" Text="Before" />

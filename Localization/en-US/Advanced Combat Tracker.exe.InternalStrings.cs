@@ -6,7 +6,7 @@ using System.Reflection;
 
 [assembly: AssemblyTitle("ActLocalization-InternalStrings")]
 [assembly: AssemblyDescription("A sample of an ACT plugin that changes localization strings.")]
-[assembly: AssemblyVersion("276.0.0.0")]
+[assembly: AssemblyVersion("278.0.0.0")]
 
 namespace ActLocalization
 {
@@ -183,6 +183,7 @@ namespace ActLocalization
 			TryEditLocalization("fileDialogTitle-importHistoryNoLogMatch", "Open log file containing {0} {1} to {2} {3}"); // Date range (to)
 			TryEditLocalization("fileDialogTitle-importSettingsXml", "Import Settings from XML"); // 
 			TryEditLocalization("fileDialogTitle-saveGraph", "Save graph as..."); // 
+			TryEditLocalization("fileDialogTitle-saveScreenshot", "Save ACT window screenshot..."); // 
 			TryEditLocalization("fileDialogTitle-saveTableImage", "Save graph as..."); // 
 			TryEditLocalization("fileDialogTitle-xmlEncounter", "Export Encounter to XML"); // 
 			TryEditLocalization("graphAdv-termDps", "DPS"); // 
@@ -217,6 +218,7 @@ namespace ActLocalization
 			TryEditLocalization("helpPanel-cbExHTMLFTP", "If checked, when ACT exports EQ2 compatible HTML files, it will attempt to upload them to an FTP server of your choice.  Make sure to test your settings before use."); // 
 			TryEditLocalization("helpPanel-cbExOdbc", "This will enable SQL exporting via ODBC automatically when an encounter ends.\n\nTo use this feature, you need an ODBC driver to connect to your datasource and to fill out the Connection String with the remote host info. http://connectionstrings.com/ can help you make a connection string for your specific SQL datasource."); // 
 			TryEditLocalization("helpPanel-cbExportBeep", "When checked, any exporting to the clipboard will cause a default system beep.  This is a good indication of when an encounter is ended and there is new data to paste into EQ2."); // 
+			TryEditLocalization("helpPanel-cbExportDurationWallTime", "For text exports such as duration/DURATION, usually the duration is calculated as EndTime-StartTime.  This setting will allow the duration text export to use the LastEstimatedTime of the logfile as the EndTime of the encounter as long as it is in-combat.  When out of combat, it will always use the encounter's EndTime."); // 
 			TryEditLocalization("helpPanel-cbExportFilterSpace", "When checked, the Mini Parse window and clipboard exporting will exclude any combatants with spaces in their names.  This will exclude most mobs such as 'a giant bat' or 'King Drayek', but not 'Anguis' or 'Frostbite'."); // 
 			TryEditLocalization("helpPanel-cbExText", "Combatant summaries for the encounter will be exported to the clipboard after an encounter has ended.  These summaries can be pasted into EQ2 by pressing Ctrl-V, and customized under General Options -> Text Only Formatting -> Clipboard Export Formatting."); // 
 			TryEditLocalization("helpPanel-cbGCollectOnClear", "Enabling this will cause ACT to call GCCollect when clearing the encounters.  Doing this will cause the Clear Encounters button to take longer and has been known to completely freeze ACT until restart.  Only use this if you have problems with ACT never freeing memory over time."); // 
@@ -241,8 +243,10 @@ namespace ActLocalization
 			TryEditLocalization("helpPanel-cbSExpEnd", "If 'You gain experience!' is seen, the encounter will be considered ended. \n('You convert experience into achievement experience!' will also trigger this.)"); // 
 			TryEditLocalization("helpPanel-cbSqlSafeMode", "In safe mode, SQL commands will be sent one at a time and server response checked.  Otherwise commands will be sent in 100 row batches, which while faster will be more problematic to debug."); // 
 			TryEditLocalization("helpPanel-cbSwarmIsMaster", "When enabled, \"Дух огня (персонажа)\", \"Wässrige Horde des Character\" and other similarly named pets will have their attack damage added to their master instead of as their own named entry.  Incoming attacks will *not* be redirected to their master's data."); // 
+			TryEditLocalization("helpPanel-cbUnblockFiles", "Files downloaded by browsers will have a file attribute marking them to be blocked for direct execution by Windows.  This setting will scan files and folders ACT tries to use for this filesystem flag and offer to unset the flag.  This is very important for plugins."); // 
 			TryEditLocalization("helpPanel-cbWebServerEnabled", "The ACT Web Interface is somewhat similar to the EQ2 HTML exports in appearance.  Dissimilarly, the web interface is not made up of intermediary HTML files but generated HTML upon request.  By default, you can see auto-updating pages of the current encounter table, Mini-Window text(with support for multiple presets), spell timers and a page that can browse through all of ACT's encounter data in memory.  Context-menu reports based on that data are not currently available but plugins can be made to expand the web interface."); // 
 			TryEditLocalization("helpPanel-cbWebServerShowReq", "If enabled, all HTTP requests will be shown.  Otherwise things like auto-updating portions of pages or .css/.js files will be hidden (unless very large).  One request to '/timers'(always shown) may initiate requests to '/ACT.js', '/ACT.css' and '/timers.body'(optionally shown) as well."); // 
+			TryEditLocalization("helpPanel-cbWmpRequireInvoke", "Require sounds to be played on the UI thread.  Do not use if ACT seems to freeze when expecting sound playback."); // 
 			TryEditLocalization("helpPanel-cbZoneAllListing", "As the first encounter of each Zone branch, an \"All\" entry can exist which will combine all data from other encounters for that zone.  As encounters progress within that zone, the All entry will be updated in real time.  The All encounter entry will be identical to a merged encounter of all encounters within that zone.\n\nDisabling this option will reduce memory and CPU usage a bit more than 10% when compared to default options."); // 
 			TryEditLocalization("helpPanel-ccDGAllyText", "The foreground color of combatant names that are marked as allies."); // 
 			TryEditLocalization("helpPanel-ccDGPersonalBackcolor", "The background color of the main table row containing your combatant."); // 
@@ -290,6 +294,7 @@ namespace ActLocalization
 			TryEditLocalization("helpPanel-soundTts-rbTtsSapiDirect", "Uses the Windows SAPI directly.  This will have a different volume curve when compared to the other setting and other WAV sound files."); // 
 			TryEditLocalization("helpPanel-soundTts-rbTtsSapiWav", "Uses temporary WAV files created by Windows SAPI.  This method was originally created for low resource machines that could not play TTS reliably while playing a demanding CPU bound game."); // 
 			TryEditLocalization("helpPanel-soundTts-TestTts", "Enter a text string to speak with the current rules and engine"); // 
+			TryEditLocalization("helpPanel-tbActTitle", "This changes the title text of ACT's main window.  {0} is replaced with Import/Export indicators.  {1} is replaced with combat indicators.  {2} is replaced with log activity indicators.  {3} is replaced by the current zone name.  {4} is replaced by the current log time.  {5} is replaced by the currently estimated time.\n\nDefault: {0}{1}Advanced Combat Tracker{2} - {3} - Log Time: {4} (Est. {5})"); // 
 			TryEditLocalization("helpPanel-tbCharName", "If a log file is open this setting is ignored; however if ACT is used as an offline parser only, this setting will be used to fill in your name instead of using 'YOU'."); // 
 			TryEditLocalization("helpPanel-tbConvertXml", "You may paste a portion of ACT's configuration file in this textbox and convert it into a snippet.  Someone copying this snippet and clicking the [Import XML] button in the corner will import the contained config settings."); // 
 			TryEditLocalization("helpPanel-tbExFileName", "This export file name is a relative file path to the game folder or may be an absolute path."); // 
@@ -351,7 +356,7 @@ namespace ActLocalization
 			TryEditLocalization("messageBox-openLogWizardNoLogs", "No logs seem to exist in this folder or subfolder.  You must have logging enabled within EQ2 to use ACT.  Type \"/log\" within EQ2 to determine the logging status."); // 
 			TryEditLocalization("messageBox-playerRemoveError", "Please select a name in the list to remove."); // 
 			TryEditLocalization("messageBox-pluginCompileError", "There were errors compiling the plugin source file.\n\nPlease refer to the Plugin Info panel for more information."); // 
-			TryEditLocalization("messageBox-pluginImageError", "ACT cannot use Win32/COM assemblies as native plugins or mix 32/64 bit assemblies."); // 
+			TryEditLocalization("messageBox-pluginImageError", "The selected file is either not a valid plugin for ACT or has been corrupted."); // 
 			TryEditLocalization("messageBox-pluginInvalid", "This assembly does not have a class that implements ACT's plugin interface, or scanning the assembly threw an error."); // 
 			TryEditLocalization("messageBox-removePlugin", "Are you sure you wish to remove plugin {0}?"); // 
 			TryEditLocalization("messageBox-searchResults", "Search returned {0} results."); // 
@@ -787,7 +792,7 @@ namespace ActLocalization
 			TryEditLocalization("webDesc-timers", "View a table of spell timers ACT is currently tracking.  Page will refresh every 2 seconds."); // 
 			TryEditLocalization("webText-actUi", "ACT Web Interface"); // 
 			TryEditLocalization("webText-browse", "Browse"); // 
-			TryEditLocalization("webText-copyAll", "Copy All to Clipboard"); // 
+			TryEditLocalization("webText-copyAll", "Copy All to Clipboard"); // OBSOLETE
 			TryEditLocalization("webText-currentEncounter", "Current Encounter"); // 
 			TryEditLocalization("webText-currentNoEncounter", "No Encounter"); // 
 			TryEditLocalization("webText-loading", "Loading..."); // 
