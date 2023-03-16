@@ -1626,7 +1626,7 @@ namespace ACT_Plugin
                     }
                 }
                 if (crit == 0)
-                    return "-";
+                    return String.Empty;
                 float lCritPerc = ((float)lCrit / (float)crit) * 100f;
                 float fCritPerc = ((float)fCrit / (float)crit) * 100f;
                 float mCritPerc = ((float)mCrit / (float)crit) * 100f;
