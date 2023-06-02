@@ -208,7 +208,7 @@ namespace ACT_Plugin
             pluginScreenSpace.Controls.Add(this);
             this.Dock = DockStyle.Fill;
 
-            lblStatus.Text = "Плагин включен";
+            changeLblStatus("Плагин включен");
             int dcIndex = -1;   // Find the Data Correction node in the Options tab
             for (int i = 0; i < ActGlobals.oFormActMain.OptionsTreeView.Nodes.Count; i++)
             {
@@ -223,7 +223,7 @@ namespace ACT_Plugin
                 ActGlobals.oFormActMain.OptionsControlSets.Add(@"Data Correction\EQ2 Russian Settings", new List<Control> { this });
                 Label lblConfig = new Label();
                 lblConfig.AutoSize = true;
-                lblConfig.Text = "Опции настройки парсера можно найти в закладке Опции, секция Data Correction (Коррекция Данных).";
+                changeLblStatus("Опции настройки парсера можно найти в закладке Опции, секция Data Correction (Коррекция Данных).");
                 pluginScreenSpace.Controls.Add(lblConfig);
             }
             xmlSettings = new SettingsSerializer(this);    // Create a new settings serializer and pass it this instance
@@ -265,6 +265,18 @@ namespace ACT_Plugin
 
             SaveSettings();
             lblStatus.Text = "Плагин выключен";
+        }
+
+        void changeLblStatus(String status)
+        {
+            if(lblStatus.InvokeRequired)
+            {
+                this.lblStatus.Invoke(new Action(() => {
+                    this.lblStatus.Text = status;
+                }));
+            }
+            else
+                this.lblStatus.Text = status;
         }
 
         void oFormActMain_UpdateCheckClicked()
