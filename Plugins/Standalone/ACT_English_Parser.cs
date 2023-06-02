@@ -277,7 +277,7 @@ namespace ACT_Plugin
 				ActGlobals.oFormActMain.OptionsControlSets.Add(@"Data Correction\EQ2 English Settings", new List<Control> { this });
 				Label lblConfig = new Label();
 				lblConfig.AutoSize = true;
-				lblConfig.Text = "Find the applicable options in the Options tab, Data Correction section.";
+				changeLblStatus("Find the applicable options in the Options tab, Data Correction section.");
 				pluginScreenSpace.Controls.Add(lblConfig);
 			}
 
@@ -292,7 +292,7 @@ namespace ACT_Plugin
 			ActGlobals.oFormActMain.UpdateCheckClicked += new FormActMain.NullDelegate(oFormActMain_UpdateCheckClicked);
 			if (ActGlobals.oFormActMain.GetAutomaticUpdatesAllowed())   // If ACT is set to automatically check for updates, check for updates to the plugin
 				new Thread(new ThreadStart(oFormActMain_UpdateCheckClicked)).Start();   // If we don't put this on a separate thread, web latency will delay the plugin init phase
-			lblStatus.Text = "Plugin Started";
+			changeLblStatus("Plugin Started");
 		}
 
 		public void DeInitPlugin()
@@ -311,6 +311,18 @@ namespace ACT_Plugin
 			SaveSettings();
 			lblStatus.Text = "Plugin Exited";
 		}
+
+		void changeLblStatus(String status)
+  {
+	  if(lblStatus.InvokeRequired)
+   {
+	   this.lblStatus.Invoke(new Action(() => {
+	    this.lblStatus.Text = status;
+    }));
+   }
+   else
+	   this.lblStatus.Text = status;
+  }
 
 		#region Parsing
 		char[] chrApos = new char[] { '\'', '’' };
