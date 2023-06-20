@@ -2147,11 +2147,10 @@ namespace ACT_Plugin
             int lCrit = 0;
             int fCrit = 0;
             int mCrit = 0;
-            int DataItemsCount = Data.Items.Count;
-            for (int i = 0; i < DataItemsCount; i++)
-            {
-                MasterSwing ms = Data.Items[i];
-                if (ms.Critical)
+            List<MasterSwing> msList = Data.Items.ToList();
+			for (int i = 0; i < msList.Count; i++)
+			{
+                if (msList[i].Critical)
                 {
                     crit++;
                     // Double tag search (ContainsKey (Name) + Item[Name]).
@@ -2162,7 +2161,7 @@ namespace ACT_Plugin
                     //string CriticalStr = ((string) ms.Tags["CriticalStr"]);
 
                     object Value = null;
-                    if (ms.Tags.TryGetValue("CriticalStr", out Value))
+                    if (msList[i].Tags.TryGetValue("CriticalStr", out Value))
                     {
                         string CriticalStr = (string)Value;
                         if (CriticalStr.Contains("Легендарный"))
