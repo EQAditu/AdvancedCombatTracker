@@ -1611,25 +1611,25 @@ namespace ACT_Plugin
                 int lCrit = 0;
                 int fCrit = 0;
                 int mCrit = 0;
-                for (int i = 0; i < Data.Items.Count; i++)
-                {
-                    MasterSwing ms = Data.Items[i];
-                    if (ms.Critical)
-                    {
-                        crit++;
-                        if (!ms.Tags.ContainsKey("CriticalStr"))
-                            continue;
-                        if (((string)ms.Tags["CriticalStr"]).Contains("Legendär"))
-                        {
-                            lCrit++;
-                            continue;
-                        }
-                        if (((string)ms.Tags["CriticalStr"]).Contains("Sagenumwoben"))
-                        {
-                            fCrit++;
-                            continue;
-                        }
-                        if (((string)ms.Tags["CriticalStr"]).Contains("Mythisch"))
+                List<MasterSwing> msList = Data.Items.ToList();
+			    for (int i = 0; i < msList.Count; i++)
+			    {
+				    if (msList[i].Critical)
+				    {
+					    crit++;
+					    if (!msList[i].Tags.ContainsKey("CriticalStr"))
+						    continue;
+					    if (((string)msList[i].Tags["CriticalStr"]).Contains("Legendary"))
+					    {
+						    lCrit++;
+						    continue;
+					    }
+					    if (((string)msList[i].Tags["CriticalStr"]).Contains("Fabled"))
+					    {
+						    fCrit++;
+						    continue;
+					    }
+					    if (((string)msList[i].Tags["CriticalStr"]).Contains("Mythical"))
                         {
                             mCrit++;
                             continue;
