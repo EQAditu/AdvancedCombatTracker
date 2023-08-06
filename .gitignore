@@ -7,3 +7,4 @@ Localization/ja-JP/Advanced Combat Tracker.exe
 
 *.user
 .vs/
+.DS_Store
