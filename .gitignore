@@ -5,3 +5,4 @@ Localization/ja-JP/.vs/
 
 *.user
 .vs/
+.DS_Store
