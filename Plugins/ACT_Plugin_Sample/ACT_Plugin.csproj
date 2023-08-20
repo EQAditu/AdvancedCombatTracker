@@ -21,6 +21,8 @@
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <ProjectGuid>{1749AF3B-F485-4EA5-9F25-6C8805501A02}</ProjectGuid>
+    <StartProgram>$(MSBuildProgramFiles32)\Advanced Combat Tracker\Advanced Combat Tracker.exe</StartProgram>
+    <StartWorkingDirectory>$(MSBuildProgramFiles32)\Advanced Combat Tracker\</StartWorkingDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -66,4 +68,7 @@
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>IF $(ConfigurationName)==Debug copy /Y $(TargetDir)$(TargetFileName) "$(APPDATA)\Advanced Combat Tracker\Plugins"</PostBuildEvent>
+  </PropertyGroup>
 </Project>
