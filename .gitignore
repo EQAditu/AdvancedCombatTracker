@@ -1,7 +1,14 @@
 [Bb]in/
 [Oo]bj/
 
-Localization/ja-JP/.vs/
 
-*.user
 .vs/
+**/.vs/
+.DS_Store
+
+.vs/
+*.csproj.user
+/UpgradeLog.htm
+/packages/NUnit.3.13.3
+/packages
+TestResults/
