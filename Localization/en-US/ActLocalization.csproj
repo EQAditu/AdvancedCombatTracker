@@ -71,4 +71,7 @@
     <EmbeddedResource Include="Advanced Combat Tracker.exe.InternalStrings.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF $(ConfigurationName)==Debug copy /Y $(TargetDir)$(TargetFileName) "$(APPDATA)\Advanced Combat Tracker\Plugins"</PostBuildEvent>
+  </PropertyGroup>
 </Project>
