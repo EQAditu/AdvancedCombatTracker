@@ -5,7 +5,7 @@ using Advanced_Combat_Tracker;
 
 namespace ActLocalization
 {
-    internal class ActLocalizationPlugin : IActPluginV1
+    internal class ActLocalizationPluginJaJP : IActPluginV1
     {
         public void InitPlugin(TabPage pluginScreenSpace, Label pluginStatusText)
         {

@@ -11,7 +11,7 @@ using System.Xml;
 
 namespace ActLocalization
 {
-	class ActLocalizationPlugin : IActPluginV1
+	class ActLocalizationPluginEnUS : IActPluginV1
 	{
 		public void InitPlugin(TabPage pluginScreenSpace, Label pluginStatusText)
 		{
