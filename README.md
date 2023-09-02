@@ -1,3 +1,5 @@
+[![ACT EverQuest DPS Plugin](https://github.com/FreedomFaighter/AdvancedCombatTrackerEverQuest/actions/workflows/build-plugin.yml/badge.svg?branch=project_each_plugin)](https://github.com/FreedomFaighter/AdvancedCombatTrackerEverQuest/actions/workflows/build-plugin.yml)
+
 # Advanced Combat Tracker
 This repository is meant to contain my own source-code based plugins, sources for some compiled plugins, main program releases, localization resources, issue tracking and hopefully some documentation.  (for once)  
 Website: https://advancedcombattracker.com  
