@@ -24,6 +24,7 @@ jobs:
     env:
       ACTFileName: 'ACTv3-setup.exe'
       ACTDownloadURI: 'https://advancedcombattracker.com/download.php?id=56'
+    name: Build Plugins on ${{ matrix.dotnetFrameworkVersion }}
     steps:
       - uses: actions/checkout@main
       - name: Setup MSBuild
