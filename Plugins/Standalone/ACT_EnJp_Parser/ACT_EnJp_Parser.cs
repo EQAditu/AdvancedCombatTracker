@@ -1155,45 +1155,45 @@ namespace ACT_Plugin
 
 			if (File.Exists(settingsFile))
 			{
-				FileStream fs = new FileStream(settingsFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-				XmlTextReader xReader = new XmlTextReader(fs);
-
-				try
+				using (FileStream fs = new FileStream(settingsFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+				using (XmlTextReader xReader = new XmlTextReader(fs))
 				{
-					while (xReader.Read())
+					try
 					{
-						if (xReader.NodeType == XmlNodeType.Element)
+						while (xReader.Read())
 						{
-							if (xReader.LocalName == "SettingsSerializer")
+							if (xReader.NodeType == XmlNodeType.Element)
 							{
-								xmlSettings.ImportFromXml(xReader);
+								if (xReader.LocalName == "SettingsSerializer")
+								{
+									xmlSettings.ImportFromXml(xReader);
+								}
 							}
 						}
 					}
+					catch (Exception ex)
+					{
+						lblStatus.Text = "Error loading settings: " + ex.Message;
+					}
 				}
-				catch (Exception ex)
-				{
-					lblStatus.Text = "Error loading settings: " + ex.Message;
-				}
-				xReader.Close();
 			}
 		}
 		void SaveSettings()
 		{
-			FileStream fs = new FileStream(settingsFile, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
-			XmlTextWriter xWriter = new XmlTextWriter(fs, Encoding.UTF8);
-			xWriter.Formatting = Formatting.Indented;
-			xWriter.Indentation = 1;
-			xWriter.IndentChar = '\t';
-			xWriter.WriteStartDocument(true);
-			xWriter.WriteStartElement("Config");	// <Config>
-			xWriter.WriteStartElement("SettingsSerializer");	// <Config><SettingsSerializer>
-			xmlSettings.ExportToXml(xWriter);	// Fill the SettingsSerializer XML
-			xWriter.WriteEndElement();	// </SettingsSerializer>
-			xWriter.WriteEndElement();	// </Config>
-			xWriter.WriteEndDocument();	// Tie up loose ends (shouldn't be any)
-			xWriter.Flush();	// Flush the file buffer to disk
-			xWriter.Close();
+			using (FileStream fs = new FileStream(settingsFile, FileMode.Create, FileAccess.Write, FileShare.ReadWrite))
+			using (XmlTextWriter xWriter = new XmlTextWriter(fs, Encoding.UTF8))
+			{
+				xWriter.Formatting = Formatting.Indented;
+				xWriter.Indentation = 1;
+				xWriter.IndentChar = '\t';
+				xWriter.WriteStartDocument(true);
+				xWriter.WriteStartElement("Config");    // <Config>
+				xWriter.WriteStartElement("SettingsSerializer");    // <Config><SettingsSerializer>
+				xmlSettings.ExportToXml(xWriter);   // Fill the SettingsSerializer XML
+				xWriter.WriteEndElement();  // </SettingsSerializer>
+				xWriter.WriteEndElement();  // </Config>
+				xWriter.WriteEndDocument(); // Tie up loose ends (shouldn't be any)
+			}
 		}
 
 		private void cbRecalcWardedHits_MouseHover(object sender, EventArgs e)

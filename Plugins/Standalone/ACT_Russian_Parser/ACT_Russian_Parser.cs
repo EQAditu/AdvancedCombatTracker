@@ -1365,52 +1365,48 @@ namespace ACT_Plugin
       xmlSettings.AddControlSetting (cbLocalize.Name,              cbLocalize);
       xmlSettings.AddControlSetting (tbFixAncestralSentry.Name,    tbFixAncestralSentry);
 
-      if (File.Exists (settingsFile))
-      {
-        using (FileStream fs = new FileStream (settingsFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-        {
-          XmlTextReader xReader = new XmlTextReader (fs);
-
-          try
-          {
-            while (xReader.Read ())
+            if (File.Exists(settingsFile))
             {
-              if (xReader.NodeType == XmlNodeType.Element)
-              {
-                if (xReader.LocalName == "SettingsSerializer")
+                using (FileStream fs = new FileStream(settingsFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
                 {
-                  xmlSettings.ImportFromXml (xReader);
+                    using (XmlTextReader xReader = new XmlTextReader(fs))
+
+                        try
+                        {
+                            while (xReader.Read())
+                            {
+                                if (xReader.NodeType == XmlNodeType.Element)
+                                {
+                                    if (xReader.LocalName == "SettingsSerializer")
+                                    {
+                                        xmlSettings.ImportFromXml(xReader);
+                                    }
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            lblStatus.Text = "Ошибка загрузки настроек: " + ex.Message;
+                        }
                 }
-              }
             }
-          }
-          catch (Exception ex)
-          {
-            lblStatus.Text = "Ошибка загрузки настроек: " + ex.Message;
-          }
-          xReader.Close ();
-        }
-      }
     }
 
     void SaveSettings ()
     {
-      using (FileStream fs = new FileStream (settingsFile, FileMode.Create, FileAccess.Write, FileShare.ReadWrite))
-      {
-        XmlTextWriter xWriter = new XmlTextWriter (fs, Encoding.UTF8);
-        xWriter.Formatting    = Formatting.Indented;
-        xWriter.Indentation   = 1;
-        xWriter.IndentChar    = '\t';
-        xWriter.WriteStartDocument (true);
-        xWriter.WriteStartElement  ("Config");    // <Config>
-        xWriter.WriteStartElement  ("SettingsSerializer");    // <Config><SettingsSerializer>
-        xmlSettings.ExportToXml    (xWriter);    // Fill the SettingsSerializer XML
-        xWriter.WriteEndElement    ();    // </SettingsSerializer>
-        xWriter.WriteEndElement    ();    // </Config>
-        xWriter.WriteEndDocument   ();    // Tie up loose ends (shouldn't be any)
-        xWriter.Flush ();    // Flush the file buffer to disk
-        xWriter.Close ();
-      }
+        using (FileStream fs = new FileStream(settingsFile, FileMode.Create, FileAccess.Write, FileShare.ReadWrite))
+            using (XmlTextWriter xWriter = new XmlTextWriter(fs, Encoding.UTF8))
+            {
+                xWriter.Formatting = Formatting.Indented;
+                xWriter.Indentation = 1;
+                xWriter.IndentChar = '\t';
+                xWriter.WriteStartDocument(true);
+                xWriter.WriteStartElement("Config");    // <Config>
+                xWriter.WriteStartElement("SettingsSerializer");    // <Config><SettingsSerializer>
+                xmlSettings.ExportToXml(xWriter);    // Fill the SettingsSerializer XML
+                xWriter.WriteEndElement();    // </SettingsSerializer>
+                xWriter.WriteEndElement();    // </Config>
+            }
     }
 
     private void cbSwarmIsMaster_MouseHover (object sender, EventArgs e)

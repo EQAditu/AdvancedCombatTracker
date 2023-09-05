@@ -350,78 +350,77 @@ namespace Some_ACT_Plugin
 			if (file.Exists == false)
 				return;
 
-			XmlTextReader xml = new XmlTextReader(xmlFileName);
-
-			try
+			using (XmlTextReader xml = new XmlTextReader(xmlFileName))
 			{
-				while (xml.Read())
+				try
 				{
-					if (xml.NodeType == XmlNodeType.Element)
+					while (xml.Read())
 					{
-						try
+						if (xml.NodeType == XmlNodeType.Element)
 						{
-							if (xml.LocalName == "ModChange")
+							try
 							{
-								string player, skill;
-								float amount;
-								int duration;
-								player = xml.GetAttribute("Player");
-								skill = xml.GetAttribute("Skill");
-								amount = Convert.ToSingle(xml.GetAttribute("Amount"));
-								duration = Convert.ToInt32(xml.GetAttribute("Duration"));
-								TimerModChange newChange = new TimerModChange(player, skill, amount, duration);
-								modChanges.Add(newChange);
-								lbChanges.Items.Add(newChange.ToString());
-							}
+								if (xml.LocalName == "ModChange")
+								{
+									string player, skill;
+									float amount;
+									int duration;
+									player = xml.GetAttribute("Player");
+									skill = xml.GetAttribute("Skill");
+									amount = Convert.ToSingle(xml.GetAttribute("Amount"));
+									duration = Convert.ToInt32(xml.GetAttribute("Duration"));
+									TimerModChange newChange = new TimerModChange(player, skill, amount, duration);
+									modChanges.Add(newChange);
+									lbChanges.Items.Add(newChange.ToString());
+								}
 
-						}
-						catch (System.Exception ex)
-						{
-							string error = String.Format("Error while parsing XML settings: Line #{0} ({1})\n{2}",
-								xml.LineNumber, xml.LocalName, ex.Message);
-							MessageBox.Show(error + "\n\n Attempting default setting", "XML Preferences Error",
-								MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-							ActGlobals.oFormActMain.WriteExceptionLog(ex, error);
-							continue;
+							}
+							catch (System.Exception ex)
+							{
+								string error = String.Format("Error while parsing XML settings: Line #{0} ({1})\n{2}",
+									xml.LineNumber, xml.LocalName, ex.Message);
+								MessageBox.Show(error + "\n\n Attempting default setting", "XML Preferences Error",
+									MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+								ActGlobals.oFormActMain.WriteExceptionLog(ex, error);
+								continue;
+							}
 						}
 					}
 				}
+				catch (System.Exception ex)
+				{
+					string error = "The XML settings file may be corrupt or unusable.  Loading defaults where applicable.";
+					MessageBox.Show(error, "XML Preferences Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					ActGlobals.oFormActMain.WriteExceptionLog(ex, error);
+				}
 			}
-			catch (System.Exception ex)
-			{
-				string error = "The XML settings file may be corrupt or unusable.  Loading defaults where applicable.";
-				MessageBox.Show(error, "XML Preferences Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				ActGlobals.oFormActMain.WriteExceptionLog(ex, error);
-			}
-			xml.Close();
 		}
 		private void SaveXmlSettings()
 		{
-			XmlTextWriter xml = new XmlTextWriter(xmlFileName, System.Text.Encoding.UTF8);
-
-			xml.Formatting = Formatting.Indented;
-			xml.Indentation = 4;
-			xml.Namespaces = false;
-
-			xml.WriteStartDocument();
-
-			xml.WriteStartElement("", "Config", "");
-
-			foreach (TimerModChange change in modChanges)
+			using (XmlTextWriter xml = new XmlTextWriter(xmlFileName, System.Text.Encoding.UTF8))
 			{
-				xml.WriteStartElement("", "ModChange", "");
-				xml.WriteAttributeString("Player", change.playerName);
-				xml.WriteAttributeString("Skill", change.skillName);
-				xml.WriteAttributeString("Amount", change.modAmount.ToString("0.00"));
-				xml.WriteAttributeString("Duration", change.modDuration.TotalSeconds.ToString("0"));
-				xml.WriteEndElement();
+				xml.Formatting = Formatting.Indented;
+				xml.Indentation = 4;
+				xml.Namespaces = false;
+
+				xml.WriteStartDocument();
+
+				xml.WriteStartElement("", "Config", "");
+
+				foreach (TimerModChange change in modChanges)
+				{
+					xml.WriteStartElement("", "ModChange", "");
+					xml.WriteAttributeString("Player", change.playerName);
+					xml.WriteAttributeString("Skill", change.skillName);
+					xml.WriteAttributeString("Amount", change.modAmount.ToString("0.00"));
+					xml.WriteAttributeString("Duration", change.modDuration.TotalSeconds.ToString("0"));
+					xml.WriteEndElement();
+				}
+
+				xml.WriteEndElement();  //Config
+
+				xml.WriteEndDocument();
 			}
-
-			xml.WriteEndElement();  //Config
-
-			xml.WriteEndDocument();
-			xml.Flush();
-			xml.Close();
 		}
 
 		private class TimerModChange

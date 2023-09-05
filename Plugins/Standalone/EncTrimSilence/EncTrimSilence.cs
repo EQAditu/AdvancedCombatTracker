@@ -196,45 +196,47 @@ namespace ACT_Plugin
 
 			if (File.Exists(settingsFile))
 			{
-				FileStream fs = new FileStream(settingsFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-				XmlTextReader xReader = new XmlTextReader(fs);
-
-				try
+				using (FileStream fs = new FileStream(settingsFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+				using (XmlTextReader xReader = new XmlTextReader(fs))
 				{
-					while (xReader.Read())
+					try
 					{
-						if (xReader.NodeType == XmlNodeType.Element)
+						while (xReader.Read())
 						{
-							if (xReader.LocalName == "SettingsSerializer")
+							if (xReader.NodeType == XmlNodeType.Element)
 							{
-								xmlSettings.ImportFromXml(xReader);
+								if (xReader.LocalName == "SettingsSerializer")
+								{
+									xmlSettings.ImportFromXml(xReader);
+								}
 							}
 						}
 					}
+					catch (Exception ex)
+					{
+						lblStatus.Text = "Error loading settings: " + ex.Message;
+					}
 				}
-				catch (Exception ex)
-				{
-					lblStatus.Text = "Error loading settings: " + ex.Message;
-				}
-				xReader.Close();
 			}
 		}
 		void SaveSettings()
 		{
-			MemoryStream ms = new MemoryStream();
-			XmlTextWriter xWriter = new XmlTextWriter(ms, Encoding.UTF8);
-			xWriter.Formatting = Formatting.Indented;
-			xWriter.Indentation = 1;
-			xWriter.IndentChar = '\t';
-			xWriter.WriteStartDocument(true);
-			xWriter.WriteStartElement("Config");    // <Config>
-			xWriter.WriteStartElement("SettingsSerializer");    // <Config><SettingsSerializer>
-			xmlSettings.ExportToXml(xWriter);   // Fill the SettingsSerializer XML
-			xWriter.WriteEndElement();  // </SettingsSerializer>
-			xWriter.WriteEndElement();  // </Config>
-			xWriter.WriteEndDocument(); // Tie up loose ends (shouldn't be any)
-			xWriter.Flush();    // Flush the buffer (useless for memory streams?)
-			ActGlobals.oFormActMain.UncachedFileSave(new FileInfo(settingsFile), ms);   // I don't trust OS write caching :(
+			using (MemoryStream ms = new MemoryStream())
+			using (XmlTextWriter xWriter = new XmlTextWriter(ms, Encoding.UTF8))
+			{
+				xWriter.Formatting = Formatting.Indented;
+				xWriter.Indentation = 1;
+				xWriter.IndentChar = '\t';
+				xWriter.WriteStartDocument(true);
+				xWriter.WriteStartElement("Config");    // <Config>
+				xWriter.WriteStartElement("SettingsSerializer");    // <Config><SettingsSerializer>
+				xmlSettings.ExportToXml(xWriter);   // Fill the SettingsSerializer XML
+				xWriter.WriteEndElement();  // </SettingsSerializer>
+				xWriter.WriteEndElement();  // </Config>
+				xWriter.WriteEndDocument(); // Tie up loose ends (shouldn't be any)
+				xWriter.Flush();    // Flush the buffer (useless for memory streams?)
+				ActGlobals.oFormActMain.UncachedFileSave(new FileInfo(settingsFile), ms);   // I don't trust OS write caching :(
+			}
 		}
 
 		private void nudSilenceLimit_ValueChanged(object sender, EventArgs e)

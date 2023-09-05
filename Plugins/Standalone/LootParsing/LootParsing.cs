@@ -952,13 +952,14 @@ Visit the forums if you need help with Regular Expressions... (or Google)";
 			FileInfo configFile = new FileInfo(appDataFolder.FullName + "\\Config\\LootParsing.config.xml");
 			if (configFile.Exists)
 			{
-				FileStream fs = new FileStream(configFile.FullName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-				XmlTextReader xReader = new XmlTextReader(fs);
-				while (xReader.Read())
-					if (xReader.NodeType == XmlNodeType.Element && xReader.Name == "Config")
-						break;
-				xmlSettings.ImportFromXml(xReader);
-				xReader.Close();
+				using (FileStream fs = new FileStream(configFile.FullName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+				using (XmlTextReader xReader = new XmlTextReader(fs))
+				{
+					while (xReader.Read())
+						if (xReader.NodeType == XmlNodeType.Element && xReader.Name == "Config")
+							break;
+					xmlSettings.ImportFromXml(xReader);
+				}
 			}
 			for (int i = 0; i < clbBlacklist.Items.Count; i++)
 			{
@@ -975,18 +976,18 @@ Visit the forums if you need help with Regular Expressions... (or Google)";
 		{
 			DirectoryInfo configFolder = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Advanced Combat Tracker");
 			FileInfo configFile = new FileInfo(configFolder.FullName + "\\Config\\LootParsing.config.xml");
-			FileStream fs = new FileStream(configFile.FullName, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
-			XmlTextWriter xWriter = new XmlTextWriter(fs, Encoding.UTF8);
-			xWriter.Formatting = Formatting.Indented;
-			xWriter.Indentation = 1;
-			xWriter.IndentChar = '\t';
-			xWriter.WriteStartDocument(true);
-			xWriter.WriteStartElement("Config");
-			xmlSettings.ExportToXml(xWriter);
-			xWriter.WriteEndElement();
-			xWriter.WriteEndDocument();
-			xWriter.Flush();
-			xWriter.Close();
+			using (FileStream fs = new FileStream(configFile.FullName, FileMode.Create, FileAccess.Write, FileShare.ReadWrite))
+			using (XmlTextWriter xWriter = new XmlTextWriter(fs, Encoding.UTF8))
+			{
+				xWriter.Formatting = Formatting.Indented;
+				xWriter.Indentation = 1;
+				xWriter.IndentChar = '\t';
+				xWriter.WriteStartDocument(true);
+				xWriter.WriteStartElement("Config");
+				xmlSettings.ExportToXml(xWriter);
+				xWriter.WriteEndElement();
+				xWriter.WriteEndDocument();
+			}
 		}
 
 		public void SetParseLang(int Language)

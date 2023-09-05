@@ -528,59 +528,59 @@ namespace ACT_Plugin
 
 				return;
 			}
-			XmlTextReader xml = new XmlTextReader(xmlFileName);
-
-			try
+			using (XmlTextReader xml = new XmlTextReader(xmlFileName))
 			{
-				while (xml.Read())
+				try
 				{
-					if (xml.NodeType == XmlNodeType.Element)
+					while (xml.Read())
 					{
-						try
+						if (xml.NodeType == XmlNodeType.Element)
 						{
-							if (xml.LocalName == "SoundSettings")
+							try
 							{
-								while (xml.Read())
+								if (xml.LocalName == "SoundSettings")
 								{
-									if (xml.NodeType == XmlNodeType.Element)
+									while (xml.Read())
 									{
-										if (xml.LocalName == "SoundSetting")
+										if (xml.NodeType == XmlNodeType.Element)
 										{
-											SoundSetting setting = new SoundSetting();
-											setting.special = xml.GetAttribute("Special");
-											int type = 0;
-											try { type = Int32.Parse(xml.GetAttribute("SoundType")); }
-											catch { }
-											setting.soundType = (SoundSettingTypeEnum)type;
-											setting.soundData = xml.GetAttribute("SoundData");
+											if (xml.LocalName == "SoundSetting")
+											{
+												SoundSetting setting = new SoundSetting();
+												setting.special = xml.GetAttribute("Special");
+												int type = 0;
+												try { type = Int32.Parse(xml.GetAttribute("SoundType")); }
+												catch { }
+												setting.soundType = (SoundSettingTypeEnum)type;
+												setting.soundData = xml.GetAttribute("SoundData");
 
-											AddSoundSetting(setting);
+												AddSoundSetting(setting);
+											}
+											else
+												break;
 										}
-										else
-											break;
 									}
 								}
 							}
-						}
-						catch (System.Exception ex)
-						{
-							string error = String.Format("Error while parsing XML settings: Line #{0} ({1})\n{2}",
-								xml.LineNumber, xml.LocalName, ex.Message);
-							MessageBox.Show(error + "\n\n Attempting default setting", "XML Preferences Error",
-								MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-							ActGlobals.oFormActMain.WriteExceptionLog(ex, error);
-							continue;
+							catch (System.Exception ex)
+							{
+								string error = String.Format("Error while parsing XML settings: Line #{0} ({1})\n{2}",
+									xml.LineNumber, xml.LocalName, ex.Message);
+								MessageBox.Show(error + "\n\n Attempting default setting", "XML Preferences Error",
+									MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+								ActGlobals.oFormActMain.WriteExceptionLog(ex, error);
+								continue;
+							}
 						}
 					}
 				}
+				catch (System.Exception ex)
+				{
+					string error = "The XML settings file may be corrupt or unusable.  Loading defaults where applicable.";
+					MessageBox.Show(error, "XML Preferences Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					ActGlobals.oFormActMain.WriteExceptionLog(ex, error);
+				}
 			}
-			catch (System.Exception ex)
-			{
-				string error = "The XML settings file may be corrupt or unusable.  Loading defaults where applicable.";
-				MessageBox.Show(error, "XML Preferences Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				ActGlobals.oFormActMain.WriteExceptionLog(ex, error);
-			}
-			xml.Close();
 		}
 		private void AddSoundSetting(SoundSetting setting)
 		{
@@ -595,32 +595,31 @@ namespace ACT_Plugin
 		}
 		private void SaveXmlSettings()
 		{
-			XmlTextWriter xml = new XmlTextWriter(xmlFileName, System.Text.Encoding.UTF8);
-
-			xml.Formatting = Formatting.Indented;
-			xml.Indentation = 4;
-			xml.Namespaces = false;
-
-			xml.WriteStartDocument();
-
-			xml.WriteStartElement("Config");
-
-			xml.WriteStartElement("SoundSettings");
-			foreach (KeyValuePair<string, SoundSetting> pair in soundSettings)
+			using (XmlTextWriter xml = new XmlTextWriter(xmlFileName, System.Text.Encoding.UTF8))
 			{
-				xml.WriteStartElement("SoundSetting");
-				xml.WriteAttributeString("Special", pair.Value.special);
-				xml.WriteAttributeString("SoundType", ((int)pair.Value.soundType).ToString());
-				xml.WriteAttributeString("SoundData", pair.Value.soundData);
-				xml.WriteEndElement();	//SoundSetting
+				xml.Formatting = Formatting.Indented;
+				xml.Indentation = 4;
+				xml.Namespaces = false;
+
+				xml.WriteStartDocument();
+
+				xml.WriteStartElement("Config");
+
+				xml.WriteStartElement("SoundSettings");
+				foreach (KeyValuePair<string, SoundSetting> pair in soundSettings)
+				{
+					xml.WriteStartElement("SoundSetting");
+					xml.WriteAttributeString("Special", pair.Value.special);
+					xml.WriteAttributeString("SoundType", ((int)pair.Value.soundType).ToString());
+					xml.WriteAttributeString("SoundData", pair.Value.soundData);
+					xml.WriteEndElement();  //SoundSetting
+				}
+				xml.WriteEndElement();  //SoundSettings
+
+				xml.WriteEndElement();  //Config
+
+				xml.WriteEndDocument();
 			}
-			xml.WriteEndElement();	//SoundSettings
-
-			xml.WriteEndElement();	//Config
-
-			xml.WriteEndDocument();
-			xml.Flush();
-			xml.Close();
 		}
 
 		SortedDictionary<string, SoundSetting> soundSettings = new SortedDictionary<string, SoundSetting>();
