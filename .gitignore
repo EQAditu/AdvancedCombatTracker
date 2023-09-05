@@ -4,3 +4,4 @@
 *.user
 **/.vs
 /packages
+.DS_Store
