@@ -30,7 +30,7 @@ jobs:
         run: Invoke-WebRequest ${{env.ACTDownloadURI}} -OutFile ${{github.workspace}}\${{env.ACTFileName}}
       - name: Silent Install of ACTv3
         run: ${{github.workspace}}\${{env.ACTFileName}} /S
-      - name: Setup Nuget
+      - name: Setup NuGet
         uses: nuget/setup-nuget@v1
       - name: Restore nuget packages
         run: nuget restore ACT_EverQuestZoneChangeUpdater\ACT_EverQuestZoneChangeUpdater.sln
