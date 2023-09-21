@@ -11,7 +11,7 @@ using System.Xml;
 [assembly: AssemblyTitle("EverQuest Companion Log Reader")]
 [assembly: AssemblyDescription("Reads the dbg.txt to report zone changes")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyVersion("0.0.0.4")]
+[assembly: AssemblyVersion("0.0.0.5")]
 #if DEBUG
 [assembly: AssemblyConfiguration("Debug")]
 #else
