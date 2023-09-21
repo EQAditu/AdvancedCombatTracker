@@ -26,7 +26,7 @@ jobs:
       - name: Restore NuGet packages
         run: nuget restore ACT_EverQuestZoneChangeUpdater\ACT_EverQuestZoneChangeUpdater.sln
       - name: Build solution
-        run: msbuild -t:build -property:Configuration=Release ACT_EverQuestZoneChangeUpdater\ACT_EverQuestZoneChangeUpdater.sln
+        run: msbuild -t:rebuild -property:Configuration=Release /p:TargetFrameworkVersion=v${{ matrix.dotnetFrameworkVersion }} ACT_EverQuestZoneChangeUpdater\ACT_EverQuestZoneChangeUpdater.sl
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
