@@ -6,7 +6,7 @@ on:
       # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-name: ACT EverQuest EverQuestCompanionLog Upload Release Asset
+name: ACT EverQuest EverQuest Zone Change Updater Upload Release Asset
 jobs:
   build-and-create-release:
     runs-on: windows-latest
@@ -24,9 +24,9 @@ jobs:
       - name: Setup Nuget
         uses: nuget/setup-nuget@v1
       - name: Restore nuget packages
-        run: nuget restore ACT_EverQuestCompanionLog\ACT_EverQuestCompanionLog.sln
+        run: nuget restore ACT_EverQuestZoneChangeUpdater\ACT_EverQuestZoneChangeUpdater.sln
       - name: Build solution
-        run: msbuild -t:build -property:Configuration=Release ACT_EverQuestCompanionLog\ACT_EverQuestCompanionLog.sln
+        run: msbuild -t:build -property:Configuration=Release ACT_EverQuestZoneChangeUpdater\ACT_EverQuestZoneChangeUpdater.sln
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -44,6 +44,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
-          asset_path: .\ACT_EverQuestCompanionLog\obj\Release\ACT_EverQuestCompanionLog.dll
-          asset_name: ACT_EverQuestCompanionLog.dll
+          asset_path: .\ACT_EverQuestZoneChangeUpdater\obj\Release\ACT_EverQuestZoneChangeUpdater.dll
+          asset_name: ACT_EverQuestZoneChangeUpdater.dll
           asset_content_type: application/dll

@@ -7,8 +7,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ACT_EverQuestCompanionLog</RootNamespace>
-    <AssemblyName>ACT_EverQuestCompanionLog</AssemblyName>
+    <RootNamespace>ACT_EverQuestZoneChangeUpdater</RootNamespace>
+    <AssemblyName>ACT_EverQuestZoneChangeUpdater</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <StartupObject>
