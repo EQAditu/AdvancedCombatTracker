@@ -1086,7 +1086,7 @@ To execute the export in EQ2, type: /do_file_commands detriment.txt   (or chosen
 			xmlSettings.AddControlSetting(nudExportLife.Name, nudExportLife);
 			xmlSettings.AddControlSetting(fccExportWindow.Name, fccExportWindow);
 
-			string path = Path.Combine(ActGlobals.oFormActMain.AppDataFolder.FullName, "Config\\DetrimentCallMacro.config.xml");
+			string path = Path.Combine(ActGlobals.oFormActMain.AppDataFolder.FullName, $"Config{Path.DirectorySeparatorChar}DetrimentCallMacro.config.xml");
 			if (!File.Exists(path))
 				return;
 
@@ -1163,7 +1163,7 @@ To execute the export in EQ2, type: /do_file_commands detriment.txt   (or chosen
 		}
 		private void SaveXmlSettings()
 		{
-			string path = Path.Combine(ActGlobals.oFormActMain.AppDataFolder.FullName, "Config\\DetrimentCallMacro.config.xml");
+			string path = Path.Combine(ActGlobals.oFormActMain.AppDataFolder.FullName, $"Config{Path.DirectorySeparatorChar}DetrimentCallMacro.config.xml");
 			using (XmlTextWriter xml = new XmlTextWriter(path, Encoding.UTF8))
 			{
 				xml.Formatting = Formatting.Indented;

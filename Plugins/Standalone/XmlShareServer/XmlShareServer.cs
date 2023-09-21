@@ -886,7 +886,7 @@ namespace ACT_Plugin
 		}
 
 		Label lblStatus;	// The status label that appears in ACT's Plugin tab
-		string settingsFile = Path.Combine(ActGlobals.oFormActMain.AppDataFolder.FullName, "Config\\XmlShareServer.config.xml");
+		string settingsFile = Path.Combine(ActGlobals.oFormActMain.AppDataFolder.FullName, $"Config{Path.DirectorySeparatorChar}XmlShareServer.config.xml");
 		SettingsSerializer xmlSettings;
 
 		#region IActPluginV1 Members

@@ -144,7 +144,7 @@ namespace ACT_Plugin
 		}
 
 		Label lblStatus;	// The status label that appears in ACT's Plugin tab
-		string settingsFile = Path.Combine(ActGlobals.oFormActMain.AppDataFolder.FullName, "Config\\ACT_EnJp_Parser.config.xml");
+		string settingsFile = Path.Combine(ActGlobals.oFormActMain.AppDataFolder.FullName, $"Config{Path.DirectorySeparatorChar}ACT_EnJp_Parser.config.xml");
 		private CheckBox cbMultiDamageIsOne;
 		private CheckBox cbRecalcWardedHits;
 		private CheckBox cbKatakana;

@@ -414,7 +414,7 @@ namespace ACT_Plugin
 			InitializeComponent();
 		}
 		Label lblPlugin;
-		string xmlFileName = Path.Combine(ActGlobals.oFormActMain.AppDataFolder.FullName, @"Config\Auto_Attack.config.xml");
+		string xmlFileName = Path.Combine(ActGlobals.oFormActMain.AppDataFolder.FullName, $@"Config{Path.DirectorySeparatorChar}Auto_Attack.config.xml");
 		public void InitPlugin(TabPage pluginScreenSpace, Label pluginStatusText)
 		{
 			pluginScreenSpace.Controls.Add(this);

@@ -198,7 +198,7 @@ namespace ACT_Plugin
 
     TreeNode optionsNode = null;
     Label lblStatus;    // The status label that appears in ACT's Plugin tab
-    string settingsFile = Path.Combine (ActGlobals.oFormActMain.AppDataFolder.FullName, "Config\\ACT_Russian_Parser.config.xml");
+    string settingsFile = Path.Combine (ActGlobals.oFormActMain.AppDataFolder.FullName, $"Config{Path.DirectorySeparatorChar}ACT_Russian_Parser.config.xml");
     SettingsSerializer xmlSettings;
 
 
@@ -220,7 +220,7 @@ namespace ACT_Plugin
         // Add our own node to the Data Correction node
         optionsNode = ActGlobals.oFormActMain.OptionsTreeView.Nodes[dcIndex].Nodes.Add ("EQ2 Russian Settings");
         // Register our user control(this) to our newly create node path.  All controls added to the list will be laid out left to right, top to bottom
-        ActGlobals.oFormActMain.OptionsControlSets.Add (@"Data Correction\EQ2 Russian Settings", new List<Control> { this });
+        ActGlobals.oFormActMain.OptionsControlSets.Add ($@"Data Correction{Path.DirectorySeparatorChar}EQ2 Russian Settings", new List<Control> { this });
         Label lblConfig    = new Label ();
         lblConfig.AutoSize = true;
         lblConfig.Text     = "Опции настройки парсера можно найти в закладке Опции, секция Data Correction (Коррекция Данных).";
@@ -260,7 +260,7 @@ namespace ACT_Plugin
       if (optionsNode != null)    // If we added our user control to the Options tab, remove it
       {
         optionsNode.Remove ();
-        ActGlobals.oFormActMain.OptionsControlSets.Remove (@"Data Correction\EQ2 Russian Settings");
+        ActGlobals.oFormActMain.OptionsControlSets.Remove ($@"Data Correction{Path.DirectorySeparatorChar}EQ2 Russian Settings");
       }
 
       SaveSettings ();

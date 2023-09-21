@@ -301,7 +301,7 @@ namespace Some_ACT_Plugin
 		TabPage screenSpace;
 		Timer tmrTick;
 		List<TimerModChange> modChanges = new List<TimerModChange>();
-		string xmlFileName = Path.Combine(ActGlobals.oFormActMain.AppDataFolder.FullName, "Config\\TimerMods.config.xml");
+		string xmlFileName = Path.Combine(ActGlobals.oFormActMain.AppDataFolder.FullName, $"Config{Path.DirectorySeparatorChar}TimerMods.config.xml");
 
 		public void DeInitPlugin()
 		{

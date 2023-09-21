@@ -897,7 +897,7 @@ namespace ACT_Harvest_Plugin
 					+ "so that updates can be captured.\n"
 					+ "(Talking to the pony can help switch if chat is inactive.)"
 					;
-		string configFile = Path.Combine(ActGlobals.oFormActMain.AppDataFolder.FullName, "Config\\Harvesting.config.xml");
+		string configFile = Path.Combine(ActGlobals.oFormActMain.AppDataFolder.FullName, $"Config{Path.DirectorySeparatorChar}Harvesting.config.xml");
 		string lastSavePath = "";
 
 		#region IActPluginV1 Members

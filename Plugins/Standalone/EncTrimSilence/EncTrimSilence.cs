@@ -107,7 +107,7 @@ namespace ACT_Plugin
 		}
 
 		Label lblStatus;    // The status label that appears in ACT's Plugin tab
-		string settingsFile = Path.Combine(ActGlobals.oFormActMain.AppDataFolder.FullName, "Config\\EncTrimSilence.config.xml");
+		string settingsFile = Path.Combine(ActGlobals.oFormActMain.AppDataFolder.FullName, $"Config{Path.DirectorySeparatorChar}EncTrimSilence.config.xml");
 		private RichTextBox rtbLog;
 		private Label label1;
 		private NumericUpDown nudSilenceLimit;

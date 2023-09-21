@@ -35,7 +35,7 @@ namespace Some_ACT_Plugin
 		TabPage screenSpace;
 		Timer tmrTick;
 
-		string xmlFileName = Application.StartupPath + "\\Config\\Talking DPS.config.xml";
+		string xmlFileName = Application.StartupPath + $"{Path.DirectorySeparatorChar}Config{Path.DirectorySeparatorChar}Talking DPS.config.xml";
 
 		#region Interface
 		private System.Windows.Forms.GroupBox groupBox;

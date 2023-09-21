@@ -254,7 +254,7 @@ namespace ACT_Plugin
 
 		TreeNode optionsNode = null;
 		Label lblStatus;    // The status label that appears in ACT's Plugin tab
-		string settingsFile = Path.Combine(ActGlobals.oFormActMain.AppDataFolder.FullName, "Config\\ACT_English_Parser.config.xml");
+		string settingsFile = Path.Combine(ActGlobals.oFormActMain.AppDataFolder.FullName, $"Config{Path.DirectorySeparatorChar}ACT_English_Parser.config.xml");
 		SettingsSerializer xmlSettings;
 
 		public void InitPlugin(TabPage pluginScreenSpace, Label pluginStatusText)
@@ -274,7 +274,7 @@ namespace ACT_Plugin
 				// Add our own node to the Data Correction node
 				optionsNode = ActGlobals.oFormActMain.OptionsTreeView.Nodes[dcIndex].Nodes.Add("EQ2 English Settings");
 				// Register our user control(this) to our newly create node path.  All controls added to the list will be laid out left to right, top to bottom
-				ActGlobals.oFormActMain.OptionsControlSets.Add(@"Data Correction\EQ2 English Settings", new List<Control> { this });
+				ActGlobals.oFormActMain.OptionsControlSets.Add($@"Data Correction{Path.DirectorySeparatorChar}EQ2 English Settings", new List<Control> { this });
 				Label lblConfig = new Label();
 				lblConfig.AutoSize = true;
 				lblConfig.Text = "Find the applicable options in the Options tab, Data Correction section.";
@@ -305,7 +305,7 @@ namespace ACT_Plugin
 			if (optionsNode != null)    // If we added our user control to the Options tab, remove it
 			{
 				optionsNode.Remove();
-				ActGlobals.oFormActMain.OptionsControlSets.Remove(@"Data Correction\EQ2 English Settings");
+				ActGlobals.oFormActMain.OptionsControlSets.Remove($@"Data Correction{Path.DirectorySeparatorChar}EQ2 English Settings");
 			}
 
 			SaveSettings();

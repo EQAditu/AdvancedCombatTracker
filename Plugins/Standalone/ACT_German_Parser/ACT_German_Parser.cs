@@ -171,7 +171,7 @@ namespace ACT_Plugin
 		}
 
 		Label lblStatus;    // The status label that appears in ACT's Plugin tab
-		string settingsFile = Path.Combine(ActGlobals.oFormActMain.AppDataFolder.FullName, "Config\\ACT_German_Parser.config.xml");
+		string settingsFile = Path.Combine(ActGlobals.oFormActMain.AppDataFolder.FullName, $"Config{Path.DirectorySeparatorChar}ACT_German_Parser.config.xml");
 		SettingsSerializer xmlSettings;
 		TreeNode optionsNode = null;
 
@@ -226,7 +226,7 @@ namespace ACT_Plugin
 			if (optionsNode != null)    // If we added our user control to the Options tab, remove it
 			{
 				optionsNode.Remove();
-				ActGlobals.oFormActMain.OptionsControlSets.Remove(@"Data Correction\EQ2 German Settings");
+				ActGlobals.oFormActMain.OptionsControlSets.Remove($@"Data Correction{Path.DirectorySeparatorChar}EQ2 German Settings");
 			}
 
 			SaveSettings();

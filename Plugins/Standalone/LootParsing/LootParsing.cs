@@ -948,8 +948,8 @@ Visit the forums if you need help with Regular Expressions... (or Google)";
 			xmlSettings.AddControlSetting(rbFrench.Name, rbFrench);
 			xmlSettings.AddControlSetting(clbBlacklist.Name, clbBlacklist);
 
-			DirectoryInfo appDataFolder = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Advanced Combat Tracker");
-			FileInfo configFile = new FileInfo(appDataFolder.FullName + "\\Config\\LootParsing.config.xml");
+			DirectoryInfo appDataFolder = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + $"{Path.DirectorySeparatorChar}Advanced Combat Tracker");
+			FileInfo configFile = new FileInfo(appDataFolder.FullName + $"{Path.DirectorySeparatorChar}Config{Path.DirectorySeparatorChar}LootParsing.config.xml");
 			if (configFile.Exists)
 			{
 				using (FileStream fs = new FileStream(configFile.FullName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
@@ -974,8 +974,8 @@ Visit the forums if you need help with Regular Expressions... (or Google)";
 		}
 		private void SaveSettings()
 		{
-			DirectoryInfo configFolder = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Advanced Combat Tracker");
-			FileInfo configFile = new FileInfo(configFolder.FullName + "\\Config\\LootParsing.config.xml");
+			DirectoryInfo configFolder = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + $"{Path.DirectorySeparatorChar}Advanced Combat Tracker");
+			FileInfo configFile = new FileInfo(configFolder.FullName + $"{Path.DirectorySeparatorChar}Config{Path.DirectorySeparatorChar}LootParsing.config.xml");
 			using (FileStream fs = new FileStream(configFile.FullName, FileMode.Create, FileAccess.Write, FileShare.ReadWrite))
 			using (XmlTextWriter xWriter = new XmlTextWriter(fs, Encoding.UTF8))
 			{

@@ -272,7 +272,7 @@ namespace ACT_Plugin
 		#endregion
 
 		Label lblStatus;
-		string settingsFile = Path.Combine(ActGlobals.oFormActMain.AppDataFolder.FullName, "Config\\VisualSoundEngine.config.xml");
+		string settingsFile = Path.Combine(ActGlobals.oFormActMain.AppDataFolder.FullName, $"Config{Path.DirectorySeparatorChar}VisualSoundEngine.config.xml");
 		SettingsSerializer xmlSettings;
 		Form eventWindow;
 		FlowLayoutPanel eventPanel;
