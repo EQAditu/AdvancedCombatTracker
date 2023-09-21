@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ControlText Form="FormCustomTriggerBenchmark">
-    <Control ControlPath="root" UniqueName="btnDoBenchmark" Text="ベンチマーク"/>
-    <Control ControlPath="root" UniqueName="groupBox2" Text="カスタムトリガー"/>
-    <Control ControlPath="root" UniqueName="groupBox1" Text="ベンチマークで使用するエンカウントを選択する..."/>
-</ControlText>

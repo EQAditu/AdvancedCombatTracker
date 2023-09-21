@@ -6,3 +6,5 @@ Localization/ja-JP/.vs/
 Localization/ja-JP/Advanced Combat Tracker.exe
 
 *.user
+/.vs
+/ACT_EverQuestCompanionLog/.vs/ACT_EverQuestCompanionLog

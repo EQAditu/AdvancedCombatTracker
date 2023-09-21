@@ -1,0 +1,51 @@
+on:
+  push:
+    # Sequence of patterns matched against refs/tags
+    tags:
+    - "0.*.*.*"
+      # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+name: ACT EverQuest EverQuestCompanionLog Upload Release Asset
+jobs:
+  build-and-create-release:
+    runs-on: windows-latest
+    env:
+      ACTFileName: 'ACTv3-setup.exe'
+      ACTDownloadURI: 'https://advancedcombattracker.com/download.php?id=56'
+    steps:
+      - uses: actions/checkout@main
+        with:
+          ref: EverQuestCompanionLog
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1.1
+      - name: Download ACTv3 file
+        run: Invoke-WebRequest ${{env.ACTDownloadURI}} -OutFile ${{github.workspace}}\${{env.ACTFileName}}
+      - name: Silent Install of ACTv3
+        run: ${{github.workspace}}\${{env.ACTFileName}} /S
+      - name: Setup Nuget
+        uses: nuget/setup-nuget@v1
+      - name: Restore nuget packages
+        run: nuget restore ACT_EverQuestCompanionLog\ACT_EverQuestCompanionLog.sln
+      - name: Build solution
+        run: msbuild -t:build -property:Configuration=Release ACT_EverQuestCompanionLog\ACT_EverQuestCompanionLog.sln
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
+      - name: Upload Release Asset
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
+          asset_path: .\ACT_EverQuestCompanionLog\obj\Release\ACT_EverQuestCompanionLog.dll
+          asset_name: ACT_EverQuestCompanionLog.dll
+          asset_content_type: application/dll

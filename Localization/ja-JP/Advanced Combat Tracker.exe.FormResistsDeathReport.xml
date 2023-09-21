@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ControlText Form="FormResistsDeathReport">
-    <Control ControlPath="root" UniqueName="lblDeathSelect" Text="戦闘不能:"/>
-    <Control ControlPath="root" UniqueName="btnHide" Text="閉じる"/>
-    <Control ControlPath="root" UniqueName="btnCopySelected" Text="選択範囲をコピー"/>
-    <Control ControlPath="root" UniqueName="btnCopyAll" Text="すべてコピー"/>
-</ControlText>
