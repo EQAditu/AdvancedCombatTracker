@@ -15,8 +15,6 @@ jobs:
       ACTDownloadURI: 'https://advancedcombattracker.com/download.php?id=56'
     steps:
       - uses: actions/checkout@main
-        with:
-          ref: EverQuestCompanionLog
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.1
       - name: Download ACTv3 file
