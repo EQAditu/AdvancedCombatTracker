@@ -6,7 +6,5 @@
 obj/
 bin/
 *.csproj.user
-/UpgradeLog.htm
-/packages/NUnit.3.13.3
-/packages
+packages/
 TestResults/
