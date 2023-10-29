@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ControlText Form="FormCombatantSearch">
-    <Control ControlPath="root" UniqueName="btnSelectEnc" Text="選択する"/>
-    <Control ControlPath="root" UniqueName="btnClose" Text="閉じる"/>
-</ControlText>

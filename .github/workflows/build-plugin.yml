@@ -1,0 +1,99 @@
+# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: ACT EverQuest DPS Plugin
+
+on:
+  push:
+    branches-ignore:
+    - 'master'
+    tags:
+    - "0.*.*.*"
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    env:
+      ACTFileName: 'ACTv3-setup.exe'
+      ACTDownloadURI: 'https://advancedcombattracker.com/download.php?id=56'
+      EQDPSPluginUnitTestLibraryPath: '.\EQDPSPluginUnitTests\bin\Release\EQDPSPluginUnitTests.dll'
+      EQDPSPluginLibraryPath: '.\EverQuestDPSPlugin\obj\Release\EverQuestDPSPlugin.dll'
+    steps:
+      - uses: actions/checkout@main
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1.1
+      - name: Download ACTv3 file
+        run: Invoke-WebRequest ${{env.ACTDownloadURI}} -OutFile ${{github.workspace}}\${{env.ACTFileName}}
+      - name: Silent Install of ACTv3
+        run: ${{github.workspace}}\${{env.ACTFileName}} /S
+      - name: Setup Nuget
+        uses: nuget/setup-nuget@v1
+      - name: Restore nuget packages
+        run: nuget restore EverQuestDPSPlugin.sln
+      - name: Build solution
+        run: msbuild -t:build -property:Configuration=Release /p:TargetFrameworkVersion=v4.8 EverQuestDPSPlugin.sln
+      - name: Test solution
+        run: '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /testcontainer:${{env.EQDPSPluginUnitTestLibraryPath}}'
+      - name: Test Success
+        uses: rjstone/discord-webhook-notify@v1
+        if: success()
+        with:
+          username: ACT EverQuest DPS Plugin
+          severity: info
+          details: Test Succeeded!
+          text: ACT EverQuest DPS Plugin .NET Framework Version ${{ matrix.dotnetFrameworkVersion }}
+          webhookUrl: ${{ secrets.ACT_EQ_DISCORD_WEBHOOK }}
+      - name: Test Failure
+        uses: rjstone/discord-webhook-notify@v1
+        if: failure()
+        with:
+          username: ACT EverQuest DPS Plugin
+          severity: error
+          details: Test Failed!
+          text: ACT EverQuest DPS Plugin .NET Framework Version ${{ matrix.dotnetFrameworkVersion }}
+          webhookUrl: ${{ secrets.ACT_EQ_DISCORD_WEBHOOK }}
+      - name: Test Cancelled
+        uses: rjstone/discord-webhook-notify@v1
+        if: cancelled()
+        with:
+            username: ACT EverQuest DPS Plugin
+            severity: warn
+            details: Test Cancelled!
+            text: ACT EverQuest DPS Plugin .NET Framework Version ${{ matrix.dotnetFrameworkVersion }}
+            webhookUrl: ${{ secrets.ACT_EQ_DISCORD_WEBHOOK }}
+      - name: Upload dll file to artifact repository
+        uses: actions/upload-artifact@v2
+        if: github.ref_type == 'tag'
+        with:
+          name: EQDPSPluginPath
+          path: ${{ env.EQDPSPluginLibraryPath }}
+  release:
+    needs: build
+    runs-on: windows-latest
+    if: github.ref_type == 'tag'
+    steps:
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
+      - uses: actions/download-artifact@v2
+        with:
+          name: EQDPSPluginPath
+      - name: Upload Release Asset
+        id: upload-release-asset 
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+          asset_path: .\EverQuestDPSPlugin.dll
+          asset_name: EverQuestDPSPlugin.dll
+          asset_content_type: application/dll
