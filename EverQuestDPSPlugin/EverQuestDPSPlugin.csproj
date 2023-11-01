@@ -63,9 +63,7 @@
     <Compile Include="EverQuestDPSPluginPartial1.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="EverQuestDPSPluginPartial2.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="EverQuestDPSPluginPartial2.cs" />
     <Compile Include="EverQuestDPSPluginResource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
