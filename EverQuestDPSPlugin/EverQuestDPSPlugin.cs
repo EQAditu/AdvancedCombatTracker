@@ -112,6 +112,8 @@ namespace EverQuestDPSPlugin
         readonly object varianceChkBxLockObject = new object(), nonMatchChkBxLockObject = new object();
         readonly string PluginSettingsFileName = $"Config{Path.DirectorySeparatorChar}ACT_EverQuest_English_Parser.config.xml";
         readonly string attackTypes = "backstab|throw|pierce|gore|crush|slash|hit|kick|slam|bash|shoot|strike|bite|grab|punch|scratch|rake|swipe|claw|maul|smash|frenzies on|frenzy";
+        readonly string damageShieldMatch = @"(?<characterName>.+)'s";
+        Regex damageShield;
         #endregion
 
         public EverQuestDPSPlugin()
@@ -1238,6 +1240,7 @@ namespace EverQuestDPSPlugin
 
         private void PopulateRegexCombat()
         {
+            damageShield = new Regex(damageShieldMatch);
             String MeleeAttack = @"(?<attacker>.+) (?<attackType>" + $@"{attackTypes}" + @")(|s|es|bed) (?<victim>.+)(\sfor\s)(?<damageAmount>[\d]+) ((?:point)(?:s|)) of damage.(?:\s\((?<damageSpecial>.+)\)){0,1}";
             String Evasion = @"(?<attacker>.*) tries to (?<attackType>\S+) (?:(?<victim>(.+)), but \1) (?:(?<evasionType>" + $@"{EverQuestDPSPluginResource.evasionTypes}" + @"))(?:\swith (your|his|hers|its) (shield|staff)){0,1}!(?:[\s][\(](?<evasionSpecial>.+)[\)]){0,1}";
             ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Clear();
@@ -1372,7 +1375,7 @@ namespace EverQuestDPSPlugin
                     case 2:
 
                         Dnum nonMeleeDamage = new Dnum(Int64.Parse(regexMatch.Groups["damagePoints"].Value), "damage shield");
-
+                        Match m = damageShield.Match(petTypeAndName.Item2);
                         MasterSwing masterSwingDamageShield = new MasterSwing(
                             EverQuestSwingType.DamageShield.GetEverQuestSwingTypeExtensionIntValue(),
                             regexMatch.Groups["damageSpecial"].Success && regexMatch.Groups["damageSpecial"].Value.Contains("Critical"),
@@ -1381,12 +1384,13 @@ namespace EverQuestDPSPlugin
                             dateTimeOfParse,
                             ActGlobals.oFormActMain.GlobalTimeSorter,
                             regexMatch.Groups["damageShieldType"].Value,
-                            CharacterNamePersonaReplace(regexMatch.Groups["attacker"].Value),
+                            CharacterNamePersonaReplace(m.Groups["characterName"].Value),
                             "Hitpoints",
-                            CharacterNamePersonaReplace(regexMatch.Groups["victim"].Value)
+                            CharacterNamePersonaReplace(victimPetTypeAndName.Item2)
                             );
+                        masterSwingDamageShield.Tags.Add("Outgoing", petTypeAndName.Item1 == default ? String.Empty : petTypeAndName.Item1.ToString());
+                        masterSwingDamageShield.Tags.Add("Incoming", victimPetTypeAndName.Item1 == default ? String.Empty : victimPetTypeAndName.Item1.ToString());
                         ActGlobals.oFormActMain.AddCombatAction(masterSwingDamageShield);
-
                         break;
                     //Missed melee
                     case 3:
