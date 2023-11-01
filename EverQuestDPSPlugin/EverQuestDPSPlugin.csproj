@@ -60,10 +60,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EverQuestDPSPluginPartial1.cs">
+    <Compile Include="EverQuestDPSPlugin.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="EverQuestDPSPluginPartial2.cs" />
     <Compile Include="EverQuestDPSPluginResource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
