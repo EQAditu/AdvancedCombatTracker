@@ -147,7 +147,7 @@ namespace EverQuestDPSPlugin
             ActGlobals.oFormActMain.BeforeLogLineRead += new LogLineEventDelegate(FormActMain_BeforeLogLineRead);
             ActGlobals.oFormActMain.UpdateCheckClicked += new FormActMain.NullDelegate(UpdateCheckClicked);
 
-            
+
             if (ActGlobals.oFormActMain.GetAutomaticUpdatesAllowed())
             {// If ACT is set to automatically check for updates, check for updates to the plugin
                 Task updateCheckClicked = new Task(() =>
@@ -408,7 +408,6 @@ namespace EverQuestDPSPlugin
                 {"Damage Shield (Out)", new CombatantData.DamageTypeDef("Damage Shield (Out)", -1, Color.Brown) },
             {"Instant Healed (Out)", new CombatantData.DamageTypeDef("Instant Healed (Out)", 1, Color.Blue)},
             {"Heal Over Time (Out)", new CombatantData.DamageTypeDef("Heal Over Time (Out)", 1, Color.DarkBlue)},
-                {"Pet Melee (Out)", new CombatantData.DamageTypeDef("Pet Melee (Out)", -1, Color.GreenYellow)},
                 {"Warder Melee (Out)", new CombatantData.DamageTypeDef("Warder Melee (Out)", -1, Color.Aqua)},
                 { "Familiar Direct Damage (Out)", new CombatantData.DamageTypeDef("Familiar Direct Damage (Out)", -1, Color.DarkCyan) },
             {"All Outgoing (Ref)", new CombatantData.DamageTypeDef("All Outgoing (Ref)", 0, Color.Black)}
@@ -422,7 +421,6 @@ namespace EverQuestDPSPlugin
             {"Damage Shield (Inc)", new CombatantData.DamageTypeDef("Damage Shield (Inc)", -1, Color.Brown) },
             {"Instant Healed (Inc)",new CombatantData.DamageTypeDef("Instant Healed (Inc)", 1, Color.LimeGreen)},
             {"Heal Over Time (Inc)",new CombatantData.DamageTypeDef("Heal Over Time (Inc)", 1, Color.DarkGreen)},
-            {"Pet Melee (Inc)", new CombatantData.DamageTypeDef("Pet Melee (Inc)", -1, Color.Green)},
                 {"Warder Melee (Inc)", new CombatantData.DamageTypeDef("Warder Melee (Inc)", -1, Color.Lavender)},
                 {"Familiar Direct Damage (Inc)", new CombatantData.DamageTypeDef("Familiar Direct Damage (Inc)", -1, Color.DarkCyan)},
             {"All Incoming (Ref)",new CombatantData.DamageTypeDef("All Incoming (Ref)", 0, Color.Black)}
@@ -436,9 +434,6 @@ namespace EverQuestDPSPlugin
             {EverQuestSwingType.InstantHealing.GetEverQuestSwingTypeExtensionIntValue(), new List<string> { "Instant Healed (Out)" } },
             {EverQuestSwingType.HealOverTime.GetEverQuestSwingTypeExtensionIntValue(), new List<string> { "Heal Over Time (Out)" } },
                 {EverQuestSwingType.DamageShield.GetEverQuestSwingTypeExtensionIntValue(), new List<string> { "Damage Shield (Out)"} },
-            {EverQuestSwingType.PetMelee.GetEverQuestSwingTypeExtensionIntValue(), new List<string> { "Pet Melee (Out)", "Outgoing Damage" } },
-            {EverQuestSwingType.WarderMelee.GetEverQuestSwingTypeExtensionIntValue(), new List<string> { "Warder Melee (Out)", "Outgoing Damage" } },
-                {EverQuestSwingType.FamiliarDirectSpellDamage.GetEverQuestSwingTypeExtensionIntValue(), new List<string> {"Familiar Direct Damage (Out)", "Outgoing Damage"} }
         };
             CombatantData.SwingTypeToDamageTypeDataLinksIncoming = new SortedDictionary<int, List<string>>
         {
@@ -449,9 +444,6 @@ namespace EverQuestDPSPlugin
             {EverQuestSwingType.DamageOverTimeSpell.GetEverQuestSwingTypeExtensionIntValue(), new List<string> {"Damage Over Time Spell (Inc)", "Incoming Damage" } },
             {EverQuestSwingType.HealOverTime.GetEverQuestSwingTypeExtensionIntValue(), new List<string> { "Heal Over Time (Inc)" } },
                 {EverQuestSwingType.DamageShield.GetEverQuestSwingTypeExtensionIntValue(), new List<string> { "Damage Shield (Inc)"} },
-            {EverQuestSwingType.PetMelee.GetEverQuestSwingTypeExtensionIntValue(), new List<string> { "Pet Melee (Inc)", "Incoming Damage" } },
-            {EverQuestSwingType.WarderMelee.GetEverQuestSwingTypeExtensionIntValue(), new List<string> { "Warder Melee (Inc)", "Incoming Damage" } },
-                {EverQuestSwingType.FamiliarDirectSpellDamage.GetEverQuestSwingTypeExtensionIntValue(), new List<string> { "Familiar Direct Damage (Inc)", "Incoming Damage"} }
         };
 
             CombatantData.DamageSwingTypes = new List<int> {
@@ -461,11 +453,11 @@ namespace EverQuestDPSPlugin
                 EverQuestSwingType.DamageOverTimeSpell.GetEverQuestSwingTypeExtensionIntValue(),
                 EverQuestSwingType.DamageShield.GetEverQuestSwingTypeExtensionIntValue(),
                 EverQuestSwingType.Bane.GetEverQuestSwingTypeExtensionIntValue(),
-                EverQuestSwingType.PetMelee.GetEverQuestSwingTypeExtensionIntValue(),
-                EverQuestSwingType.WarderMelee.GetEverQuestSwingTypeExtensionIntValue(),
-                EverQuestSwingType.FamiliarDirectSpellDamage.GetEverQuestSwingTypeExtensionIntValue()
             };
-            CombatantData.HealingSwingTypes = new List<int> { EverQuestSwingType.InstantHealing.GetEverQuestSwingTypeExtensionIntValue(), EverQuestSwingType.HealOverTime.GetEverQuestSwingTypeExtensionIntValue() };
+            CombatantData.HealingSwingTypes = new List<int> {
+                EverQuestSwingType.InstantHealing.GetEverQuestSwingTypeExtensionIntValue(),
+                EverQuestSwingType.HealOverTime.GetEverQuestSwingTypeExtensionIntValue(),
+            };
 
             CombatantData.ExportVariables.Clear();
             CombatantData.ExportVariables.Add("n", new CombatantData.TextExportFormatter("n", "New Line", "Formatting after this element will appear on a new line.", (Data, Extra) => { return "\n"; }));
@@ -599,7 +591,7 @@ namespace EverQuestDPSPlugin
             AttackType.ColumnDefs.Add("CritTypes", new AttackType.ColumnDef("CritTypes", true, "VARCHAR(32)", "CritTypes", AttackTypeGetCritTypes, AttackTypeGetCritTypes, (Left, Right) => { return AttackTypeGetCritTypes(Left).CompareTo(AttackTypeGetCritTypes(Right)); }));
             AttackType.ColumnDefs.Add("Max", new AttackType.ColumnDef("Max", true, "BIGINT", "Max", (Data) => { return Data.MaxHit.ToString(); }, (Data) => { return Data.MaxHit.ToString(); }, (Left, Right) => { return Left.MaxHit.CompareTo(Right.MaxHit); }));
             AttackType.ColumnDefs.Add("Min", new AttackType.ColumnDef("Min", true, "BIGINT", "Min", (Data) => { return Data.MinHit.ToString(); }, (Data) => { return Data.MinHit.ToString(); }, (Left, Right) => { return Left.MinHit.CompareTo(Right.MinHit); }));
-            
+
 
             MasterSwing.ColumnDefs.Clear();
             MasterSwing.ColumnDefs.Add("EncId", new MasterSwing.ColumnDef("EncId", false, "CHAR(8)", "EncId", (Data) => { return string.Empty; }, (Data) => { return Data.ParentEncounter.EncId; }, (Left, Right) => { return 0; }));
@@ -638,7 +630,20 @@ namespace EverQuestDPSPlugin
             {
                 return (Left.Tags.ContainsKey("overheal") && Right.Tags.ContainsKey("overheal")) ? ((long)Left.Tags["overheal"]).CompareTo((long)Right.Tags["overheal"]) : 0;
             }));
-
+            MasterSwing.ColumnDefs.Add("Outgoing", new MasterSwing.ColumnDef("Outgoing", true, "VARCHAR2(16)", "Outgoing",
+                (Data) => { return Data.Tags.ContainsKey("Outgoing") ? Data.Tags["Outgoing"].ToString() : String.Empty; },
+                (Data) => { return Data.Tags.ContainsKey("Outgoing") ? Data.Tags["Outgoing"].ToString() : String.Empty; }, (Left, Right) =>
+                {
+                    return (Left.Tags.ContainsKey("Outgoing") && Right.Tags.ContainsKey("Outgoing")) ? Left.Tags["Outgoing"].ToString().CompareTo(Right.Tags["Outgoing"].ToString()) : 0;
+                })
+            );
+            MasterSwing.ColumnDefs.Add("Incoming", new MasterSwing.ColumnDef("Incoming", true, "VARCHAR2(16)", "Incoming",
+                (Data) => { return Data.Tags.ContainsKey("Incoming") ? Data.Tags["Incoming"].ToString() : String.Empty; },
+                (Data) => { return Data.Tags.ContainsKey("Incoming") ? Data.Tags["Incoming"].ToString() : String.Empty; }, (Left, Right) =>
+                {
+                    return (Left.Tags.ContainsKey("Incoming") && Right.Tags.ContainsKey("Incoming")) ? Left.Tags["Incoming"].ToString().CompareTo(Right.Tags["Incoming"].ToString()) : 0;
+                })
+            );
             foreach (KeyValuePair<string, MasterSwing.ColumnDef> pair in MasterSwing.ColumnDefs)
                 pair.Value.GetCellForeColor = (Data) => { return GetSwingTypeColor((EverQuestSwingType)Data.SwingType); };
 
