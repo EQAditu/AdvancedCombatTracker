@@ -127,7 +127,7 @@
     <value>Critical</value>
   </data>
   <data name="DamageShield" xml:space="preserve">
-    <value>(?&lt;victim&gt;.+) is (?&lt;damageShieldDamageType&gt;\S+) by (?&lt;attacker&gt;.+) (?&lt;damageShieldType&gt;\S+) for (?&lt;damagePoints&gt;[\d]+) points of non-melee damage.</value>
+    <value>(?&lt;victim&gt;.+) is (?&lt;damageShieldDamageType&gt;\S+) by (?&lt;attacker&gt;.+)'s (?&lt;damageShieldType&gt;\S+) for (?&lt;damagePoints&gt;[\d]+) points of non-melee damage.</value>
   </data>
   <data name="DamageSpecial" xml:space="preserve">
     <value>damageSpecial</value>
