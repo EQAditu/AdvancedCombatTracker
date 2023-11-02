@@ -1443,10 +1443,10 @@ namespace EverQuestDPSPlugin
                                 (regexMatch.Groups["overTime"].Success ? EverQuestSwingType.HealOverTime : EverQuestSwingType.InstantHealing).GetEverQuestSwingTypeExtensionIntValue(),
                                 regexMatch.Groups["healingSpecial"].Success && regexMatch.Groups["healingSpecial"].Value.Contains(EverQuestDPSPluginResource.Critical),
                                 regexMatch.Groups["healingSpecial"].Success ? regexMatch.Groups["healingSpecial"].Value : String.Empty,
-                                new Dnum(Int64.Parse(regexMatch.Groups["healingPoints"].Value), "healing"),
+                                new Dnum(Int64.Parse(regexMatch.Groups["pointsOfHealing"].Value), "healing"),
                                 dateTimeOfParse,
                                 ActGlobals.oFormActMain.GlobalTimeSorter,
-                                regexMatch.Groups["healingSpell"].Value,
+                                regexMatch.Groups["healingSpellName"].Success ? regexMatch.Groups["healingSpellName"].Value : new String("unnamed heal".ToCharArray()),
                                 CharacterNamePersonaReplace(petTypeAndName.Item2),
                                 "Hitpoints",
                                 CheckIfSelf(victimPetTypeAndName.Item2) ? CharacterNamePersonaReplace(petTypeAndName.Item2) : CharacterNamePersonaReplace(victimPetTypeAndName.Item2));

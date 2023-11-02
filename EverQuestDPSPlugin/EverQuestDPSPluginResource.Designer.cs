@@ -169,7 +169,7 @@ namespace EverQuestDPSPlugin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to (?&lt;attacker&gt;.+?) (?:has been\s){0,1}healed (?&lt;victim&gt;^[over time]|.+?)(?:\s(?&lt;overTime&gt;over time)){0,1} for (?&lt;healingPoints&gt;[\d]+)(?:\s\((?&lt;overHealPoints&gt;[\d]+)\)){0,1} hit point(?:|s) by (?&lt;healingSpell&gt;.*)\.(?:[\s][\(](?&lt;healingSpecial&gt;.+)[\)]){0,1}.
+        ///   Looks up a localized string similar to (?&lt;attacker&gt;.+?) (?:has been\s){0,1}healed (?&lt;victim&gt;^[over time]|.+?)(?:\s(?&lt;overTime&gt;over time)){0,1} for (?&lt;pointsOfHealing&gt;[\d]+)(?:\s\((?&lt;pointsOfDamage&gt;[\d]+)\)){0,1} hit point(|s)(?:\sby(?&lt;healingSpellName&gt;.+)){0,1}\.(?:[\s][\(](?&lt;healingSpecial&gt;.+)[\)]){0,1}.
         /// </summary>
         internal static string Heal {
             get {
