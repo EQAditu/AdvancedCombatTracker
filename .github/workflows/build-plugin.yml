@@ -97,6 +97,12 @@ jobs:
           asset_path: .\EverQuestDPSPlugin.dll
           asset_name: EverQuestDPSPlugin.dll
           asset_content_type: application/dll
+      - name: Upload dll file to artifact repository
+        uses: actions/upload-artifact@v2
+        if: github.ref_type == 'tag'
+        with:
+          name: EQDPSPluginPath
+          path: ${{ env.EQDPSPluginLibraryPath }}
       - name: Release Success
         uses: rjstone/discord-webhook-notify@v1
         if: success()
@@ -124,9 +130,3 @@ jobs:
             details: Release Cancelled!
             text: ACT EverQuest DPS Plugin
             webhookUrl: ${{ secrets.ACT_EQ_DISCORD_WEBHOOK }}
-      - name: Upload dll file to artifact repository
-        uses: actions/upload-artifact@v2
-        if: github.ref_type == 'tag'
-        with:
-          name: EQDPSPluginPath
-          path: ${{ env.EQDPSPluginLibraryPath }}
