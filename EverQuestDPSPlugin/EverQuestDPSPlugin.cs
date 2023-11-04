@@ -95,9 +95,10 @@ namespace EverQuestDPSPlugin
         bool populationVariance; //for keeping track of whether population variance or sample variance is displayed
         string settingsFile;
         SettingsSerializer xmlSettings;
-        readonly object varianceChkBxLockObject = new object(), nonMatchChkBxLockObject = new object();
+        readonly object varianceChkBxLockObject = new object();//, nonMatchChkBxLockObject = new object()
         readonly string PluginSettingsFileName = $"Config{Path.DirectorySeparatorChar}ACT_EverQuest_English_Parser.config.xml";
-        readonly string attackTypes = "backstab|throw|pierce|gore|crush|slash|hit|kick|slam|bash|shoot|strike|bite|grab|punch|scratch|rake|swipe|claw|maul|smash|frenzies on|frenzy";
+        readonly string attackTypes = @"backstab|throw|pierce|gore|crush|slash|hit|kick|slam|bash|shoot|strike|bite|grab|punch|scratch|rake|swipe|claw|maul|smash|frenzies on|frenzy";
+        readonly string zoneChangeRgxString = @"You have entered (^[(?:the Drunken Monkey stance adequately)]|(?<zoneName>.+))\.";
         #endregion
 
         public EverQuestDPSPlugin()
@@ -191,7 +192,6 @@ namespace EverQuestDPSPlugin
                     {
                         case DialogResult.Yes:
                             FileInfo updatedFile = ActGlobals.oFormActMain.PluginDownload(pluginId);
-                            //String githubData = ActGlobals.oFormActMain.PluginGetGithubApi(pluginId);
                             ActPluginData pluginData = ActGlobals.oFormActMain.PluginGetSelfData(this);
                             pluginData.pluginFile.Delete();
                             updatedFile.MoveTo(pluginData.pluginFile.FullName);
@@ -1213,6 +1213,7 @@ namespace EverQuestDPSPlugin
 
         internal void PopulateRegexNonCombat()
         {
+            ActGlobals.oFormActMain.ZoneChangeRegex = new Regex(RegexString(zoneChangeRgxString), RegexOptions.Compiled);
             possesive = new Regex(@"(?:[`|']s\s)(?<" + $@"{EverQuestDPSPluginResource.possesiveOf}" + @">\S[^']+)(?:[']s\s(?<" + $@"{EverQuestDPSPluginResource.secondaryPossesiveOf}" + @">\S+)){0,1}", RegexOptions.Compiled);
             selfCheck = new Regex(EverQuestDPSPluginResource.selfMatch, RegexOptions.Compiled);
             regexTupleList = new List<Tuple<Color, Regex>>();
@@ -1245,6 +1246,10 @@ namespace EverQuestDPSPlugin
             ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(regexTupleList.Count, regexTupleList[regexTupleList.Count - 1].Item1);
             regexTupleList.Add(new Tuple<Color, Regex>(Color.PaleVioletRed, new Regex(RegexString(EverQuestDPSPluginResource.FocusDamageEffect), RegexOptions.Compiled)));
             ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(regexTupleList.Count, regexTupleList[regexTupleList.Count - 1].Item1);
+            regexTupleList.Add(new Tuple<Color, Regex>(Color.DarkOliveGreen, new Regex(RegexString(EverQuestDPSPluginResource.DamageShieldUnknownOrigin), RegexOptions.Compiled)));
+            ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(regexTupleList.Count, regexTupleList[regexTupleList.Count - 1].Item1);
+            regexTupleList.Add(new Tuple<Color, Regex>(Color.SaddleBrown, ActGlobals.oFormActMain.ZoneChangeRegex));
+            ActGlobals.oFormEncounterLogs.LogTypeToColorMapping.Add(regexTupleList.Count, regexTupleList[regexTupleList.Count - 1].Item1);
         }
 
         private void FormActMain_BeforeLogLineRead(bool isImport, LogLineEventArgs logInfo)
@@ -1259,20 +1264,6 @@ namespace EverQuestDPSPlugin
                     break;
                 }
             }
-        }
-
-        EverQuestSwingType GetDamageShieldType(String damageShieldType)
-        {
-            List<String> damageShieldTypes = new List<String>()
-            {
-                "flames",
-                "frost",
-                "thorns"
-            };
-            return (damageShieldTypes.Select((value) =>
-            {
-                return value == damageShieldType;
-            }).Count() > 0) ? EverQuestSwingType.DamageShield : 0;
         }
 
         internal Tuple<String, String> GetTypeAndNameForPet(String nameToSetTypeTo)
@@ -1298,7 +1289,8 @@ namespace EverQuestDPSPlugin
             DateTime dateTimeOfParse = ParseDateTime(regexMatch.Groups[EverQuestDPSPluginResource.dateTimeOfLogLineString].Value);
             Tuple<String, String> petTypeAndName = GetTypeAndNameForPet(CharacterNamePersonaReplace(regexMatch.Groups["attacker"].Value));
             Tuple<String, String> victimPetTypeAndName = GetTypeAndNameForPet(regexMatch.Groups["victim"].Value);
-            if (ActGlobals.oFormActMain.SetEncounter(ActGlobals.oFormActMain.LastKnownTime, CharacterNamePersonaReplace(regexMatch.Groups["attacker"].Value), CharacterNamePersonaReplace(regexMatch.Groups["victim"].Value)))
+            
+            if (logMatched != 13 && ActGlobals.oFormActMain.SetEncounter(ActGlobals.oFormActMain.LastKnownTime, CharacterNamePersonaReplace(regexMatch.Groups["attacker"].Value), CharacterNamePersonaReplace(regexMatch.Groups["victim"].Value)))
             {
                 switch (logMatched)
                 {
@@ -1492,6 +1484,7 @@ namespace EverQuestDPSPlugin
                         masterSwingFocusEffect.Tags.Add("Incoming", victimPetTypeAndName.Item1);
                         ActGlobals.oFormActMain.AddCombatAction(masterSwingFocusEffect);
                         break;
+                    //Unknown damage shield
                     case 12:
                         MasterSwing masterSwingDamageShieldUnknownOrigin = new MasterSwing(
                             EverQuestSwingType.DamageShield.GetEverQuestSwingTypeExtensionIntValue() ,
@@ -1510,8 +1503,14 @@ namespace EverQuestDPSPlugin
                         ActGlobals.oFormActMain.AddCombatAction(masterSwingDamageShieldUnknownOrigin);
                         break;
                     default:
+                        ArgumentOutOfRangeException argumentOutOfRangeException = new ArgumentOutOfRangeException(logMatched.GetType().Name, "Match found but no case to assign to");
+                        ActGlobals.oFormActMain.WriteExceptionLog(argumentOutOfRangeException, "Method invoked with no matching case");
                         break;
                 }
+            }
+            else if(logMatched == 13)
+            {
+                ActGlobals.oFormActMain.ChangeZone(regexMatch.Groups["zoneName"].Value);
             }
         }
 
