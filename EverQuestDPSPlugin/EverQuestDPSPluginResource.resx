@@ -127,7 +127,10 @@
     <value>Critical</value>
   </data>
   <data name="DamageShield" xml:space="preserve">
-    <value>(?&lt;victim&gt;.+) is (?&lt;damageShieldDamageType&gt;\S+) by (?&lt;attacker&gt;.+)'s (?&lt;damageShieldType&gt;\S+) for (?&lt;damagePoints&gt;[\d]+) points of non-melee damage.</value>
+    <value>(?&lt;victim&gt;.+) is (?&lt;damageShieldDamageType&gt;\S+) by (?&lt;attacker&gt;.+)('s|) (?&lt;damageShieldType&gt;\S+) for (?&lt;damagePoints&gt;[\d]+) points of non-melee damage.</value>
+  </data>
+  <data name="DamageShieldUnknownOrigin" xml:space="preserve">
+    <value>(?&lt;victim&gt;.+) was (?&lt;damageShieldResponse&gt;.+) for (?&lt;damagePoints&gt;[\d]+) point(|s) of non-melee damage.</value>
   </data>
   <data name="DamageSpecial" xml:space="preserve">
     <value>damageSpecial</value>
@@ -154,7 +157,7 @@
     <value>(?&lt;victim&gt;.+) has taken (?&lt;damagePoints&gt;[\d]+) damage from (?&lt;attacker&gt;(your)+) (?&lt;damageEffect&gt;.[^.]+)\.(?:[\s][\(](?&lt;focusSpecial&gt;.+)[\)]){0,1}</value>
   </data>
   <data name="Heal" xml:space="preserve">
-    <value>(?&lt;attacker&gt;.+?) (?:has been\s){0,1}healed (?&lt;victim&gt;^[over time]|.+?)(?:\s(?&lt;overTime&gt;over time)){0,1} for (?&lt;pointsOfHealing&gt;[\d]+)(?:\s\((?&lt;pointsOfDamage&gt;[\d]+)\)){0,1} hit point(|s)(?:\sby(?&lt;healingSpellName&gt;.+)){0,1}\.(?:[\s][\(](?&lt;healingSpecial&gt;.+)[\)]){0,1}</value>
+    <value>(?&lt;attacker&gt;.+?) (?:has been\s){0,1}healed (?&lt;victim&gt;^[over time]|.+?)(?:\s(?&lt;overTime&gt;over time)){0,1} for (?&lt;pointsOfHealing&gt;[\d]+)(?:\s\((?&lt;pointsOfDamage&gt;[\d]+)\)){0,1} hit point(|s)(?:\sby(?&lt;healingSpellName&gt;.+)){0,1}\.(?:[\s][\(](?&lt;damageSpecial&gt;.+)[\)]){0,1}</value>
   </data>
   <data name="Locked" xml:space="preserve">
     <value>Locked</value>
@@ -184,7 +187,7 @@
     <value>(?&lt;attacker&gt;.+) (?:(ha(ve|s) been slain by|have slain)) (?&lt;victim&gt;.+)!</value>
   </data>
   <data name="SpellDamage" xml:space="preserve">
-    <value>(?&lt;attacker&gt;.+) hit (?&lt;victim&gt;.*) for (?&lt;damagePoints&gt;[\d]+) (?:point[|s]) of (?&lt;typeOfDamage&gt;.+) damage by (?&lt;damageEffect&gt;.*)\.(?:[\s][\(](?&lt;spellSpecial&gt;.+)[\)]){0,1}</value>
+    <value>(?&lt;attacker&gt;.+) hit (?&lt;victim&gt;.*) for (?&lt;damagePoints&gt;[\d]+) (?:point[|s]) of (?&lt;typeOfDamage&gt;.+) damage by (?&lt;attackType&gt;.*)\.(?:[\s][\(](?&lt;damageSpecial&gt;.+)[\)]){0,1}</value>
   </data>
   <data name="SpellDamageOverTime" xml:space="preserve">
     <value>(?&lt;victim&gt;.+) has taken (?&lt;damagePoints&gt;[\d]+) damage from (?&lt;damageEffect&gt;.*) by (?&lt;attacker&gt;.*)\.(?:[\s][\(](?&lt;spellSpecial&gt;.+)[\)]){0,1}</value>

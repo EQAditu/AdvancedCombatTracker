@@ -10,13 +10,9 @@ namespace EverQuestDPSPlugin
         InstantHealing = 4,
         HealOverTime = 8,
         Bane = 16,
-        Pet = 32,
-        Warder = 64,
-        DirectDamageSpell = 128,
-        DamageOverTimeSpell = 256,
-        Ward = 512,
-        Familiar = 1024,
-        DamageShield = 2048,
+        DirectDamageSpell = 32,
+        DamageOverTimeSpell = 64,
+        DamageShield = 128,
     }
 
     internal static class EverQuestSwingTypeExtensions

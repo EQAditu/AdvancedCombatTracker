@@ -88,11 +88,20 @@ namespace EverQuestDPSPlugin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to (?&lt;victim&gt;.+) is (?&lt;damageShieldDamageType&gt;\S+) by (?&lt;attacker&gt;.+)&apos;s (?&lt;damageShieldType&gt;\S+) for (?&lt;damagePoints&gt;[\d]+) points of non-melee damage..
+        ///   Looks up a localized string similar to (?&lt;victim&gt;.+) is (?&lt;damageShieldDamageType&gt;\S+) by (?&lt;attacker&gt;.+)(&apos;s|) (?&lt;damageShieldType&gt;\S+) for (?&lt;damagePoints&gt;[\d]+) points of non-melee damage..
         /// </summary>
         internal static string DamageShield {
             get {
                 return ResourceManager.GetString("DamageShield", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (?&lt;victim&gt;.+) was (?&lt;damageShieldResponse&gt;.+) for (?&lt;damagePoints&gt;[\d]+) point(|s) of non-melee damage..
+        /// </summary>
+        internal static string DamageShieldUnknownOrigin {
+            get {
+                return ResourceManager.GetString("DamageShieldUnknownOrigin", resourceCulture);
             }
         }
         
@@ -169,7 +178,7 @@ namespace EverQuestDPSPlugin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to (?&lt;attacker&gt;.+?) (?:has been\s){0,1}healed (?&lt;victim&gt;^[over time]|.+?)(?:\s(?&lt;overTime&gt;over time)){0,1} for (?&lt;pointsOfHealing&gt;[\d]+)(?:\s\((?&lt;pointsOfDamage&gt;[\d]+)\)){0,1} hit point(|s)(?:\sby(?&lt;healingSpellName&gt;.+)){0,1}\.(?:[\s][\(](?&lt;healingSpecial&gt;.+)[\)]){0,1}.
+        ///   Looks up a localized string similar to (?&lt;attacker&gt;.+?) (?:has been\s){0,1}healed (?&lt;victim&gt;^[over time]|.+?)(?:\s(?&lt;overTime&gt;over time)){0,1} for (?&lt;pointsOfHealing&gt;[\d]+)(?:\s\((?&lt;pointsOfDamage&gt;[\d]+)\)){0,1} hit point(|s)(?:\sby(?&lt;healingSpellName&gt;.+)){0,1}\.(?:[\s][\(](?&lt;damageSpecial&gt;.+)[\)]){0,1}.
         /// </summary>
         internal static string Heal {
             get {
@@ -259,7 +268,7 @@ namespace EverQuestDPSPlugin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to (?&lt;attacker&gt;.+) hit (?&lt;victim&gt;.*) for (?&lt;damagePoints&gt;[\d]+) (?:point[|s]) of (?&lt;typeOfDamage&gt;.+) damage by (?&lt;damageEffect&gt;.*)\.(?:[\s][\(](?&lt;spellSpecial&gt;.+)[\)]){0,1}.
+        ///   Looks up a localized string similar to (?&lt;attacker&gt;.+) hit (?&lt;victim&gt;.*) for (?&lt;damagePoints&gt;[\d]+) (?:point[|s]) of (?&lt;typeOfDamage&gt;.+) damage by (?&lt;attackType&gt;.*)\.(?:[\s][\(](?&lt;damageSpecial&gt;.+)[\)]){0,1}.
         /// </summary>
         internal static string SpellDamage {
             get {

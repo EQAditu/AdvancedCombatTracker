@@ -70,13 +70,6 @@
     </Compile>
     <Compile Include="EverQuestSwingType.cs" />
     <Compile Include="EverQuest_DPS_Plugin_Localization.cs" />
-    <Compile Include="Interfaces\IEverQuestDPSPlugin.cs" />
-    <Compile Include="Forms\nonmatch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\nonmatch.Designer.cs">
-      <DependentUpon>nonmatch.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -84,9 +77,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>EverQuestDPSPluginResource.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\nonmatch.resx">
-      <DependentUpon>nonmatch.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
