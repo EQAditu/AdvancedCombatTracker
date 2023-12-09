@@ -6,7 +6,7 @@ using System.Reflection;
 
 [assembly: AssemblyTitle("ActLocalization-InternalStrings")]
 [assembly: AssemblyDescription("A sample of an ACT plugin that changes localization strings.")]
-[assembly: AssemblyVersion("278.0.0.0")]
+[assembly: AssemblyVersion("280.0.0.0")]
 
 namespace ActLocalization
 {
@@ -192,11 +192,14 @@ namespace ActLocalization
 			TryEditLocalization("graphCombatant-toolTip", "+{0} ({1:#,0} sec average)"); // sec = second
 			TryEditLocalization("graphEncText-noDataError", "The table currently has no data to graph..."); // 
 			TryEditLocalization("graphEncText-noDataSortingError", "No rows with compatible data to graph...\nTry sorting the table by another column."); // 
+			TryEditLocalization("helpPanel-btnApplyDark", "This will apply some starting colors to use with pseudo-dark themes.  For best results, restart ACT after applying.  \n\nPS. WinForms will never theme well with what Microsoft offers."); // 
+			TryEditLocalization("helpPanel-btnApplyDark2", "This will apply some starting colors to use with pseudo-dark themes.  For best results, restart ACT after applying.  \n\nPS. WinForms will never theme well with what Microsoft offers."); // 
 			TryEditLocalization("helpPanel-btnExportUIBrowser", "Press this button to start a wizard allowing you to set the EQ2's web browser to ACT's encounter index and optionally extracting a browser UI replacement with a collapsable interface and controls for maximum screen space."); // 
 			TryEditLocalization("helpPanel-btnImportFile", "To import encounters from your logfile, select the start and ending date with the choosers and select the log file to parse."); // 
 			TryEditLocalization("helpPanel-btnOdbcDropTables", "This will perform the DROP command on each table ACT uses.  This will delete all table data and remove the tables from the datasource."); // 
 			TryEditLocalization("helpPanel-btnOdbcTestConnection", "This will attempt to log into the ODBC datasource specified in the Connection String."); // 
 			TryEditLocalization("helpPanel-btnOdbcValidateTables", "This will make sure the ODBC datasource has the required tables and the tables have the required columns.  If anything is missing, ACT will attempt to create or alter the tables.  Success is required to do SQL exporting."); // 
+			TryEditLocalization("helpPanel-btnResetAll", "This will reset all of the colors defined in the sub-pages and will require a restart of ACT."); // 
 			TryEditLocalization("helpPanel-btnResetColors", "Resetting color/font settings will require ACT to be restarted."); // 
 			TryEditLocalization("helpPanel-btnResetOdbcHacks", "This button will delete all ODBC hacks and replace them with a set of known hacks for various datasources, such as MSSQL, MS Access, Postgres..."); // 
 			TryEditLocalization("helpPanel-cbAutoLoadLogs", "ACT should check every few seconds for existing logs to have been updated and switch to those currently used logs.  (It will not check for new files automatically)"); // 
@@ -427,6 +430,7 @@ namespace ActLocalization
 			TryEditLocalization("messageBoxTitle-getPluginsApplyFail2", "Error applying plugin"); // 
 			TryEditLocalization("messageBoxTitle-getPluginsError1", "Error retrieving plugin list"); // 
 			TryEditLocalization("messageBoxTitle-getPluginsUnknownFile", "Unknown file type"); // 
+			TryEditLocalization("messageBoxTitle-historyDatabase", "History Database"); // 
 			TryEditLocalization("messageBoxTitle-htmlNoFileAccess", "File Access Denied"); // 
 			TryEditLocalization("messageBoxTitle-importAbort", "Abort?"); // 
 			TryEditLocalization("messageBoxTitle-importFail", "Parse failed"); // 
