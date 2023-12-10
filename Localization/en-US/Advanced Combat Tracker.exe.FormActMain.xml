@@ -3,7 +3,6 @@
     <Control ControlPath="root\flpCornerButtons" UniqueName="cbbMiniParse" Text="Show Mini" />
     <Control ControlPath="root\flpCornerButtons" UniqueName="cbbShowTimers" Text="Show Timers" />
     <Control ControlPath="root\flpCornerButtons" UniqueName="btnPasteXmlSnippet" Text="Import&#xD;&#xA;XML" />
-    <Control ControlPath="root" UniqueName="btnPasteXmlSnippet" Text="fakeFLP" />
     <Control ControlPath="root\tc1" UniqueName="tpMain" Text="Main" />
     <Control ControlPath="root\tc1\tpMain\pRightView\pDG" UniqueName="lblDG" Text="Encounters" />
     <Control ControlPath="root\tc1\tpMain\pLeftView\pTvBtns\tableLayoutPanel11" UniqueName="btnClear" Text="&amp;Clear Encounters" />
@@ -90,7 +89,7 @@
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_MiniParse\fccMiniParse" UniqueName="lblForeColor" Text="Forecolor" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_MiniParse\fccMiniParse" UniqueName="btnFontDisplay" Text="Change Font" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_MiniParse\fccMiniParse" UniqueName="lblBackColor" Text="Backcolor" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_MiniParse" UniqueName="btnAddPresetMini" Text="Add Preset" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_MiniParse" UniqueName="btnAddPresetMini" Text="Add Preset..." />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_MiniParse" UniqueName="label44" Text="Window Opacity" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_MiniParse" UniqueName="label89" Text="Mini-Parse Text Formatting:" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_MiniParse" UniqueName="label23" Text="seconds." />
@@ -98,7 +97,7 @@
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_MiniParse" UniqueName="cbRestoreEncBox" Text="Hide Mini Parse on application restore" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_MiniParse" UniqueName="cbSmallEncTop" Text="Mini Parse - Always On Top" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_MiniParse" UniqueName="cbMiniColumnAlign" Text="Align text to appear in columns based on cell contents" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_MiniParse" UniqueName="cbMiniClickThrough" Text="Allow mouse clicks to pass through.   (Win2k or above required)" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_MiniParse" UniqueName="cbMiniClickThrough" Text="Allow mouse clicks to pass through." />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_MiniParse" UniqueName="cbMinEncBox" Text="Minimize application to Mini Parse window" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_MiniParse" UniqueName="btnRemovePresetMini" Text="Remove" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_TableZone" UniqueName="btnTableDefaults" Text="Reset Columns to Default" />
@@ -123,23 +122,24 @@
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_TableAttackType\gbTableDepth5" UniqueName="label49" Text="Sort #2:" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_TableAttackType\gbTableDepth5" UniqueName="btnATSort2" Text="Time" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_TableAttackType" UniqueName="btnTableDefaults" Text="Reset Columns to Default" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_MainTableGen" UniqueName="cbEncSilenceCut" Text="Number of seconds to wait after the last combat action to pause the encounter duration." />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_MainTableGen" UniqueName="cbEncSilenceCut" Text="Number of seconds to wait after the last combat action to pause the encounter duration:" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_MainTableGen" UniqueName="groupBox6" Text="Main Table Options" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_MainTableGen\groupBox6" UniqueName="cbTableCommas" Text="Show thousand separators in the Main tab tables" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_MainTableGen\groupBox6" UniqueName="cbReverseSort" Text="Reverse the sorting order of the main table.  (Decending order)" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_MainTableGen\groupBox6" UniqueName="label2" Text="Main table update frequency in seconds:" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_MainTableGen" UniqueName="cbIdleEnd" Text="Number of seconds to wait after the last combat action to begin a new encounter." />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_MainTableGen" UniqueName="cbIdleEnd" Text="Number of seconds to wait after the last combat action to begin a new encounter:" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_MainTableGen" UniqueName="cbIdleTimerEnd" Text="Use an internal timer to count down instead of relying only on logfile timestamps." />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Graphing\tableLayoutPanel3" UniqueName="rbGraphSimple" Text="Simple bar graphs depicting the current sort." />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Graphing\tableLayoutPanel3" UniqueName="rbGraphAdv" Text="Advanced DPS over time graphs.  (CPU Intensive)" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Graphing\tableLayoutPanel3" UniqueName="cbOnlyGraphAllies" Text="Only show allies" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Graphing\tableLayoutPanel3" UniqueName="cbSimpleGraphTotals" Text="Show Totals &amp;&amp; Average" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Graphing" UniqueName="cbBarGraphUseSuffixDecimals" Text="Use decimals" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Graphing" UniqueName="cbGraphsUseSuffix" Text="In Graphs, simplify numbers to use K/M/B suffixes" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Graphing" UniqueName="groupBox2" Text="Advanced Graph Options" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Graphing\groupBox2\tableLayoutPanel2" UniqueName="label92" Text="For line graphs, set the plot points to include the average of the last N seconds:" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Graphing\groupBox2\tableLayoutPanel1" UniqueName="label11" Text="CPU Priority of graph generation:" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Graphing\groupBox2" UniqueName="label1" Text="DamageType categories to include in combatant line graphs." />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Graphing\groupBox2" UniqueName="label92" Text="For line graphs, set the plot points to include the average of the last N seconds:" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Graphing\groupBox2" UniqueName="label11" Text="CPU Priority of graph generation:" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Graphing\groupBox2" UniqueName="cbGraphRollingAvg" Text="Graph lines show a rolling average instead of grouped together segments of time" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Graphing" UniqueName="rbGraphAdv" Text="Advanced DPS over time graphs.  (CPU Intensive)" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Graphing" UniqueName="cbSimpleGraphTotals" Text="Show Totals &amp;&amp; Average" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Graphing" UniqueName="cbOnlyGraphAllies" Text="Only show allies" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Graphing" UniqueName="rbGraphSimple" Text="Simple bar graphs depicting the current sort." />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_TextExports" UniqueName="groupBox11" Text="Cross Computer Clipboard Sharing" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_TextExports\groupBox11" UniqueName="lblClipStatus" Text="Not Connected." />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_TextExports\groupBox11" UniqueName="cbClipAutoConnect" Text="Connect to this IP automatically." />
@@ -272,6 +272,12 @@
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1\fccWindowColors" UniqueName="lblForeColor" Text="Forecolor" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1\fccWindowColors" UniqueName="btnFontDisplay" Text="Sample" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1\fccWindowColors" UniqueName="lblBackColor" Text="Backcolor" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1" UniqueName="cbColorPlugins" Text="Allow these settings to affect plugin tabs" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1" UniqueName="fccPluginsNotifications" Text="Plugin &amp;&amp; Notification Panels" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1\fccPluginsNotifications" UniqueName="lblText" Text="Plugin &amp;&amp; Notification Panels" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1\fccPluginsNotifications" UniqueName="lblForeColor" Text="Forecolor" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1\fccPluginsNotifications" UniqueName="btnFontDisplay" Text="Sample" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1\fccPluginsNotifications" UniqueName="lblBackColor" Text="Backcolor" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1" UniqueName="fccTreeView" Text="TreeView Colors" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1\fccTreeView" UniqueName="lblText" Text="TreeView Colors" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1\fccTreeView" UniqueName="lblForeColor" Text="Forecolor" />
@@ -283,8 +289,8 @@
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1\ccEncLabel2" UniqueName="lblText" Text="Encounter Color 2" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1" UniqueName="ccEncLabel3" Text="Encounter Color 3" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1\ccEncLabel3" UniqueName="lblText" Text="Encounter Color 3" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1" UniqueName="fccDataGrid" Text="Data Grid Colors" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1\fccDataGrid" UniqueName="lblText" Text="Data Grid Colors" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1" UniqueName="fccDataGrid" Text="Data Grid Items" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1\fccDataGrid" UniqueName="lblText" Text="Data Grid Items" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1\fccDataGrid" UniqueName="lblForeColor" Text="Forecolor" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1\fccDataGrid" UniqueName="btnFontDisplay" Text="Change Font" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1\fccDataGrid" UniqueName="lblBackColor" Text="Backcolor" />
@@ -292,6 +298,10 @@
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1\ccDGAllyText" UniqueName="lblText" Text="Ally Text Color" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1" UniqueName="ccDGPersonalBackcolor" Text="Personal Cell Backcolor" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1\ccDGPersonalBackcolor" UniqueName="lblText" Text="Personal Cell Backcolor" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1\panel1" UniqueName="label3" Text="(Only adjusts colors not defined in this area)" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1\panel1" UniqueName="label2" Text="Saturation Offset:" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1\panel1" UniqueName="label1" Text="Luminance Offset:" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorUserInterface\groupBox1\flowLayoutPanel1\panel1" UniqueName="cbInvertLuminosity" Text="Invert Luminance (for darker themes)" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorGraphing" UniqueName="groupBox2" Text="Graph Fill Colors" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorGraphing\groupBox2" UniqueName="btnResetGraphFillColors" Text="Reset" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorGraphing\groupBox2\flowLayoutPanel2" UniqueName="ccGraphFill1" Text="Graph Fill 01" />
@@ -370,6 +380,19 @@
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorGraphing\groupBox1\flowLayoutPanel1\ccEncBarColor3" UniqueName="lblText" Text="Bar color 3" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorGraphing\groupBox1\flowLayoutPanel1" UniqueName="ccEncBarText" Text="Bar text color" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorGraphing\groupBox1\flowLayoutPanel1\ccEncBarText" UniqueName="lblText" Text="Bar text color" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorMisc" UniqueName="groupBox2" Text="Custom Triggers" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorMisc\groupBox2" UniqueName="btnResetColorsCustomTriggers" Text="Reset" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorMisc\groupBox2" UniqueName="ccCustomTriggerRestricted" Text="Custom Trigger Restricted to Category" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorMisc\groupBox2\ccCustomTriggerRestricted" UniqueName="lblText" Text="Custom Trigger Restricted to Category" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorMisc\groupBox2" UniqueName="ccCustomTriggerInactive" Text="Custom Trigger Inactive" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorMisc\groupBox2\ccCustomTriggerInactive" UniqueName="lblText" Text="Custom Trigger Inactive" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorMisc\groupBox2" UniqueName="ccCustomTriggerActive" Text="Custom Trigger Active" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorMisc\groupBox2\ccCustomTriggerActive" UniqueName="lblText" Text="Custom Trigger Active" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorMisc\groupBox2" UniqueName="fccCustomTriggerTreeView" Text="Custom Triggers TreeView" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorMisc\groupBox2\fccCustomTriggerTreeView" UniqueName="lblText" Text="Custom Triggers TreeView" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorMisc\groupBox2\fccCustomTriggerTreeView" UniqueName="lblForeColor" Text="Forecolor" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorMisc\groupBox2\fccCustomTriggerTreeView" UniqueName="btnFontDisplay" Text="Change Font" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorMisc\groupBox2\fccCustomTriggerTreeView" UniqueName="lblBackColor" Text="Backcolor" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorMisc" UniqueName="groupBox1" Text="Spell Timer Window" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorMisc\groupBox1" UniqueName="btnResetColors" Text="Reset" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorMisc\groupBox1" UniqueName="ccSpellTimerForeColor" Text="Spell Timer Window Fore Color" />
@@ -380,23 +403,23 @@
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorMisc\groupBox1\ccSpellTimerWarnColor" UniqueName="lblText" Text="Spell Timer Warning Color" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorMisc\groupBox1" UniqueName="ccSpellTimerBackColor" Text="Spell Timer Window Back Color" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorMisc\groupBox1\ccSpellTimerBackColor" UniqueName="lblText" Text="Spell Timer Window Back Color" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc" UniqueName="label2" Text="Titlebar format for ACT's window:" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc\tableLayoutPanel5" UniqueName="label1" Text="Custom Trigger parsing may spawn up to this many additional threads: " />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc\tableLayoutPanel4" UniqueName="label69" Text="Process CPU Affinity:" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc\tableLayoutPanel4" UniqueName="btnCpuAffinityApply" Text="Change/View" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc\tableLayoutPanel3" UniqueName="lblLogPriority" Text="CPU Priority of normal log parsing:" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc\tableLayoutPanel2" UniqueName="label2" Text="Titlebar format for ACT's window:" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc" UniqueName="cbDisableIncrementalCaching" Text="Disable incremental caching for data objects" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc" UniqueName="cbUnblockFiles" Text="Scan ACT folders and plugins for Internet downloads to unblock." />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc" UniqueName="label1" Text="Custom Trigger parsing may spawn up to this many additional threads: " />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc" UniqueName="gbFile" Text="Log File" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc\gbFile\tableLayoutPanel6" UniqueName="lblSplitFile" Text="When opening or closing log files, attempt to rename the log if over this value (in megabytes):" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc\gbFile" UniqueName="cbbPauseLog" Text="Pause Log" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc\gbFile" UniqueName="lblSplitFile" Text="When opening or closing log files, attempt to rename the log if over this value (in megabytes):" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc\gbFile" UniqueName="cbAutoLoadLogs" Text="Auto-load recently changed log files." />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc\gbFile" UniqueName="lblLogFile" Text="No log file selected.  (Remember to turn /log ON)" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc\gbFile" UniqueName="btnCloseLog" Text="Close Log" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc\gbFile" UniqueName="btnOpenLog" Text="Open Log" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc\gbFile" UniqueName="btnOpenLog" Text="Open Log..." />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc" UniqueName="cbAutoSaveDatabase" Text="Once a minute, automatically save ACT's Encounter History Database. " />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc" UniqueName="cbAutoSaveSettings" Text="Once a minute, automatically save ACT's settings." />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc" UniqueName="cbGCollectOnClear" Text="Immediately attempt to free all unused memory from RAM when clearing encounters (may freeze ACT)" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc" UniqueName="label69" Text="Process CPU Affinity:" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc" UniqueName="lblLogPriority" Text="CPU Priority of normal log parsing:" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc" UniqueName="btnCpuAffinityApply" Text="Change/View" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc" UniqueName="cbMinimizeToIcon" Text="Minimize ACT to a tray icon." />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc" UniqueName="cbRecordLogs" Text="Record all log lines while parsing.  (View Logs context menu option)" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc" UniqueName="cbZoneAllListing" Text="Populate an 'All' encounter which includes all data from separate encounters within a zone.  (Not retroactive)" />
@@ -404,63 +427,63 @@
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc\tableLayoutPanel1" UniqueName="btnResetLocs" Text="Reset Windows Loc/Size" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc\tableLayoutPanel1" UniqueName="btnShowStartupWiz" Text="Show Startup Wizard" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc\tableLayoutPanel1" UniqueName="btnShowPerfWiz" Text="Show Performance Wizard" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ImportExport\tableLayoutPanel1" UniqueName="label9" Text="Import/Export ACT Settings ..." />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ImportExport\tableLayoutPanel1" UniqueName="btnImportSettings" Text="Import..." />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ImportExport\tableLayoutPanel1" UniqueName="btnExportSettings" Text="Export..." />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ImportExport" UniqueName="groupBox2" Text="Convert Config XML to XML Share Snippet" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ImportExport\groupBox2" UniqueName="lblXmlSnippetStatus" Text=" " />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ImportExport\groupBox2" UniqueName="btnConvertXmlSnippet" Text="Convert to XML Snippet" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ImportExport\groupBox2\tableLayoutPanel2" UniqueName="lblXmlSnippetStatus" Text=" " />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ImportExport\groupBox2\tableLayoutPanel2" UniqueName="btnConvertXmlSnippet" Text="Convert to XML Snippet" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ImportExport" UniqueName="groupBox1" Text="Load ACT configuration backups" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ImportExport\groupBox1" UniqueName="btnLoadSelected" Text="Load Backup" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ImportExport\groupBox1" UniqueName="btnRefreshListing" Text="Refresh" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ImportExport" UniqueName="label9" Text="Import/Export ACT Settings ..." />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ImportExport" UniqueName="btnExportSettings" Text="Export..." />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ImportExport" UniqueName="btnImportSettings" Text="Import..." />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_SelectiveParsing" UniqueName="groupBox19" Text="Batch Remove Players" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_SelectiveParsing\groupBox19" UniqueName="btnSParseClear" Text="Clear Entire List" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_SelectiveParsing\groupBox19" UniqueName="btnSParseCull" Text="Clear Unchecked" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_SelectiveParsing\groupBox19" UniqueName="btnSParseUncheckAll" Text="Uncheck All" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_SelectiveParsing\groupBox19\tableLayoutPanel1" UniqueName="btnSParseCull" Text="Clear Unchecked" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_SelectiveParsing\groupBox19\tableLayoutPanel1" UniqueName="btnSParseClear" Text="Clear Entire List" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_SelectiveParsing\groupBox19\tableLayoutPanel1" UniqueName="btnSParseUncheckAll" Text="Uncheck All" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_SelectiveParsing" UniqueName="groupBox18" Text="Add/Remove Players" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_SelectiveParsing\groupBox18" UniqueName="btnSParseAddPlayer" Text="&amp;Add" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_SelectiveParsing\groupBox18" UniqueName="btnSParseRemovePlayer" Text="&amp;Remove" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_SelectiveParsing\groupBox18\tableLayoutPanel2" UniqueName="btnSParseRemovePlayer" Text="&amp;Remove" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_SelectiveParsing\groupBox18\tableLayoutPanel2" UniqueName="btnSParseAddPlayer" Text="&amp;Add" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_SelectiveParsing" UniqueName="groupBox17" Text="Combatant Limiting" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_SelectiveParsing\groupBox17" UniqueName="cbSParseIgnoreEnemies" Text="Never show non-whitelisted combatants" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_SelectiveParsing\groupBox17" UniqueName="rbSParseNone" Text="No selective parsing (Rely on automatic ally detection)" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_SelectiveParsing\groupBox17" UniqueName="rbSParseExport" Text="Show only listed combatants in graphs/text exports" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_SelectiveParsing\groupBox17" UniqueName="rbSParseFull" Text="Only record combat actions taken by/against listed" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_SelectiveParsing\groupBox17" UniqueName="cbSParseExportIgnoreOtherAllies" Text="In &quot;allied&quot; totals, only include listed players" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionMisc\tableLayoutPanel1" UniqueName="lblCharName" Text="Default character name if not defined by the log file name." />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionMisc\tableLayoutPanel1" UniqueName="btnCharNameApply" Text="Apply" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionMisc" UniqueName="cbCalcRealAvgDly" Text="When calculating average delay, group together multiple hits in a single second.  (More accurate)" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionMisc" UniqueName="btnCharNameApply" Text="Apply" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionMisc" UniqueName="lblCharName" Text="Default character name if not defined by the log file name." />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionMisc" UniqueName="cbBlockisHit" Text="Count a hit that inflicts no damage as a Hit in calculations." />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionMisc" UniqueName="cbExportDurationWallTime" Text="For text export durations, include wall-time while in-combat." />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionMisc" UniqueName="cbLongEncDuration" Text="Allow heals to extend an encounter's duration past the last damage action." />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionRename" UniqueName="label82" Text="After" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionRename" UniqueName="label81" Text="Before" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionRename" UniqueName="btnRenameAdd" Text="Add Correction" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionRename" UniqueName="btnRenameRemove" Text="Remove Correction" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionRename" UniqueName="label80" Text="Rename a combatant to a new one, or merge into an old one" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionRedirect" UniqueName="label97" Text="Into" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionRedirect" UniqueName="label96" Text="Abilty" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionRedirect" UniqueName="btnAbilityRedirectRemove" Text="Remove Correction" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionRedirect" UniqueName="btnAbilityRedirectAdd" Text="Add Correction" />
-    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionRedirect" UniqueName="label95" Text="Redirect damage done by a specific ability name into a combatant" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionRename\tableLayoutPanel2" UniqueName="label80" Text="Rename a combatant to a new one, or merge into an old one" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionRename\tableLayoutPanel2" UniqueName="label82" Text="After" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionRename\tableLayoutPanel2" UniqueName="label81" Text="Before" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionRename\tableLayoutPanel1" UniqueName="btnRenameAdd" Text="Add Correction" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionRename\tableLayoutPanel1" UniqueName="btnRenameRemove" Text="Remove Correction" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionRedirect\tableLayoutPanel2" UniqueName="btnAbilityRedirectAdd" Text="Add Correction" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionRedirect\tableLayoutPanel2" UniqueName="btnAbilityRedirectRemove" Text="Remove Correction" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionRedirect\tableLayoutPanel1" UniqueName="label95" Text="Redirect damage done by a specific ability name into a combatant" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionRedirect\tableLayoutPanel1" UniqueName="label97" Text="Into" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionRedirect\tableLayoutPanel1" UniqueName="label96" Text="Abilty" />
     <Control ControlPath="root\tc1\tpOptions\tableLayoutPanel12" UniqueName="btnOptionSearchClear" Text="Clear" />
     <Control ControlPath="root\tc1" UniqueName="tpTriggers" Text="Custom Triggers" />
-    <Control ControlPath="root\tc1\tpTriggers" UniqueName="btnOpenCtBenchmark" Text="Benchmark CTs" />
+    <Control ControlPath="root\tc1\tpTriggers" UniqueName="btnOpenCtBenchmark" Text="Benchmark CTs..." />
     <Control ControlPath="root\tc1\tpTriggers\tcTriggers" UniqueName="tabPage0" Text="Triggers" />
-    <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0\flowLayoutPanel1" UniqueName="label90" Text="Category" />
+    <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0\tableLayoutPanel2" UniqueName="btnRemoveTrigger" Text="&amp;Remove" />
+    <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0\tableLayoutPanel2" UniqueName="btnAddTrigger" Text="Add/Edit" />
+    <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0\tableLayoutPanel2" UniqueName="btnSndTriggerBrowse" Text="..." />
+    <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0\tableLayoutPanel2" UniqueName="rbSndTriggerTTS" Text="TTS:" />
+    <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0\tableLayoutPanel2" UniqueName="rbSndTriggerWAV" Text="WAV:" />
+    <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0\tableLayoutPanel2" UniqueName="rbSndTriggerBeep" Text="Beep" />
+    <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0\tableLayoutPanel2" UniqueName="rbSndTriggerNone" Text="None" />
+    <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0\tableLayoutPanel2" UniqueName="label40" Text="Custom trigger:" />
+    <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0\tableLayoutPanel1" UniqueName="linkRegex" Text="Regular Expression:" />
+    <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0\flowLayoutPanel1" UniqueName="label90" Text="Category:" />
     <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0\flowLayoutPanel1" UniqueName="btnCtInsZone" Text="← Zone" />
     <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0\flowLayoutPanel1" UniqueName="cbTriggerCategoryRestrict" Text="Restrict to Category Zone" />
-    <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0\flowLayoutPanel1" UniqueName="label91" Text="Timer or Tab name" />
+    <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0\flowLayoutPanel1" UniqueName="label91" Text="Timer or Tab name:" />
     <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0\flowLayoutPanel1" UniqueName="cbTriggerTimer" Text="Trigger timer" />
     <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0\flowLayoutPanel1" UniqueName="cbTriggerTabbed" Text="Add Results Tab" />
-    <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0\panel8" UniqueName="btnSndTriggerBrowse" Text="..." />
-    <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0\panel8" UniqueName="rbSndTriggerTTS" Text="TTS:" />
-    <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0\panel8" UniqueName="rbSndTriggerWAV" Text="WAV:" />
-    <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0\panel8" UniqueName="label40" Text="Custom trigger:" />
-    <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0\panel8" UniqueName="rbSndTriggerBeep" Text="Beep" />
-    <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0\panel8" UniqueName="rbSndTriggerNone" Text="None" />
-    <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0" UniqueName="btnAddTrigger" Text="Add/Edit" />
-    <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0" UniqueName="btnRemoveTrigger" Text="&amp;Remove" />
-    <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0" UniqueName="linkRegex" Text="Regular Expression:" />
     <Control ControlPath="root\tc1" UniqueName="tpPlugins" Text="Plugins" />
     <Control ControlPath="root\tc1\tpPlugins\tcPlugins" UniqueName="tabPage1" Text="Plugin Listing" />
     <Control ControlPath="root\tc1\tpPlugins\tcPlugins\tabPage1\flpPluginButtons" UniqueName="btnGetPlugins" Text="Get Plugins..." />
@@ -468,6 +491,7 @@
     <Control ControlPath="root\tc1\tpPlugins\tcPlugins\tabPage1" UniqueName="groupBox3" Text="Plugin Info" />
     <Control ControlPath="root\tc1\tpPlugins\tcPlugins\tabPage1\panel15" UniqueName="btnAddPluginPanel" Text="Add/Enable Plugin" />
     <Control ControlPath="root\tc1\tpPlugins\tcPlugins\tabPage1\panel15" UniqueName="btnPluginBrowse" Text="Browse..." />
+    <Control ControlPath="root\tc1\tpPlugins\tcPlugins\tabPage1\panel15" UniqueName="lblPluginFileInfo" Text="Browse to select a plugin file..." />
     <Control ControlPath="root\tc1" UniqueName="tpImportExport" Text="Import/Export" />
     <Control ControlPath="root\tc1\tpImportExport\flpIoControls\IO_ImportClip" UniqueName="btnImportClip" Text="Import Clipboard..." />
     <Control ControlPath="root\tc1\tpImportExport\flpIoControls\IO_ImportClip" UniqueName="btnRefreshClipStats" Text="Examine Clipboard" />
@@ -541,7 +565,7 @@
     <Control ControlPath="root\tc1\tpAbout\gbAbout" UniqueName="cbAutoCheck" Text="Auto Version Check" />
     <Control ControlPath="root\tc1\tpAbout\gbAbout" UniqueName="btnCheckVer" Text="Check Version Now" />
     <Control ControlPath="root\tc1\tpAbout\gbAbout" UniqueName="label5" Text="Version:" />
-    <Control ControlPath="root\tc1\tpAbout\gbAbout" UniqueName="linkURL" Text="Main Website" />
+    <Control ControlPath="root\tc1\tpAbout\gbAbout" UniqueName="linkURL" Text="https://advancedcombattracker.com" />
     <Control ControlPath="root\tc1\tpAbout\gbAbout" UniqueName="label4" Text="Made by EQAditu" />
     <Control ControlPath="root\tc1\tpAbout\gbAbout" UniqueName="linkEmail" Text="aditu@advancedcombattracker.com" />
     <Control ControlPath="root\tc1\tpAbout\gbAbout" UniqueName="label7" Text="Visit:" />
