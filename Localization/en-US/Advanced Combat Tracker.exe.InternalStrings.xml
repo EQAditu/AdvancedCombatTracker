@@ -275,11 +275,14 @@
 	<string key="graphCombatant-toolTip" value="+{0} ({1:#,0} sec average)" />
 	<string key="graphEncText-noDataError" value="The table currently has no data to graph..." />
 	<string key="graphEncText-noDataSortingError" value="No rows with compatible data to graph...&#xA;Try sorting the table by another column." />
+	<string key="helpPanel-btnApplyDark" value="This will apply some starting colors to use with pseudo-dark themes.  For best results, restart ACT after applying.  &#xA;&#xA;PS. WinForms will never theme well with what Microsoft offers." />
+	<string key="helpPanel-btnApplyDark2" value="This will apply some starting colors to use with pseudo-dark themes.  For best results, restart ACT after applying.  &#xA;&#xA;PS. WinForms will never theme well with what Microsoft offers." />
 	<string key="helpPanel-btnExportUIBrowser" value="Press this button to start a wizard allowing you to set the EQ2's web browser to ACT's encounter index and optionally extracting a browser UI replacement with a collapsable interface and controls for maximum screen space." />
 	<string key="helpPanel-btnImportFile" value="To import encounters from your logfile, select the start and ending date with the choosers and select the log file to parse." />
 	<string key="helpPanel-btnOdbcDropTables" value="This will perform the DROP command on each table ACT uses.  This will delete all table data and remove the tables from the datasource." />
 	<string key="helpPanel-btnOdbcTestConnection" value="This will attempt to log into the ODBC datasource specified in the Connection String." />
 	<string key="helpPanel-btnOdbcValidateTables" value="This will make sure the ODBC datasource has the required tables and the tables have the required columns.  If anything is missing, ACT will attempt to create or alter the tables.  Success is required to do SQL exporting." />
+	<string key="helpPanel-btnResetAll" value="This will reset all of the colors defined in the sub-pages and will require a restart of ACT." />
 	<string key="helpPanel-btnResetColors" value="Resetting color/font settings will require ACT to be restarted." />
 	<string key="helpPanel-btnResetOdbcHacks" value="This button will delete all ODBC hacks and replace them with a set of known hacks for various datasources, such as MSSQL, MS Access, Postgres..." />
 	<string key="helpPanel-cbAutoLoadLogs" value="ACT should check every few seconds for existing logs to have been updated and switch to those currently used logs.  (It will not check for new files automatically)" />
@@ -514,6 +517,7 @@
 	<string key="messageBoxTitle-getPluginsApplyFail2" value="Error applying plugin" />
 	<string key="messageBoxTitle-getPluginsError1" value="Error retrieving plugin list" />
 	<string key="messageBoxTitle-getPluginsUnknownFile" value="Unknown file type" />
+	<string key="messageBoxTitle-historyDatabase" value="History Database" />
 	<string key="messageBoxTitle-htmlNoFileAccess" value="File Access Denied" />
 	<string key="messageBoxTitle-importAbort" value="Abort?" />
 	<string key="messageBoxTitle-importFail" value="Parse failed" />
