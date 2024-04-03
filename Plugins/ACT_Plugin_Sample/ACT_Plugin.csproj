@@ -31,8 +31,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <StartAction>Program</StartAction>
-    <StartProgram>C:\Program Files (x86)\Advanced Combat Tracker\Advanced Combat Tracker.exe</StartProgram>
-    <StartWorkingDirectory>C:\Program Files (x86)\Advanced Combat Tracker\</StartWorkingDirectory>
+    <StartProgram>$(MSBuildProgramFiles32)\Advanced Combat Tracker\Advanced Combat Tracker.exe</StartProgram>
+    <StartWorkingDirectory>$(MSBuildProgramFiles32)\Advanced Combat Tracker\</StartWorkingDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -52,7 +52,7 @@
   -->
   <ItemGroup>
     <Reference Include="Advanced Combat Tracker">
-      <HintPath>C:\Program Files (x86)\Advanced Combat Tracker\Advanced Combat Tracker.exe</HintPath>
+      <HintPath>$(MSBuildProgramFiles32)\Advanced Combat Tracker\Advanced Combat Tracker.exe</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -66,4 +66,8 @@
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>IF NOT EXIST "$(APPDATA)\Advanced Combat Tracker\Plugins" mkdir "$(APPDATA)\Advanced Combat Tracker\Plugins"
+IF Debug==$(ConfigurationName) copy /Y $(TargetPath) "$(APPDATA)\Advanced Combat Tracker\Plugins"</PostBuildEvent>
+  </PropertyGroup>
 </Project>
