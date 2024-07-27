@@ -12,8 +12,8 @@
     <Control ControlPath="root\panel1" UniqueName="cbLinkToEnc" Text="Realtime Mode" />
     <Control ControlPath="root\panel1" UniqueName="cbRadialDisplay" Text="Show Combatants in a ring" />
     <Control ControlPath="root\panel1" UniqueName="cbOutlineTraces" Text="Outline trace pointers" />
-    <Control ControlPath="root\panel1" UniqueName="label3" Text="Dmg Threshold" />
     <Control ControlPath="root\panel1" UniqueName="label2" Text="s" />
     <Control ControlPath="root\panel1" UniqueName="label1" Text="Shadow" />
     <Control ControlPath="root\panel1" UniqueName="cbPersistantMobs" Text="Inactive mobs persist" />
+    <Control ControlPath="root\panel1" UniqueName="label3" Text="Dmg Threshold K" />
 </ControlText>

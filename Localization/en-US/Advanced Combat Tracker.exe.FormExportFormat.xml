@@ -11,14 +11,10 @@
     <Control ControlPath="root\groupBox1" UniqueName="cbAlliesOnly" Text="Only export allied combatants" />
     <Control ControlPath="root\groupBox1" UniqueName="groupBox6" Text="Allies Formatting" />
     <Control ControlPath="root\groupBox1\groupBox6" UniqueName="btnEditAllyString" Text="Edit Directly" />
-    <Control ControlPath="root\groupBox1\groupBox6" UniqueName="btnShiftRightAllies" Text="-&gt;" />
-    <Control ControlPath="root\groupBox1\groupBox6" UniqueName="btnShiftLeftAllies" Text="&lt;-" />
     <Control ControlPath="root\groupBox1\groupBox6" UniqueName="btnAppendAllies" Text="Append" />
     <Control ControlPath="root\groupBox1\groupBox6" UniqueName="btnRemoveAllies" Text="Remove" />
     <Control ControlPath="root\groupBox1" UniqueName="groupBox5" Text="Per-Combatant Formatting" />
     <Control ControlPath="root\groupBox1\groupBox5" UniqueName="btnEditCombatantString" Text="Edit Directly" />
-    <Control ControlPath="root\groupBox1\groupBox5" UniqueName="btnShiftRight" Text="-&gt;" />
-    <Control ControlPath="root\groupBox1\groupBox5" UniqueName="btnShiftLeft" Text="&lt;-" />
     <Control ControlPath="root\groupBox1\groupBox5" UniqueName="btnAppend" Text="Append" />
     <Control ControlPath="root\groupBox1\groupBox5" UniqueName="btnRemove" Text="Remove" />
 </ControlText>

@@ -307,6 +307,7 @@
 	<string key="helpPanel-cbExportDurationWallTime" value="For text exports such as duration/DURATION, usually the duration is calculated as EndTime-StartTime.  This setting will allow the duration text export to use the LastEstimatedTime of the logfile as the EndTime of the encounter as long as it is in-combat.  When out of combat, it will always use the encounter's EndTime." />
 	<string key="helpPanel-cbExportFilterSpace" value="When checked, the Mini Parse window and clipboard exporting will exclude any combatants with spaces in their names.  This will exclude most mobs such as 'a giant bat' or 'King Drayek', but not 'Anguis' or 'Frostbite'." />
 	<string key="helpPanel-cbExText" value="Combatant summaries for the encounter will be exported to the clipboard after an encounter has ended.  These summaries can be pasted into EQ2 by pressing Ctrl-V, and customized under General Options -&gt; Text Only Formatting -&gt; Clipboard Export Formatting." />
+	<string key="helpPanel-cbFrameBorders" value="This setting will add colored panels to the edge of ACT's window to cover up the permanent gray borders of the tab controls." />
 	<string key="helpPanel-cbGCollectOnClear" value="Enabling this will cause ACT to call GCCollect when clearing the encounters.  Doing this will cause the Clear Encounters button to take longer and has been known to completely freeze ACT until restart.  Only use this if you have problems with ACT never freeing memory over time." />
 	<string key="helpPanel-cbGermanMergeNames" value="If enabled, combatants with grammatical changes such as: ruhiger Wachposten, ruhigen Wachpostens s, ruhigen Wachposten, ruhige Wachposten, ruhigen Wachposten en; will all show up as the same combatant.  (Which ever showed up first in an encounter)" />
 	<string key="helpPanel-cbGExpEnd" value="If 'You gain bonus experience for defeating the encounter!' is seen, the encounter will be considered ended. &#xA;('You convert experience into achievement experience!' twice in a single second will also trigger this.)" />
@@ -315,7 +316,6 @@
 	<string key="helpPanel-cbIdleEnd" value="If no combat actions such as attacking are observed for N number of seconds, the encounter will be considered ended." />
 	<string key="helpPanel-cbIdleTimerEnd" value="A previously defaulted non-option, ACT can internally count seconds of inactivity instead of waiting on a log timestamp with a time sufficiently after the last combat action.  If disabled, ACT will only end encounters based off of timestamps, and if no new log lines are parsed, its possible to never end an encounter *until* a new log timestamp is seen from EQ2.  When enabled, the timer will not strictly end an encounter based off the timer, but two seconds after (in absense of log timestamps)." />
 	<string key="helpPanel-cbKillEnd" value="When an allied combatant kills another, the encounter will be considered ended." />
-	<string key="helpPanel-cbLcdEnabled" value="This will enable ACT's support for the G15 and G19 keyboards, or other devices that use those unified drivers.  For the default applets: button 1 of 4(G15) or Menu button(G19) will change ACT modes.  The next button(G15) or OK button(G19) will usually change sub-modes within that mode, such as switching export formats." />
 	<string key="helpPanel-cbLcdRoute" value="When the ACT Clipboard Sharer is connected, using this option will route all LCD traffic to the G15 LCD on the connected computer's keyboard.  This allows you to run ACT on a different computer than EQ2 and retain all LCD functionality." />
 	<string key="helpPanel-cbLongEncDuration" value="Previously when only using timed encounter ending, heals being cast while the delay was counting down could affect the encounter's total duration, and therefore ExtDPS.  If unchecked, heals after the last combat action will still be recorded up until the encounter is terminated, but will not affect the duration of the encounter." />
 	<string key="helpPanel-cbMiniClickThrough" value="When enabled, mouse actions will not affect the Mini Window.  When transparency is set, this allows you to both see through and click on things behind the window.  Of course you can no longer move or close the window by normal means until click-through is disabled.  NOTE: You may toggle this option by right-clicking the main window 'Show Mini' button." />
@@ -348,6 +348,7 @@
 	<string key="helpPanel-gbOdbcHacks" value="This section contains rules to modify all commands sent to the datasource if the connection string matches the rule.  You may use the Reset button to pre-populate known rules for reference." />
 	<string key="helpPanel-GraphSize" value="This will set the image dimentions of the graph in HTML exporting and EQ2 viewing." />
 	<string key="helpPanel-GraphType" value="Select a graphing method for the main encounter display." />
+	<string key="helpPanel-invertLuminosity" value="These settings will invert the luminosity value of colors that might be defined by plugins, such as main table cell colors.  Perfect grays when inverted will be the same, but you may apply offsets to the inverted value to brighten/darken colors and add/remove color saturation as a whole.  These settings will not change colors explicitly defined above." />
 	<string key="helpPanel-IO_ExportAct" value="This feature will export a compressed binary file which can be later imported by ACT to recreate the encounter.  If you wish to export more than one encounter as a single file, use the Show Checkboxes feature on the Main tab." />
 	<string key="helpPanel-IO_ExportHtml" value="This feature will export the selected encounters into a single static HTML file which is then controlled by JavaScript and CSS." />
 	<string key="helpPanel-IO_ImportAct" value="This feature is specifically for importing *.act files exported by ACT." />
@@ -356,13 +357,9 @@
 	<string key="helpPanel-IO_XmlFile" value="This feature was added by user request.  I don't know of any practical use for it." />
 	<string key="helpPanel-lblExFileLines" value="ACT will only create macro files with up to this many commands.  NOTE: EQ2 has server side filtering to prevent spam in public channels.  No matter what, you cannot exceed 16 chat commands in a public channel within a short amount of time." />
 	<string key="helpPanel-lblExportSound" value="The sound for when ACT creates clipboard exports, macro exports, etc either manually or immediately after combat." />
-	<string key="helpPanel-lblLcdMiniFormat" value="This LCD mode mimics the Mini Window in ACT.  This selector changes the export format displayed and may also be flipped through using the 2nd button of the G15 or OK button of the G19." />
-	<string key="helpPanel-lblPersonalParseFormat" value="This LCD mode will create an export with only your personal data in it, unlike the repeating format of all other combatants." />
 	<string key="helpPanel-lblSplitFile" value="As long as another program has not locked the file, ACT will attempt to rename the file with a date when opening or closing a file. (When over this size)" />
 	<string key="helpPanel-lblWebServerPort" value="The listening port to accept HTTP requests from.  If you use a non-standard port (80), clients must add that port to their URL notation like the following: http://127.0.0.1:80/" />
 	<string key="helpPanel-LogPriority" value="This setting will change the priority of normal log parsing.  All programs have a priority, usually Normal by default, and this priority defines how much CPU time should be given to the current task.  If set to Lowest(Idle), log parsing will only take CPU time not used by other applications.  If EQ2 is running, this will be next to nothing.  Normal priority will give equal amounts of CPU time to ACT and any other task, such as EQ2.&#xA;&#xA;If ACT seems unable to keep up with log parsing tasks while EQ2 is running, you may wish to set this to Above Normal.&#xA;&#xA;For this setting to take effect, you must restart ACT or Close and Reopen the current log." />
-	<string key="helpPanel-Options_LcdColor" value="This section will define the look of the G19 specific applet.  Use the Change Font buttons to change the font/size of the specific modes.  Also be aware that changing the font size may require you to change the vertical spacing to look correct.  You may also change the basic colors of those modes.  The Spell Timer and Graph modes mimic ACT's normal settings for colors." />
-	<string key="helpPanel-Options_LcdMono" value="This section will define the look of the G15 specific applet.  Use the Font button to choose a base font to use for all screens.  To adjust the font size, use the Size Offset numeric selector for that mode.  Also adjust the vertical spacing of each line as you change the font size to meet your needs." />
 	<string key="helpPanel-Options_MiniParse" value="The Mini Parse window is a small text only display of the current encounter.  It may also show a graph if you click the red button in the corner.  To change the included information, create a preset the new export format." />
 	<string key="helpPanel-Options_Odbc" value="This section is for exporting ACT data into SQL datasources.  ACT uses ODBC connectivity in order to connect to these datasources and the local machine must have an ODBC driver installed to communicate to the desired type of datasource." />
 	<string key="helpPanel-Options_SelectiveParsing" value="The purpose of selective parsing is to restrict the data that appears.  The list at the left decides which combatants are used for data/exports." />
@@ -409,11 +406,6 @@
 	<string key="ioImportLog" value="Import a Log File" />
 	<string key="ioOdbc" value="Export to SQL/ODBC" />
 	<string key="ioXmlFile" value="Export to an XML File" />
-	<string key="lcdError-noDevice" value="No device is connected." />
-	<string key="lcdModeName-miniWindow" value="Mini Window" />
-	<string key="lcdModeName-personalStats" value="Personal Stats" />
-	<string key="lcdModeName-sortBars" value="Sort Bars" />
-	<string key="lcdModeName-spellTimers" value="Spell Timers" />
 	<!--mergedEncounterTerm-all -> The localized term for the merged All encounter at the top of zone breakdowns-->
 	<string key="mergedEncounterTerm-all" value="All" />
 	<string key="messageBox-avoidanceCopyDetail" value="&#xA;&#xA;Do you wish to copy this to the windows clipboard?" />
@@ -453,6 +445,7 @@
 	<string key="messageBox-sortingColumnError" value="Select a column entry to sort by." />
 	<string key="messageBoxText-abilityRedirectError" value="Please fill in both the Ability and Into fields and select an ability type." />
 	<string key="messageBoxText-addCalcTimer" value="The lowest calculated recast has been sent to the spell timer options.  Do you wish to add/replace this timer now?" />
+	<string key="messageBoxText-AlreadyLoadedAssembly" value="This file is already loaded into memory.  You should restart ACT before proceeding." />
 	<string key="messageBoxText-colorRestart" value="You must restart ACT to revert these color changes." />
 	<string key="messageBoxText-combatantRenameError" value="Please fill in both the Before and After fields." />
 	<string key="messageBoxText-ctBenchComplete1" value="The baseline benchmark did not consume enough time to be useful.  Please select another encounter that has more log lines available." />
@@ -569,7 +562,9 @@
 	<!--messageBox-xmlSyntaxError -> The XML file was not parsable-->
 	<string key="messageBox-xmlSyntaxError" value="The XML settings file may be corrupt or unusable.  Loading defaults where applicable.&#xA;{0}" />
 	<string key="notifText-clipboardReadFail" value="Could not get text from the clipboard..." />
-	<string key="notifText-unknownAssembly" value="The following assemblies were not recognized.  If they are plugins or from plugins, they should be deleted or moved to another folder to avoid &quot;wrong version&quot; load issues.&#xD;&#xA;&#xD;&#xA;{0}" />
+	<string key="notifText-oldSslError" value="This version of Windows cannot create a secure channel to download plugins/updates.  You will need to download this file manually.&#xA;&#xA;Would you like to open your default browser to the file download?" />
+	<string key="notifText-unknownAssembly" value="The following assemblies were not recognized.  If they are plugins or from plugins, they should be deleted or moved to another folder to avoid &quot;wrong version&quot; load issues.&#xA;&#xA;{0}" />
+	<string key="notifText-UnzipError" value="The following file could not be extracted: {0}" />
 	<string key="notifText-xmlShareAdded" value="A ({0}) from ({1}) has been added to ACT." />
 	<string key="notifText-xmlShareDetected" value="A ({0}) from ({1}) has been detected in the log file.&#xA;&#xA;Would you like to import this to ACT?&#xA;&#xA;&#xA;&#xA;&#xA;[Also in Options -&gt; Configuration Import/Export -&gt; XML Share Snippets]" />
 	<string key="notifText-xmlSnippetError" value="There was an unexpected error importing this XML snippet.&#xA;&#xA;{0}" />
@@ -577,7 +572,9 @@
 	<string key="notifText-xmlSnippetNotHandled" value="The XML Snippet was not marked as handled.  Does this share type require a plugin?" />
 	<string key="notifTitle-clipboardReadFail" value="Clipboard Error" />
 	<string key="notifTitle-imageSaveException" value="Could not save image." />
+	<string key="notifTitle-oldSslError" value="Unable to Download" />
 	<string key="notifTitle-unknownAssembly" value="Unknown assemblies in ACT's folder.  (Click Show to open folder)" />
+	<string key="notifTitle-UnzipError" value="Unzip error" />
 	<string key="notifTitle-webserverError" value="Webserver error" />
 	<string key="notifTitle-webserverException" value="Webserver closed" />
 	<string key="notifTitle-xmlShareAdded" value="ACT XML Share" />
@@ -596,9 +593,6 @@
 	<string key="opFileHTML" value="HTML File Generation" />
 	<string key="opGraphing" value="Graphing" />
 	<string key="opImportExport" value="Configuration Import/Export" />
-	<string key="opLcdColor" value="Color LCD Options" />
-	<string key="opLcdGeneral" value="LCD Display Options" />
-	<string key="opLcdMono" value="Monochrome LCD Options" />
 	<string key="opMainTable" value="Main Table/Encounters" />
 	<string key="opMainTableGen" value="General" />
 	<string key="opMiniParse" value="Mini Parse Window" />
@@ -652,7 +646,6 @@
 	<string key="trayText-eventExceptions2" value="{0} [{1} time(s)]" />
 	<string key="trayText-findZoneBusy" value="Finding the zone name in the log file appears to be taking a long time.  Do you wish to skip scanning?&#xA;&#xA;{0} {1:0,0} bytes" />
 	<string key="trayText-globalMutex" value="There is already another running copy of ACT.  You should close ALL running copies and restart ACT.&#xA;&#xA;You may disable this warning by adding &#xA;-skipmutex to the commandline parameters.  You may block new instances by adding -onlyone." />
-	<string key="trayText-lowDotNet" value="Your detected .NET Framework version is {0}.&#xA;&#xA;You will need to install v4.6 of the .NET Framework or greater in order for most Internet downloads/updates to work." />
 	<string key="trayText-parsingBusy" value="Log line parsing has been behind for 10 seconds.  A plugin subscribed to BeforeLogLine/OnLogLine may be processing synchronously and taking too long." />
 	<string key="trayText-restartACT" value="Restarting ACT is required to complete changes. &#xA;&#xA;{0}" />
 	<string key="trayText-xmlPrefErrorCount" value="There were {0} errors encountered while loading settings.&#xA;If you just changed ACT versions, these errors may be a one-time result of ACT settings changing names/locations." />
@@ -660,7 +653,6 @@
 	<string key="trayTitle-eventUnhandledException" value="Event Handler Unhandled Exceptions" />
 	<string key="trayTitle-findZoneBusy" value="Scanning Log File" />
 	<string key="trayTitle-globalMutex" value="Multiple Instances" />
-	<string key="trayTitle-lowDotNet" value="Insufficient .NET Framework" />
 	<string key="trayTitle-parsingBusy" value="Log Parsing lagging behind" />
 	<string key="trayTitle-restartAct" value="ACT Restart Requested" />
 	<string key="trayTitle-unhandledException" value="Unhandled Exception in ACT" />
