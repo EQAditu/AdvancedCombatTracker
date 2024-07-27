@@ -5,6 +5,8 @@
     <Control ControlPath="root\groupBox2\tableLayoutPanel1" UniqueName="label1" Text="Range Start" />
     <Control ControlPath="root\groupBox2\tableLayoutPanel1" UniqueName="label2" Text="Range End" />
     <Control ControlPath="root\groupBox2\tableLayoutPanel1" UniqueName="label3" Text="Time Codes (Copy/Paste to/from other windows)" />
+    <Control ControlPath="root\groupBox2\tableLayoutPanel1" UniqueName="btnPasteCodes" Text="Paste" />
+    <Control ControlPath="root\groupBox2\tableLayoutPanel1" UniqueName="btnCopyCodes" Text="Copy" />
     <Control ControlPath="root" UniqueName="groupBox1" Text="Slide Time Ranges" />
     <Control ControlPath="root\groupBox1" UniqueName="label5" Text="End" />
     <Control ControlPath="root\groupBox1" UniqueName="label4" Text="Start" />

@@ -6,7 +6,7 @@ using System.Reflection;
 
 [assembly: AssemblyTitle("ActLocalization-InternalStrings")]
 [assembly: AssemblyDescription("A sample of an ACT plugin that changes localization strings.")]
-[assembly: AssemblyVersion("280.0.0.0")]
+[assembly: AssemblyVersion("281.0.0.0")]
 
 namespace ActLocalization
 {
@@ -224,6 +224,7 @@ namespace ActLocalization
 			TryEditLocalization("helpPanel-cbExportDurationWallTime", "For text exports such as duration/DURATION, usually the duration is calculated as EndTime-StartTime.  This setting will allow the duration text export to use the LastEstimatedTime of the logfile as the EndTime of the encounter as long as it is in-combat.  When out of combat, it will always use the encounter's EndTime."); // 
 			TryEditLocalization("helpPanel-cbExportFilterSpace", "When checked, the Mini Parse window and clipboard exporting will exclude any combatants with spaces in their names.  This will exclude most mobs such as 'a giant bat' or 'King Drayek', but not 'Anguis' or 'Frostbite'."); // 
 			TryEditLocalization("helpPanel-cbExText", "Combatant summaries for the encounter will be exported to the clipboard after an encounter has ended.  These summaries can be pasted into EQ2 by pressing Ctrl-V, and customized under General Options -> Text Only Formatting -> Clipboard Export Formatting."); // 
+			TryEditLocalization("helpPanel-cbFrameBorders", "This setting will add colored panels to the edge of ACT's window to cover up the permanent gray borders of the tab controls."); // 
 			TryEditLocalization("helpPanel-cbGCollectOnClear", "Enabling this will cause ACT to call GCCollect when clearing the encounters.  Doing this will cause the Clear Encounters button to take longer and has been known to completely freeze ACT until restart.  Only use this if you have problems with ACT never freeing memory over time."); // 
 			TryEditLocalization("helpPanel-cbGermanMergeNames", "If enabled, combatants with grammatical changes such as: ruhiger Wachposten, ruhigen Wachpostens s, ruhigen Wachposten, ruhige Wachposten, ruhigen Wachposten en; will all show up as the same combatant.  (Which ever showed up first in an encounter)"); // 
 			TryEditLocalization("helpPanel-cbGExpEnd", "If 'You gain bonus experience for defeating the encounter!' is seen, the encounter will be considered ended. \n('You convert experience into achievement experience!' twice in a single second will also trigger this.)"); // 
@@ -232,7 +233,6 @@ namespace ActLocalization
 			TryEditLocalization("helpPanel-cbIdleEnd", "If no combat actions such as attacking are observed for N number of seconds, the encounter will be considered ended."); // 
 			TryEditLocalization("helpPanel-cbIdleTimerEnd", "A previously defaulted non-option, ACT can internally count seconds of inactivity instead of waiting on a log timestamp with a time sufficiently after the last combat action.  If disabled, ACT will only end encounters based off of timestamps, and if no new log lines are parsed, its possible to never end an encounter *until* a new log timestamp is seen from EQ2.  When enabled, the timer will not strictly end an encounter based off the timer, but two seconds after (in absense of log timestamps)."); // 
 			TryEditLocalization("helpPanel-cbKillEnd", "When an allied combatant kills another, the encounter will be considered ended."); // 
-			TryEditLocalization("helpPanel-cbLcdEnabled", "This will enable ACT's support for the G15 and G19 keyboards, or other devices that use those unified drivers.  For the default applets: button 1 of 4(G15) or Menu button(G19) will change ACT modes.  The next button(G15) or OK button(G19) will usually change sub-modes within that mode, such as switching export formats."); // 
 			TryEditLocalization("helpPanel-cbLcdRoute", "When the ACT Clipboard Sharer is connected, using this option will route all LCD traffic to the G15 LCD on the connected computer's keyboard.  This allows you to run ACT on a different computer than EQ2 and retain all LCD functionality."); // 
 			TryEditLocalization("helpPanel-cbLongEncDuration", "Previously when only using timed encounter ending, heals being cast while the delay was counting down could affect the encounter's total duration, and therefore ExtDPS.  If unchecked, heals after the last combat action will still be recorded up until the encounter is terminated, but will not affect the duration of the encounter."); // 
 			TryEditLocalization("helpPanel-cbMiniClickThrough", "When enabled, mouse actions will not affect the Mini Window.  When transparency is set, this allows you to both see through and click on things behind the window.  Of course you can no longer move or close the window by normal means until click-through is disabled.  NOTE: You may toggle this option by right-clicking the main window 'Show Mini' button."); // 
@@ -265,6 +265,7 @@ namespace ActLocalization
 			TryEditLocalization("helpPanel-gbOdbcHacks", "This section contains rules to modify all commands sent to the datasource if the connection string matches the rule.  You may use the Reset button to pre-populate known rules for reference."); // 
 			TryEditLocalization("helpPanel-GraphSize", "This will set the image dimentions of the graph in HTML exporting and EQ2 viewing."); // 
 			TryEditLocalization("helpPanel-GraphType", "Select a graphing method for the main encounter display."); // 
+			TryEditLocalization("helpPanel-invertLuminosity", "These settings will invert the luminosity value of colors that might be defined by plugins, such as main table cell colors.  Perfect grays when inverted will be the same, but you may apply offsets to the inverted value to brighten/darken colors and add/remove color saturation as a whole.  These settings will not change colors explicitly defined above."); // 
 			TryEditLocalization("helpPanel-IO_ExportAct", "This feature will export a compressed binary file which can be later imported by ACT to recreate the encounter.  If you wish to export more than one encounter as a single file, use the Show Checkboxes feature on the Main tab."); // 
 			TryEditLocalization("helpPanel-IO_ExportHtml", "This feature will export the selected encounters into a single static HTML file which is then controlled by JavaScript and CSS."); // 
 			TryEditLocalization("helpPanel-IO_ImportAct", "This feature is specifically for importing *.act files exported by ACT."); // 
@@ -273,13 +274,9 @@ namespace ActLocalization
 			TryEditLocalization("helpPanel-IO_XmlFile", "This feature was added by user request.  I don't know of any practical use for it."); // 
 			TryEditLocalization("helpPanel-lblExFileLines", "ACT will only create macro files with up to this many commands.  NOTE: EQ2 has server side filtering to prevent spam in public channels.  No matter what, you cannot exceed 16 chat commands in a public channel within a short amount of time."); // 
 			TryEditLocalization("helpPanel-lblExportSound", "The sound for when ACT creates clipboard exports, macro exports, etc either manually or immediately after combat."); // 
-			TryEditLocalization("helpPanel-lblLcdMiniFormat", "This LCD mode mimics the Mini Window in ACT.  This selector changes the export format displayed and may also be flipped through using the 2nd button of the G15 or OK button of the G19."); // 
-			TryEditLocalization("helpPanel-lblPersonalParseFormat", "This LCD mode will create an export with only your personal data in it, unlike the repeating format of all other combatants."); // 
 			TryEditLocalization("helpPanel-lblSplitFile", "As long as another program has not locked the file, ACT will attempt to rename the file with a date when opening or closing a file. (When over this size)"); // 
 			TryEditLocalization("helpPanel-lblWebServerPort", "The listening port to accept HTTP requests from.  If you use a non-standard port (80), clients must add that port to their URL notation like the following: http://127.0.0.1:80/"); // 
 			TryEditLocalization("helpPanel-LogPriority", "This setting will change the priority of normal log parsing.  All programs have a priority, usually Normal by default, and this priority defines how much CPU time should be given to the current task.  If set to Lowest(Idle), log parsing will only take CPU time not used by other applications.  If EQ2 is running, this will be next to nothing.  Normal priority will give equal amounts of CPU time to ACT and any other task, such as EQ2.\n\nIf ACT seems unable to keep up with log parsing tasks while EQ2 is running, you may wish to set this to Above Normal.\n\nFor this setting to take effect, you must restart ACT or Close and Reopen the current log."); // 
-			TryEditLocalization("helpPanel-Options_LcdColor", "This section will define the look of the G19 specific applet.  Use the Change Font buttons to change the font/size of the specific modes.  Also be aware that changing the font size may require you to change the vertical spacing to look correct.  You may also change the basic colors of those modes.  The Spell Timer and Graph modes mimic ACT's normal settings for colors."); // 
-			TryEditLocalization("helpPanel-Options_LcdMono", "This section will define the look of the G15 specific applet.  Use the Font button to choose a base font to use for all screens.  To adjust the font size, use the Size Offset numeric selector for that mode.  Also adjust the vertical spacing of each line as you change the font size to meet your needs."); // 
 			TryEditLocalization("helpPanel-Options_MiniParse", "The Mini Parse window is a small text only display of the current encounter.  It may also show a graph if you click the red button in the corner.  To change the included information, create a preset the new export format."); // 
 			TryEditLocalization("helpPanel-Options_Odbc", "This section is for exporting ACT data into SQL datasources.  ACT uses ODBC connectivity in order to connect to these datasources and the local machine must have an ODBC driver installed to communicate to the desired type of datasource."); // 
 			TryEditLocalization("helpPanel-Options_SelectiveParsing", "The purpose of selective parsing is to restrict the data that appears.  The list at the left decides which combatants are used for data/exports."); // 
@@ -325,11 +322,6 @@ namespace ActLocalization
 			TryEditLocalization("ioImportLog", "Import a Log File"); // 
 			TryEditLocalization("ioOdbc", "Export to SQL/ODBC"); // 
 			TryEditLocalization("ioXmlFile", "Export to an XML File"); // 
-			TryEditLocalization("lcdError-noDevice", "No device is connected."); // 
-			TryEditLocalization("lcdModeName-miniWindow", "Mini Window"); // 
-			TryEditLocalization("lcdModeName-personalStats", "Personal Stats"); // 
-			TryEditLocalization("lcdModeName-sortBars", "Sort Bars"); // 
-			TryEditLocalization("lcdModeName-spellTimers", "Spell Timers"); // 
 			TryEditLocalization("mergedEncounterTerm-all", "All"); // The localized term for the merged All encounter at the top of zone breakdowns
 			TryEditLocalization("messageBox-avoidanceCopyDetail", "\n\nDo you wish to copy this to the windows clipboard?"); // 
 			TryEditLocalization("messageBox-clipboardNoText", "The clipboard cannot be converted to plain text data."); // 
@@ -367,6 +359,7 @@ namespace ActLocalization
 			TryEditLocalization("messageBox-sortingColumnError", "Select a column entry to sort by."); // 
 			TryEditLocalization("messageBoxText-abilityRedirectError", "Please fill in both the Ability and Into fields and select an ability type."); // 
 			TryEditLocalization("messageBoxText-addCalcTimer", "The lowest calculated recast has been sent to the spell timer options.  Do you wish to add/replace this timer now?"); // 
+			TryEditLocalization("messageBoxText-AlreadyLoadedAssembly", "This file is already loaded into memory.  You should restart ACT before proceeding."); // 
 			TryEditLocalization("messageBoxText-colorRestart", "You must restart ACT to revert these color changes."); // 
 			TryEditLocalization("messageBoxText-combatantRenameError", "Please fill in both the Before and After fields."); // 
 			TryEditLocalization("messageBoxText-ctBenchComplete1", "The baseline benchmark did not consume enough time to be useful.  Please select another encounter that has more log lines available."); // 
@@ -480,7 +473,9 @@ namespace ActLocalization
 			TryEditLocalization("messageBox-xmlReadError", "Error while parsing XML settings: Line #{0} ({1})\n{2}\n\n Attempting default setting"); // A non-syntax error when reading XML setting files
 			TryEditLocalization("messageBox-xmlSyntaxError", "The XML settings file may be corrupt or unusable.  Loading defaults where applicable.\n{0}"); // The XML file was not parsable
 			TryEditLocalization("notifText-clipboardReadFail", "Could not get text from the clipboard..."); // 
-			TryEditLocalization("notifText-unknownAssembly", "The following assemblies were not recognized.  If they are plugins or from plugins, they should be deleted or moved to another folder to avoid \"wrong version\" load issues.\r\n\r\n{0}"); // 
+			TryEditLocalization("notifText-oldSslError", "This version of Windows cannot create a secure channel to download plugins/updates.  You will need to download this file manually.\n\nWould you like to open your default browser to the file download?"); // 
+			TryEditLocalization("notifText-unknownAssembly", "The following assemblies were not recognized.  If they are plugins or from plugins, they should be deleted or moved to another folder to avoid \"wrong version\" load issues.\n\n{0}"); // 
+			TryEditLocalization("notifText-UnzipError", "The following file could not be extracted: {0}"); // 
 			TryEditLocalization("notifText-xmlShareAdded", "A ({0}) from ({1}) has been added to ACT."); // 
 			TryEditLocalization("notifText-xmlShareDetected", "A ({0}) from ({1}) has been detected in the log file.\n\nWould you like to import this to ACT?\n\n\n\n\n[Also in Options -> Configuration Import/Export -> XML Share Snippets]"); // 
 			TryEditLocalization("notifText-xmlSnippetError", "There was an unexpected error importing this XML snippet.\n\n{0}"); // 
@@ -488,7 +483,9 @@ namespace ActLocalization
 			TryEditLocalization("notifText-xmlSnippetNotHandled", "The XML Snippet was not marked as handled.  Does this share type require a plugin?"); // 
 			TryEditLocalization("notifTitle-clipboardReadFail", "Clipboard Error"); // 
 			TryEditLocalization("notifTitle-imageSaveException", "Could not save image."); // 
+			TryEditLocalization("notifTitle-oldSslError", "Unable to Download"); // 
 			TryEditLocalization("notifTitle-unknownAssembly", "Unknown assemblies in ACT's folder.  (Click Show to open folder)"); // 
+			TryEditLocalization("notifTitle-UnzipError", "Unzip error"); // 
 			TryEditLocalization("notifTitle-webserverError", "Webserver error"); // 
 			TryEditLocalization("notifTitle-webserverException", "Webserver closed"); // 
 			TryEditLocalization("notifTitle-xmlShareAdded", "ACT XML Share"); // 
@@ -507,9 +504,6 @@ namespace ActLocalization
 			TryEditLocalization("opFileHTML", "HTML File Generation"); // 
 			TryEditLocalization("opGraphing", "Graphing"); // 
 			TryEditLocalization("opImportExport", "Configuration Import/Export"); // 
-			TryEditLocalization("opLcdColor", "Color LCD Options"); // 
-			TryEditLocalization("opLcdGeneral", "LCD Display Options"); // 
-			TryEditLocalization("opLcdMono", "Monochrome LCD Options"); // 
 			TryEditLocalization("opMainTable", "Main Table/Encounters"); // 
 			TryEditLocalization("opMainTableGen", "General"); // 
 			TryEditLocalization("opMiniParse", "Mini Parse Window"); // 
@@ -560,7 +554,6 @@ namespace ActLocalization
 			TryEditLocalization("trayText-eventExceptions2", "{0} [{1} time(s)]"); // 
 			TryEditLocalization("trayText-findZoneBusy", "Finding the zone name in the log file appears to be taking a long time.  Do you wish to skip scanning?\n\n{0} {1:0,0} bytes"); // 
 			TryEditLocalization("trayText-globalMutex", "There is already another running copy of ACT.  You should close ALL running copies and restart ACT.\n\nYou may disable this warning by adding \n-skipmutex to the commandline parameters.  You may block new instances by adding -onlyone."); // 
-			TryEditLocalization("trayText-lowDotNet", "Your detected .NET Framework version is {0}.\n\nYou will need to install v4.6 of the .NET Framework or greater in order for most Internet downloads/updates to work."); // 
 			TryEditLocalization("trayText-parsingBusy", "Log line parsing has been behind for 10 seconds.  A plugin subscribed to BeforeLogLine/OnLogLine may be processing synchronously and taking too long."); // 
 			TryEditLocalization("trayText-restartACT", "Restarting ACT is required to complete changes. \n\n{0}"); // 
 			TryEditLocalization("trayText-xmlPrefErrorCount", "There were {0} errors encountered while loading settings.\nIf you just changed ACT versions, these errors may be a one-time result of ACT settings changing names/locations."); // 
@@ -568,7 +561,6 @@ namespace ActLocalization
 			TryEditLocalization("trayTitle-eventUnhandledException", "Event Handler Unhandled Exceptions"); // 
 			TryEditLocalization("trayTitle-findZoneBusy", "Scanning Log File"); // 
 			TryEditLocalization("trayTitle-globalMutex", "Multiple Instances"); // 
-			TryEditLocalization("trayTitle-lowDotNet", "Insufficient .NET Framework"); // 
 			TryEditLocalization("trayTitle-parsingBusy", "Log Parsing lagging behind"); // 
 			TryEditLocalization("trayTitle-restartAct", "ACT Restart Requested"); // 
 			TryEditLocalization("trayTitle-unhandledException", "Unhandled Exception in ACT"); // 

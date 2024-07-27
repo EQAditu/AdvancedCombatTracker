@@ -32,11 +32,8 @@
     <Control ControlPath="root\groupBox1" UniqueName="cbTableZone" Text="Zone View Options" />
     <Control ControlPath="root\groupBox1" UniqueName="cbEncCulling" Text="Encounter Culling" />
     <Control ControlPath="root\groupBox1" UniqueName="cbTableGeneral" Text="General" />
-    <Control ControlPath="root\groupBox1" UniqueName="cbLcdMono" Text="Monochrome LCD Options" />
-    <Control ControlPath="root\groupBox1" UniqueName="cbLcdMisc" Text="LCD Display Options" />
     <Control ControlPath="root\groupBox1" UniqueName="cbXmlSubs" Text="XML Config Subscriptions" />
     <Control ControlPath="root\groupBox1" UniqueName="checkBox9" Text="Main Table/Encounters" />
-    <Control ControlPath="root\groupBox1" UniqueName="cbLcdColor" Text="Color LCD Options" />
     <Control ControlPath="root\groupBox1" UniqueName="checkBox5" Text="Configuration Import/Export" />
     <Control ControlPath="root\groupBox1" UniqueName="cbXmlSnippets" Text="XML Share Snippets" />
     <Control ControlPath="root\groupBox1" UniqueName="cbSoundSettings" Text="Sound Settings" />

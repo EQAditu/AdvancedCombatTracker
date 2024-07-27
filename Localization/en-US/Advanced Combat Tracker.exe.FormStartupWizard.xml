@@ -9,7 +9,6 @@
     <Control ControlPath="root\tabControl1\tabPage4" UniqueName="label8" Text="Make certain that you select the proper plugin for the game you are playing.  (Marked in bold red)" />
     <Control ControlPath="root\tabControl1\tabPage4" UniqueName="label7" Text="ACT by itself does not have any capability to parse game log files.  You must use an external plugin to parse log files from different games.  Browse the drop-down list and select a plugin to enable with the associated button. Do not enable more than one parsing plugin at a time." />
     <Control ControlPath="root\tabControl1\tabPage4" UniqueName="btnUsePlugin" Text="Download/Enable Plugin" />
-    <Control ControlPath="root\tabControl1\tabPage4" UniqueName="btnGetPluginTitles" Text="1: Get available parsing plugins" />
     <Control ControlPath="root\tabControl1" UniqueName="tabPage2" Text="Log File" />
     <Control ControlPath="root\tabControl1\tabPage2" UniqueName="label3" Text="Any time you switch characters ACT can detect a different log file being used and switch to it automatically." />
     <Control ControlPath="root\tabControl1\tabPage2" UniqueName="cbAutoLogSwitch" Text="Auto-load recently changed log files." />
