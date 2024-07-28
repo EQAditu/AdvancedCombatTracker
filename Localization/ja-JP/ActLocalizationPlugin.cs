@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 using Advanced_Combat_Tracker;
@@ -7,6 +8,17 @@ namespace ActLocalization
 {
     internal class ActLocalizationPlugin : IActPluginV1
     {
+        void pluginScreenSpaceRemove(TabPage screenSpace)
+        {
+            Action removeControl = new Action(() => { screenSpace.Parent.Controls.Remove(screenSpace); });
+            if (screenSpace.InvokeRequired)
+            {
+                screenSpace.Invoke(removeControl);
+            }
+            else
+                removeControl.Invoke();
+        }
+
         public void InitPlugin(TabPage pluginScreenSpace, Label pluginStatusText)
         {
             ActLocalization.InternalStrings.EditLocalizations();
@@ -57,12 +69,31 @@ namespace ActLocalization
                     ActGlobals.oFormXmlSettingsIO.ImportControlTextXML(s);
             }
 
-            pluginStatusText.Text = "Localization Complete";
-            pluginScreenSpace.Parent.Controls.Remove(pluginScreenSpace);
+            ChangeLblStatus(pluginStatusText, "Localization Complete");
+            pluginScreenSpaceRemove(pluginScreenSpace);
         }
 
         public void DeInitPlugin()
         {
+        }
+
+        void ChangeLblStatus(Label label, String status)
+        {
+
+            switch (label.InvokeRequired)
+            {
+                case true:
+                    label.Invoke(new Action(() =>
+                    {
+                        label.Text = status;
+                    }));
+                    break;
+                case false:
+                    label.Text = status;
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
