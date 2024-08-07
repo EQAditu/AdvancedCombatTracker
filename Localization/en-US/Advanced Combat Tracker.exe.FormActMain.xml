@@ -431,8 +431,8 @@
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_DataCorrectionRedirect\tableLayoutPanel1" UniqueName="label96" Text="Abilty" />
     <Control ControlPath="root\tc1\tpOptions\tableLayoutPanel12" UniqueName="btnOptionSearchClear" Text="Clear" />
     <Control ControlPath="root\tc1" UniqueName="tpTriggers" Text="Custom Triggers" />
-    <Control ControlPath="root\tc1\tpTriggers" UniqueName="btnOpenCtBenchmark" Text="Benchmark CTs..." />
     <Control ControlPath="root\tc1\tpTriggers\tcTriggers" UniqueName="tabPage0" Text="Triggers" />
+    <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0" UniqueName="btnOpenCtBenchmark" Text="Benchmark CTs..." />
     <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0\tableLayoutPanel2" UniqueName="btnRemoveTrigger" Text="&amp;Remove" />
     <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0\tableLayoutPanel2" UniqueName="btnAddTrigger" Text="Add/Edit" />
     <Control ControlPath="root\tc1\tpTriggers\tcTriggers\tabPage0\tableLayoutPanel2" UniqueName="btnSndTriggerBrowse" Text="..." />

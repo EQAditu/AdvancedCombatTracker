@@ -6,7 +6,7 @@ using System.Reflection;
 
 [assembly: AssemblyTitle("ActLocalization-InternalStrings")]
 [assembly: AssemblyDescription("A sample of an ACT plugin that changes localization strings.")]
-[assembly: AssemblyVersion("281.0.0.0")]
+[assembly: AssemblyVersion("284.0.0.0")]
 
 namespace ActLocalization
 {
@@ -377,6 +377,7 @@ namespace ActLocalization
 			TryEditLocalization("messageBoxText-getPluginsApplyFail", "The downloaded file did not contain a plugin that could be loaded."); // 
 			TryEditLocalization("messageBoxText-getPluginsUnknownFile", "The downloaded file was not of the expected type for a plugin."); // 
 			TryEditLocalization("messageBoxText-importAbort", "Do you wish to abort the import process?"); // 
+			TryEditLocalization("messageBoxText-noPluginPath", "The plugin file \"{0}\" cannot be found.  Did you mean to use the Get Plugins dialog?"); // 
 			TryEditLocalization("messageBoxText-pluginInternetBlocked", "{0}\n\n---\n\nSuggestion: The plugin ({1}) may be blocked from loading because it is marked as from the Internet.  Please right-click the file, select Properties and Unblock the file.\n\nIf this plugin came with any other files, unblock them as well."); // 
 			TryEditLocalization("messageBoxText-pluginWizParserAdded", "The parsing plugin has been added and started."); // 
 			TryEditLocalization("messageBoxText-restartAct", "You must restart ACT to apply changes."); // 
@@ -432,6 +433,7 @@ namespace ActLocalization
 			TryEditLocalization("messageBoxTitle-loadError", "Load Error"); // 
 			TryEditLocalization("messageBoxTitle-localSecurityPolicy", "Security Exception"); // 
 			TryEditLocalization("messageBoxTitle-noFileFound", "File Not Found"); // 
+			TryEditLocalization("messageBoxTitle-noPluginPath", "Invalid Browse Path"); // 
 			TryEditLocalization("messageBoxTitle-odbcDropTables", "ACT ODBC database removal"); // 
 			TryEditLocalization("messageBoxTitle-odbcHackError", "Could not add OdbcHack"); // 
 			TryEditLocalization("messageBoxTitle-odbcQueryError", "ODBC Connection Query Failed"); // 
@@ -476,6 +478,7 @@ namespace ActLocalization
 			TryEditLocalization("notifText-oldSslError", "This version of Windows cannot create a secure channel to download plugins/updates.  You will need to download this file manually.\n\nWould you like to open your default browser to the file download?"); // 
 			TryEditLocalization("notifText-unknownAssembly", "The following assemblies were not recognized.  If they are plugins or from plugins, they should be deleted or moved to another folder to avoid \"wrong version\" load issues.\n\n{0}"); // 
 			TryEditLocalization("notifText-UnzipError", "The following file could not be extracted: {0}"); // 
+			TryEditLocalization("notifText-windowOutOfBounds", "{0}({1}) was found out of bounds of all displays and could not be restored to its old location/size."); // 
 			TryEditLocalization("notifText-xmlShareAdded", "A ({0}) from ({1}) has been added to ACT."); // 
 			TryEditLocalization("notifText-xmlShareDetected", "A ({0}) from ({1}) has been detected in the log file.\n\nWould you like to import this to ACT?\n\n\n\n\n[Also in Options -> Configuration Import/Export -> XML Share Snippets]"); // 
 			TryEditLocalization("notifText-xmlSnippetError", "There was an unexpected error importing this XML snippet.\n\n{0}"); // 
@@ -488,6 +491,7 @@ namespace ActLocalization
 			TryEditLocalization("notifTitle-UnzipError", "Unzip error"); // 
 			TryEditLocalization("notifTitle-webserverError", "Webserver error"); // 
 			TryEditLocalization("notifTitle-webserverException", "Webserver closed"); // 
+			TryEditLocalization("notifTitle-windowOutOfBounds", "Window Out of Bounds"); // 
 			TryEditLocalization("notifTitle-xmlShareAdded", "ACT XML Share"); // 
 			TryEditLocalization("notifTitle-xmlSnippetError", "XML Share error"); // 
 			TryEditLocalization("notifTitle-xmlSnippetIncomplete", "XML Share incomplete"); // 
