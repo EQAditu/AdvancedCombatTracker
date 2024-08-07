@@ -463,6 +463,7 @@
 	<string key="messageBoxText-getPluginsApplyFail" value="The downloaded file did not contain a plugin that could be loaded." />
 	<string key="messageBoxText-getPluginsUnknownFile" value="The downloaded file was not of the expected type for a plugin." />
 	<string key="messageBoxText-importAbort" value="Do you wish to abort the import process?" />
+	<string key="messageBoxText-noPluginPath" value="The plugin file &quot;{0}&quot; cannot be found.  Did you mean to use the Get Plugins dialog?" />
 	<string key="messageBoxText-pluginInternetBlocked" value="{0}&#xA;&#xA;---&#xA;&#xA;Suggestion: The plugin ({1}) may be blocked from loading because it is marked as from the Internet.  Please right-click the file, select Properties and Unblock the file.&#xA;&#xA;If this plugin came with any other files, unblock them as well." />
 	<string key="messageBoxText-pluginWizParserAdded" value="The parsing plugin has been added and started." />
 	<string key="messageBoxText-restartAct" value="You must restart ACT to apply changes." />
@@ -519,6 +520,7 @@
 	<string key="messageBoxTitle-loadError" value="Load Error" />
 	<string key="messageBoxTitle-localSecurityPolicy" value="Security Exception" />
 	<string key="messageBoxTitle-noFileFound" value="File Not Found" />
+	<string key="messageBoxTitle-noPluginPath" value="Invalid Browse Path" />
 	<string key="messageBoxTitle-odbcDropTables" value="ACT ODBC database removal" />
 	<string key="messageBoxTitle-odbcHackError" value="Could not add OdbcHack" />
 	<string key="messageBoxTitle-odbcQueryError" value="ODBC Connection Query Failed" />
@@ -565,6 +567,7 @@
 	<string key="notifText-oldSslError" value="This version of Windows cannot create a secure channel to download plugins/updates.  You will need to download this file manually.&#xA;&#xA;Would you like to open your default browser to the file download?" />
 	<string key="notifText-unknownAssembly" value="The following assemblies were not recognized.  If they are plugins or from plugins, they should be deleted or moved to another folder to avoid &quot;wrong version&quot; load issues.&#xA;&#xA;{0}" />
 	<string key="notifText-UnzipError" value="The following file could not be extracted: {0}" />
+	<string key="notifText-windowOutOfBounds" value="{0}({1}) was found out of bounds of all displays and could not be restored to its old location/size." />
 	<string key="notifText-xmlShareAdded" value="A ({0}) from ({1}) has been added to ACT." />
 	<string key="notifText-xmlShareDetected" value="A ({0}) from ({1}) has been detected in the log file.&#xA;&#xA;Would you like to import this to ACT?&#xA;&#xA;&#xA;&#xA;&#xA;[Also in Options -&gt; Configuration Import/Export -&gt; XML Share Snippets]" />
 	<string key="notifText-xmlSnippetError" value="There was an unexpected error importing this XML snippet.&#xA;&#xA;{0}" />
@@ -577,6 +580,7 @@
 	<string key="notifTitle-UnzipError" value="Unzip error" />
 	<string key="notifTitle-webserverError" value="Webserver error" />
 	<string key="notifTitle-webserverException" value="Webserver closed" />
+	<string key="notifTitle-windowOutOfBounds" value="Window Out of Bounds" />
 	<string key="notifTitle-xmlShareAdded" value="ACT XML Share" />
 	<string key="notifTitle-xmlSnippetError" value="XML Share error" />
 	<string key="notifTitle-xmlSnippetIncomplete" value="XML Share incomplete" />
