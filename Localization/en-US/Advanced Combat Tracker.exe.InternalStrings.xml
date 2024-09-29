@@ -258,7 +258,6 @@
 	<string key="fileDialogFilter-triggerSound" value="Waveform Files (*.wav)|*.wav" />
 	<string key="fileDialogFilter-xml" value="XML File (*.xml)|*.xml" />
 	<string key="fileDialogTitle-actExport" value="Export Encounter to Data File" />
-	<string key="fileDialogTitle-eq2InstallFolder" value="Select your EQ2 installation folder" />
 	<string key="fileDialogTitle-exportHtml" value="Export Encounter to HTML" />
 	<!--fileDialogTitle-importHistoryNoLogMatch -> Date range (to)-->
 	<string key="fileDialogTitle-importHistoryNoLogMatch" value="Open log file containing {0} {1} to {2} {3}" />
@@ -440,8 +439,6 @@
 	<string key="messageBox-pluginInvalid" value="This assembly does not have a class that implements ACT's plugin interface, or scanning the assembly threw an error." />
 	<string key="messageBox-removePlugin" value="Are you sure you wish to remove plugin {0}?" />
 	<string key="messageBox-searchResults" value="Search returned {0} results." />
-	<!--messageBox-selectEq2Path -> ACT unable to find the EQ2 installation-->
-	<string key="messageBox-selectEq2Path" value="Your current EQ2 installation was not detectable.  Please select the folder where EQ2 resides." />
 	<string key="messageBox-sortingColumnError" value="Select a column entry to sort by." />
 	<string key="messageBoxText-abilityRedirectError" value="Please fill in both the Ability and Into fields and select an ability type." />
 	<string key="messageBoxText-addCalcTimer" value="The lowest calculated recast has been sent to the spell timer options.  Do you wish to add/replace this timer now?" />
@@ -453,11 +450,9 @@
 	<string key="messageBoxText-ctBenchNoSelection" value="Please select an encounter in the left-side TreeView." />
 	<string key="messageBoxText-ctBenchSmallSelection" value="Please select an encounter with more than 1000 log line entries." />
 	<string key="messageBoxText-customTriggerDeleteMultiple" value="Really delete {0} custom triggers under '{1}'?" />
-	<string key="messageBoxText-eq2CreateFileError" value="Could not create {0}.&#xA;{1}" />
 	<string key="messageBoxText-exFilePrefixBlank" value="Leaving this blank field is dangerous and will result in macro files that will not function unless the used Clipboard Format properly prefixes channel commands to every line." />
 	<string key="messageBoxText-fatalUnhandledException" value="An unhandled exception has occurred.  ACT may close.&#xA;Press Ctrl-C to copy this MessageBox.&#xA;&#xA;{0}" />
 	<string key="messageBoxText-getPlugins429" value="The remote server returned a 429 status error.&#xA;&#xA;This may mean you have tried to access this resource too many times recently.  Please try again later." />
-	<string key="messageBoxText-getPlugins503" value="The remote server returned a 503 status error.&#xA;&#xA;This may mean you have tried to access this resource too many times recently.  Please try again later." />
 	<string key="messageBoxText-getPluginsApplied" value="The plugin has been added and started." />
 	<string key="messageBoxText-getPluginsAppliedZip" value="From the ZIP, {0} plugin(s) have been added and started." />
 	<string key="messageBoxText-getPluginsApplyFail" value="The downloaded file did not contain a plugin that could be loaded." />
@@ -486,13 +481,11 @@
 	<string key="messageBoxTitle-clipConnectError" value="Clipboard Connection Failed" />
 	<string key="messageBoxTitle-colorRestart" value="Restart required" />
 	<string key="messageBoxTitle-combatantRenameError" value="Invalid Entry" />
-	<string key="messageBoxTitle-complete" value="The operation has completed" />
 	<string key="messageBoxTitle-ctBenchComplete" value="Complete" />
 	<string key="messageBoxTitle-ctBenchInvalid" value="Invalid Selection" />
 	<string key="messageBoxTitle-cullHistory" value="Cull History" />
 	<string key="messageBoxTitle-customTriggerDeleteMultiple" value="Delete multiple triggers?" />
 	<string key="messageBoxTitle-duplicatePlugin" value="Duplicate Plugin" />
-	<string key="messageBoxTitle-eq2CreateFileError" value="Unable to continue" />
 	<string key="messageBoxTitle-eq2FolderWizard" value="Detected EQ2 Folder" />
 	<string key="messageBoxTitle-eq2NotFound" value="Could not confirm folder selection" />
 	<string key="messageBoxTitle-error" value="Error" />
@@ -536,7 +529,6 @@
 	<string key="messageBoxTitle-removePlugin" value="Remove Plugin?" />
 	<string key="messageBoxTitle-restartAct" value="Restart" />
 	<string key="messageBoxTitle-searchResults" value="Search Complete" />
-	<string key="messageBoxTitle-selectEq2Path" value="EQ2 Detection Failed" />
 	<string key="messageBoxTitle-serverStartError" value="Could not start the server" />
 	<string key="messageBoxTitle-sortingColumnError" value="Nothing Selected" />
 	<string key="messageBoxTitle-startupLogError" value="Error loading last log file" />
@@ -554,8 +546,6 @@
 	<string key="messageboxTitle-xmlShareError" value="Error adding XML Share" />
 	<string key="messageBoxTitle-xmlShareError" value="Error parsing XML Share" />
 	<string key="messageBoxTitle-xmlSnippetError" value="Error adding XML Share" />
-	<string key="messageBox-uiExport1" value="Do you wish to set the homepage of EQ2's embedded browser to ACT's encounter index?" />
-	<string key="messageBox-uiExport2" value="Do you wish to replace EQ2's browser window with one that has a collapsable interface and URL bar?" />
 	<string key="messageBox-updateAct" value="This will close the program and start the update.&#xA;Do you wish to continue?" />
 	<string key="messageBox-updateCheckFail" value="Unable to obtain version info from web.&#xA;" />
 	<string key="messageBox-xmlPrefLoadError" value="The XML settings file may be corrupt or unusable.  Consider loading a backup from 'Configuration Import/Export' options." />
@@ -638,18 +628,21 @@
 	<string key="trayButton-ignore" value="Ignore For Now" />
 	<string key="trayButton-ignoreRestart" value="Ignore" />
 	<string key="trayButton-never" value="Never ask again" />
+	<string key="trayButton-no" value="No" />
 	<string key="trayButton-notNow" value="Not now" />
 	<string key="trayButton-ok" value="OK" />
 	<string key="trayButton-openActLog" value="Open error log" />
 	<string key="trayButton-openLogs" value="Open Logs Folder" />
 	<string key="trayButton-restartAct" value="Restart" />
 	<string key="trayButton-skip" value="Skip" />
+	<string key="trayButton-yes" value="Yes" />
 	<string key="trayText-ctBench2" value="Custom Trigger log parsing has been behind for 10 seconds.  You may need to add more Custom Trigger threads in the Options page or optimize your current Custom Triggers to be more effiecient.&#xA;&#xA;Would you like to open the Custom Trigger Benchmark to identify problematic Custom Triggers?" />
 	<string key="trayText-encClearGcCollect" value="{0:0,0} bytes allocated difference" />
 	<string key="trayText-eventExceptions1" value="In the last minute, these plugins caused exceptions in event handlers:&#xA;" />
 	<string key="trayText-eventExceptions2" value="{0} [{1} time(s)]" />
 	<string key="trayText-findZoneBusy" value="Finding the zone name in the log file appears to be taking a long time.  Do you wish to skip scanning?&#xA;&#xA;{0} {1:0,0} bytes" />
 	<string key="trayText-globalMutex" value="There is already another running copy of ACT.  You should close ALL running copies and restart ACT.&#xA;&#xA;You may disable this warning by adding &#xA;-skipmutex to the commandline parameters.  You may block new instances by adding -onlyone." />
+	<string key="trayText-LinuxConfigurationErrors" value="A subset of Linux users cannot make web requests in ACT due to an app.config setting that is considered &quot;unrecognized&quot;.  This configuration helps support HiDPI displays but is otherwise unnecessary.&#xA;&#xA;Would you like to remove this configuration?" />
 	<string key="trayText-parsingBusy" value="Log line parsing has been behind for 10 seconds.  A plugin subscribed to BeforeLogLine/OnLogLine may be processing synchronously and taking too long." />
 	<string key="trayText-restartACT" value="Restarting ACT is required to complete changes. &#xA;&#xA;{0}" />
 	<string key="trayText-xmlPrefErrorCount" value="There were {0} errors encountered while loading settings.&#xA;If you just changed ACT versions, these errors may be a one-time result of ACT settings changing names/locations." />
@@ -657,6 +650,7 @@
 	<string key="trayTitle-eventUnhandledException" value="Event Handler Unhandled Exceptions" />
 	<string key="trayTitle-findZoneBusy" value="Scanning Log File" />
 	<string key="trayTitle-globalMutex" value="Multiple Instances" />
+	<string key="trayTitle-LinuxConfigurationErrors" value="WebRequest exception" />
 	<string key="trayTitle-parsingBusy" value="Log Parsing lagging behind" />
 	<string key="trayTitle-restartAct" value="ACT Restart Requested" />
 	<string key="trayTitle-unhandledException" value="Unhandled Exception in ACT" />
@@ -856,13 +850,6 @@
 	<string key="uiText-customTriggerSearch" value="Search triggered log lines..." />
 	<string key="uiText-customTriggerSearchRegex" value="Search as Regex" />
 	<string key="uiText-customTriggerSearchText" value="Search as Text" />
-	<string key="uiText-eq2BrowserExtracted" value="Extracted eq2ui_mainhud_browser.xml" />
-	<string key="uiText-eq2Folder" value="EQ2 Folder is: {0}" />
-	<!--uiText-eq2Ini -> eq2.ini is a file name-->
-	<string key="uiText-eq2Ini" value="eq2.ini found." />
-	<string key="uiText-eq2UiComplete" value="&#xA;Operation Complete. Type &quot;/browser&quot; in-game to show the web browser." />
-	<string key="uiText-eq2UiFolder" value="UI Folder: {0}\{1}" />
-	<string key="uiText-eq2UiFolder2" value="UI Folder: UI\ACT" />
 	<string key="uiText-exitAct" value="Exiting ACT..." />
 	<string key="ui-textExportDefault" value="[Current Default]" />
 	<string key="uiText-htmlComplete" value="Export to {0} has completed.&#xA;{1} seconds elapsed." />
