@@ -238,6 +238,8 @@ namespace ActLocalization
 			TryEditLocalization("helpPanel-cbMiniColumnAlign", "When enabled, the text export will be aligned into a table where each cell is padded to the length of the longest entry in that column.  The alignment is dependant on the font selected.  It is recommended you use a text formatter such as {NAME10} instead of {name} or that column may have excessive padding."); // 
 			TryEditLocalization("helpPanel-cbMultiDamageIsOne", "When enabled, an attack that has multiple damage types, such as \"300 crushing, 5 poison and 5 disease damage\" will show up as one total attack: 300/5/5 crushing/poison/disease, internally seen as 310.  If disabled, each damage type will show up as an individual swing, IE three attacks: 300 crushing; 5 poison; 5 disease.  Having a single attack show up as multiple will have consequences when calculating ToHit%."); // 
 			TryEditLocalization("helpPanel-cbOnlyGraphAllies", "When checked, simple encounter bar graphs will only show your allies."); // 
+			TryEditLocalization("helpPanel-cbOriginalLoglineCustomTriggers", "When enabled, the log lines passed to Custom Triggers are the original log lines instead of the version modified by plugins or without timestamps."); // 
+			TryEditLocalization("helpPanel-cbOriginalLoglineViewLogs", "When enabled, the log lines appearing in View Logs are the original log lines instead of the version modified by plugins."); // 
 			TryEditLocalization("helpPanel-cbPetIsMaster", "When checked, a pet will not show as its own entry, but as a spell under their master.  When unchecked, the pet is considered a seperate combatant and has its own statistics unrelated to its master.\nThis setting is not retroactive, and will not combine or seperate a pet from its master if the encounter has already taken place.  Only future encounters will be affected by this setting.\n\n\nSince LU19 and <Purpose tags> showing under a pet's name and not in log files, parsers cannot automatically see who a pet belongs to."); // 
 			TryEditLocalization("helpPanel-cbRecalcWardedHits", "If enabled, no-damage hits or reduced damage hits immediately following a ward absorbtion will be increased by the absorbtion amount.  Stoneskin's no-damage hits cannot be recalculated."); // 
 			TryEditLocalization("helpPanel-cbRecordLogs", "When checked, ACT will record all log lines that appear during an encounter.  You may then right click an encounter, select View Logs and view/search through them.  Disabling this option will reduce memory usage by a bit less than 45% when compared to default settings.  Exported ACT files will retain these recorded logs."); // 
@@ -358,7 +360,7 @@ namespace ActLocalization
 			TryEditLocalization("messageBoxText-abilityRedirectError", "Please fill in both the Ability and Into fields and select an ability type."); // 
 			TryEditLocalization("messageBoxText-addCalcTimer", "The lowest calculated recast has been sent to the spell timer options.  Do you wish to add/replace this timer now?"); // 
 			TryEditLocalization("messageBoxText-AlreadyLoadedAssembly", "This file is already loaded into memory.  You should restart ACT before proceeding."); // 
-			TryEditLocalization("messageBoxText-colorRestart", "You must restart ACT to revert these color changes."); // 
+			TryEditLocalization("messageBoxText-colorRestart", "You should restart ACT to finalize these color changes."); // 
 			TryEditLocalization("messageBoxText-combatantRenameError", "Please fill in both the Before and After fields."); // 
 			TryEditLocalization("messageBoxText-ctBenchComplete1", "The baseline benchmark did not consume enough time to be useful.  Please select another encounter that has more log lines available."); // 
 			TryEditLocalization("messageBoxText-ctBenchComplete2", "Benchmarking complete.\n\nIdentify the Custom Triggers that are many times more expensive than the baseline for optimizations.  Alternatively, restrict them to a specific zone if not already done."); // 
@@ -393,7 +395,6 @@ namespace ActLocalization
 			TryEditLocalization("messageBoxTitle-avoidanceCopyDetail", "Per hit average damage avoided: {0}"); // 
 			TryEditLocalization("messageBoxTitle-clipboardNoText", "Clipboard import failed"); // 
 			TryEditLocalization("messageBoxTitle-clipConnectError", "Clipboard Connection Failed"); // 
-			TryEditLocalization("messageBoxTitle-colorRestart", "Restart required"); // 
 			TryEditLocalization("messageBoxTitle-combatantRenameError", "Invalid Entry"); // 
 			TryEditLocalization("messageBoxTitle-ctBenchComplete", "Complete"); // 
 			TryEditLocalization("messageBoxTitle-ctBenchInvalid", "Invalid Selection"); // 

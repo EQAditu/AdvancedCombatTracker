@@ -321,6 +321,8 @@
 	<string key="helpPanel-cbMiniColumnAlign" value="When enabled, the text export will be aligned into a table where each cell is padded to the length of the longest entry in that column.  The alignment is dependant on the font selected.  It is recommended you use a text formatter such as {NAME10} instead of {name} or that column may have excessive padding." />
 	<string key="helpPanel-cbMultiDamageIsOne" value="When enabled, an attack that has multiple damage types, such as &quot;300 crushing, 5 poison and 5 disease damage&quot; will show up as one total attack: 300/5/5 crushing/poison/disease, internally seen as 310.  If disabled, each damage type will show up as an individual swing, IE three attacks: 300 crushing; 5 poison; 5 disease.  Having a single attack show up as multiple will have consequences when calculating ToHit%." />
 	<string key="helpPanel-cbOnlyGraphAllies" value="When checked, simple encounter bar graphs will only show your allies." />
+	<string key="helpPanel-cbOriginalLoglineCustomTriggers" value="When enabled, the log lines passed to Custom Triggers are the original log lines instead of the version modified by plugins or without timestamps." />
+	<string key="helpPanel-cbOriginalLoglineViewLogs" value="When enabled, the log lines appearing in View Logs are the original log lines instead of the version modified by plugins." />
 	<string key="helpPanel-cbPetIsMaster" value="When checked, a pet will not show as its own entry, but as a spell under their master.  When unchecked, the pet is considered a seperate combatant and has its own statistics unrelated to its master.&#xA;This setting is not retroactive, and will not combine or seperate a pet from its master if the encounter has already taken place.  Only future encounters will be affected by this setting.&#xA;&#xA;&#xA;Since LU19 and &lt;Purpose tags&gt; showing under a pet's name and not in log files, parsers cannot automatically see who a pet belongs to." />
 	<string key="helpPanel-cbRecalcWardedHits" value="If enabled, no-damage hits or reduced damage hits immediately following a ward absorbtion will be increased by the absorbtion amount.  Stoneskin's no-damage hits cannot be recalculated." />
 	<string key="helpPanel-cbRecordLogs" value="When checked, ACT will record all log lines that appear during an encounter.  You may then right click an encounter, select View Logs and view/search through them.  Disabling this option will reduce memory usage by a bit less than 45% when compared to default settings.  Exported ACT files will retain these recorded logs." />
@@ -443,7 +445,7 @@
 	<string key="messageBoxText-abilityRedirectError" value="Please fill in both the Ability and Into fields and select an ability type." />
 	<string key="messageBoxText-addCalcTimer" value="The lowest calculated recast has been sent to the spell timer options.  Do you wish to add/replace this timer now?" />
 	<string key="messageBoxText-AlreadyLoadedAssembly" value="This file is already loaded into memory.  You should restart ACT before proceeding." />
-	<string key="messageBoxText-colorRestart" value="You must restart ACT to revert these color changes." />
+	<string key="messageBoxText-colorRestart" value="You should restart ACT to finalize these color changes." />
 	<string key="messageBoxText-combatantRenameError" value="Please fill in both the Before and After fields." />
 	<string key="messageBoxText-ctBenchComplete1" value="The baseline benchmark did not consume enough time to be useful.  Please select another encounter that has more log lines available." />
 	<string key="messageBoxText-ctBenchComplete2" value="Benchmarking complete.&#xA;&#xA;Identify the Custom Triggers that are many times more expensive than the baseline for optimizations.  Alternatively, restrict them to a specific zone if not already done." />
@@ -479,7 +481,6 @@
 	<string key="messageBoxTitle-avoidanceCopyDetail" value="Per hit average damage avoided: {0}" />
 	<string key="messageBoxTitle-clipboardNoText" value="Clipboard import failed" />
 	<string key="messageBoxTitle-clipConnectError" value="Clipboard Connection Failed" />
-	<string key="messageBoxTitle-colorRestart" value="Restart required" />
 	<string key="messageBoxTitle-combatantRenameError" value="Invalid Entry" />
 	<string key="messageBoxTitle-ctBenchComplete" value="Complete" />
 	<string key="messageBoxTitle-ctBenchInvalid" value="Invalid Selection" />

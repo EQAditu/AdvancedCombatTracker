@@ -365,6 +365,8 @@
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorMisc\groupBox1\ccSpellTimerWarnColor" UniqueName="lblText" Text="Spell Timer Warning Color" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorMisc\groupBox1" UniqueName="ccSpellTimerBackColor" Text="Spell Timer Window Back Color" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_ColorMisc\groupBox1\ccSpellTimerBackColor" UniqueName="lblText" Text="Spell Timer Window Back Color" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc" UniqueName="cbOriginalLoglineCustomTriggers" Text="Keep the original logline for Custom Triggers" />
+    <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc" UniqueName="cbOriginalLoglineViewLogs" Text="Keep the original logline for View Logs" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc\tableLayoutPanel5" UniqueName="label1" Text="Custom Trigger parsing may spawn up to this many additional threads: " />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc\tableLayoutPanel4" UniqueName="label69" Text="Process CPU Affinity:" />
     <Control ControlPath="root\tc1\tpOptions\flpOptionControls\Options_Misc\tableLayoutPanel4" UniqueName="btnCpuAffinityApply" Text="Change/View" />
