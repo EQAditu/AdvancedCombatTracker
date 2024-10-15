@@ -464,6 +464,7 @@
 	<string key="messageBoxText-pluginInternetBlocked" value="{0}&#xA;&#xA;---&#xA;&#xA;Suggestion: The plugin ({1}) may be blocked from loading because it is marked as from the Internet.  Please right-click the file, select Properties and Unblock the file.&#xA;&#xA;If this plugin came with any other files, unblock them as well." />
 	<string key="messageBoxText-pluginWizParserAdded" value="The parsing plugin has been added and started." />
 	<string key="messageBoxText-restartAct" value="You must restart ACT to apply changes." />
+	<string key="messageBoxText-spellTimerDeleteMultiple" value="Really delete {0} spell timers under '{1}'?" />
 	<string key="messageBoxText-startupWizEQ2" value="Will ACT be used for EverQuest II?" />
 	<string key="messageBoxText-startupWizFF14" value="Will ACT be used for Final Fantasy XIV?" />
 	<string key="messageBoxText-startupWizManualSelect" value="Please manually select your game log file." />
@@ -532,6 +533,7 @@
 	<string key="messageBoxTitle-searchResults" value="Search Complete" />
 	<string key="messageBoxTitle-serverStartError" value="Could not start the server" />
 	<string key="messageBoxTitle-sortingColumnError" value="Nothing Selected" />
+	<string key="messageBoxTitle-spellTimerDeleteMultiple" value="Delete multiple spell timers?" />
 	<string key="messageBoxTitle-startupLogError" value="Error loading last log file" />
 	<string key="messageBoxTitle-startupWizEQ2" value="EQ2?" />
 	<string key="messageBoxTitle-startupWizFF14" value="FFXIV?" />

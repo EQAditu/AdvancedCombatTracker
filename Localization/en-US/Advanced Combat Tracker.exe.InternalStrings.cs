@@ -379,6 +379,7 @@ namespace ActLocalization
 			TryEditLocalization("messageBoxText-pluginInternetBlocked", "{0}\n\n---\n\nSuggestion: The plugin ({1}) may be blocked from loading because it is marked as from the Internet.  Please right-click the file, select Properties and Unblock the file.\n\nIf this plugin came with any other files, unblock them as well."); // 
 			TryEditLocalization("messageBoxText-pluginWizParserAdded", "The parsing plugin has been added and started."); // 
 			TryEditLocalization("messageBoxText-restartAct", "You must restart ACT to apply changes."); // 
+			TryEditLocalization("messageBoxText-spellTimerDeleteMultiple", "Really delete {0} spell timers under '{1}'?"); // 
 			TryEditLocalization("messageBoxText-startupWizEQ2", "Will ACT be used for EverQuest II?"); // 
 			TryEditLocalization("messageBoxText-startupWizFF14", "Will ACT be used for Final Fantasy XIV?"); // 
 			TryEditLocalization("messageBoxText-startupWizManualSelect", "Please manually select your game log file."); // 
@@ -446,6 +447,7 @@ namespace ActLocalization
 			TryEditLocalization("messageBoxTitle-searchResults", "Search Complete"); // 
 			TryEditLocalization("messageBoxTitle-serverStartError", "Could not start the server"); // 
 			TryEditLocalization("messageBoxTitle-sortingColumnError", "Nothing Selected"); // 
+			TryEditLocalization("messageBoxTitle-spellTimerDeleteMultiple", "Delete multiple spell timers?"); // 
 			TryEditLocalization("messageBoxTitle-startupLogError", "Error loading last log file"); // 
 			TryEditLocalization("messageBoxTitle-startupWizEQ2", "EQ2?"); // 
 			TryEditLocalization("messageBoxTitle-startupWizFF14", "FFXIV?"); // 
