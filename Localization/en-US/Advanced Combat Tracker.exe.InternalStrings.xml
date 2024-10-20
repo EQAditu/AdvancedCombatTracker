@@ -477,6 +477,13 @@
 	<string key="messageBoxText-xmlShareInvalid" value="This feature is for importing XML Share snippets, only.  If you wish to import an XML configuration file, use the Import button in Options -&gt; Configuration Import/Export." />
 	<string key="messageboxText-xmlShareUnknown" value="{0}: No XML Snippet Handler marked the snippet as consumed.  Does this share type require a plugin?" />
 	<string key="messageBoxText-xmlSnippetNotUsed" value="{0}: No XML Snippet Handler marked the snippet as used.  This share type may require a plugin." />
+	<string key="messageBoxText-xmlSubsImportNoUpdates" value="There are no external XML files that need to be updated." />
+	<!--messageBoxText-xmlSubsImportQuestion1 -> {0} is a URL-->
+	<string key="messageBoxText-xmlSubsImportQuestion1" value="{0} -- is outdated.&#xA;&#xA;" />
+	<!--messageBoxText-xmlSubsImportQuestion2 -> {0} is a URL-->
+	<string key="messageBoxText-xmlSubsImportQuestion2" value="Warning: {0} -- is outdated but ignored.&#xA;&#xA;" />
+	<string key="messageBoxText-xmlSubsImportQuestion3" value="Import these now?" />
+	<string key="messageBoxText-xmlSubsUpdatesComplete" value="{0} external XML file(s) have been imported." />
 	<string key="messageBoxTitle-abilityRedirectError" value="Invalid Entry" />
 	<string key="messageBoxTitle-addCalcTimer" value="Add Timer Now?" />
 	<string key="messageBoxTitle-avoidanceCopyDetail" value="Per hit average damage avoided: {0}" />
@@ -549,6 +556,8 @@
 	<string key="messageboxTitle-xmlShareError" value="Error adding XML Share" />
 	<string key="messageBoxTitle-xmlShareError" value="Error parsing XML Share" />
 	<string key="messageBoxTitle-xmlSnippetError" value="Error adding XML Share" />
+	<string key="messageBoxTitle-xmlSubsImportQuestion" value="XML Subscriptions" />
+	<string key="messageBoxTitle-xmlSubsUpdatesComplete" value="Updates Complete" />
 	<string key="messageBox-updateAct" value="This will close the program and start the update.&#xA;Do you wish to continue?" />
 	<string key="messageBox-updateCheckFail" value="Unable to obtain version info from web.&#xA;" />
 	<string key="messageBox-xmlPrefLoadError" value="The XML settings file may be corrupt or unusable.  Consider loading a backup from 'Configuration Import/Export' options." />
@@ -885,6 +894,7 @@
 	<string key="uiText-pluginInfoTitle1" value="Assembly Info:&#xA;" />
 	<string key="uiText-pluginInfoTitle2" value="Source File Info:&#xA;" />
 	<string key="uiText-startupWizLogFileInfo" value="{0}\{1}&#xA;File size: {2:0,0}  Last Modified: {3}" />
+	<string key="uiText-xmlSubsQueryInfo" value="Last updated: {0} {1}" />
 	<!--uiText-y -> Yes-->
 	<string key="uiText-y" value="Y" />
 	<string key="uiTitle-act" value="Advanced Combat Tracker" />

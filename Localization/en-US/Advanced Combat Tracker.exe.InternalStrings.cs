@@ -391,6 +391,11 @@ namespace ActLocalization
 			TryEditLocalization("messageBoxText-xmlShareInvalid", "This feature is for importing XML Share snippets, only.  If you wish to import an XML configuration file, use the Import button in Options -> Configuration Import/Export."); // 
 			TryEditLocalization("messageboxText-xmlShareUnknown", "{0}: No XML Snippet Handler marked the snippet as consumed.  Does this share type require a plugin?"); // 
 			TryEditLocalization("messageBoxText-xmlSnippetNotUsed", "{0}: No XML Snippet Handler marked the snippet as used.  This share type may require a plugin."); // 
+			TryEditLocalization("messageBoxText-xmlSubsImportNoUpdates", "There are no external XML files that need to be updated."); // 
+			TryEditLocalization("messageBoxText-xmlSubsImportQuestion1", "{0} -- is outdated.\n\n"); // {0} is a URL
+			TryEditLocalization("messageBoxText-xmlSubsImportQuestion2", "Warning: {0} -- is outdated but ignored.\n\n"); // {0} is a URL
+			TryEditLocalization("messageBoxText-xmlSubsImportQuestion3", "Import these now?"); // 
+			TryEditLocalization("messageBoxText-xmlSubsUpdatesComplete", "{0} external XML file(s) have been imported."); // 
 			TryEditLocalization("messageBoxTitle-abilityRedirectError", "Invalid Entry"); // 
 			TryEditLocalization("messageBoxTitle-addCalcTimer", "Add Timer Now?"); // 
 			TryEditLocalization("messageBoxTitle-avoidanceCopyDetail", "Per hit average damage avoided: {0}"); // 
@@ -463,6 +468,8 @@ namespace ActLocalization
 			TryEditLocalization("messageboxTitle-xmlShareError", "Error adding XML Share"); // 
 			TryEditLocalization("messageBoxTitle-xmlShareError", "Error parsing XML Share"); // 
 			TryEditLocalization("messageBoxTitle-xmlSnippetError", "Error adding XML Share"); // 
+			TryEditLocalization("messageBoxTitle-xmlSubsImportQuestion", "XML Subscriptions"); // 
+			TryEditLocalization("messageBoxTitle-xmlSubsUpdatesComplete", "Updates Complete"); // 
 			TryEditLocalization("messageBox-updateAct", "This will close the program and start the update.\nDo you wish to continue?"); // 
 			TryEditLocalization("messageBox-updateCheckFail", "Unable to obtain version info from web.\n"); // 
 			TryEditLocalization("messageBox-xmlPrefLoadError", "The XML settings file may be corrupt or unusable.  Consider loading a backup from 'Configuration Import/Export' options."); // 
@@ -775,6 +782,7 @@ namespace ActLocalization
 			TryEditLocalization("uiText-pluginInfoTitle1", "Assembly Info:\n"); // 
 			TryEditLocalization("uiText-pluginInfoTitle2", "Source File Info:\n"); // 
 			TryEditLocalization("uiText-startupWizLogFileInfo", "{0}\{1}\nFile size: {2:0,0}  Last Modified: {3}"); // 
+			TryEditLocalization("uiText-xmlSubsQueryInfo", "Last updated: {0} {1}"); // 
 			TryEditLocalization("uiText-y", "Y"); // Yes
 			TryEditLocalization("uiTitle-act", "Advanced Combat Tracker"); // 
 			TryEditLocalization("ui-webserverStatus", "Server Status"); // 
