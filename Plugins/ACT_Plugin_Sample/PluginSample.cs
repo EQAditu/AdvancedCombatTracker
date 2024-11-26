@@ -13,7 +13,7 @@ using System.Xml;
 [assembly: AssemblyTitle("Sample Plugin")]
 [assembly: AssemblyDescription("A sample of an ACT plugin that is a UserControl and uses a settings file")]
 [assembly: AssemblyCompany("EQAditu")]
-[assembly: AssemblyVersion("1.0.0.2")]
+[assembly: AssemblyVersion("1.0.1.0")]
 
 namespace ACT_Plugin
 {
@@ -94,14 +94,25 @@ namespace ACT_Plugin
 		}
 
 		Label lblStatus;    // The status label that appears in ACT's Plugin tab
-		string settingsFile = Path.Combine(ActGlobals.oFormActMain.AppDataFolder.FullName, "Config\\PluginSample.config.xml");
+		string settingsFile = Path.Combine(ActGlobals.oFormActMain.AppDataFolder.FullName, $"Config{Path.DirectorySeparatorChar}PluginSample.config.xml");
 		SettingsSerializer xmlSettings;
+
+		void pluginScreenSpaceAdd(TabPage screenSpace, Control control)
+        {
+            Action addControl = new Action(() => { screenSpace.Controls.Add(control); });
+            if (screenSpace.InvokeRequired)
+            {
+                screenSpace.Invoke(addControl);
+            }
+            else
+                addControl.Invoke();
+        }
 
 		#region IActPluginV1 Members
 		public void InitPlugin(TabPage pluginScreenSpace, Label pluginStatusText)
 		{
 			lblStatus = pluginStatusText;   // Hand the status label's reference to our local var
-			pluginScreenSpace.Controls.Add(this);   // Add this UserControl to the tab ACT provides
+			pluginScreenSpaceAdd(pluginScreenSpace, this);   // Add this UserControl to the tab ACT provides
 			this.Dock = DockStyle.Fill; // Expand the UserControl to fill the tab's client space
 			xmlSettings = new SettingsSerializer(this); // Create a new settings serializer and pass it this instance
 			LoadSettings();
@@ -109,7 +120,7 @@ namespace ACT_Plugin
 			// Create some sort of parsing event handler.  After the "+=" hit TAB twice and the code will be generated for you.
 			ActGlobals.oFormActMain.AfterCombatAction += new CombatActionDelegate(oFormActMain_AfterCombatAction);
 
-			lblStatus.Text = "Plugin Started";
+			ChangeLblStatus("Plugin Started");
 		}
 		public void DeInitPlugin()
 		{
@@ -133,45 +144,64 @@ namespace ACT_Plugin
 
 			if (File.Exists(settingsFile))
 			{
-				FileStream fs = new FileStream(settingsFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-				XmlTextReader xReader = new XmlTextReader(fs);
-
-				try
+				using(FileStream fs = new FileStream(settingsFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+				using(XmlTextReader xReader = new XmlTextReader(fs))
 				{
-					while (xReader.Read())
-					{
-						if (xReader.NodeType == XmlNodeType.Element)
+                    try {
+						while (xReader.Read())
 						{
-							if (xReader.LocalName == "SettingsSerializer")
+							if (xReader.NodeType == XmlNodeType.Element)
 							{
-								xmlSettings.ImportFromXml(xReader);
+								if (xReader.LocalName == "SettingsSerializer")
+								{
+									xmlSettings.ImportFromXml(xReader);
+								}
 							}
 						}
 					}
+					catch (Exception ex)
+					{
+						ChangeLblStatus($"Error loading settings: {ex.Message}");
+					}
 				}
-				catch (Exception ex)
-				{
-					lblStatus.Text = "Error loading settings: " + ex.Message;
-				}
-				xReader.Close();
 			}
 		}
+
 		void SaveSettings()
 		{
-			FileStream fs = new FileStream(settingsFile, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
-			XmlTextWriter xWriter = new XmlTextWriter(fs, Encoding.UTF8);
-			xWriter.Formatting = Formatting.Indented;
-			xWriter.Indentation = 1;
-			xWriter.IndentChar = '\t';
-			xWriter.WriteStartDocument(true);
-			xWriter.WriteStartElement("Config");    // <Config>
-			xWriter.WriteStartElement("SettingsSerializer");    // <Config><SettingsSerializer>
-			xmlSettings.ExportToXml(xWriter);   // Fill the SettingsSerializer XML
-			xWriter.WriteEndElement();  // </SettingsSerializer>
-			xWriter.WriteEndElement();  // </Config>
-			xWriter.WriteEndDocument(); // Tie up loose ends (shouldn't be any)
-			xWriter.Flush();    // Flush the file buffer to disk
-			xWriter.Close();
+			using(FileStream fs = new FileStream(settingsFile, FileMode.Create, FileAccess.Write, FileShare.ReadWrite))
+			using(XmlTextWriter xWriter = new XmlTextWriter(fs, Encoding.UTF8))
+            { 
+				xWriter.Formatting = Formatting.Indented;
+				xWriter.Indentation = 1;
+				xWriter.IndentChar = '\t';
+				xWriter.WriteStartDocument(true);
+				xWriter.WriteStartElement("Config");    // <Config>
+				xWriter.WriteStartElement("SettingsSerializer");    // <Config><SettingsSerializer>
+				xmlSettings.ExportToXml(xWriter);   // Fill the SettingsSerializer XML
+				xWriter.WriteEndElement();  // </SettingsSerializer>
+				xWriter.WriteEndElement();  // </Config>
+				xWriter.WriteEndDocument(); // Tie up loose ends (shouldn't be any)
+			}
 		}
+
+		void ChangeLblStatus(String status)
+        {
+
+            switch (lblStatus.InvokeRequired)
+            {
+                case true:
+                    this.lblStatus.Invoke(new Action(() =>
+                    {
+                        this.lblStatus.Text = status;
+                    }));
+                    break;
+                case false:
+                    this.lblStatus.Text = status;
+                    break;
+                default:
+                    break;
+            }
+        }
 	}
 }

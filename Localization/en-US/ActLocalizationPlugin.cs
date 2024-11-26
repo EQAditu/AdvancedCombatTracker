@@ -7,12 +7,22 @@ using System.Xml;
 
 [assembly: AssemblyTitle("ActLocalization en-US")]
 [assembly: AssemblyDescription("A sample of an ACT plugin that changes localization strings using XML resources.")]
-[assembly: AssemblyVersion("276.0.0.0")]
+[assembly: AssemblyVersion("276.0.1.0")]
 
 namespace ActLocalization
 {
 	class ActLocalizationPlugin : IActPluginV1
 	{
+		void pluginScreenSpaceRemove(TabPage screenSpace)
+		{
+			Action removeControl = new Action(() => { screenSpace.Parent.Controls.Remove(screenSpace); });
+			if (screenSpace.InvokeRequired)
+			{
+				screenSpace.Invoke(removeControl);
+			}
+			else
+				removeControl.Invoke();
+		}
 		public void InitPlugin(TabPage pluginScreenSpace, Label pluginStatusText)
 		{
 			//ActLocalization.InternalStrings.EditLocalizations();
@@ -74,8 +84,8 @@ namespace ActLocalization
 				using (Stream s = asm.GetManifestResourceStream("ActLocalization.Advanced Combat Tracker.exe.FormXmlSettingsIO.xml"))
 					ActGlobals.oFormXmlSettingsIO.ImportControlTextXML(s);
 			}
-			pluginStatusText.Text = "Localization Complete";
-			pluginScreenSpace.Parent.Controls.Remove(pluginScreenSpace);
+			ChangeLblStatus(pluginStatusText, "Localization Complete");
+			pluginScreenSpaceRemove(pluginScreenSpace);
 		}
 		internal static bool TryEditLocalization(string Key, string Value)
 		{
@@ -90,6 +100,25 @@ namespace ActLocalization
 
 		public void DeInitPlugin()
 		{
+		}
+
+		void ChangeLblStatus(Label label, String status)
+		{
+
+			switch (label.InvokeRequired)
+			{
+				case true:
+					label.Invoke(new Action(() =>
+					{
+						label.Text = status;
+					}));
+					break;
+				case false:
+					label.Text = status;
+					break;
+				default:
+					break;
+			}
 		}
 	}
 }
