@@ -6,7 +6,7 @@ using System.Reflection;
 
 [assembly: AssemblyTitle("ActLocalization-InternalStrings")]
 [assembly: AssemblyDescription("A sample of an ACT plugin that changes localization strings.")]
-[assembly: AssemblyVersion("285.0.0.0")]
+[assembly: AssemblyVersion("287.0.0.0")]
 
 namespace ActLocalization
 {
@@ -477,6 +477,7 @@ namespace ActLocalization
 			TryEditLocalization("messageBox-xmlSyntaxError", "The XML settings file may be corrupt or unusable.  Loading defaults where applicable.\n{0}"); // The XML file was not parsable
 			TryEditLocalization("notifText-clipboardReadFail", "Could not get text from the clipboard..."); // 
 			TryEditLocalization("notifText-oldSslError", "This version of Windows cannot create a secure channel to download plugins/updates.  You will need to download this file manually.\n\nWould you like to open your default browser to the file download?"); // 
+			TryEditLocalization("notifText-ongoingDownload", "There is an ongoing download that is taking longer than expected."); // 
 			TryEditLocalization("notifText-unknownAssembly", "The following assemblies were not recognized.  If they are plugins or from plugins, they should be deleted or moved to another folder to avoid \"wrong version\" load issues.\n\n{0}"); // 
 			TryEditLocalization("notifText-UnzipError", "The following file could not be extracted: {0}"); // 
 			TryEditLocalization("notifText-windowOutOfBounds", "{0}({1}) was found out of bounds of all displays and could not be restored to its old location/size."); // 
@@ -488,6 +489,7 @@ namespace ActLocalization
 			TryEditLocalization("notifTitle-clipboardReadFail", "Clipboard Error"); // 
 			TryEditLocalization("notifTitle-imageSaveException", "Could not save image."); // 
 			TryEditLocalization("notifTitle-oldSslError", "Unable to Download"); // 
+			TryEditLocalization("notifTitle-ongoingDownload", "Ongoing Download ({0}%)"); // 
 			TryEditLocalization("notifTitle-unknownAssembly", "Unknown assemblies in ACT's folder.  (Click Show to open folder)"); // 
 			TryEditLocalization("notifTitle-UnzipError", "Unzip error"); // 
 			TryEditLocalization("notifTitle-webserverError", "Webserver error"); // 
@@ -652,6 +654,7 @@ namespace ActLocalization
 			TryEditLocalization("uiFormStartupWizard-eq2FolderFound", "EQ2 Logs folder found."); // 
 			TryEditLocalization("uiFormStartupWizard-eq2FolderFound2", "EQ2 Logs folder not found."); // 
 			TryEditLocalization("uiFormStartupWizard-eq2FolderTitle", "Select your EQ2 installation folder"); // 
+			TryEditLocalization("uiFormStartupWizard-loaded", "Click here to choose a plugin for your game..."); // 
 			TryEditLocalization("uiFormStartupWizard-loading", "Please wait..."); // 
 			TryEditLocalization("uiFormStartupWizard-pluginInfo", "Added: {1} - Modified: {2} {3}"); // 
 			TryEditLocalization("uiFormStartupWizard-pluginLog", "Plugin selected log file."); // 

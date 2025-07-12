@@ -567,6 +567,7 @@
 	<string key="messageBox-xmlSyntaxError" value="The XML settings file may be corrupt or unusable.  Loading defaults where applicable.&#xA;{0}" />
 	<string key="notifText-clipboardReadFail" value="Could not get text from the clipboard..." />
 	<string key="notifText-oldSslError" value="This version of Windows cannot create a secure channel to download plugins/updates.  You will need to download this file manually.&#xA;&#xA;Would you like to open your default browser to the file download?" />
+	<string key="notifText-ongoingDownload" value="There is an ongoing download that is taking longer than expected." />
 	<string key="notifText-unknownAssembly" value="The following assemblies were not recognized.  If they are plugins or from plugins, they should be deleted or moved to another folder to avoid &quot;wrong version&quot; load issues.&#xA;&#xA;{0}" />
 	<string key="notifText-UnzipError" value="The following file could not be extracted: {0}" />
 	<string key="notifText-windowOutOfBounds" value="{0}({1}) was found out of bounds of all displays and could not be restored to its old location/size." />
@@ -578,6 +579,7 @@
 	<string key="notifTitle-clipboardReadFail" value="Clipboard Error" />
 	<string key="notifTitle-imageSaveException" value="Could not save image." />
 	<string key="notifTitle-oldSslError" value="Unable to Download" />
+	<string key="notifTitle-ongoingDownload" value="Ongoing Download ({0}%)" />
 	<string key="notifTitle-unknownAssembly" value="Unknown assemblies in ACT's folder.  (Click Show to open folder)" />
 	<string key="notifTitle-UnzipError" value="Unzip error" />
 	<string key="notifTitle-webserverError" value="Webserver error" />
@@ -757,6 +759,7 @@
 	<string key="uiFormStartupWizard-eq2FolderFound" value="EQ2 Logs folder found." />
 	<string key="uiFormStartupWizard-eq2FolderFound2" value="EQ2 Logs folder not found." />
 	<string key="uiFormStartupWizard-eq2FolderTitle" value="Select your EQ2 installation folder" />
+	<string key="uiFormStartupWizard-loaded" value="Click here to choose a plugin for your game..." />
 	<string key="uiFormStartupWizard-loading" value="Please wait..." />
 	<string key="uiFormStartupWizard-pluginInfo" value="Added: {1} - Modified: {2} {3}" />
 	<string key="uiFormStartupWizard-pluginLog" value="Plugin selected log file." />
