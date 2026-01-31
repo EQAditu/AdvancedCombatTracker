@@ -1,2 +1,2 @@
-## ACT Version 3.6.0.274
+## ACT Localization
 ### `en-US`
