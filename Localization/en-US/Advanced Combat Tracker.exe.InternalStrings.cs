@@ -6,7 +6,7 @@ using System.Reflection;
 
 [assembly: AssemblyTitle("ActLocalization-InternalStrings")]
 [assembly: AssemblyDescription("A sample of an ACT plugin that changes localization strings.")]
-[assembly: AssemblyVersion("287.0.0.0")]
+[assembly: AssemblyVersion("288.0.0.0")]
 
 namespace ActLocalization
 {
@@ -369,6 +369,7 @@ namespace ActLocalization
 			TryEditLocalization("messageBoxText-customTriggerDeleteMultiple", "Really delete {0} custom triggers under '{1}'?"); // 
 			TryEditLocalization("messageBoxText-exFilePrefixBlank", "Leaving this blank field is dangerous and will result in macro files that will not function unless the used Clipboard Format properly prefixes channel commands to every line."); // 
 			TryEditLocalization("messageBoxText-fatalUnhandledException", "An unhandled exception has occurred.  ACT may close.\nPress Ctrl-C to copy this MessageBox.\n\n{0}"); // 
+			TryEditLocalization("messageBoxText-getPlugins409", "The remote server returned a 409 status error.\n\nThis may indicate an anti-botting measure.  If you are using a VPN, try downloading without."); // 
 			TryEditLocalization("messageBoxText-getPlugins429", "The remote server returned a 429 status error.\n\nThis may mean you have tried to access this resource too many times recently.  Please try again later."); // 
 			TryEditLocalization("messageBoxText-getPluginsApplied", "The plugin has been added and started."); // 
 			TryEditLocalization("messageBoxText-getPluginsAppliedZip", "From the ZIP, {0} plugin(s) have been added and started."); // 
