@@ -454,6 +454,7 @@
 	<string key="messageBoxText-customTriggerDeleteMultiple" value="Really delete {0} custom triggers under '{1}'?" />
 	<string key="messageBoxText-exFilePrefixBlank" value="Leaving this blank field is dangerous and will result in macro files that will not function unless the used Clipboard Format properly prefixes channel commands to every line." />
 	<string key="messageBoxText-fatalUnhandledException" value="An unhandled exception has occurred.  ACT may close.&#xA;Press Ctrl-C to copy this MessageBox.&#xA;&#xA;{0}" />
+	<string key="messageBoxText-getPlugins409" value="The remote server returned a 409 status error.&#xA;&#xA;This may indicate an anti-botting measure.  If you are using a VPN, try downloading without." />
 	<string key="messageBoxText-getPlugins429" value="The remote server returned a 429 status error.&#xA;&#xA;This may mean you have tried to access this resource too many times recently.  Please try again later." />
 	<string key="messageBoxText-getPluginsApplied" value="The plugin has been added and started." />
 	<string key="messageBoxText-getPluginsAppliedZip" value="From the ZIP, {0} plugin(s) have been added and started." />
